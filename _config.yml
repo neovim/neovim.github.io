@@ -1,0 +1,8 @@
+title: Neovim
+description: "vim's rebirth for the 21st century"
+
+url: "http://neovim.org"
+
+markdown: kramdown
+
+pygments: true
