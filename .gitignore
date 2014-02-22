@@ -1,0 +1,5 @@
+# .gitignore for neovim.github.io
+
+## jekyll
+_site
+_drafts
