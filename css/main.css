@@ -1,0 +1,23 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+}
+
+#main {
+    margin-top: 70px;
+}
+
+/* navbar */
+.navbar-brand {
+    font-size: 26px;
+}
+ul.navbar-nav li:hover {
+    background: #EEE;
+}
+
+.container .jumbotron {
+    padding: 20px;
+}
+.jumbotron h1, h2{
+    margin: 0 0 10px 0;
+}
