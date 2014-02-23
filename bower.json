@@ -1,0 +1,23 @@
+{
+  "name": "neovim.github.io",
+  "version": "0.0.0",
+  "homepage": "neovim.org",
+  "authors": [
+    "jbranchaud <jbranchaud@gmail.com>",
+    "cweagans <cweagans@gmail.com>"
+  ],
+  "description": "neovim's website",
+  "main": "index.html",
+  "keywords": [
+    "vim"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
