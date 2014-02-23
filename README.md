@@ -26,4 +26,6 @@ the project itself.
 
 ## License
 
-...
+&copy; 2014 Cameron Eagans and Josh Branchaud
+
+Licensed under the MIT License. See LICENSE for details.
