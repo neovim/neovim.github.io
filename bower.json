@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "normalize": "http://necolas.github.io/normalize.css/3.0.0/normalize.css",
+    "bootstrap": "~3.1.1"
+  }
 }
