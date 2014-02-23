@@ -6,3 +6,5 @@ url: "http://neovim.org"
 markdown: kramdown
 
 pygments: true
+
+exclude: ['README.md']
