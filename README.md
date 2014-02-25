@@ -22,7 +22,17 @@ the project itself.
 
 ## Contributing
 
-...
+### Getting a local copy:
+Just do 
+````sudo gem install bundler````
+then you can just
+````bundle install````
+
+To run:
+````
+jekyll serve --watch
+````
+Open on `http://localhost:4000`
 
 ## License
 
