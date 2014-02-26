@@ -24,14 +24,11 @@ the project itself.
 ...
 
 ## Setup
-Just do 
-````sudo gem install bundler````
-then you can just
-````bundle install````
-now 
+`sudo gem install bundler` to get bundler, then you can just `bundle install` to install all the gems.
+Install bower if you don't have it:
 ````npm install bower````
-if you don't have it, and
-````bower install```
+
+Then install the JS dependancies with `bower install`
 
 
 To run:
