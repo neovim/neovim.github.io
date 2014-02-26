@@ -21,8 +21,9 @@ This repository is for the project's website; visit
 the project itself.
 
 ## Contributing
+...
 
-### Getting a local copy:
+## Setup
 Just do 
 ````sudo gem install bundler````
 then you can just
