@@ -28,6 +28,11 @@ Just do
 ````sudo gem install bundler````
 then you can just
 ````bundle install````
+now 
+````npm install bower````
+if you don't have it, and
+````bower install```
+
 
 To run:
 ````
