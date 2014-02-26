@@ -21,8 +21,19 @@ This repository is for the project's website; visit
 the project itself.
 
 ## Contributing
-
 ...
+
+## Setup
+Just do 
+````sudo gem install bundler````
+then you can just
+````bundle install````
+
+To run:
+````
+jekyll serve --watch
+````
+Open on `http://localhost:4000`
 
 ## License
 
