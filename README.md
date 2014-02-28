@@ -24,18 +24,19 @@ the project itself.
 ...
 
 ## Setup
+### Installing Ruby gems
 `sudo gem install bundler` to get bundler, then you can just `bundle install` to install all the gems. 
 
-Install bower if you don't have it:
-````npm install bower```` 
-Then install the JS dependencies with `bower install` 
-
-To run:
+### Serving locally
 ````
 jekyll serve --watch
 ````
 Open on `http://localhost:4000`
 
+### (Optionally) Regenerate dependencies
+Install bower if you don't have it:
+````npm install bower```` 
+Then install the JS dependencies with `bower install` 
 ## License
 
 &copy; 2014 Cameron Eagans and Josh Branchaud
