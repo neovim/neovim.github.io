@@ -1,5 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/neovim/neovim.github.io.png?label=ready&title=Ready)](https://waffle.io/neovim/neovim.github.io)
-# Neovim's Website
+# Neovim's Website (0.1.0 work-in-progress)
 
 **Vim's rebirth for the 21st century**
 
