@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="601px" height="736px" viewBox="0 0 601 736" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>neovim-mark-flat@2x</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="mark-copy-3" sketch:type="MSLayerGroup" transform="translate(1.000000, 4.000000)">
+            <path d="M0,155.437209 L26.1659448,129 L155,320.997949 L154.999997,727 L0,572.201847 L0,155.437209 Z" id="Left---green" fill="#3C92D2" sketch:type="MSShapeGroup"></path>
+            <path d="M443.060403,156.91391 L599.999996,-1 L600,403.297284 L468.704944,601 C468.704944,600.999977 442,571.971417 442,571.971417 L443.060403,156.91391 Z" id="Right---blue" fill="#57A143" sketch:type="MSShapeGroup" transform="translate(521.000000, 300.000000) scale(-1, 1) translate(-521.000000, -300.000000) "></path>
+            <path d="M154.986294,0 L558,615.189696 L445.224605,728 L42,114.172017 L154.986294,0 Z" id="Cross---blue" fill="#57A143" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
