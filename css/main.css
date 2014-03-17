@@ -1,23 +1,35 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 18px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #444;
+  background-color: #fbfbfb;
 }
 
-#main {
-    margin-top: 70px;
+h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
 }
 
-/* navbar */
-.navbar-brand {
-    font-size: 26px;
-}
-ul.navbar-nav li:hover {
-    background: #EEE;
+h3 {
+  color: #54a23d;
 }
 
-.container .jumbotron {
-    padding: 20px;
+.masthead {
+  text-align: center;
 }
-.jumbotron h1, h2{
-    margin: 0 0 10px 0;
+
+.masthead h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.masthead .lead {
+  font-weight: 900;
+  color: #54a23d;
 }
