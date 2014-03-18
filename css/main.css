@@ -20,6 +20,12 @@ h3 {
   color: #54a23d;
 }
 
+/*
+ * Content container
+ *
+ * Centered container for all content
+ */
+
 .container {
   margin: 0 15px;
 }
@@ -29,6 +35,39 @@ h3 {
     max-width: 1200px;
   }
 }
+
+/*
+ * Navbar
+ *
+ * Logo and navigation at the top of the page
+ */
+
+.navbar {
+  padding: 12px 0;
+}
+@media (min-width: 568px) {
+  .navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.logo {
+  width: 120px;
+  position: relative;
+  top: 4px;
+}
+@media (min-width: 568px) {
+  .logo {
+    width: 180px;
+  }
+}
+
+/*
+ * Masthead
+ *
+ * Big intro billboard
+ */
 
 .masthead {
   border-top: solid 1px #ececec;
@@ -53,7 +92,7 @@ h3 {
 }
 
 .masthead h1 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
 }
 @media (min-width: 568px) {
@@ -67,7 +106,7 @@ h3 {
   font-weight: 900;
   color: #54a23d;
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 900;
 }
 @media (min-width: 568px) {
