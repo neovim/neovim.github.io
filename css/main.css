@@ -5,9 +5,20 @@
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 1.4;
   color: #444;
   background-color: #fbfbfb;
+}
+@media (min-width: 568px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+a {
+  color: #3c92d1;
+  text-decoration: none;
 }
 
 h1,
@@ -16,6 +27,17 @@ h3 {
   font-family: 'Lato', sans-serif;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #54a23d;
+  margin-bottom: 0;
+}
+@media (min-width: 568px) {
+  h2 {
+    font-size: 30px;
+  }
+}
 h3 {
   color: #54a23d;
 }
@@ -113,4 +135,71 @@ h3 {
   .masthead .lead {
     font-size: 26px;
   }
+}
+
+/*
+ * Columns
+ *
+ * Two columns utilizing the golden ratio
+ */
+
+.col-wide,
+.col-narrow {
+  display: block;
+}
+@media (min-width: 568px) {
+  .col-wide {
+    display: table-cell;
+    width: 61.8%;
+    vertical-align: top;
+  }
+  .col-narrow {
+    display: table-cell;
+    width: 38.2%;
+    padding-left: 6%;
+    vertical-align: top;
+  }
+}
+
+/*
+ * Front page
+ *
+ * Big section blocks for the front page
+ */
+
+.front-section {
+  padding: 8px 0;
+}
+@media (min-width: 568px) {
+  .front-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: table;
+  }
+}
+
+.front-section.shaded {
+  background-color: #f4f4f4;
+}
+
+
+/*
+ * Buttons
+ *
+ * Fun to click
+ */
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #3c92d1;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  padding: 15px 30px;
+}
+
+.btn.full-width {
+  width: 100%;
 }
