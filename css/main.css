@@ -20,16 +20,58 @@ h3 {
   color: #54a23d;
 }
 
+.container {
+  margin: 0 15px;
+}
+@media (min-width: 568px) {
+  .container {
+    margin: 0 100px;
+    max-width: 1200px;
+  }
+}
+
 .masthead {
+  border-top: solid 1px #ececec;
+  border-bottom: solid 1px #ececec;
   text-align: center;
+  padding: 20px 12px;
+}
+@media (min-width: 568px) {
+  .masthead {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.masthead .container {
+}
+@media (min-width: 568px) {
+  .masthead .container {
+    width: 568px;
+    margin: 0 auto;
+  }
 }
 
 .masthead h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
+}
+@media (min-width: 568px) {
+  .masthead h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
 }
 
 .masthead .lead {
   font-weight: 900;
   color: #54a23d;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+}
+@media (min-width: 568px) {
+  .masthead .lead {
+    font-size: 26px;
+  }
 }
