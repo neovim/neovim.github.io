@@ -29,7 +29,7 @@ h3 {
 
 h2 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   color: #54a23d;
   margin-bottom: 0;
 }
@@ -170,10 +170,13 @@ h3 {
 .front-section {
   padding: 8px 0;
 }
+.front-section .container > h2 {
+  margin-top: 0;
+}
 @media (min-width: 568px) {
   .front-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: table;
   }
 }
@@ -198,6 +201,10 @@ h3 {
   font-family: 'Lato', sans-serif;
   border-radius: 4px;
   padding: 15px 30px;
+}
+
+.btn:hover {
+  background-color: #3889c4;
 }
 
 .btn.full-width {
