@@ -1,23 +1,292 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Exo 2', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #444;
+  background-color: #fbfbfb;
+}
+@media (min-width: 568px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+a {
+  color: #3c92d1;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #54a23d;
+  margin-bottom: 0;
+}
+@media (min-width: 568px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+h3 {
+  /* color: #54a23d; */
+}
+
+/*
+ * Content container
+ *
+ * Centered container for all content
+ */
+
+.container {
+  margin: 0 15px;
+}
+@media (min-width: 568px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+/*
+ * Navbar
+ *
+ * Logo and navigation at the top of the page
+ */
+
+.navbar {
+  padding: 12px 0;
+}
+@media (min-width: 568px) {
+  .navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.logo {
+  width: 120px;
+  position: relative;
+  top: 4px;
+}
+@media (min-width: 568px) {
+  .logo {
+    width: 180px;
+  }
+}
+
+.site-nav {
+  display: none;
+}
+@media (min-width: 568px) {
+  .site-nav {
+    display: block;
+    float: right;
+  }
+  .site-nav ul {
+    list-style: none;
+  }
+  .site-nav li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 20px;
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
+  }
 }
 
-#main {
-    margin-top: 70px;
+/*
+ * Masthead
+ *
+ * Big intro billboard
+ */
+
+.masthead {
+  border-top: solid 1px #ececec;
+  border-bottom: solid 1px #ececec;
+  text-align: center;
+  padding: 20px 12px;
+}
+@media (min-width: 568px) {
+  .masthead {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
-/* navbar */
-.navbar-brand {
+.masthead .container {
+}
+@media (min-width: 568px) {
+  .masthead .container {
+    width: 568px;
+    margin: 0 auto;
+  }
+}
+
+.masthead h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (min-width: 568px) {
+  .masthead h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+.masthead .lead {
+  font-weight: 900;
+  color: #54a23d;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+@media (min-width: 568px) {
+  .masthead .lead {
     font-size: 26px;
-}
-ul.navbar-nav li:hover {
-    background: #EEE;
+  }
 }
 
-.container .jumbotron {
-    padding: 20px;
+/*
+ * Columns
+ *
+ * Two columns utilizing the golden ratio
+ */
+
+.col-wide,
+.col-narrow {
+  display: block;
 }
-.jumbotron h1, h2{
-    margin: 0 0 10px 0;
+@media (min-width: 568px) {
+  .col-wide {
+    display: table-cell;
+    width: 61.8%;
+    vertical-align: top;
+  }
+  .col-narrow {
+    display: table-cell;
+    width: 38.2%;
+    padding-left: 6%;
+    vertical-align: top;
+  }
+}
+
+/*
+ * Front page
+ *
+ * Big section blocks for the front page
+ */
+
+.front-section {
+  padding: 8px 0;
+}
+@media (min-width: 568px) {
+  .front-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: table;
+    width: 100%;
+  }
+  .front-section h2:first-child {
+    margin-top: 0;
+  }
+}
+
+.front-section.shaded {
+  background-color: #f4f4f4;
+}
+
+/*
+ * FAQs
+ *
+ * Formatted as a definition list
+ */
+
+.faqs dt {
+  font-weight: 700;
+}
+
+.faqs dd {
+  color: #777;
+  font-size: 15px;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+/*
+ * Buttons
+ *
+ * Fun to click
+ */
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #3c92d1;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  padding: 15px 30px;
+}
+
+.btn:hover {
+  background-color: #3889c4;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
+/*
+ * Footer
+ *
+ * Links, legalese, etc.
+ */
+
+footer .container {
+  border-top: solid 1px #ececec;
+  padding: 20px 0 50px;
+  font-size: 12px;
+  color: #777;
+}
+@media (min-width: 568px) {
+  footer .container {
+    font-size: 14px;
+    display: table;
+  }
+}
+
+footer a {
+  color: #444;
+}
+
+
+/*
+ * Misc
+ *
+ * Odds 'n ends
+ */
+
+.light {
+  color: #777;
+}
+
+.light a {
+  color: #444;
+}
+
+.small {
+  font-size: 70%;
 }
