@@ -39,7 +39,7 @@ h2 {
   }
 }
 h3 {
-  color: #54a23d;
+  /* color: #54a23d; */
 }
 
 /*
@@ -53,7 +53,8 @@ h3 {
 }
 @media (min-width: 568px) {
   .container {
-    margin: 0 100px;
+    margin: 0 auto;
+    width: 90%;
     max-width: 1200px;
   }
 }
@@ -170,14 +171,15 @@ h3 {
 .front-section {
   padding: 8px 0;
 }
-.front-section .container > h2 {
-  margin-top: 0;
-}
 @media (min-width: 568px) {
   .front-section {
     padding-top: 30px;
     padding-bottom: 30px;
     display: table;
+    width: 100%;
+  }
+  .front-section h2:first-child {
+    margin-top: 0;
   }
 }
 
@@ -185,6 +187,22 @@ h3 {
   background-color: #f4f4f4;
 }
 
+/*
+ * FAQs
+ *
+ * Formatted as a definition list
+ */
+
+.faqs dt {
+  font-weight: 700;
+}
+
+.faqs dd {
+  color: #777;
+  font-size: 15px;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
 
 /*
  * Buttons
@@ -209,4 +227,22 @@ h3 {
 
 .btn.full-width {
   width: 100%;
+}
+
+/*
+ * Misc
+ *
+ * Odds 'n ends
+ */
+
+.light {
+  color: #777;
+}
+
+.light a {
+  color: #444;
+}
+
+.small {
+  font-size: 70%;
 }
