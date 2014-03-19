@@ -230,6 +230,30 @@ h3 {
 }
 
 /*
+ * Footer
+ *
+ * Links, legalese, etc.
+ */
+
+footer .container {
+  border-top: solid 1px #ececec;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #777;
+}
+@media (min-width: 568px) {
+  footer .container {
+    font-size: 14px;
+    display: table;
+  }
+}
+
+footer a {
+  color: #444;
+}
+
+
+/*
  * Misc
  *
  * Odds 'n ends
