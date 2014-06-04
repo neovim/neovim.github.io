@@ -8,35 +8,40 @@ title: News
 <section class="front-section">
   <div class="container">
     <div class="col-wide">
-      <h2>Lorem Ipsum</h2>
 
-      <h3>Dolor sit amet.</h3>
+      <h2>{{ site.categories.newsletter.first.title }}</h2>
 
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-        no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
+      <a href="{{ site.categories.newsletter.first.url }}"><h3>{{ site.categories.newsletter.first.date | date: "%B %Y" }}</h3></a>
+
+      {{ site.categories.newsletter.first.content }}
 
     </div>
-  </div>
-</section>
 
-<section class="front-section shaded">
-  <div class="container">
-    <div class="col-wide">
-      <h2>Lorem Ipsum</h2>
-
-      <h3>Dolor sit amet.</h3>
+    <div class="col-narrow">
+      <h2>RSS feed</h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        For an RSS reader, use this link to
+        <a href="{{ site.news.feed }}">the feed</a>.
       </p>
 
+      <h2>Email newsletter</h2>
+
+      <p>
+        If you'd prefer this newsletter going to your inbox, use a solution
+        similar to <a href="http://blogtrottr.com/">Blogtrottr</a> which takes
+        an RSS feed and sends it to your email.
+      </p>
+
+      <h2>More frequent news</h2>
+
+      <p>
+        Follow us on Twitter for updates and information more frequently than
+        the newsletter.
+      </p>
+
+      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Neovim</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
   </div>
 </section>
