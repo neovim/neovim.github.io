@@ -1,0 +1,10 @@
+- title: Home
+  url: /
+- title: News
+  url: /news/
+- title: Development
+  url: /dev/
+- title: Community
+  url: /community/
+- title: Contribute
+  url: https://github.com/neovim/neovim
