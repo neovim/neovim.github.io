@@ -6,6 +6,12 @@ markdown: kramdown
 title: Neovim
 description: "vim's rebirth for the 21st century"
 
+news:
+    name: Neovim Newsletter
+    authors: Neovim Community
+    url: http://neovim.org/news
+    feed: /news.xml
+
 url: "http://neovim.org"
 
 exclude:
