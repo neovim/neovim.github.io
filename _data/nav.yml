@@ -2,9 +2,9 @@
   url: /
 - title: News
   url: /news/
-- title: Development
-  url: /dev/
-- title: Community
-  url: /community/
-- title: Contribute
+- title: Develop
+  url: /develop/
+- title: Discuss
+  url: /discuss/
+- title: Source
   url: https://github.com/neovim/neovim
