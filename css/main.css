@@ -334,3 +334,10 @@ footer a {
 .small {
   font-size: 70%;
 }
+
+/*
+ * Newsletter CSS
+ */
+.newsletter h1 {
+  margin-bottom: 0px;
+}
