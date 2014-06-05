@@ -1,29 +1,54 @@
 ---
 layout: post
-title: "Issue #1: First Newsletter"
+title: "Issue #1: A New Hope"
 category: newsletter
 ---
 
-Welcome to the first newsletter that we plan on releasing monthly to detail the
-progress and anything else newsworthy for Neovim.
+Welcome to the first newsletter for Neovim, a project that hopes to give a new
+beginning to a text editor that we all love. We plan on releasing a newsletter
+each month to detail the progress and anything else newsworthy for the project.
 
 Future newsletters will be released on the first Friday of every month. That
 makes the next one scheduled for July 4th.
 
-## Catch Up
+## Playing Catch Up
 
-Since there have been months of development preceeding this first newsletter,
-let's take a look at some of the milestones.
+Let's take a look at some of the milestones of the months preceding May:
 
-> Basically some big development changes, some of the news on Twitter/Reddit
+### General News
+
+- March 23: [Fundraiser for Neovim][fund] on [Bountysource][bountysource] ended with
+  nearly $34,000.
+- April: List of [BACKERS.md][backers] was added.
+
+### Development News
+
+- March: A Neovim [Style Guide][style] was written.
+- April: A large portion of the OS specific code has been ported to use
+  [libuv][libuv].
 
 ### How much has changed since it forked from Vim?
 
-> Show diff (lines added, removed), files added, etc.
+Taking into account the [initial import of Vim][vim-import] which happened
+January 31, 2014, there have been 1,010 commits across 77 contributors.
+
+This has resulted in: 887 files changed, 575371 insertions(+), 500868
+deletions(-) according to `git diff --stat`.
+
+Do note, however, that this includes legacy Vim tests, unit tests, as well as
+localization files.
 
 ## Recent Development
 
-> Detail the recent development within the last month here.
+Now that we have detailed some of the milestones before the month of May
+started, we can now look at what has happened in the last month!
+
+### Removal of Encryption Code
+
+[Discussion][crypto-discussion] arose regarding Neovim's inherited crypto code.
+It was determined that the crypto code should be removed rather than to provide
+a possibly insecure implementation. The removal was then [promptly
+handled][crypto-removal].
 
 ## Road Map
 
@@ -32,3 +57,12 @@ let's take a look at some of the milestones.
 ## A Look at the Contributors
 
 > List the active developers.
+
+[fund]: https://www.bountysource.com/teams/neovim/fundraiser
+[bountysource]: https://www.bountysource.com/
+[backers]: https://github.com/neovim/neovim/blob/master/BACKERS.md
+[libuv]: https://github.com/joyent/libuv
+[style]: http://neovim.org/development-wiki/style-guide/style-guide.xml
+[vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
+[crypto-discussion]: https://github.com/neovim/neovim/issues/694
+[crypto-removal]: https://github.com/neovim/neovim/pull/699
