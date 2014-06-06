@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vim's rebirth for the 21st century">
     <meta name="author" content="">
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
