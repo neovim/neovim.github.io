@@ -128,6 +128,16 @@ To increase developer clarity, the code for this was refactored into new
 functions defined in [`os/fs.c`][fs.c]. The existing calls to `mch_stat()`
 were then [switched over][pr619].
 
+### Coverity Support
+
+[Coverity Scan][coverity] is a service that performs a static analysis on source
+code to look for defects and vulnerabilities. It can look at multiple paths
+through execution and find issues that might only arise under certain
+conditions.
+
+Neovim now has a twice-monthly [Coverity check][coverity-neovim] in addition to
+the continuous integration that is used with [TravisCI][travis].
+
 
 ### API Events
 
@@ -149,6 +159,7 @@ The following is a list of things that are either in progress or on the roadmap.
 4. Remove the use of temp files when using `system()` and [use pipes
    instead][pipes].
 5. Add the functionality of [redraw events][redraw].
+6. Add [Travis builds for OS X][travis-osx].
 
 ### A Note on the VimL to Lua Translator
 
@@ -246,3 +257,7 @@ Bountysource][neovim-bountysource] page.
 [first-release]: https://groups.google.com/d/msg/neovim/KDgatetthQw/8rn4rdm8z8wJ
 [neovim.org]: http://neovim.org/
 [eval.c]: https://raw.githubusercontent.com/neovim/neovim/master/src/nvim/eval.c
+[coverity-neovim]: https://scan.coverity.com/projects/2227
+[coverity]: http://scan.coverity.com/
+[travis]: https://travis-ci.org/neovim/neovim
+[travis-osx]: https://github.com/neovim/neovim/issues/766
