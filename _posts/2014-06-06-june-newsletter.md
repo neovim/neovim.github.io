@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: newsletter
 title: "Issue #1 - A New Hope"
 category: newsletter
 ---
