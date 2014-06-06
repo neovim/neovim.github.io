@@ -57,9 +57,20 @@ It was determined that the crypto code should be removed rather than to provide
 a possibly insecure implementation. The removal was then [promptly
 handled][crypto-removal].
 
+### Nvim Namespace
+
+Due to name collisions with some Neovim's headers, the source code was [moved
+into a 'nvim' namespace][namespace]. It was also determined that `nvim` would be
+the internal/technical identifier for the project from that point on.
+
+## Here
+
 ## Road Map
 
-> Look at where development will be doing in this upcoming month.
+1. Finish [porting][port-os] the rest of the OS layer to libuv.
+2. Continue work on [VimL -> Lua translator][translator] by [ZyX-I][zyx].
+3. Use [include-what-you-use][iwyu] to clean up headers and includes as
+   [discussed][iwyu-issue].
 
 ## A Look at the Contributors
 
@@ -73,3 +84,14 @@ handled][crypto-removal].
 [vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
 [crypto-discussion]: https://github.com/neovim/neovim/issues/694
 [crypto-removal]: https://github.com/neovim/neovim/pull/699
+[gitinspector]: https://code.google.com/p/gitinspector/
+[stats]: https://gist.github.com/jdavis/b5dba46bc5ede54bdc4c
+[keyes]: https://groups.google.com/forum/#!topic/neovim/R_jXItMXN4E
+[justinmk]: https://github.com/justinmk
+[os-specific]: https://github.com/neovim/neovim/tree/master/src/nvim/os
+[namespace]: https://github.com/neovim/neovim/pull/716
+[port-os]: https://github.com/neovim/neovim/issues/133
+[translator]: https://github.com/neovim/neovim/pull/243
+[zyx]: https://github.com/ZyX-I
+[iwyu]: https://code.google.com/p/include-what-you-use/
+[iwyu-issue]: https://github.com/neovim/neovim/issues/549
