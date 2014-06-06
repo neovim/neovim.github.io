@@ -99,12 +99,14 @@ logging utility][logging]. The utility uses macros and can log a standard debug
 message, basic info, a warning message or an error. The logging can be turned on
 or off depending on if `NDEBUG` or `DISABLE_LOG` is defined.
 
-### Removing Non-Standard C99 Types
+### Removing Vim Specific Integer Types
 
-There are Vim specific types that are used where [C99 fixed-width integer
-types][c99-types] would be better suited. This includes: `char_u`, `long_u`,
-and `short_u` types. The work to remove these has been spread across multiple
-pull requests: [#656][pr656] and [#757][pr757].
+There are Vim specific types that are used where standard types would be better
+options. The complete information regarding these types can be found in this
+[guideline][int-guideline].
+
+So far `char_u`, `long_i`, and `short_u` types have been [removed][pr656].
+`long_u` removal is [currently underway][pr757] as well.
 
 ### Out of Memory Errors
 
@@ -261,3 +263,4 @@ Bountysource][neovim-bountysource] page.
 [coverity]: http://scan.coverity.com/
 [travis]: https://travis-ci.org/neovim/neovim
 [travis-osx]: https://github.com/neovim/neovim/issues/766
+[int-guideline]: https://github.com/neovim/neovim/wiki/Integer-types-refactoring-guidelines
