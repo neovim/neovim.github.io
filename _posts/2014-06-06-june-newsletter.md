@@ -105,8 +105,9 @@ There are Vim specific types that are used where standard types would be better
 options. The complete information regarding these types can be found in this
 [guideline][int-guideline].
 
-So far `char_u`, `long_i`, and `short_u` types have been [removed][pr656].
-`long_u` removal is [currently underway][pr757] as well.
+So far `short_u`, `int_u`, and `long_i` types have been [removed][pr656].
+`long_u` removal is [currently underway][pr757] as well with `char_u` and `long`
+types planned for the near future.
 
 ### Out of Memory Errors
 
