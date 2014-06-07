@@ -1,10 +1,19 @@
+safe: true
+pygments: true
+permalink: pretty
+markdown: kramdown
+
 title: Neovim
 description: "vim's rebirth for the 21st century"
 
+news:
+    name: Neovim Newsletter
+    authors: Neovim Community
+    url: http://neovim.org/news
+    feed: /news.xml
+
 url: "http://neovim.org"
 
-markdown: kramdown
-
-pygments: true
-
-exclude: ['README.md']
+exclude:
+    - README.md
+    - LICENSE

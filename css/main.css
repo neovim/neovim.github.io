@@ -42,6 +42,12 @@ h3 {
   /* color: #54a23d; */
 }
 
+blockquote {
+  border-left: 5px solid #eeeeee;
+  margin-left: 0;
+  padding-left: 15px;
+}
+
 /*
  * Content container
  *
@@ -333,4 +339,12 @@ footer a {
 
 .small {
   font-size: 70%;
+}
+
+/*
+ * Newsletter CSS
+ */
+
+.newsletter h1 {
+  margin-bottom: 0px;
 }

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vim's rebirth for the 21st century">
     <meta name="author" content="">
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -28,7 +28,7 @@
             <li><a href="http://neovim.org/development-wiki/">Dev Wiki</a></li>
           </ul>
         </nav>
-        <a href="/"><img src="images/logo@2x.png" class="logo" alt="Neovim"></a>
+        <a href="/"><img src="/images/logo@2x.png" class="logo" alt="Neovim"></a>
       </div>
     </header>
     {{ content }}
