@@ -138,8 +138,9 @@ code to look for defects and vulnerabilities. It can look at multiple paths
 through execution and find issues that might only arise under certain
 conditions.
 
-Neovim now has a twice-monthly [Coverity check][coverity-neovim] in addition to
-the continuous integration that is used with [TravisCI][travis].
+Neovim now has a [Coverity check][coverity-neovim] that runs multiple times a
+week in addition to the continuous integration that is used with
+[TravisCI][travis].
 
 
 ### API Events
