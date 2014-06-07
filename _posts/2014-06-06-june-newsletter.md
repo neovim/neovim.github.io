@@ -192,6 +192,20 @@ release][first-release]:
 > If there's a volunteer, I'm going to delegate writing the GUI program after I
 > finish implementing redraw events since I'm not very good with designing UIs.
 
+### Donating
+
+If you'd like to help support development, you may donate using Bitcoins here:
+`1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ` or back the team on the [Neovim
+Bountysource][neovim-bountysource] page.
+
+### Contributing
+
+If you an experienced developer or inexperienced but wanting to learn, visit the
+GitHub repo and check out the [README][github], [CONTRIBUTING][CONTRIB] guide,
+and finally the [Wiki][wiki] to learn more.
+
+There are plenty of opportunities to help out and plenty of things to do.
+
 ## That's a Wrap
 
 Do you have any feedback or suggestions regarding this first newsletter? Feel
@@ -265,3 +279,6 @@ Bountysource][neovim-bountysource] page.
 [travis]: https://travis-ci.org/neovim/neovim
 [travis-osx]: https://github.com/neovim/neovim/issues/766
 [int-guideline]: https://github.com/neovim/neovim/wiki/Integer-types-refactoring-guidelines
+[github]: https://github.com/neovim/neovim/blob/master/README.md
+[CONTRIB]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
+[wiki]: https://github.com/neovim/neovim/wiki
