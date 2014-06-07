@@ -2,7 +2,7 @@
 layout: newsletter
 title: "Issue #1 - A New Hope"
 category: newsletter
-permalink: /newsletter/2014/june/
+permalink: /news/2014/june/
 ---
 
 Welcome to the first newsletter for Neovim, a project that hopes to give a new
