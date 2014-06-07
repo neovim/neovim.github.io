@@ -215,9 +215,7 @@ Also be sure to subscribe to the [RSS feed][rss] to stay up-to-date on what is
 happening in the Neovim world. The next newsletter will be released the first
 Friday of July.
 
-If you'd like to help development, you may donate using Bitcoins here:
-`1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ` or back the team on the [Neovim
-Bountysource][neovim-bountysource] page.
+Until next time. `:wq`
 
 [fund]: https://www.bountysource.com/teams/neovim/fundraiser
 [bountysource]: https://www.bountysource.com/
@@ -238,7 +236,7 @@ Bountysource][neovim-bountysource] page.
 [zyx]: https://github.com/ZyX-I
 [iwyu]: https://code.google.com/p/include-what-you-use/
 [iwyu-issue]: https://github.com/neovim/neovim/issues/549
-[rss]: TODO
+[rss]: {{ site.news.feed }}
 [twitter]: https://twitter.com/Neovim
 [neovim-bountysource]: https://www.bountysource.com/teams/neovim
 [logging]: https://github.com/neovim/neovim/pull/644
