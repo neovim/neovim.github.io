@@ -111,19 +111,6 @@ blockquote {
     font-family: 'Lato', sans-serif;
     position: relative;
   }
-
-  .site-nav li.current a {
-    padding: 9px 10px;
-    background-color: transparent;
-    border-radius: 4px;
-    background-color: #54a23d;
-    color: white;
-  }
-
-  .site-nav ul ul {
-    position: absolute;
-    margin: 0 auto;
-  }
 }
 
 /*
