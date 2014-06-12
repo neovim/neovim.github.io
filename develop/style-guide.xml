@@ -1,0 +1,1640 @@
+---
+layout: nil
+redirect_from: /development-wiki/style-guide/style-guide.xml
+---
+
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<GUIDE title="Neovim Style Guide">
+
+<OVERVIEW>
+<CATEGORY title="Important Note">
+  <STYLEPOINT title="Displaying Hidden Details in this Guide">
+     <SUMMARY>
+       This style guide contains many details that are initially
+       hidden from view.  They are marked by the triangle icon, which you
+       see here on your left.  Click it now.
+       You should see "Hooray" appear below.
+     </SUMMARY>
+     <BODY>
+       <p>
+        Hooray!  Now you know you can expand points to get more
+        details.
+       </p>
+     </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Copyright">
+    <SUMMARY>
+      <p>
+        This style guide is licensed under the
+        <a href="http://creativecommons.org/licenses/by/3.0/">CC-By 3.0</a>
+        License.
+        It was originally created by
+        <a href="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml">Google</a>
+        and has been modified to fit Neovim's needs.
+      </p>
+    </SUMMARY>
+  </STYLEPOINT>
+</CATEGORY>
+<CATEGORY title="Background">
+  <p>
+    One way in which we keep the code base manageable is by enforcing
+    <em>consistency</em>.
+    
+    It is very important that any
+    
+    programmer
+    be able to look at another's code and quickly understand it.
+    Maintaining a uniform style and following conventions means that we can
+    more easily use "pattern-matching" to infer what various symbols are
+    and what invariants are true about them. Creating common, required
+    idioms and patterns makes code much easier to understand.  In some
+    cases there might be good arguments for changing certain style
+    rules, but we nonetheless keep things as they are in order to
+    preserve consistency.
+  </p>
+</CATEGORY>
+</OVERVIEW>
+
+<CATEGORY title="Header Files">
+  <STYLEPOINT title="The #define Guard">
+    <SUMMARY>
+      All header files should have <code>#define</code> guards to
+      prevent multiple inclusion.  The format of the symbol name
+      should be
+      <code><i>NEOVIM</i>_<i>&lt;DIRECTORY&gt;</i>_<i>&lt;FILE&gt;</i>_H</code>.
+    </SUMMARY>
+    <BODY>
+      <p>
+        In <code>foo/bar.h</code>:
+        <CODE_SNIPPET>
+           #ifndef NEOVIM_FOO_BAR_H
+           #define NEOVIM_FOO_BAR_H
+
+           ...
+
+           #endif  // NEOVIM_FOO_BAR_H
+        </CODE_SNIPPET>
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Names and Order of Includes">
+    <SUMMARY>
+      Use standard order for readability and to avoid hidden
+      dependencies: C library,
+      
+      other libraries' <code>.h</code>, your
+      project's
+      <code>.h</code>.
+    </SUMMARY>
+    <BODY>
+      <p>
+        In <code><var>foo</var>.c</code>
+        order your includes as
+        follows:
+      </p>
+      <ol>
+        <li>C system files.</li>
+        <li>Other libraries' <code>.h</code> files.</li>
+        <li>Your project's <code>.h</code> files.</li>
+      </ol>
+      <p>
+        Exception: sometimes, system-specific code needs conditional includes.
+        Such code can put conditional includes after other includes.
+        Of course, keep your system-specific code small and localized.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Constants">
+    <SUMMARY>
+      Do not use macros to define constants in headers.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Macro constants in header files cannot be used by unit tests.
+      </p>
+      <p>
+        However, you are allowed to define a macro that holds the same value as a non-enum constant (defined in the same header) if the value of the constant represents the size of an array.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+</CATEGORY>
+
+<CATEGORY title="Scoping">
+  <STYLEPOINT title="Local Variables">
+    <SUMMARY>
+      Place a function's variables in the narrowest scope possible,
+      and initialize variables in the declaration.
+    </SUMMARY>
+    <BODY>
+      <p>
+        C99 allows you to declare variables anywhere in a function.
+        Declare them in as local a scope as
+        possible, and as close to the first use as possible. This
+        makes it easier for the reader to find the declaration and see
+        what type the variable is and what it was initialized to.  In
+        particular, initialization should be used instead of
+        declaration and assignment, e.g.
+      </p>
+      <BAD_CODE_SNIPPET>
+        int i;
+        i = f();      // Bad -- initialization separate from declaration.
+      </BAD_CODE_SNIPPET>
+      <CODE_SNIPPET>
+        int j = g();  // Good -- declaration has initialization.
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+</CATEGORY>
+
+<CATEGORY title="Neovim-Specific Magic">
+
+  <STYLEPOINT title="clint">
+    <SUMMARY>
+      Use
+      <code>clint.py</code>
+      to detect style errors.
+    </SUMMARY>
+    <BODY>
+      <p>
+        <code>clint.py</code>
+        is a tool that reads a source file and
+        identifies many style errors.  It is not perfect, and has both false
+        positives and false negatives, but it is still a valuable tool.  False
+        positives can be ignored by putting <code>// NOLINT</code> at
+        the end of the line.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+  
+</CATEGORY>
+
+<CATEGORY title="Other C Features">
+
+  <STYLEPOINT title="Variable-Length Arrays and alloca()">
+    <SUMMARY>
+      We do not allow variable-length arrays or <code>alloca()</code>.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Variable-length arrays can cause hard to detect stack overflows.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Postincrement and Postdecrement">
+    <SUMMARY>
+      Use postfix form (<code>i++</code>) in statements.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        for (int i = 0; i &lt; 3; i++) { }
+        int j = ++i;  // OK: ++i is used as an expression.
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        for (int i = 0; i &lt; 3; ++i) { }
+        ++i;  // BAD: ++i is used as a statement.
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Use of const">
+    <SUMMARY>
+      Use <code>const</code> pointers whenever possible.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Where to put the const">
+        <p>
+          Some people favor the form <code>int const *foo</code> to
+          <code>const int *foo</code>.  They argue that this is more
+          readable because it's more consistent: it keeps the rule
+          that <code>const</code> always follows the object it's
+          describing.  However, this consistency argument doesn't
+          apply in codebases with few deeply-nested pointer
+          expressions since most <code>const</code> expressions have
+          only one <code>const</code>, and it applies to the
+          underlying value.  In such cases, there's no consistency to
+          maintain.
+          Putting the <code>const</code> first is arguably more readable,
+          since it follows English in putting the "adjective"
+          (<code>const</code>) before the "noun" (<code>int</code>).
+        </p>
+        <p>
+          That said, while we encourage putting <code>const</code> first,
+          we do not require it.  But be consistent with the code around
+          you!
+        </p>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Integer Types">
+    <SUMMARY>
+      <p>
+        Of the built-in integer types only use
+        <code>char</code>,
+        <code>int</code>,
+        <code>uint8_t</code>,
+        <code>int8_t</code>,
+        <code>uint16_t</code>,
+        <code>int16_t</code>,
+        <code>uint32_t</code>,
+        <code>int32_t</code>,
+        <code>uint64_t</code>,
+        <code>int64_t</code>,
+        <code>uintmax_t</code>,
+        <code>intmax_t</code>,
+        <code>size_t</code>,
+        <code>ssize_t</code>,
+        <code>uintptr_t</code>,
+        <code>intptr_t</code>,
+        and
+        <code>ptrdiff_t</code>.
+      </p>
+      <p>
+        Use <code>int</code> for error codes and local, trivial variables only.
+      </p>
+    </SUMMARY>
+    <BODY>
+      <p>
+        Use care when converting integer types. Integer conversions and
+        promotions can cause non-intuitive behavior.  Note that the signedness of
+        <code>char</code> is implementation defined.
+      </p>
+      <p>
+        Public facing types must have fixed width (<code>uint8_t</code>, etc.)
+      </p>
+      <p>
+        There are no convenient <code>printf</code> format placeholders for
+        fixed width types.  Cast to <code>uintmax_t</code> or
+        <code>intmax_t</code>
+        if you have to format fixed width integers.
+      </p>
+      <p>
+        <table border="1" summary="printf placeholders">
+          <TBODY>
+            <tr align="center">
+              <th>Type</th>
+              <th>unsigned</th>
+              <th>signed</th>
+            </tr>
+
+            <tr align="center">
+              <td><code>char</code></td>
+              <td><code>%hhu</code></td>
+              <td><code>%hhd</code></td>
+            </tr>
+
+            <tr align="center">
+              <td><code>int</code></td>
+              <td>n/a</td>
+              <td><code>%d</code></td>
+            </tr>
+
+            <tr align="center">
+              <td><code>(u)intmax_t</code></td>
+              <td><code>%ju</code></td>
+              <td><code>%jd</code></td>
+            </tr>
+
+            <tr align="center">
+              <td><code>(s)size_t</code></td>
+              <td><code>%zu</code></td>
+              <td><code>%zd</code></td>
+            </tr>
+
+            <tr align="center">
+              <td><code>ptrdiff_t</code></td>
+              <td><code>%tu</code></td>
+              <td><code>%td</code></td>
+            </tr>
+          </TBODY>
+        </table>
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Booleans">
+    <SUMMARY>
+        Use <code>bool</code> to represent boolean values.
+    </SUMMARY>
+    <BODY>
+      <BAD_CODE_SNIPPET>
+        int loaded = 1;  // BAD: loaded should have type bool.
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Variable declarations">
+    <SUMMARY>
+      Declare only one variable per line.
+    </SUMMARY>
+    <BODY>
+      <BAD_CODE_SNIPPET>
+        int i, j = 1
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Conditions">
+    <SUMMARY>
+      Don't use "yoda-conditions".
+      Use at most one assignment per condition.
+    </SUMMARY>
+    <BODY>
+      <BAD_CODE_SNIPPET>
+        if (1 == x) {
+      </BAD_CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        if ((x = f()) &amp;&amp; (y = g())) {
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Function declarations">
+    <SUMMARY>
+      Every function must have a declaration separate from its definition.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        static void f(void);
+
+        static void f(void)
+        {
+          ...
+        }
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="General translation unit layout">
+    <SUMMARY>
+      Declarations of static functions precede the definitions of public functions
+      which in turn precede the definitions of static functions.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        &lt;HEADER&gt;
+
+        &lt;STATIC FUNCTION DECLARATIONS&gt;
+
+        &lt;PUBLIC FUNCTION DEFINITIONS&gt;
+
+        &lt;STATIC FUNCTION DEFINITIONS&gt;
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="64-bit Portability">
+    <SUMMARY>
+      Code should be 64-bit and 32-bit friendly.  Bear in mind problems of
+      printing, comparisons, and structure alignment.
+    </SUMMARY>
+    <BODY>
+      <ul>
+        <li> Remember that <code>sizeof(void *)</code> !=
+             <code>sizeof(int)</code>.  Use <code>intptr_t</code> if
+             you want a pointer-sized integer.
+             </li>
+
+        <li> You may need to be careful with structure alignments,
+             particularly for structures being stored on disk. Any
+             class/structure with a
+             
+             <code>int64_t</code>/<code>uint64_t</code>
+             member will by default end up being 8-byte aligned on a 64-bit
+             system. If you have such structures being shared on disk
+             between 32-bit and 64-bit code, you will need to ensure
+             that they are packed the same on both architectures.
+             
+             Most compilers offer a way to alter
+             structure alignment.  For gcc, you can use
+             <code>__attribute__((packed))</code>.  MSVC offers
+             <code>#pragma pack()</code> and
+             <code>__declspec(align())</code>.
+             </li>
+
+        <li>
+             
+             Use the <code>LL</code> or <code>ULL</code> suffixes as
+             needed to create 64-bit constants.  For example:
+             
+             <CODE_SNIPPET>
+             int64_t my_value = 0x123456789LL;
+             uint64_t my_mask = 3ULL &lt;&lt; 48;
+             </CODE_SNIPPET>
+             </li>
+      </ul>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="sizeof">
+  <SUMMARY>
+    Prefer <code>sizeof(<var>varname</var>)</code> to
+    <code>sizeof(<var>type</var>)</code>.
+  </SUMMARY>
+  <BODY>
+    <p>
+      Use <code>sizeof(<var>varname</var>)</code>
+      when you take the size of a particular variable.
+      <code>sizeof(<var>varname</var>)</code> will update
+      appropriately if someone changes the variable type
+      either now or later.
+      You may use <code>sizeof(<var>type</var>)</code>
+      for code unrelated to any particular variable,
+      such as code that manages an external or internal
+      data format where a variable of an appropriate C type
+      is not convenient.
+    </p>
+    <p>
+      <CODE_SNIPPET>
+        Struct data;
+        memset(&amp;data, 0, sizeof(data));
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        memset(&amp;data, 0, sizeof(Struct));
+      </BAD_CODE_SNIPPET>
+      <CODE_SNIPPET>
+        if (raw_size &lt; sizeof(int)) {
+          fprintf(stderr, "compressed record not big enough for count: %ju", raw_size);
+          return false;
+        }
+      </CODE_SNIPPET>
+    </p>
+  </BODY>
+  </STYLEPOINT>
+
+</CATEGORY>
+
+<CATEGORY title="Naming">
+  <p>
+    The most important consistency rules are those that govern
+    naming. The style of a name immediately informs us what sort of
+    thing the named entity is: a type, a variable, a function, a
+    constant, a macro, etc., without requiring us to search for the
+    declaration of that entity. The pattern-matching engine in our
+    brains relies a great deal on these naming rules.
+    
+  </p>
+  <p>
+    Naming rules are pretty arbitrary, but
+    
+    we feel that consistency is more important than individual preferences
+    in this area, so regardless of whether you find them sensible or not,
+    the rules are the rules.
+  </p>
+
+  <STYLEPOINT title="General Naming Rules">
+    <SUMMARY>
+      Function names, variable names, and filenames should be
+      descriptive; eschew abbreviation.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Give as descriptive a name as possible, within reason. Do
+        not worry about saving horizontal space as it is far more
+        important to make your code immediately understandable by a
+        new reader. Do not use abbreviations that are ambiguous or
+        unfamiliar to readers outside your project, and do not
+        abbreviate by deleting letters within a word.
+      </p>
+      <CODE_SNIPPET>
+        int price_count_reader;    // No abbreviation.
+        int num_errors;            // "num" is a widespread convention.
+        int num_dns_connections;   // Most people know what "DNS" stands for.
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        int n;                     // Meaningless.
+        int nerr;                  // Ambiguous abbreviation.
+        int n_comp_conns;          // Ambiguous abbreviation.
+        int wgc_connections;       // Only your group knows what this stands for.
+        int pc_reader;             // Lots of things can be abbreviated "pc".
+        int cstmr_id;              // Deletes internal letters.
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="File Names">
+    <SUMMARY>
+      Filenames should be all lowercase and can include underscores
+      (<code>_</code>).
+    </SUMMARY>
+    <BODY>
+      <p>
+        Use underscores to separate words. Examples of acceptable file names:
+      </p>
+      <p>
+        <CODE_SNIPPET>
+          my_useful_file.c
+          getline_fix.c  // OK: getline refers to the glibc function.
+        </CODE_SNIPPET>
+      </p>
+      <p>
+        C files should end in <code>.c</code> and header files
+        should end in <code>.h</code>.
+      </p>
+      <p>
+        Do not use filenames that already exist
+        in <code>/usr/include</code>, such as <code>db.h</code>.
+      </p>
+      <p>
+        In general, make your filenames very specific.  For example,
+        use <code>http_server_logs.h</code> rather
+        than <code>logs.h</code>.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Type Names">
+    <SUMMARY>
+      <p>
+        Typedef-ed structs and enums
+        start with a capital letter and have a capital
+        letter for each new word, with no underscores:
+        <code>MyExcitingStruct</code>.
+      </p>
+      <p>
+        Non-Typedef-ed structs and enums
+        are all lowercase with underscores between words:
+        <code>struct my_exciting_struct</code>.
+      </p>
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        struct my_struct {
+          ...
+        };
+        typedef struct my_struct MyAwesomeStruct;
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Variable Names">
+    <SUMMARY>
+      Variable names are all lowercase, with underscores between
+      words.  For
+      instance: <code>my_exciting_local_variable</code>.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Common Variable names">
+        <p>
+          For example:
+        </p>
+        <CODE_SNIPPET>
+          string table_name;  // OK - uses underscore.
+          string tablename;   // OK - all lowercase.
+        </CODE_SNIPPET>
+        <BAD_CODE_SNIPPET>
+          string tableName;   // Bad - mixed case.
+        </BAD_CODE_SNIPPET>
+      </SUBSECTION>
+
+      <SUBSECTION title="Struct Variables">
+        <p>
+          Data members in structs should be named like regular
+          variables.
+        </p>
+        <CODE_SNIPPET>
+          struct url_table_properties {
+            string name;
+            int num_entries;
+          }
+        </CODE_SNIPPET>
+      </SUBSECTION>
+
+      <SUBSECTION title="Global Variables">
+        <p>
+          Don't use global variables unless absolutely necessary.
+          Prefix global variables with <code>g_</code>.
+        </p>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Constant Names">
+    <SUMMARY>
+      Use a <code>k</code> followed by mixed case:
+      <code>kDaysInAWeek</code>.
+    </SUMMARY>
+    <BODY>
+      <p>
+        All compile-time constants, whether they are declared locally
+        or globally, follow a slightly different
+        naming convention from other variables. Use a <code>k</code>
+        followed by words with uppercase first letters:
+      </p>
+      <CODE_SNIPPET>
+        const int kDaysInAWeek = 7;
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Function Names">
+    <SUMMARY>
+      Function names are all lowercase, with underscores between
+      words.  For
+      instance: <code>my_exceptional_function()</code>.
+      All functions in the same header file should have a common prefix.
+    </SUMMARY>
+    <BODY>
+      <p>
+        In <code>os_unix.h</code>:
+      </p>
+      <CODE_SNIPPET>
+        void unix_open(const char *path);
+        void unix_user_id(void);
+      </CODE_SNIPPET>
+      <p>
+        If your function crashes upon an error, you should append or_die to
+        the function name. This only applies to functions which could be
+        used by production code and to errors that are reasonably
+        likely to occur during normal operation.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Enumerator Names">
+    <SUMMARY>
+      Enumerators should be named like
+      <A HREF="#Constant_Names">constants</A>:
+      <code>kEnumName</code>.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        enum url_table_errors {
+          kOK = 0,
+          kErrorOutOfMemory,
+          kErrorMalformedInput,
+        };
+      </CODE_SNIPPET>
+      
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Macro Names">
+    <SUMMARY>
+      They're like this:
+      <code>MY_MACRO_THAT_SCARES_CPP_DEVELOPERS</code>.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        #define ROUND(x) ...
+        #define PI_ROUNDED 5.0
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+</CATEGORY>
+
+<CATEGORY title="Comments">
+  <p>
+    Though a pain to write, comments are absolutely vital to keeping our
+    code readable.  The following rules describe what you should
+    comment and where.  But remember: while comments are very
+    important, the best code is self-documenting.  Giving sensible
+    names to types and variables is much better than using obscure
+    names that you must then explain through comments.
+  </p>
+  <p>
+    When writing your comments, write for your audience: the next
+    contributor
+    who will need to understand your code.  Be generous — the next
+    one may be you!
+  </p>
+  <p>
+    Neovim uses <a href="http://en.wikipedia.org/wiki/Doxygen">Doxygen</a>
+    comments.
+  </p>
+
+  <STYLEPOINT title="Comment Style">
+    <SUMMARY>
+      Use the <code>//</code>-style syntax only.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        // This is a comment spanning
+        // multiple lines
+        f();
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="File Comments">
+    <SUMMARY>
+      Start each file with a description of its contents.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Legal Notice">
+        <p>
+          We have no such thing. These things are in COPYING and only there.
+        </p>
+      </SUBSECTION>
+
+      <SUBSECTION title="File Contents">
+        <p>
+          Every file should have a comment at the top describing its contents.
+        </p>
+        <p>
+          Generally a <code>.h</code> file will describe the variabels and
+          functions
+          that are declared in the file with an overview of what they
+          are for and how they are used. A <code>.c</code> file
+          should contain more information about implementation details
+          or discussions of tricky algorithms. If you feel the
+          implementation details or a discussion of the algorithms
+          would be useful for someone reading the <code>.h</code>,
+          feel free to put it there instead, but mention in the
+          <code>.c</code> that the documentation is in the
+          <code>.h</code> file.
+        </p>
+        <p>
+          Do not duplicate comments in both the <code>.h</code> and
+          the <code>.c</code>. Duplicated comments diverge.
+        </p>
+      </SUBSECTION>
+      <CODE_SNIPPET>
+        /// A brief description of this file.
+        ///
+        /// A longer description of this file.
+        /// Be very generous here.
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Struct Comments">
+    <SUMMARY>
+      Every struct definition should have accompanying comments that
+      describes what it is for and how it should be used.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        /// Window info stored with a buffer.
+        ///
+        /// Two types of info are kept for a buffer which are associated with a
+        /// specific window:
+        /// 1. Each window can have a different line number associated with a
+        /// buffer.
+        /// 2. The window-local options for a buffer work in a similar way.
+        /// The window-info is kept in a list at g_wininfo.  It is kept in
+        /// most-recently-used order.
+        struct win_info {
+          /// Next entry or NULL for last entry.
+          WinInfo *wi_next;
+          /// Previous entry or NULL for first entry.
+          WinInfo *wi_prev;
+          /// Pointer to window that did the wi_fpos.
+          Win *wi_win;
+          ...
+        };
+      </CODE_SNIPPET>
+      <p>
+        If the field comments are short, you can also put them next to the
+        field. But be consistent within one struct.
+      </p>
+      <CODE_SNIPPET>
+        struct wininfo_S {
+          WinInfo *wi_next;  /// Next entry or NULL for last entry.
+          WinInfo *wi_prev;  /// Previous entry or NULL for first entry.
+          Win *wi_win;       /// Pointer to window that did the wi_fpos.
+          ...
+        };
+      </CODE_SNIPPET>
+      <p>
+        If you have already described a struct in detail in the
+        comments at the top of your file feel free to simply state
+        "See comment at top of file for a complete description", but
+        be sure to have some sort of comment.
+      </p>
+      <p>
+        Document the synchronization assumptions the struct makes, if
+        any.  If an instance of the struct can be accessed by multiple
+        threads, take extra care to document the rules and invariants
+        surrounding multithreaded use.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Function Comments">
+    <SUMMARY>
+      Declaration comments describe use of the function; comments at
+      the definition of a function describe operation.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Function Declarations">
+        <p>
+          Every function declaration should have comments immediately
+          preceding it that describe what the function does and how to
+          use it.  These comments should be descriptive ("Opens the
+          file") rather than imperative ("Open the file"); the comment
+          describes the function, it does not tell the function what
+          to do.  In general, these comments do not describe how the
+          function performs its task.  Instead, that should be left to
+          comments in the function definition.
+        </p>
+        <p>
+          Types of things to mention in comments at the function
+          declaration:
+        </p>
+        <ul>
+          <li> If the function allocates memory that the caller
+               must free.
+               </li>
+          <li> Whether any of the arguments can be a null pointer.
+               </li>
+          <li> If there are any performance implications of how a
+               function is used.
+               </li>
+          <li> If the function is re-entrant.  What are its
+               synchronization assumptions?
+               </li>
+        </ul>
+        <CODE_SNIPPET>
+          /// Brief description of the function.
+          ///
+          /// Detailed description.
+          /// May span multiple paragraphs.
+          ///
+          /// @param arg1 Description of arg1
+          /// @param arg2 Description of arg2. May span
+          ///        multiple lines.
+          ///
+          /// @return Description of the return value.
+          Iterator *get_iterator(void *arg1, void *arg2);
+        </CODE_SNIPPET>
+      </SUBSECTION>
+
+      <SUBSECTION title="Function Definitions">
+        <p>
+          If there is anything tricky about how a function does its
+          job, the function definition should have an explanatory
+          comment. For example, in the definition comment you might
+          describe any coding tricks you use, give an overview of the
+          steps you go through, or explain why you chose to implement
+          the function in the way you did rather than using a viable
+          alternative.  For instance, you might mention why it must
+          acquire a lock for the first half of the function but why it
+          is not needed for the second half.
+        </p>
+        <p>
+          Note you should <em>not</em> just repeat the comments given
+          with the function declaration, in the <code>.h</code> file or
+          wherever.  It's okay to recapitulate briefly what the function
+          does, but the focus of the comments should be on how it does it.
+        </p>
+        <CODE_SNIPPET>
+          // Note that we don't use Doxygen comments here.
+          Iterator *get_iterator(void *arg1, void *arg2)
+          {
+            ...
+          }
+        </CODE_SNIPPET>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Variable Comments">
+    <SUMMARY>
+      In general the actual name of the variable should be descriptive
+      enough to give a good idea of what the variable is used for.  In
+      certain cases, more comments are required.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Global Variables">
+        <p>
+          All global variables should have a
+          comment describing what they are and what they are used for.
+          For example:
+        </p>
+        <CODE_SNIPPET>
+          /// The total number of tests cases that we run
+          /// through in this regression test.
+          const int kNumTestCases = 6;
+        </CODE_SNIPPET>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Implementation Comments">
+    <SUMMARY>
+      In your implementation you should have comments in tricky,
+      non-obvious, interesting, or important parts of your code.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="Line Comments">
+        <p>
+          Also, lines that are non-obvious should get a comment at the
+          end of the line. These end-of-line comments should be
+          separated from the code by 2 spaces.  Example:
+        </p>
+        <CODE_SNIPPET>
+          // If we have enough memory, mmap the data portion too.
+          mmap_budget = max&lt;int64&gt;(0, mmap_budget - index_-&gt;length());
+          if (mmap_budget &gt;= data_size_ &amp;&amp; !MmapData(mmap_chunk_bytes, mlock)) {
+            return;  // Error already logged.
+          }
+        </CODE_SNIPPET>
+        <p>
+          Note that there are both comments that describe what the
+          code is doing, and comments that mention that an error has
+          already been logged when the function returns.
+        </p>
+        <p>
+          If you have several comments on subsequent lines, it can
+          often be more readable to line them up:
+        </p>
+        <CODE_SNIPPET>
+          do_something();                      // Comment here so the comments line up.
+          do_something_else_that_is_longer();  // Comment here so there are two spaces between
+                                               // the code and the comment.
+          { // One space before comment when opening a new scope is allowed,
+            // thus the comment lines up with the following comments and code.
+            do_something_else();  // Two spaces before line comments normally.
+          }
+        </CODE_SNIPPET>
+      </SUBSECTION>
+      <SUBSECTION title="NULL, true/false, 1, 2, 3...">
+        <p>
+          When you pass in a null pointer, boolean, or literal integer
+          values to functions, you should consider adding a comment about
+          what they are, or make your code self-documenting by using
+          constants. For example, compare:
+        </p>
+        <BAD_CODE_SNIPPET>
+          bool success = calculate_something(interesting_value,
+                                             10,
+                                             false,
+                                             NULL);  // What are these arguments??
+        </BAD_CODE_SNIPPET>
+        <p>
+          versus:
+        </p>
+        <CODE_SNIPPET>
+          bool success = calculate_something(interesting_value,
+                                             10,     // Default base value.
+                                             false,  // Not the first time we're calling this.
+                                             NULL);  // No callback.
+        </CODE_SNIPPET>
+        <p>
+          Or alternatively, constants or self-describing variables:
+        </p>
+        <CODE_SNIPPET>
+          const int kDefaultBaseValue = 10;
+          const bool kFirstTimeCalling = false;
+          Callback *null_callback = NULL;
+          bool success = calculate_something(interesting_value,
+                                             kDefaultBaseValue,
+                                             kFirstTimeCalling,
+                                             null_callback);
+        </CODE_SNIPPET>
+      </SUBSECTION>
+
+      <SUBSECTION title="Don'ts">
+        <p>
+          Note that you should <em>never</em> describe the code
+          itself. Assume that the person reading the code knows C
+          better than you do, even though he or she does not know what
+          you are trying to do:
+        </p>
+        <BAD_CODE_SNIPPET>
+           // Now go through the b array and make sure that if i occurs,
+           // the next element is i+1.
+           ...        // Geez.  What a useless comment.
+        </BAD_CODE_SNIPPET>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Punctuation, Spelling and Grammar">
+    <SUMMARY>
+      Pay attention to punctuation, spelling, and grammar; it is
+      easier to read well-written comments than badly written ones.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Comments should be as readable as narrative text, with proper
+        capitalization and punctuation. In many cases, complete sentences are
+        more readable than sentence fragments. Shorter comments, such as
+        comments at the end of a line of code, can sometimes be less formal, but
+        you should be consistent with your style.
+      </p>
+      <p>
+        Although it can be frustrating to have a code reviewer point
+        out that you are using a comma when you should be using a
+        semicolon, it is very important that source code maintain a
+        high level of clarity and readability.  Proper punctuation,
+        spelling, and grammar help with that goal.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="TODO Comments">
+    <SUMMARY>
+      Use <code>TODO</code> comments for code that is temporary, a
+      short-term solution, or good-enough but not perfect.
+    </SUMMARY>
+    <BODY>
+      <p>
+        <code>TODO</code>s should include the string <code>TODO</code> in
+        all caps, followed by the
+        
+        name, e-mail address, or other
+        identifier
+        of the person who can best provide context about the problem
+        referenced by the <code>TODO</code>.  The main
+        purpose is to have a consistent <code>TODO</code> format that can be
+        searched to find the person who can provide more details upon request.
+        A <code>TODO</code> is not a commitment that the person referenced
+        will fix the problem.  Thus when you create a <code>TODO</code>, it is
+        almost always your
+        
+        name
+        that is given.
+      </p>
+      
+      <CODE_SNIPPET>
+        // TODO(kl@gmail.com): Use a "*" here for concatenation operator.
+        // TODO(Zeke): change this to use relations.
+      </CODE_SNIPPET>
+      <p>
+        If your <code>TODO</code> is of the form "At a future date do
+        something" make sure that you either include a very specific
+        date ("Fix by November 2005") or a very specific event
+        ("Remove this code when all clients can handle XML responses.").
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Deprecation Comments">
+    <SUMMARY>
+      Mark deprecated interface points with <code>DEPRECATED</code> comments.
+    </SUMMARY>
+    <BODY>
+      <p>
+      You can mark an interface as deprecated by writing a comment containing
+      the word <code>DEPRECATED</code> in all caps.  The comment goes either
+      before the declaration of the interface or on the same line as the
+      declaration.
+      </p>
+      
+      <p>
+      After the word <code>DEPRECATED</code>, write your name, e-mail address,
+      or other identifier in parentheses.
+      </p>
+      <p>
+      A deprecation comment must include simple, clear directions for people to
+      fix their callsites.  In C, you can implement a deprecated function as
+      an inline function that calls the new interface point.
+      </p>
+      <p>
+      Marking an interface point <code>DEPRECATED</code> will not magically
+      cause any callsites to change.  If you want people to actually stop using
+      the deprecated facility, you will have to fix the callsites yourself or
+      recruit a crew to help you.
+      </p>
+      <p>
+      New code should not contain calls to deprecated interface points.  Use
+      the new interface point instead.  If you cannot understand the
+      directions, find the person who created the deprecation and ask them for
+      help using the new interface point.
+      </p>
+      
+    </BODY>
+  </STYLEPOINT>
+
+</CATEGORY>
+
+<CATEGORY title="Formatting">
+  <p>
+    Coding style and formatting are pretty arbitrary, but a
+    
+    project
+    is much easier to follow if everyone uses the same style. Individuals
+    may not agree with every aspect of the formatting rules, and some of
+    the rules may take some getting used to, but it is important that all
+    
+    project contributors
+    follow the style rules so that
+    
+    they
+    can all read and understand everyone's code easily.
+  </p>
+
+  <STYLEPOINT title="Line Length">
+    <SUMMARY>
+      Each line of text in your code should be at most 80 characters
+      long.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Exception: if a comment line contains an example command or
+        a literal URL longer than 80 characters, that line may be
+        longer than 80 characters for ease of cut and paste.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Non-ASCII Characters">
+    <SUMMARY>
+      Non-ASCII characters should be rare, and must use UTF-8 formatting.
+    </SUMMARY>
+    <BODY>
+      <p>
+        You shouldn't hard-code user-facing text in source
+        (OR SHOULD YOU?), even English,
+        so use of non-ASCII characters should be rare.  However, in certain
+        cases it is appropriate to include such words in your code.  For
+        example, if your code parses data files from foreign sources,
+        it may be appropriate to hard-code the non-ASCII string(s) used in
+        those data files as delimiters.  More commonly, unittest code
+        (which does not
+        
+        need to be localized) might contain non-ASCII strings.  In such
+        cases, you should use UTF-8, since that is
+        
+        an encoding understood by most tools able
+        to handle more than just ASCII.
+      </p>
+      <p>
+        Hex encoding is also OK, and encouraged where it enhances
+        readability — for example, <code>"\uFEFF"</code>, is the
+        Unicode zero-width no-break space character, which would be
+        invisible if included in the source as straight UTF-8.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Spaces vs. Tabs">
+    <SUMMARY>
+      Use only spaces, and indent 2 spaces at a time.
+      Do not use tabs in your code.
+    </SUMMARY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Function Declarations and Definitions">
+    <SUMMARY>
+      Return type on the same line as function name, parameters on the
+      same line if they fit.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Functions look like this:
+      </p>
+      <CODE_SNIPPET>
+        ReturnType function_name(Type par_name1, Type par_name2)
+        {
+          do_something();
+          ...
+        }
+      </CODE_SNIPPET>
+      <p>
+        If you have too much text to fit on one line:
+      </p>
+      <CODE_SNIPPET>
+        ReturnType really_long_function_name(Type par_name1, Type par_name2,
+                                             Type par_name3)
+        {
+          do_something();
+          ...
+        }
+      </CODE_SNIPPET>
+      <p>
+        or if you cannot fit even the first parameter (but only then):
+      </p>
+      <CODE_SNIPPET>
+        ReturnType really_really_really_long_function_name(
+            Type par_name1,  // 4 space indent
+            Type par_name2,
+            Type par_name3)
+        {
+          do_something();  // 2 space indent
+          ...
+        }
+      </CODE_SNIPPET>
+      <p>
+        Some points to note:
+      </p>
+      <ul>
+        <li> The open parenthesis is always on the same line as the
+             function name.
+             </li>
+        <li> There is never a space between the function name and the
+             open parenthesis.
+             </li>
+        <li> There is never a space between the parentheses and the
+             parameters.
+             </li>
+        <li> The open curly brace is always on the next line.
+             </li>
+        <li> The close curly brace is always on the last line by itself.
+             </li>
+        <li> There should be a space between the close parenthesis and
+             the open curly brace.
+             </li>
+        <li> All parameters should be named, with identical names in the
+             declaration and implementation.
+             </li>
+        <li> All parameters should be aligned if possible.
+             </li>
+        <li> Default indentation is 2 spaces.
+             </li>
+        <li> Wrapped parameters have a 4 space indent.
+             </li>
+      </ul>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Function Calls">
+    <SUMMARY>
+      On one line if it fits; otherwise, wrap arguments at the
+      parenthesis.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Function calls have the following format:
+      </p>
+      <CODE_SNIPPET>
+        bool retval = do_something(argument1, argument2, argument3);
+      </CODE_SNIPPET>
+      <p>
+        If the arguments do not all fit on one line, they should be
+        broken up onto multiple lines, with each subsequent line
+        aligned with the first argument.  Do not add spaces after the
+        open paren or before the close paren:
+      </p>
+      <CODE_SNIPPET>
+        bool retval = do_something(averyveryveryverylongargument1,
+                                   argument2, argument3);
+      </CODE_SNIPPET>
+      <p>
+        If the function has many arguments, consider having one per
+        line if this makes the code more readable:
+      </p>
+      <CODE_SNIPPET>
+        bool retval = do_something(argument1,
+                                   argument2,
+                                   argument3,
+                                   argument4);
+      </CODE_SNIPPET>
+      <p>
+        Arguments may optionally all be placed on subsequent lines, with one
+        line per argument:
+      </p>
+      <CODE_SNIPPET>
+        if (...) {
+          ...
+          ...
+          if (...) {
+            do_something(
+                argument1,  // 4 space indent
+                argument2,
+                argument3,
+                argument4);
+          }
+      </CODE_SNIPPET>
+      <p>
+        In particular, this should be done if the function signature is so long
+        that it cannot fit within the maximum <a href="#Line_Length">line
+        length</a>.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Braced Initializer Lists">
+    <SUMMARY>
+      Format a braced list exactly like you would format a function call in its
+      place but with one space after the <code>{</code> and one space before the
+      <code>}</code>
+    </SUMMARY>
+    <BODY>
+      <p>
+        If the braced list follows a name (e.g. a type or variable name),
+        format as if the <code>{}</code> were the parentheses of a function call
+        with that name. If there is no name, assume a zero-length name.
+      </p>
+      <CODE_SNIPPET>
+        struct my_struct m = {  // Here, you could also break before {.
+            superlongvariablename1,
+            superlongvariablename2,
+            { short, interior, list },
+            { interiorwrappinglist,
+              interiorwrappinglist2 } };
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Conditionals">
+    <SUMMARY>
+      Don't use spaces inside parentheses. Always use curly braces.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        if (condition) {  // no spaces inside parentheses
+          ...  // 2 space indent.
+        } else if (...) {  // The else goes on the same line as the closing brace.
+          ...
+        } else {
+          ...
+        }
+      </CODE_SNIPPET>
+      <p>
+        You must have a space between the
+        <code>if</code> and the open parenthesis.  You must also have
+        a space between the close parenthesis and the curly brace, if
+        you're using one.
+      </p>
+      <BAD_CODE_SNIPPET>
+        if(condition) {   // Bad - space missing after IF.
+        if (condition){   // Bad - space missing before {.
+        if(condition){    // Doubly bad.
+      </BAD_CODE_SNIPPET>
+      <CODE_SNIPPET>
+        if (condition) {  // Good - proper space after IF and before {.
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Loops and Switch Statements">
+    <SUMMARY>
+      Annotate non-trivial
+      fall-through between cases. Empty loop bodies should use <code>{}</code>
+      or <code>continue</code>.
+    </SUMMARY>
+    <BODY>
+      <p>
+        If not conditional on an enumerated value, switch statements
+        should always have a <code>default</code> case (in the case of
+        an enumerated value, the compiler will warn you if any values
+        are not handled).  If the default case should never execute,
+        simply
+        <code>assert</code>:
+      </p>
+      
+      <CODE_SNIPPET>
+        switch (var) {
+          case 0:    // 2 space indent
+            ...      // 4 space indent
+            break;
+          case 1:
+            ...
+            break;
+          default:
+            assert(false);
+        }
+      </CODE_SNIPPET>
+      
+      
+      <p>
+        Empty loop bodies should use <code>{}</code> or
+        <code>continue</code>, but not a single semicolon.
+      </p>
+      <CODE_SNIPPET>
+        while (condition) {
+          // Repeat test until it returns false.
+        }
+        for (int i = 0; i &lt; kSomeNumber; i++) {}  // Good - empty body.
+        while (condition) continue;  // Good - continue indicates no logic.
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        while (condition);  // Bad - looks like part of do/while loop.
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Pointer Expressions">
+    <SUMMARY>
+      No spaces around period or arrow.  Pointer operators do not have
+      trailing spaces.
+    </SUMMARY>
+    <BODY>
+      <p>
+        The following are examples of correctly-formatted pointer and
+        reference expressions:
+      </p>
+      <CODE_SNIPPET>
+        x = *p;
+        p = &amp;x;
+        x = r.y;
+        x = r-&gt;y;
+      </CODE_SNIPPET>
+      <p>
+        Note that:
+      </p>
+      <ul>
+        <li> There are no spaces around the period or arrow when
+             accessing a member.
+             </li>
+        <li> Pointer operators have no space after the <code>*</code> or
+             <code>&amp;</code>.
+             </li>
+      </ul>
+      <p>
+        When declaring a pointer variable or argument, place
+        the asterisk adjacent to the variable
+        name:
+      </p>
+      <CODE_SNIPPET>
+        char *c;
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        char * c;  // Bad - spaces on both sides of *
+        char* c;   // Bad
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Boolean Expressions">
+    <SUMMARY>
+      When you have a boolean expression that is longer than the
+      <a href="#Line_Length">standard line length</a>,
+      keep operators at the start of the line.
+    </SUMMARY>
+    <BODY>
+      <CODE_SNIPPET>
+        if (this_one_thing &gt; this_other_thing
+            &amp;&amp; a_third_thing == a_fourth_thing
+            &amp;&amp; yet_another &amp;&amp; last_one) {
+          ...
+        }
+      </CODE_SNIPPET>
+      <p>
+        Also note that you should always use the
+        punctuation operators, such as <code>&amp;&amp;</code> and
+        <code>~</code>, rather than the word operators, such as <code>and</code>
+        and <code>compl</code>.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Return Values">
+    <SUMMARY>
+      Do not needlessly surround the <code>return</code> expression with
+      parentheses.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Use parentheses in <code>return expr;</code> only where you would use
+        them in <code>x = expr;</code>.
+      </p>
+      <CODE_SNIPPET>
+        return result;
+        return (some_long_condition &amp;&amp; another_condition);
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        return (value);  // You wouldn't write var = (value);
+        return(result);  // return is not a function!
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Preprocessor Directives">
+    <SUMMARY>
+      The hash mark that starts a preprocessor directive should
+      always be at the beginning of the line.
+    </SUMMARY>
+    <BODY>
+      <p>
+        Even when preprocessor directives are within the body of
+        indented code, the directives should start at the beginning of
+        the line.
+      </p>
+      <p>
+        Nested directives should add one spaces after the hash mark for each
+        level of indentation.
+      </p>
+      <CODE_SNIPPET>
+        // Good - directives at beginning of line
+          if (lopsided_score) {
+        #if DISASTER_PENDING      // Correct -- Starts at beginning of line
+            drop_everything();
+        # if NOTIFY               // One space after #
+            notify_client();
+        # endif
+        #endif
+            BackToNormal();
+          }
+      </CODE_SNIPPET>
+      <BAD_CODE_SNIPPET>
+        // Bad - indented directives
+          if (lopsided_score) {
+            #if DISASTER_PENDING  // Wrong!  The "#if" should be at beginning of line
+            drop_everything();
+            #endif                // Wrong!  Do not indent "#endif"
+            back_to_normal();
+          }
+      </BAD_CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+
+  <STYLEPOINT title="Horizontal Whitespace">
+    <SUMMARY>
+      Use of horizontal whitespace depends on location.  Never put trailing
+      whitespace at the end of a line.
+    </SUMMARY>
+    <BODY>
+      <SUBSECTION title="General">
+        <CODE_SNIPPET>
+        if (x) {          // Open braces should always have a space before them.
+          ...
+        }
+        int i = 0;        // Semicolons usually have no space before them.
+        int x[] = { 0 };  // Spaces inside braces for braced-init-list.
+        </CODE_SNIPPET>
+      </SUBSECTION>
+      <SUBSECTION title="Variables">
+        <BAD_CODE_SNIPPET>
+          int long_variable = 0;  // Don't align assignments.
+          int i             = 1;
+        </BAD_CODE_SNIPPET>
+        <CODE_SNIPPET>
+          struct my_struct {  // Exception: struct arrays.
+            const char *boy;
+            const char *girl;
+            int pos;
+          } my_variable[] = {
+            { "Mia",       "Michael", 8  },
+            { "Elizabeth", "Aiden",   10 },
+            { "Emma",      "Mason",   2  },
+          };
+        </CODE_SNIPPET>
+      </SUBSECTION>
+      <SUBSECTION title="Macros">
+        <BAD_CODE_SNIPPET>
+          #define FI(x) \  // Don't align \'s in macro definitions.
+            foo();      \
+            bar();      \
+            ...
+        </BAD_CODE_SNIPPET>
+      </SUBSECTION>
+      <SUBSECTION title="Loops and Conditionals">
+        <CODE_SNIPPET>
+        if (b) {              // Space after the keyword in condition.
+        } else {              // Spaces around else.
+        }
+        while (test) {}       // There is usually no space inside parentheses.
+        for (; i &lt; 5; i++) {  // For loops always have a space after the
+          ...                 // semicolon and no a space before the
+          ...                 // semicolon.
+        }
+        switch (i) {
+          case 1:             // No space before colon in a switch case.
+            ...
+          case 2: break;      // Space after a colon if there's code after it.
+        </CODE_SNIPPET>
+      </SUBSECTION>
+      <SUBSECTION title="Operators">
+        <CODE_SNIPPET>
+        x = 0;            // Assignment operators always have spaces around
+                          // them.
+        x = -5;           // No spaces separating unary operators and their
+        x++;              // arguments.
+        if (x &amp;&amp; !y)
+          ...
+        v = w*x + y/z;    // Use spaces to indicate operator precedence.
+        v = w * (x + z);  // Parentheses should have no spaces inside them.
+        i = (int)d;       // No spaces after a cast operator.
+        </CODE_SNIPPET>
+      </SUBSECTION>
+    </BODY>
+  </STYLEPOINT>
+
+
+  <STYLEPOINT title="Vertical Whitespace">
+    <SUMMARY>
+      Minimize use of vertical whitespace.
+    </SUMMARY>
+    <BODY>
+      <p>
+        This is more a principle than a rule: don't use blank lines
+        when you don't have to.  In particular, don't put more than
+        one or two blank lines between functions, resist starting
+        functions with a blank line, don't end functions with a blank
+        line, and be discriminating with your use of blank lines
+        inside functions.
+      </p>
+      <p>
+        The basic principle is: The more code that fits on one screen,
+        the easier it is to follow and understand the control flow of
+        the program.  Of course, readability can suffer from code
+        being too dense as well as too spread out, so use your
+        judgement.  But in general, minimize use of vertical
+        whitespace.
+      </p>
+    </BODY>
+  </STYLEPOINT>
+</CATEGORY>
+
+<PARTING_WORDS>
+  The style guide is supposed to make the code more readable. If you think you have
+  to violate its rules for the sake of clarity, do it! But please add a note to
+  your pull request explaining your reasoning.
+</PARTING_WORDS>
+
+<HR/>
+
+<p align="right">
+Revision 4
+</p>
+
+</GUIDE>
