@@ -8,7 +8,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    blankslate (2.1.2.4)
+    blankslate (2.1.3)
     classifier (1.3.4)
       fast-stemmer (>= 1.0.0)
     colorator (0.1)
