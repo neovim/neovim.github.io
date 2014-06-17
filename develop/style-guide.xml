@@ -1,6 +1,7 @@
 ---
 layout: nil
-redirect_from: /development-wiki/style-guide/style-guide.xml
+redirect_from:
+  - /development-wiki/style-guide/
 ---
 
 <?xml version="1.0"?>
