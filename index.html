@@ -1,7 +1,11 @@
 ---
 layout: default
 title: Home
+redirect_from:
+  - /development-wiki/
 ---
+
+{% include nav.html active='Home' %}
 
 <section class="masthead">
   <div class="container">
@@ -33,7 +37,7 @@ title: Home
       <div class="sponsors">
         <h3>Project sponsors</h3>
 
-         <div class="first-level-sponsor">
+        <div class="first-level-sponsor">
           <a href="http://digitalocean.com"><img src="images/sponsors/digital-ocean@2x.png" width="311"></a>
         </div>
 
@@ -60,7 +64,7 @@ title: Home
 
 <section class="front-section shaded">
   <div class="container">
-    <h2>Getting involved</h2>
+    <h2 id="getting-invovled">Getting involved</h2>
 
     <div class="col-wide">
       <p>The development is happening in the <a href="https://github.com/neovim/neovim">GitHub repository</a>. We're discussing the project in IRC (the <strong>#neovim</strong> channel on <strong>irc.freenode.net</strong>) and in the <a href="https://groups.google.com/forum/#!forum/neovim">Neovim Google Group</a>, so join us there if you'd like to get involved in the development process.</p>
@@ -74,33 +78,41 @@ title: Home
 <section class="front-section">
   <div class="container">
     <div class="col-wide">
-      <h2>FAQs</h2>
+      <h2 id="faqs">FAQs</h2>
 
-       <dl class="faqs">
-         <dt>Is it ready to download and run now with all the features?</dt>
-         <dd>No. Although some features are a work in progress, Neovim isn't at a stable point. Using Neovim should be done with caution as things may change.</dd>
+      <dl class="faqs">
+        <dt>Is it ready to download and run now with all the features?</dt>
+        <dd>No. Although some features are a work in progress, Neovim isn't at a stable point. Using Neovim should be done with caution as things may change.</dd>
 
-         <dt>When will a beta be available?</dt>
-         <dd>When it's ready.</dd>
+        <dt>When will a beta be available?</dt>
+        <dd>When it's ready.</dd>
 
-         <dt>What ways will we be able to install Neovim?</dt>
-         <dd>Neovim hopes to be available through common package managers such as Homebrew for OS X, apt-get, pacman, and yum.</dd>
+        <dt>What ways will we be able to install Neovim?</dt>
+        <dd>Neovim hopes to be available through common package managers such as Homebrew for OS X, apt-get, pacman, and yum.</dd>
 
-         <dt>Will Neovim improve upon the default configuration that was found in Vim?</dt>
-         <dd>This is being <a href="https://github.com/neovim/neovim/issues/276">discussed</a>, but the community seems to be in favor of it.</dd>
+        <dt>Will Neovim improve upon the default configuration that was found in Vim?</dt>
+        <dd>This is being <a href="https://github.com/neovim/neovim/issues/276">discussed</a>, but the community seems to be in favor of it.</dd>
 
-         <dt>Can I donate to Neovim's development?</dt>
-         <dd>By using Bountysource, you can either place a bounty on an issue or donate to the entire team by going to <a href="https://www.bountysource.com/teams/neovim">Neovim's Bountysource Team</a> page.</dd>
-       </dl>
+        <dt>Can I donate to Neovim's development?</dt>
+        <dd>Yes you can, take a look at the <a href="#donate">Donate section</a> to learn more.</dd>
+      </dl>
     </div>
 
     <div class="col-narrow">
       <h2>Stay informed</h2>
 
-      <p>Follow us on Twitter to stay up-to-date on the latest project news.</p>
+      <p>Subscribe to the <a href="/news">monthly newsletter</a> or follow us
+      on Twitter to stay up-to-date on the latest project news.</p>
 
-      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Neovim</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <h2>Community polls</h2>
+
+      <p>
+      Have a say in the development of Neovim by voting in the
+      <a href="/polls/">Community Polls</a>.
+      </p>
 
       <h2>Logos</h2>
 
@@ -109,6 +121,48 @@ title: Home
       <p><a href="logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
 
       <p class="light small">The Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="front-section shaded">
+  <div class="container">
+    <h2 id="donate">Donate</h2>
+
+    <div class="col-half">
+      <p>
+      All the donations received will go towards the development of
+      Neovim. Any amount donated is very much appreciated by the
+      community.
+      </p>
+      <p>
+      From time to time, the team will create a bounty for a certain
+      feature or bug with the money donated. If you successfully
+      implement the feature or fix the bug, you'll be rewarded for
+      your efforts.
+      </p>
+    </div>
+    <div class="col-half second">
+      <h3>Bitcoin</h3>
+      <div class="donate">
+        <div class="icon">
+          <img src="/images/icons/bitcoin.png" alt="Bitcoin logo"/>
+        </div>
+        <input class="donate" type="text" value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ" readonly="readonly">
+      </div>
+
+      <p>
+      View the address info on
+      <a href="https://blockchain.info/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ">Blockchain.info</a>.
+      </p>
+
+      <h3>Bountysource</h3>
+      <p>
+      Donate to the
+      <a href="https://www.bountysource.com/teams/neovim">Neovim Team</a>
+      using Bountysource. Bountysource supports Paypal &amp; Google
+      Wallet.
+      </p>
     </div>
   </div>
 </section>

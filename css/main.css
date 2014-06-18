@@ -109,6 +109,16 @@ blockquote {
     margin-left: 20px;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
+    position: relative;
+  }
+  .col-half {
+    display: table-cell;
+    width: 50%;
+    min-width: 50%;
+    vertical-align: top;
+  }
+  .col-half.second {
+    padding-left: 6%;
   }
 }
 
@@ -347,4 +357,59 @@ footer a {
 
 .newsletter h1 {
   margin-bottom: 0px;
+}
+
+/*
+ * Donation
+ */
+
+.donate {
+  display: table;
+  width: 100%;
+  font-size: 17px;
+}
+
+.donate > .icon {
+  width: .01%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1em;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgba(0,0,0,.15);
+  background-color: #FAFAFA;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.05)));
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.05));
+  background-image: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.05));
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.05));
+}
+
+.donate > .icon img {
+  display: inline;
+  vertical-align: top;
+}
+
+.donate > input {
+  font-family: monospace, monospace;
+  padding: .65em 1em;
+  border: 1px solid rgba(0,0,0,.15);
+  -webkit-transition: background-color .3s ease-out,-webkit-box-shadow .2s ease,border-color .2s ease;
+  -moz-transition: background-color .3s ease-out,box-shadow .2s ease,border-color .2s ease;
+  transition: background-color .3s ease-out,box-shadow .2s ease,border-color .2s ease;
+  color: #d72929;
+  background-color: #efefef;
+  white-space: nowrap;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+/*
+ * Poll info
+ */
+iframe.poll {
+  width: 100%;
+  overflow-y: hidden;
 }

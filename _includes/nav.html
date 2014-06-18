@@ -1,0 +1,18 @@
+<header class="navbar">
+    <div class="container">
+        <nav class="site-nav">
+            <ul>
+        {% for nav in site.data.nav %}
+            {% if include.active == nav.title %}
+                <li class="current">
+            {% else %}
+                <li>
+            {% endif %}
+                    <a href="{{ nav.url }}">{{ nav.title }}</a>
+                </li>
+        {% endfor %}
+            </ul>
+        </nav>
+        <a href="/"><img src="/images/logo@2x.png" class="logo" alt="Neovim"></a>
+    </div>
+</header>
