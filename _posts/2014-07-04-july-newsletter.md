@@ -11,7 +11,16 @@ permalink: /news/2014/july/
 
 ## Recent Development
 
-News here.
+### Clarification of Neovim's License
+
+[Concern arose][neovim-license-concern] over Neovim using [Vim's
+license][vim-license]. While the Vim license still applies to the original Vim
+code, newly written code wasn't explicitly being addressed and could be
+relicensed.
+
+The community settled on using [Apache 2.0][apache-license]. The license info
+was then [updated][license-update] and all contributors have been asked to sign
+a [CLA][cla].
 
 ## Shape of Things to Come
 
@@ -49,3 +58,8 @@ Until next time. `:wq`
 [contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [wiki]: https://github.com/neovim/neovim/wiki
 [github]: https://github.com/neovim/neovim/
+[vim-license]: http://vimdoc.sourceforge.net/htmldoc/uganda.html#license
+[neovim-license-concern]: https://github.com/neovim/neovim/issues/878
+[apache-license]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
+[license-update]: https://github.com/neovim/neovim/pull/883
+[cla]: http://en.wikipedia.org/wiki/Contributor_License_Agreement
