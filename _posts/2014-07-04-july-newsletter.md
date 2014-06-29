@@ -22,6 +22,12 @@ The community settled on using [Apache 2.0][apache-license]. The license info
 was then [updated][license-update] and all contributors have been asked to sign
 a [CLA][cla].
 
+#### Note
+
+This means that if you've contributed code *before* the switch to Apache 2.0,
+your code is still under the old Vim license. It won't become part of Apache 2.0
+*unless* you sign the CLA.
+
 ## Shape of Things to Come
 
 News here.
