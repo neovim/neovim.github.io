@@ -20,7 +20,8 @@ relicensed.
 
 The community settled on using [Apache 2.0][apache-license]. The license info
 was then [updated][license-update] and all contributors have been asked to sign
-a [CLA][cla].
+a [CLA][cla] by filling out [this document][cla-doc] and adding your name to
+[this Wiki page][cla-wiki].
 
 #### Note
 
@@ -69,3 +70,5 @@ Until next time. `:wq`
 [apache-license]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
 [license-update]: https://github.com/neovim/neovim/pull/883
 [cla]: http://en.wikipedia.org/wiki/Contributor_License_Agreement
+[cla-wiki]: https://github.com/neovim/neovim/wiki/CLA-confirmation-page
+[cla-doc]: https://docs.google.com/forms/d/1u54bpbwzneDIRltFx1TGi2evKxY3w0cOV3vlpj8DPbg/viewform
