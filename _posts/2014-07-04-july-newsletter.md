@@ -23,6 +23,15 @@ was then [updated][license-update] and all contributors have been asked to sign
 a [CLA][cla] by filling out [this document][cla-doc] and adding your name to
 [this Wiki page][cla-wiki].
 
+### Compiling under Windows
+
+The ability to build Neovim on Windows has been popular and a [target for
+months][windows-months]. The entire discussion can be viewed in [this
+issue][windows-master].
+
+[Recent progress][windows-equalsraf] has been made by @equalsraf in his attempt
+to build Neovim under [MinGW][mingw].
+
 #### Note
 
 > This means that if you've contributed code *before* the switch to Apache 2.0,
@@ -72,3 +81,7 @@ Until next time. `:wq`
 [cla]: http://en.wikipedia.org/wiki/Contributor_License_Agreement
 [cla-wiki]: https://github.com/neovim/neovim/wiki/CLA-confirmation-page
 [cla-doc]: https://docs.google.com/forms/d/1u54bpbwzneDIRltFx1TGi2evKxY3w0cOV3vlpj8DPbg/viewform
+[mingw]: http://www.mingw.org/
+[windows-months]: https://github.com/neovim/neovim/issues/328
+[windows-master]: https://github.com/neovim/neovim/issues/696
+[windows-equalsraf]: https://github.com/neovim/neovim/pull/810
