@@ -24,9 +24,9 @@ a [CLA][cla].
 
 #### Note
 
-This means that if you've contributed code *before* the switch to Apache 2.0,
-your code is still under the old Vim license. It won't become part of Apache 2.0
-*unless* you sign the CLA.
+> This means that if you've contributed code *before* the switch to Apache 2.0,
+> your code is still under the old Vim license. It won't become part of Apache 2.0
+> *unless* you sign the CLA.
 
 ## Shape of Things to Come
 
@@ -53,7 +53,7 @@ free to reach out through the [Neovim Twitter][twitter].
 
 Also be sure to subscribe to the [RSS feed][rss] to stay up-to-date on what is
 happening in the Neovim world. The next newsletter will be released the first
-Friday of July.
+Friday of August.
 
 Until next time. `:wq`
 
