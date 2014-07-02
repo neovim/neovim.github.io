@@ -73,6 +73,14 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 - https://github.com/neovim/neovim.github.io/issues/48
 - https://github.com/marvim
 
+### Follow Up #619 PR with #775 Section
+
+- https://github.com/neovim/neovim/pull/775
+
+### Possibly legacy Mac OS Section?
+
+- https://github.com/neovim/neovim/pull/808
+
 
 #### Note
 
