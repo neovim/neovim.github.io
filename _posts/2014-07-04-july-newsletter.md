@@ -5,9 +5,11 @@ category: newsletter
 permalink: /news/2014/july/
 ---
 
-### General News
+Welcome to the second monthly newsletter for Neovim.
 
-- News here.
+Development has has been steadily progressing. There haven't been any general
+news points, so let's jump straight into the development updates to see what has
+been happening in the last month.
 
 ## Recent Development
 
@@ -31,6 +33,10 @@ issue][windows-master].
 
 [Recent progress][windows-equalsraf] has been made by @equalsraf in his attempt
 to build Neovim under [MinGW][mingw].
+
+For help building on other platforms, be sure to check out the newly minted
+[Building Neovim page][building] on the Wiki for all things related to
+compiling.
 
 #### Note
 
@@ -85,3 +91,4 @@ Until next time. `:wq`
 [windows-months]: https://github.com/neovim/neovim/issues/328
 [windows-master]: https://github.com/neovim/neovim/issues/696
 [windows-equalsraf]: https://github.com/neovim/neovim/pull/810
+[building]: https://github.com/neovim/neovim/wiki/Building-Neovim
