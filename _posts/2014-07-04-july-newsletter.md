@@ -25,6 +25,12 @@ was then [updated][license-update] and all contributors have been asked to sign
 a [CLA][cla] by filling out [this document][cla-doc] and adding your name to
 [this Wiki page][cla-wiki].
 
+#### Note
+
+> This means that if you've contributed code *before* the switch to Apache 2.0,
+> your code is still under the old Vim license. It won't become part of Apache 2.0
+> *unless* you sign the CLA.
+
 ### Compiling under Windows
 
 The ability to build Neovim on Windows has been popular and a [target for
@@ -80,13 +86,6 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 ### Possibly legacy Mac OS Section?
 
 - https://github.com/neovim/neovim/pull/808
-
-
-#### Note
-
-> This means that if you've contributed code *before* the switch to Apache 2.0,
-> your code is still under the old Vim license. It won't become part of Apache 2.0
-> *unless* you sign the CLA.
 
 ## Shape of Things to Come
 
