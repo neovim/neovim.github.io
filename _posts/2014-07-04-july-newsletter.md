@@ -1,6 +1,6 @@
 ---
 layout: newsletter
-title: "Issue #2 - TODO"
+title: "Issue #2 - Perchance to Dream"
 category: newsletter
 permalink: /news/2014/july/
 ---
