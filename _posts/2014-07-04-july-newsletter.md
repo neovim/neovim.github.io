@@ -67,6 +67,12 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 - https://github.com/neovim/neovim/pull/853
 - https://github.com/neovim/neovim/pull/872
 
+### Doxygen Theme + Bot Auto Generation Section Here
+
+- https://github.com/neovim/neovim/pull/824
+- https://github.com/neovim/neovim.github.io/issues/48
+- https://github.com/marvim
+
 
 #### Note
 
