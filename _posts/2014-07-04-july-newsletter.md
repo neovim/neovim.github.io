@@ -89,7 +89,9 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 
 ## Shape of Things to Come
 
-News here.
+### Documentation on Neovim.org Section Here
+
+- https://github.com/neovim/neovim.github.io/issues/55
 
 ### Donating
 
