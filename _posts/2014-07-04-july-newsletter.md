@@ -54,6 +54,20 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 > slowly improving it). It's a miracle how much can be accomplished with so
 > little abstraction (and a lot of low level code).
 
+### Garray Section Here
+
+- https://github.com/neovim/neovim/pull/830
+
+### Implement VimL libcall Section Here
+
+- https://github.com/neovim/neovim/pull/802
+
+### Thiago's Progress Section Here
+
+- https://github.com/neovim/neovim/pull/853
+- https://github.com/neovim/neovim/pull/872
+
+
 #### Note
 
 > This means that if you've contributed code *before* the switch to Apache 2.0,
