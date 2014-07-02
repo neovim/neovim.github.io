@@ -38,6 +38,22 @@ For help building on other platforms, be sure to check out the newly minted
 [Building Neovim page][building] on the Wiki for all things related to
 compiling.
 
+### String Handling
+
+[Effort was made][string-strncpy] to replace `vim_strncpy` with `strlcpy` and
+it was merged in successfully. However there was a bit of
+[fallout][string-fallout] from the changes.
+
+In response, @aktau created a [master issue][string-master] to collaborate on
+the process and discuss the best way forward.
+
+To quote @philix, he summed it up best in [his comment][string-comment]:
+
+> String handling is really important in a text editor and the current codebase
+> doesn't have good abstractions for string handling (even though we've been
+> slowly improving it). It's a miracle how much can be accomplished with so
+> little abstraction (and a lot of low level code).
+
 #### Note
 
 > This means that if you've contributed code *before* the switch to Apache 2.0,
@@ -92,3 +108,8 @@ Until next time. `:wq`
 [windows-master]: https://github.com/neovim/neovim/issues/696
 [windows-equalsraf]: https://github.com/neovim/neovim/pull/810
 [building]: https://github.com/neovim/neovim/wiki/Building-Neovim
+[string-master]: https://github.com/neovim/neovim/issues/859
+[string-strncpy]: https://github.com/neovim/neovim/pull/743
+[string-fallout]: https://github.com/neovim/neovim/issues/858
+[sds-strings]: https://github.com/antirez/sds
+[string-comment]: https://github.com/neovim/neovim/issues/859#issuecomment-46429356
