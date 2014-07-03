@@ -88,6 +88,11 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 
 - https://github.com/neovim/neovim/pull/808
 
+### Translations Section Here
+
+- https://github.com/neovim/neovim/pull/780
+- https://github.com/neovim/neovim/pull/892
+
 ## Shape of Things to Come
 
 ### Documentation on Neovim.org Section Here
