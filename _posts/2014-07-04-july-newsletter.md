@@ -67,6 +67,7 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 ### Implement VimL libcall Section Here
 
 - https://github.com/neovim/neovim/pull/802
+- https://github.com/neovim/neovim/issues/795
 
 ### Thiago's Progress Section Here
 
