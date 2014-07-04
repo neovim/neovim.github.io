@@ -60,9 +60,15 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 > slowly improving it). It's a miracle how much can be accomplished with so
 > little abstraction (and a lot of low level code).
 
-### Garray Section Here
+### Growable Array Additions
 
-- https://github.com/neovim/neovim/pull/830
+[Garray.c][garray-code] is a data structure from Vim that provides a
+"**g**rowable **array**" to the editor. It has been the target of many [pull
+requests][garray-issues] in the past.
+
+The [latest addition][garray-append-init] by @philix gives an easier way to
+append to the array. While `garray` is still being improved, eventually it will
+be phased out by a more robust solution.
 
 ### Implement VimL libcall Section Here
 
@@ -83,10 +89,6 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 ### Follow Up #619 PR with #775 Section
 
 - https://github.com/neovim/neovim/pull/775
-
-### Possibly legacy Mac OS Section?
-
-- https://github.com/neovim/neovim/pull/808
 
 ### Translations
 
@@ -168,3 +170,6 @@ Until next time. `:wq`
 [windows-master]: https://github.com/neovim/neovim/issues/696
 [windows-mingw]: http://www.mingw.org/
 [windows-months]: https://github.com/neovim/neovim/issues/328
+[garray-code]: https://github.com/neovim/neovim/blob/master/src/nvim/garray.c
+[garray-issues]: https://github.com/neovim/neovim/search?q=garray&ref=cmdform&type=Issues
+[garray-append-init]: https://github.com/neovim/neovim/pull/830
