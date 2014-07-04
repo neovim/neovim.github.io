@@ -88,10 +88,15 @@ To quote @philix, he summed it up best in [his comment][string-comment]:
 
 - https://github.com/neovim/neovim/pull/808
 
-### Translations Section Here
+### Translations
 
-- https://github.com/neovim/neovim/pull/780
-- https://github.com/neovim/neovim/pull/892
+Contributors to Neovim live in countries all over the world. Many native
+speakers have been busy updating the translations in their native languages.
+
+Translations that already have been updated include
+[German][translation-german] and [Brazilian Portuguese][translation-pt-br]. With
+others like [Spanish][translation-spanish] and [Swedish][translation-swedish] in
+the works.
 
 ## Shape of Things to Come
 
@@ -160,3 +165,7 @@ Until next time. `:wq`
 [merge-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [merge-user]: https://github.com/neovim/neovim.github.io/issues/55
 [marvin-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
+[translation-german]: https://github.com/neovim/neovim/pull/780
+[translation-pt-br]: https://github.com/neovim/neovim/pull/892
+[translation-swedish]: https://github.com/neovim/neovim/pull/913
+[translation-spanish]: https://github.com/neovim/neovim/pull/913
