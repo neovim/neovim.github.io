@@ -5,13 +5,29 @@ category: newsletter
 permalink: /news/2014/july/
 ---
 
-Welcome to the second monthly newsletter for Neovim.
+Welcome to the second monthly newsletter for Neovim, the project that dreams to
+be the next text editor that we'll all love.
 
-Development has has been steadily progressing. There haven't been any general
-news points, so let's jump straight into the development updates to see what has
-been happening in the last month.
+## General News
 
-## Recent Development
+### Colorscheme Contest
+
+In the discussion about [default Neovim settings][color-defaults], the idea of
+having a default colorscheme was brought up. A [later issue][color-discussion]
+was started to determine what colorscheme would be used.
+
+It was decided that a new colorscheme would be great for Neovim. To do this, the
+Neovim collaborators will create a contest that will allow submissions of
+colorschemes. After some time, the submissions will close and then a new Poll
+will be started to let the community pick the winner.
+
+The winner(s) will be awarded the prize money and their colorschemes will
+forever be enshrined in distributions of Neovim.
+
+Stay tuned to the [Neovim Twitter][info-twitter] for when the submission
+guidelines and process are announced.
+
+## Development News
 
 ### Clarification of Neovim's License
 
@@ -173,3 +189,5 @@ Until next time. `:wq`
 [garray-code]: https://github.com/neovim/neovim/blob/master/src/nvim/garray.c
 [garray-issues]: https://github.com/neovim/neovim/search?q=garray&ref=cmdform&type=Issues
 [garray-append-init]: https://github.com/neovim/neovim/pull/830
+[color-discussion]: https://github.com/neovim/neovim/issues/793
+[color-defaults]: https://github.com/neovim/neovim/issues/276
