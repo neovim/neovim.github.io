@@ -96,11 +96,10 @@ be phased out by a more robust solution.
 - https://github.com/neovim/neovim/pull/853
 - https://github.com/neovim/neovim/pull/872
 
-### Doxygen Theme + Bot Auto Generation Section Here
+### Doxygen Theme
 
-- https://github.com/neovim/neovim/pull/824
-- https://github.com/neovim/neovim.github.io/issues/48
-- https://github.com/marvim
+@stefan991 customized the Doxygen theme to style it similar to how Neovim.org
+looks. It was then [added to the codebase][docs-theme] for future builds.
 
 ### Follow Up #619 PR with #775 Section
 
@@ -159,6 +158,7 @@ Until next time. `:wq`
 [docs-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [docs-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
 [docs-user]: https://github.com/neovim/neovim.github.io/issues/55
+[docs-theme]: https://github.com/neovim/neovim/pull/824
 [info-bountysource]: https://www.bountysource.com/teams/neovim
 [info-contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [info-github]: https://github.com/neovim/neovim/
