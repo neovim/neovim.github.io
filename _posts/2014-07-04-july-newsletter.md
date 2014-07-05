@@ -101,9 +101,12 @@ be phased out by a more robust solution.
 @stefan991 customized the Doxygen theme to style it similar to how Neovim.org
 looks. It was then [added to the codebase][docs-theme] for future builds.
 
-### Follow Up #619 PR with #775 Section
+### Continued File Function Refactoring
 
-- https://github.com/neovim/neovim/pull/775
+In last month's issue, we talked about the [changes to `mch_stat`
+calls][file-previous]. This refactoring was [continued][file-continued] by
+@stefan991 to add a new structure that encapsulates `st_dev` and `st_ino` of
+libc's [stat.h][file-stat-h] attributes of the `struct stat`.
 
 ### Translations
 
@@ -191,3 +194,6 @@ Until next time. `:wq`
 [garray-append-init]: https://github.com/neovim/neovim/pull/830
 [color-discussion]: https://github.com/neovim/neovim/issues/793
 [color-defaults]: https://github.com/neovim/neovim/issues/276
+[file-previous]: https://github.com/neovim/neovim/pull/619
+[file-continued]: https://github.com/neovim/neovim/pull/775
+[file-stat-h]: http://www.gnu.org/software/libc/manual/html_node/Attribute-Meanings.html
