@@ -153,6 +153,8 @@ To aid in the process, @Marvim, Neovim's newly appointed resident automaton (aka
 bot), will be configured to automate the process. Just don't [talk to him about
 life][docs-quotes].
 
+## Helping Out
+
 ### Donating
 
 If you'd like to help support development, you may donate using Bitcoins here:
