@@ -47,6 +47,26 @@ your name to [this Wiki page][license-cla-wiki].
 > your code is still under the old Vim license. It won't become part of Apache 2.0
 > *unless* you sign the CLA.
 
+### Client-side RPC
+
+@tarruda finished [his implementation][client-pr] that provides a
+`channel_send_call` function that allows code to be ran in other scripting
+engines such as Python, Ruby, and more.
+
+As @tarruda notes, the code runs in another process, blocks until the client
+responds, has a 3 second timeout and has a call stack limit of 20.
+
+### Various Fixes and Improvements
+
+@tarruda opened [a pull request][various-pr] that proposed various fixes and
+improvements to some of his past work. The changes targeted the jobs API,
+streams API and lastly the events API. All of these past features were discussed
+in last month's newsletter.
+
+These changes included the ability to send large amounts of data through
+streams, added code for [msgpack][various-msgpack] parsing failures, and an
+ability to lock onto a set of event sources.
+
 ### Compiling under Windows
 
 The ability to build Neovim on Windows has been popular and a [target for
@@ -59,22 +79,6 @@ to build Neovim under [MinGW][windows-mingw].
 For help building on other platforms, be sure to check out the newly minted
 [Building Neovim page][windows-building] on the Wiki for all things related to
 compiling.
-
-### String Handling
-
-[Effort was made][string-strncpy] to replace `vim_strncpy` with `strlcpy` and
-it was merged in successfully. However there was a bit of
-[fallout][string-fallout] from the changes.
-
-In response, @aktau created a [master issue][string-master] to collaborate on
-the process and discuss the best way forward.
-
-To quote @philix, he summed it up best in [his comment][string-comment]:
-
-> String handling is really important in a text editor and the current codebase
-> doesn't have good abstractions for string handling (even though we've been
-> slowly improving it). It's a miracle how much can be accomplished with so
-> little abstraction (and a lot of low level code).
 
 ### Growable Array Additions
 
@@ -97,16 +101,6 @@ re-add it to retain compatibility with Vim. @atkau proposed a solution and then
 created a [pull request][libcall-fix] with the new changes which have since been
 merged.
 
-### Thiago's Progress Section Here
-
-- https://github.com/neovim/neovim/pull/853
-- https://github.com/neovim/neovim/pull/872
-
-### Doxygen Theme
-
-@stefan991 customized the Doxygen theme to style it similar to how Neovim.org
-looks. It was then [added to the codebase][docs-theme] for future builds.
-
 ### Continued File Function Refactoring
 
 In last month's issue, we talked about the [changes to `mch_stat`
@@ -123,6 +117,27 @@ Translations that already have been updated include
 [German][translation-german] and [Brazilian Portuguese][translation-pt-br]. With
 others like [Spanish][translation-spanish] and [Swedish][translation-swedish] in
 the works.
+
+### Doxygen Theme
+
+@stefan991 customized the Doxygen theme to style it similar to how Neovim.org
+looks. It was then [added to the codebase][docs-theme] for future builds.
+
+### String Handling
+
+[Effort was made][string-strncpy] to replace `vim_strncpy` with `strlcpy` and
+it was merged in successfully. However there was a bit of
+[fallout][string-fallout] from the changes.
+
+In response, @aktau created a [master issue][string-master] to collaborate on
+the process and discuss the best way forward.
+
+To quote @philix, he summed it up best in [his comment][string-comment]:
+
+> String handling is really important in a text editor and the current codebase
+> doesn't have good abstractions for string handling (even though we've been
+> slowly improving it). It's a miracle how much can be accomplished with so
+> little abstraction (and a lot of low level code).
 
 ## Shape of Things to Come
 
@@ -148,18 +163,19 @@ Bountysource][info-bountysource] page.
 
 If you an experienced developer or inexperienced but wanting to learn, visit the
 [GitHub repo][info-github] and check out the [README][info-readme],
-[CONTRIBUTING][info-contrib] guide, and finally the [Wiki][info-wiki] to learn more.
+[CONTRIBUTING][info-contrib] guide, and finally the [Wiki][info-wiki] to learn
+more.
 
 There are plenty of opportunities to help out and plenty of things to do.
 
 ## That's a Wrap
 
-Do you have any feedback or suggestions regarding this first newsletter? Feel
+Do you have any feedback or suggestions regarding this second newsletter? Feel
 free to reach out through the [Neovim Twitter][info-twitter].
 
 Also be sure to subscribe to the [RSS feed][info-rss] to stay up-to-date on what is
-happening in the Neovim world. The next newsletter will be released the first
-Friday of August.
+happening in the Neovim world. The next newsletter will be released around the
+first Friday of August.
 
 Until next time. `:wq`
 
@@ -206,3 +222,6 @@ Until next time. `:wq`
 [libcall-docs]: http://vimdoc.sourceforge.net/htmldoc/eval.html#libcall()
 [libcall-discussion]: https://github.com/neovim/neovim/issues/795
 [libcall-fix]: https://github.com/neovim/neovim/pull/802
+[client-pr]: https://github.com/neovim/neovim/pull/872
+[various-pr]: https://github.com/neovim/neovim/pull/853
+[various-msgpack]: http://msgpack.org/
