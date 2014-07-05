@@ -112,7 +112,7 @@ looks. It was then [added to the codebase][docs-theme] for future builds.
 In last month's issue, we talked about the [changes to `mch_stat`
 calls][file-previous]. This refactoring was [continued][file-continued] by
 @stefan991 to add a new structure that encapsulates `st_dev` and `st_ino` of
-libc's [stat.h][file-stat-h] attributes of the `struct stat`.
+[libuv's][file-uv-stat-t] `uv_stat_t`.
 
 ### Translations
 
@@ -202,7 +202,7 @@ Until next time. `:wq`
 [color-defaults]: https://github.com/neovim/neovim/issues/276
 [file-previous]: https://github.com/neovim/neovim/pull/619
 [file-continued]: https://github.com/neovim/neovim/pull/775
-[file-stat-h]: http://www.gnu.org/software/libc/manual/html_node/Attribute-Meanings.html
+[file-uv-stat-t]: https://github.com/joyent/libuv/blob/b9b386ac5a8bf772af95e7238c3f0b6673626923/include/uv.h#L441
 [libcall-docs]: http://vimdoc.sourceforge.net/htmldoc/eval.html#libcall()
 [libcall-discussion]: https://github.com/neovim/neovim/issues/795
 [libcall-fix]: https://github.com/neovim/neovim/pull/802
