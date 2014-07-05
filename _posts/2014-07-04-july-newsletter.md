@@ -86,10 +86,16 @@ The [latest addition][garray-append-init] by @philix gives an easier way to
 append to the array. While `garray` is still being improved, eventually it will
 be phased out by a more robust solution.
 
-### Implement VimL libcall Section Here
+### Fixing VimL Libcall
 
-- https://github.com/neovim/neovim/pull/802
-- https://github.com/neovim/neovim/issues/795
+A function called `mch_libcall()` was temporarily removed during some of the
+cleanup. It is called in Vim by using the [`libcall()`][libcall-docs] function
+and is used by some plugins.
+
+[Discussion started][libcall-discussion] around its temporary removal and how to
+re-add it to retain compatibility with Vim. @atkau proposed a solution and then
+created a [pull request][libcall-fix] with the new changes which have since been
+merged.
 
 ### Thiago's Progress Section Here
 
@@ -197,3 +203,6 @@ Until next time. `:wq`
 [file-previous]: https://github.com/neovim/neovim/pull/619
 [file-continued]: https://github.com/neovim/neovim/pull/775
 [file-stat-h]: http://www.gnu.org/software/libc/manual/html_node/Attribute-Meanings.html
+[libcall-docs]: http://vimdoc.sourceforge.net/htmldoc/eval.html#libcall()
+[libcall-discussion]: https://github.com/neovim/neovim/issues/795
+[libcall-fix]: https://github.com/neovim/neovim/pull/802
