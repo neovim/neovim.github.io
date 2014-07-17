@@ -1,5 +1,7 @@
 - title: News
   url: /news/
+- title: Documentation
+  url: /doc/
 - title: Google Group
   url: https://groups.google.com/forum/#!forum/neovim
 - title: Twitter
