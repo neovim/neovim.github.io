@@ -1,0 +1,21 @@
+---
+layout: default
+title: News
+---
+
+{% include nav.html active='News' %}
+
+<section class="front-section">
+  <div class="container">
+    <div class="newsletter col-wide">
+
+      <h1>{{ site.categories.newsletter.first.title }}</h1>
+
+      <a class="release-date" href="{{ site.categories.newsletter.first.url }}">{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a>
+
+      {{ site.categories.newsletter.first.content }}
+
+    </div>
+
+    {% include news_sidebar.html %}
+</section>

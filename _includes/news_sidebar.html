@@ -1,22 +1,3 @@
----
-layout: default
-title: News
----
-
-{% include nav.html active='News' %}
-
-<section class="front-section">
-  <div class="container">
-    <div class="newsletter col-wide">
-
-      <h1>{{ site.categories.newsletter.first.title }}</h1>
-
-      <a class="release-date" href="{{ site.categories.newsletter.first.url }}">{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a>
-
-      {{ site.categories.newsletter.first.content }}
-
-    </div>
-
     <div class="col-narrow">
       <h2>RSS feed</h2>
 
@@ -33,6 +14,14 @@ title: News
         an RSS feed and sends it to your email.
       </p>
 
+      <h2>Archives</h2>
+
+      <p>
+        To find and read the previous newsletters, just use the
+        <a href="/news/archive/">Archive</a> page.
+      </p>
+
+
       <h2>More frequent news</h2>
 
       <p>
@@ -40,8 +29,7 @@ title: News
         the newsletter.
       </p>
 
-      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
+      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Neovim</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
   </div>
-</section>
