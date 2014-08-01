@@ -18,5 +18,8 @@ gems:
     - jekyll-mentions
 
 exclude:
-    - README.md
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
     - LICENSE
+    - README.md
