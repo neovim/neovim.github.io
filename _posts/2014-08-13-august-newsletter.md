@@ -9,7 +9,22 @@ Welcome to the third monthly newsletter for Neovim, the project that TODO.
 
 ## General News
 
-TODO
+### Over 1,000 Issues
+
+The Issues tracker on GitHub now has over 1,000 issues. The lucky [1000th pull
+request][issues-1000th] was opened shortly before August.
+
+The number of open issues/pull requests has been hovering around 180 for awhile
+thanks to the great effort of the collaborators. Issues are being closed almost
+as fast as they are being opened.
+
+### Documentation Update
+
+As mentioned in last month's newsletter, the documentation has successfully been
+moved to [neovim.org/doc/][docs-home].
+
+It features some general documenation links as well as some more specific
+reports directed towards developers and contributors.
 
 ## Development News
 
@@ -54,3 +69,5 @@ Until next time. `:wq`
 [info-rss]: {{ site.news.feed }}
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
+[issues-1000th]: https://github.com/neovim/neovim/pull/1000
+[docs-home]: http://neovim.org/doc/
