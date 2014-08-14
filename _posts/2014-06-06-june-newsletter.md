@@ -157,7 +157,7 @@ have been implemented but take a look at it to learn more.
 The following is a list of things that are either in progress or on the roadmap.
 
 1. Finish [porting][port-os] the rest of the OS layer to libuv.
-2. Continue work on [VimL -> Lua translator][translator] by [ZyX-I][zyx].
+2. Continue work on [VimL -> Lua translator][translator] by @ZyX-I.
 3. Use [include-what-you-use][iwyu] to clean up headers and includes as
    [discussed][iwyu-issue].
 4. Remove the use of temp files when using `system()` and [use pipes
@@ -234,7 +234,6 @@ Until next time. `:wq`
 [namespace]: https://github.com/neovim/neovim/pull/716
 [port-os]: https://github.com/neovim/neovim/issues/133
 [translator]: https://github.com/neovim/neovim/pull/243
-[zyx]: https://github.com/ZyX-I
 [iwyu]: https://code.google.com/p/include-what-you-use/
 [iwyu-issue]: https://github.com/neovim/neovim/issues/549
 [rss]: {{ site.news.feed }}
