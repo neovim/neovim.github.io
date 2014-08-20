@@ -23,8 +23,12 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
           <HEAD>
               <TITLE><xsl:value-of select="@title"/></TITLE>
               <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-              <LINK HREF="favicon.ico" type="image/x-icon"
+              <LINK HREF="/favicon.ico" type="image/x-icon"
                     rel="shortcut icon"/>
+              <LINK HREF="/css/normalize.css"
+                    type="text/css" rel="stylesheet"/>
+              <LINK HREF="/css/main.css"
+                    type="text/css" rel="stylesheet"/>
               <LINK HREF="guide.css"
                     type="text/css" rel="stylesheet"/>
 
@@ -153,8 +157,24 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
               </SCRIPT>
           </HEAD>
           <BODY>
-            <H1><xsl:value-of select="@title"/></H1>
-              <xsl:apply-templates/>
+            <HEADER class="navbar">
+              <DIV class="container">
+                <DIV class="site-nav">
+                  <UL>
+                    <LI><A href="/">Neovim Home</A></LI>
+                  </UL>
+                </DIV>
+                <A href="/"><IMG class="logo" alt="Neovim logo" src="/images/logo@2x.png" /></A>
+              </DIV>
+            </HEADER>
+            <SECTION class="front-section">
+              <DIV class="container">
+                <H1><xsl:value-of select="@title"/></H1>
+                <DIV class="indent">
+                  <xsl:apply-templates/>
+                </DIV>
+              </DIV>
+            </SECTION>
           </BODY>
       </HTML>
   </xsl:template>
