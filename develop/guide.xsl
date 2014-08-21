@@ -167,14 +167,12 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
                 <A href="/"><IMG class="logo" alt="Neovim logo" src="/images/logo@2x.png" /></A>
               </DIV>
             </HEADER>
-            <SECTION class="front-section">
-              <DIV class="container">
-                <H1><xsl:value-of select="@title"/></H1>
-                <DIV class="indent">
-                  <xsl:apply-templates/>
-                </DIV>
+            <DIV class="container">
+              <H1><xsl:value-of select="@title"/></H1>
+              <DIV class="indent">
+                <xsl:apply-templates/>
               </DIV>
-            </SECTION>
+            </DIV>
           </BODY>
       </HTML>
   </xsl:template>
