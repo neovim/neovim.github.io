@@ -186,7 +186,7 @@ There are plenty of opportunities to help out and plenty of things to do.
 
 ## That's a Wrap
 
-Do you have any feedback or suggestions regarding this second newsletter? Feel
+Do you have any feedback or suggestions regarding this third newsletter? Feel
 free to reach out through the [Neovim Twitter][info-twitter].
 
 Also be sure to subscribe to the [RSS feed][info-rss] to stay up-to-date on what is
