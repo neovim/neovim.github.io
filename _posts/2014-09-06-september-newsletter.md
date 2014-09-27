@@ -86,7 +86,7 @@ In the last few weeks, @tarruda has [completed the
 implementation][msgpack-compliance] to fully support the specification.
 
 He also has been working on [upgrading][msgpack-2.0] the use of msgpack to the
-latest version, 2.0 which should be merged soon.
+latest version, 2.0, which should be merged soon.
 
 ### Python Client
 
@@ -96,7 +96,7 @@ improvements.
 
 ### Go Client
 
-@myitcv has made a [propsal for adding Go integration][go-integration] in a
+@myitcv has made a [proposal for adding Go integration][go-integration] in a
 similar way that the Python integration works. The proposal also touches on
 being language agnostic.
 
@@ -116,7 +116,7 @@ The systems that still had code lingering included [SGI IRIS][removal-sgi],
 The function to create temporary files in Neovim needed features that weren't in
 [libuv][info-libuv].
 
-@Hinidu, one of Neovim's contributor, [sent a pull request][temp-libuv-pr] to
+@Hinidu, one of Neovim's contributors, [sent a pull request][temp-libuv-pr] to
 libuv to add a new function, `uv_fs_mkdtemp`. The changes (now part of libuv
 [version 0.11.27][temp-version]) are being [used by Neovim][temp-pr] to provide
 temporary file/directory creation and the changes work across platforms.
@@ -127,7 +127,7 @@ projects can benefit from the changes.
 ### First Bounty Claimed!
 
 Back on April 9th, the [first bounty][bounty-first] on [Neovim's
-Bountysoure][info-bountysource] was created. The request was to port an existing
+Bountysource][info-bountysource] was created. The request was to port an existing
 patch that was written by Christian Brabandt from Vim to Neovim. The patch gives
 a `breakindent` option that will match the indentation when a line is wrapped.
 
@@ -164,7 +164,7 @@ stdin and stdout.
 ### Windows Progress
 
 Neovim has successfully been compiled in [Microsoft Visual C++][windows-msvc] as
-well as using [MinGW][windows-mingw] in [this issue][windows-master] and [this
+well as using [MinGW][windows-mingw], in [this issue][windows-master] and [this
 one][windows-mingw-issue] respectively.
 
 ## Helping Out
