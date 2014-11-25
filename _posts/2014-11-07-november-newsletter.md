@@ -1,6 +1,6 @@
 ---
 layout: newsletter
-title: "Issue #4 - Thanksvimming Day"
+title: "Newsletter #4 - Thanksvimming Day"
 category: newsletter
 permalink: /news/2014/nov/
 ---

@@ -1,6 +1,6 @@
 ---
 layout: newsletter
-title: "Issue #3 - Better Late than Never"
+title: "Newsletter #3 - Better Late than Never"
 category: newsletter
 permalink: /news/2014/sept/
 ---

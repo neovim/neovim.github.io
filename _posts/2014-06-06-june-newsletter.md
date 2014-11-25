@@ -1,6 +1,6 @@
 ---
 layout: newsletter
-title: "Issue #1 - A New Hope"
+title: "Newsletter #1 - A New Hope"
 category: newsletter
 permalink: /news/2014/june/
 ---
