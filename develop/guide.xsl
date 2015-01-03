@@ -25,7 +25,7 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
               <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
               <LINK HREF="/favicon.ico" type="image/x-icon"
                     rel="shortcut icon"/>
-              <LINK HREF="/css/normalize.css"
+              <LINK HREF="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css"
                     type="text/css" rel="stylesheet"/>
               <LINK HREF="/css/main.css"
                     type="text/css" rel="stylesheet"/>
