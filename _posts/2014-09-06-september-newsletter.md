@@ -216,7 +216,7 @@ Until next time. `:wq`
 [windows-mingw]: http://www.mingw.org/
 [moonscript-drop]: https://github.com/neovim/neovim/pull/1128
 [moonscript-lua]: https://github.com/neovim/neovim/issues/207
-[moonscript-busted]: http://olivinelabs.com/busted/
+[moonscript-busted]: https://github.com/Olivine-Labs/busted
 [moonscript-decision]: https://github.com/neovim/neovim/pull/1098
 [moonscript-failing]: https://github.com/neovim/neovim/pull/1098#issuecomment-53942512
 [moonscript-site]: http://moonscript.org/
