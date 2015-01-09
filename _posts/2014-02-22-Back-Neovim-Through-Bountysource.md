@@ -10,7 +10,7 @@ vim code base is unwieldy and difficult to maintain despite a community of
 developers wanting to extend and improve it. This project is an effort to
 clean up the code base and bring vim to the 21st century.
 
-[Thiago de Arruda](https://github.com/tarrudaThiago de Arruda) is the person
+[Thiago de Arruda](https://github.com/tarruda) is the person
 who is spearheading this effort. He needs the support of a community excited
 about Neovim to make this happen. If you can support Neovim through any size
 of financial contribution, do so at

@@ -97,7 +97,7 @@ cleanup. It is called in Vim by using the [`libcall()`][libcall-docs] function
 and is used by some plugins.
 
 [Discussion started][libcall-discussion] around its temporary removal and how to
-re-add it to retain compatibility with Vim. @atkau proposed a solution and then
+re-add it to retain compatibility with Vim. @aktau proposed a solution and then
 created a [pull request][libcall-fix] with the new changes which have since been
 merged.
 
@@ -181,7 +181,7 @@ first Friday of August.
 
 Until next time. `:wq`
 
-[docs-dev]: http://neovim.menkar.uberspace.de/devdoc/
+[docs-dev]: http://neovim.org/doc/dev
 [docs-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [docs-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
 [docs-user]: https://github.com/neovim/neovim.github.io/issues/55
