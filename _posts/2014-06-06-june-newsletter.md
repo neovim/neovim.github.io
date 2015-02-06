@@ -222,7 +222,7 @@ Until next time. `:wq`
 [bountysource]: https://www.bountysource.com/
 [backers]: https://github.com/neovim/neovim/blob/master/BACKERS.md
 [libuv]: https://github.com/joyent/libuv
-[style]: http://neovim.org/development-wiki/style-guide/style-guide.xml
+[style]: /develop/style-guide.xml
 [vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
 [crypto-discussion]: https://github.com/neovim/neovim/issues/694
 [crypto-removal]: https://github.com/neovim/neovim/pull/699
@@ -270,7 +270,7 @@ Until next time. `:wq`
 [redraw]: https://github.com/neovim/neovim/pull/781
 [mailing]: https://groups.google.com/forum/#!forum/neovim
 [first-release]: https://groups.google.com/d/msg/neovim/KDgatetthQw/8rn4rdm8z8wJ
-[neovim.org]: http://neovim.org/
+[neovim.org]: /
 [eval.c]: https://raw.githubusercontent.com/neovim/neovim/master/src/nvim/eval.c
 [coverity-neovim]: https://scan.coverity.com/projects/2227
 [coverity]: http://scan.coverity.com/

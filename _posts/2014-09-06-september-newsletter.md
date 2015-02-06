@@ -204,12 +204,12 @@ Until next time. `:wq`
 [info-wiki]: https://github.com/neovim/neovim/wiki
 [info-libuv]: https://github.com/joyent/libuv
 [issues-1000th]: https://github.com/neovim/neovim/pull/1000
-[docs-home]: http://neovim.org/doc/
+[docs-home]: /doc/
 [docs-help]: https://github.com/neovim/neovim/pull/985
 [pipes-pr]: https://github.com/neovim/neovim/pull/978
 [pipes-selecta]: https://github.com/garybernhardt/selecta
 [pipes-bug]: https://github.com/neovim/neovim/issues/1044
-[newsletters-june]: http://neovim.org/news/2014/june/
+[newsletters-june]: /news/2014/june/
 [windows-master]: https://github.com/neovim/neovim/issues/696
 [windows-mingw-issue]: https://github.com/neovim/neovim/pull/810
 [windows-msvc]: http://msdn.microsoft.com/en-us/vstudio/hh386302.aspx
