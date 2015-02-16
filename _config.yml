@@ -3,7 +3,7 @@ permalink: pretty
 markdown: kramdown
 
 title: Neovim
-description: "vim's rebirth for the 21st century"
+description: "vim out of the box"
 
 news:
     name: Neovim Newsletter
