@@ -181,7 +181,7 @@ first Friday of August.
 
 Until next time. `:wq`
 
-[docs-dev]: http://neovim.org/doc/dev
+[docs-dev]: https://neovim.org/doc/dev
 [docs-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [docs-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
 [docs-user]: https://github.com/neovim/neovim.github.io/issues/55
@@ -196,7 +196,7 @@ Until next time. `:wq`
 [license-apache]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
 [license-cla-doc]: https://docs.google.com/forms/d/1u54bpbwzneDIRltFx1TGi2evKxY3w0cOV3vlpj8DPbg/viewform
 [license-cla-wiki]: https://github.com/neovim/neovim/wiki/CLA-confirmation-page
-[license-cla]: http://en.wikipedia.org/wiki/Contributor_License_Agreement
+[license-cla]: https://en.wikipedia.org/wiki/Contributor_License_Agreement
 [license-concern]: https://github.com/neovim/neovim/issues/878
 [license-update]: https://github.com/neovim/neovim/pull/883
 [license-vim]: http://vimdoc.sourceforge.net/htmldoc/uganda.html#license

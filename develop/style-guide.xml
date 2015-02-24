@@ -28,10 +28,10 @@ redirect_from:
     <SUMMARY>
       <p>
         This style guide is licensed under the
-        <a href="http://creativecommons.org/licenses/by/3.0/">CC-By 3.0</a>
+        <a href="https://creativecommons.org/licenses/by/3.0/">CC-By 3.0</a>
         License.
         It was originally created by
-        <a href="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml">Google</a>
+        <a href="https://google-styleguide.googlecode.com/svn/trunk/cppguide.xml">Google</a>
         and has been modified to fit Neovim's needs.
       </p>
     </SUMMARY>
@@ -704,7 +704,7 @@ redirect_from:
     one may be you!
   </p>
   <p>
-    Neovim uses <a href="http://en.wikipedia.org/wiki/Doxygen">Doxygen</a>
+    Neovim uses <a href="https://en.wikipedia.org/wiki/Doxygen">Doxygen</a>
     comments.
   </p>
 
