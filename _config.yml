@@ -8,7 +8,7 @@ description: "vim out of the box"
 news:
     name: Neovim Newsletter
     authors: Neovim Community
-    url: https://neovim.org/news
+    url: /news
     feed: /news.xml
 
 url: "https://neovim.org"

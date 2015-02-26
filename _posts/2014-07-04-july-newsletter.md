@@ -181,7 +181,7 @@ first Friday of August.
 
 Until next time. `:wq`
 
-[docs-dev]: https://neovim.org/doc/dev
+[docs-dev]: /doc/dev
 [docs-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [docs-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
 [docs-user]: https://github.com/neovim/neovim.github.io/issues/55
