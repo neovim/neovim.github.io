@@ -356,34 +356,76 @@ redirect_from:
 
   <STYLEPOINT title="Function declarations">
     <SUMMARY>
-      Every function must have a declaration separate from its definition.
+      Every function must not have a separate declaration.
     </SUMMARY>
     <BODY>
-      <CODE_SNIPPET>
+      Function declarations are created by the gendeclarations.lua script.
+      <BAD_CODE_SNIPPET>
         static void f(void);
 
         static void f(void)
         {
           ...
         }
-      </CODE_SNIPPET>
+      </BAD_CODE_SNIPPET>
     </BODY>
   </STYLEPOINT>
 
   <STYLEPOINT title="General translation unit layout">
     <SUMMARY>
-      Declarations of static functions precede the definitions of public functions
-      which in turn precede the definitions of static functions.
+      The definitions of public functions precede the definitions of static
+      functions.
     </SUMMARY>
     <BODY>
       <CODE_SNIPPET>
         &lt;HEADER&gt;
 
-        &lt;STATIC FUNCTION DECLARATIONS&gt;
-
         &lt;PUBLIC FUNCTION DEFINITIONS&gt;
 
         &lt;STATIC FUNCTION DEFINITIONS&gt;
+      </CODE_SNIPPET>
+    </BODY>
+  </STYLEPOINT>
+  
+  <STYLEPOINT title="Integration with declarations generator">
+    <SUMMARY>
+      Every C file must contain #include of the generated header file,
+      guarded by #ifdef INCLUDE_GENERATED_DECLARATIONS.
+    </SUMMARY>
+    <BODY>
+      Include must go after other #includes and typedefs in .c files and
+      after everything else in header files. It is allowed to omit
+      #include in a .c file if .c file does not contain any static
+      functions.
+      
+      Included file name consists of the .c file name without extension,
+      preceded by the directory name relative to src/nvim. Name of the
+      file containing static functions declarations ends with
+      <code>.c.generated.h</code>, <code>*.h.generated.h</code> files contain
+      only non-static function declarations.
+      <CODE_SNIPPET>
+        // src/nvim/foo.c file
+        #include &lt;stddef.h&gt;
+
+        typedef int FooType;
+
+        #ifdef INCLUDE_GENERATED_DECLARATIONS
+        # include "foo.c.generated.h"
+        #endif
+
+        …
+      </CODE_SNIPPET>
+      <CODE_SNIPPET>
+        // src/nvim/foo.h file
+        #ifndef NVIM_FOO_H
+        #define NVIM_FOO_H
+  
+        …
+  
+        #ifdef INCLUDE_GENERATED_DECLARATIONS
+        # include "foo.c.generated.h"
+        #endif
+        #endif
       </CODE_SNIPPET>
     </BODY>
   </STYLEPOINT>
