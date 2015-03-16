@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.current a {
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3 {

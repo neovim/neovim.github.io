@@ -4,11 +4,7 @@
   url: /news/
 - title: Documentation
   url: /doc/
-- title: Google Group
-  url: https://groups.google.com/forum/#!forum/neovim
-- title: Twitter
-  url: http://twitter.com/Neovim
-- title: Bountysource
-  url: https://www.bountysource.com/teams/neovim
+- title: Community
+  url: /community/
 - title: Development
   url: https://github.com/neovim/neovim
