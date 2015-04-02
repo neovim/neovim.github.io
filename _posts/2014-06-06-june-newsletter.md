@@ -222,7 +222,7 @@ Until next time. `:wq`
 [bountysource]: https://www.bountysource.com/
 [backers]: https://github.com/neovim/neovim/blob/master/BACKERS.md
 [libuv]: https://github.com/joyent/libuv
-[style]: http://neovim.org/development-wiki/style-guide/style-guide.xml
+[style]: /development-wiki/style-guide/style-guide.xml
 [vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
 [crypto-discussion]: https://github.com/neovim/neovim/issues/694
 [crypto-removal]: https://github.com/neovim/neovim/pull/699
@@ -248,7 +248,7 @@ Until next time. `:wq`
 [pr656]: https://github.com/neovim/neovim/pull/656
 [feat_]: https://github.com/neovim/neovim/pull/500
 [streams]: https://github.com/neovim/neovim/pull/556
-[format-strings]: http://en.wikipedia.org/wiki/Printf_format_string
+[format-strings]: https://en.wikipedia.org/wiki/Printf_format_string
 [pr296]: https://github.com/neovim/neovim/pull/296
 [pr490]: https://github.com/neovim/neovim/issues/490
 [pr574]: https://github.com/neovim/neovim/issues/574
@@ -258,10 +258,10 @@ Until next time. `:wq`
 [1st-bounty]: https://www.bountysource.com/issues/1563162-include-the-vim-breakindent-patch
 [job-control]: https://github.com/neovim/neovim/pull/475
 [unit]: https://github.com/neovim/neovim/tree/master/test/unit
-[c99]: http://en.wikipedia.org/wiki/C99
+[c99]: https://en.wikipedia.org/wiki/C99
 [cmake]: http://www.cmake.org/
 [msgpack-api]: https://github.com/neovim/neovim/pull/509
-[stat]: http://en.wikipedia.org/wiki/Stat_(system_call)
+[stat]: https://en.wikipedia.org/wiki/Stat_(system_call)
 [fs.c]: https://github.com/neovim/neovim/blob/master/src/nvim/os/fs.c
 [pr619]: https://github.com/neovim/neovim/pull/619
 [plugin-arch]: https://github.com/neovim/neovim/wiki/Plugin-UI-architecture
@@ -270,10 +270,10 @@ Until next time. `:wq`
 [redraw]: https://github.com/neovim/neovim/pull/781
 [mailing]: https://groups.google.com/forum/#!forum/neovim
 [first-release]: https://groups.google.com/d/msg/neovim/KDgatetthQw/8rn4rdm8z8wJ
-[neovim.org]: http://neovim.org/
+[neovim.org]: /
 [eval.c]: https://raw.githubusercontent.com/neovim/neovim/master/src/nvim/eval.c
 [coverity-neovim]: https://scan.coverity.com/projects/2227
-[coverity]: http://scan.coverity.com/
+[coverity]: https://scan.coverity.com/
 [travis]: https://travis-ci.org/neovim/neovim
 [travis-osx]: https://github.com/neovim/neovim/issues/766
 [int-guideline]: https://github.com/neovim/neovim/wiki/Integer-types-refactoring-guidelines

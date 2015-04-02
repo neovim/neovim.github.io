@@ -238,15 +238,15 @@ Until next time. `:wq`
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
 
-[unixstickers-site]: http://www.unixstickers.com/
-[unixstickers-nvim]: http://www.unixstickers.com/tag/neovim
+[unixstickers-site]: https://www.unixstickers.com/
+[unixstickers-nvim]: https://www.unixstickers.com/tag/neovim
 [unixstickers-iccf]: http://iccf-holland.org/
 
 [floobits-site]: https://floobits.com/
 [floobits-blog]: https://news.floobits.com/2014/11/04/neovim/
 [floobits-repo]: https://github.com/Floobits/floobits-neovim
 
-[vim-patch-report]: http://neovim.org/doc/reports/vimpatch/
+[vim-patch-report]: /doc/reports/vimpatch/
 
 [legacy-first]: https://github.com/neovim/neovim/pull/1318
 [legacy-second]: https://github.com/neovim/neovim/pull/1328
@@ -273,7 +273,7 @@ Until next time. `:wq`
 [iconv-pr]: https://github.com/neovim/neovim/pull/1370
 [iconv-site]: http://www.gnu.org/software/libiconv/
 
-[int-types-newsletter]: http://neovim.org/news/2014/june/
+[int-types-newsletter]: /news/2014/june/
 [int-types-pr]: https://github.com/neovim/neovim/pull/1340
 [int-types-part-1]: https://github.com/neovim/neovim/pull/656
 [int-types-part-2]: https://github.com/neovim/neovim/pull/757
@@ -294,13 +294,13 @@ Until next time. `:wq`
 [clang-4]: https://github.com/neovim/neovim/pull/1478
 
 [plugin-pr]: https://github.com/neovim/neovim/pull/1454
-[plugin-remote-doc]: http://neovim.org/doc/user/remote_plugin.html#remote-plugin
-[plugin-provider-doc]: http://neovim.org/doc/user/nvim_provider.html#nvim-provider
+[plugin-remote-doc]: /doc/user/remote_plugin.html#remote-plugin
+[plugin-provider-doc]: /doc/user/nvim_provider.html#nvim-provider
 [plugin-comment]: https://github.com/neovim/neovim/issues/1501#issuecomment-63765917
 [plugin-1]: https://github.com/neovim/neovim/issues/1415
 [plugin-2]: https://github.com/neovim/neovim/issues/1459
 
-[box]: http://en.wikipedia.org/wiki/Out_of_the_box_feature
+[box]: https://en.wikipedia.org/wiki/Out_of_the_box_feature
 
 [job-rstream]: https://github.com/neovim/neovim/blob/master/src/nvim/os/rstream.c
 [job-pr]: https://github.com/neovim/neovim/pull/1255
