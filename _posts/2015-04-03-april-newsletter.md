@@ -1,6 +1,6 @@
 ---
 layout: newsletter
-title: "Newsletter #5 - TODO"
+title: "Newsletter #5 - Out of the Box"
 category: newsletter
 permalink: /news/2015/april/
 ---
@@ -9,7 +9,8 @@ permalink: /news/2015/april/
 > project in my experience so far.
 > <a href="https://twitter.com/telemachus/status/568918223745372160"><small>&#64;telemachus</small></a>
 
-Welcome to the fifth newsletter for Neovim.
+Welcome to the fifth newsletter for Neovim, the project that looks to become Vim
+[out of the box][info-box].
 
 ## General News
 
@@ -345,6 +346,7 @@ Until next time. `:wq`
 [info-rss]: {{ site.news.feed }}
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
+[info-box]: http://en.wikipedia.org/wiki/Out_of_the_box_feature
 
 [iccf-site]: http://iccf-holland.org/
 [iccf-unixstickers]: http://www.unixstickers.com/
