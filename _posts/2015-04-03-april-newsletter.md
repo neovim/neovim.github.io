@@ -174,7 +174,7 @@ been created:
   uses Neovim for binding and manipulating text. Take a look at [this
   video][gui-vim-mode-video] to see it.
 - [python-client][gui-python] by @tarruda: which in addition to being a Python
-  library for communicating with Neovim, it also contains an interface using
+  library for communicating with Neovim, also contains an interface using
   [GTK][gui-python-gtk].
 - [neovim.as][gui-atom] by @coolwanglu: an application that uses [Atom
   Shell][gui-atom-shell]. A video of it in action can be [seen
