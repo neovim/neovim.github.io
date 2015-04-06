@@ -48,6 +48,17 @@ blockquote {
   padding-left: 15px;
 }
 
+blockquote small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.4;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0'
+}
+
+
 /*
  * Content container
  *

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', '~> 28'
+gem 'github-pages', '~> 33'
 gem 'jekyll', '~> 2.4.0'
-gem 'kramdown', '~> 1.3.1'
+gem 'redcarpet', '~> 3.1.2'
 
 group :test do
   gem 'html-proofer'
