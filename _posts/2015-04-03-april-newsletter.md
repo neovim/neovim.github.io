@@ -17,7 +17,7 @@ Welcome to the fifth newsletter for Neovim, the project that looks to become Vim
 ### Gitter.im for Neovim
 
 Now in addition to the [mailing list][gitter-list] and IRC channel, you can hop
-into the [Neovim chat room][gitter-link] provided through
+into the [Neovim chat room][gitter-nvim] provided through
 [Gitter.im][gitter-link]. It has a convenient web interface but also allows you
 to connect using your [favorite IRC client][gitter-irc].
 
