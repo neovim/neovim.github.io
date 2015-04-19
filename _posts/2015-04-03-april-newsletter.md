@@ -359,7 +359,7 @@ Until next time. `:wq`
 [tui-pr]: https://github.com/neovim/neovim/pull/1820
 [tui-libtermkey]: http://www.leonerd.org.uk/code/libtermkey/
 [tui-unibilium]: https://github.com/mauke/unibilium
-[tui-bindings]: http://neovim.org/doc/user/vim_diff.html#nvim-features-new
+[tui-bindings]: http://neovim.io/doc/user/vim_diff.html#nvim-features-new
 [tui-combining]: http://en.wikipedia.org/wiki/Combining_character
 [tui-terminfo]: http://en.wikipedia.org/wiki/Terminfo
 [tui-manpage]: http://manpages.debian.org/cgi-bin/man.cgi?query=terminfo&sektion=5
@@ -367,29 +367,29 @@ Until next time. `:wq`
 
 [term-pr]: https://github.com/neovim/neovim/pull/2076
 [term-libvterm]: http://www.leonerd.org.uk/code/libvterm/
-[term-normal]: http://neovim.org/doc/user/intro.html#Normal
+[term-normal]: http://neovim.io/doc/user/intro.html#Normal
 [term-comment]: https://github.com/neovim/neovim/pull/2076#issuecomment-85979869
-[term-docs]: http://neovim.org/doc/user/nvim_terminal_emulator.html
+[term-docs]: http://neovim.io/doc/user/nvim_terminal_emulator.html
 [term-shell]: http://vimdoc.sourceforge.net/htmldoc/various.html#:shell
 
 [easy-pr]: https://github.com/neovim/neovim/pull/1656
 [easy-vimdoc]: http://vimdoc.sourceforge.net/htmldoc/starting.html#-y
-[easy-insert]: http://neovim.org/doc/user/options.html#'insertmode'
+[easy-insert]: http://neovim.io/doc/user/options.html#'insertmode'
 
 [color-pr]: https://github.com/neovim/neovim/pull/2198
 [color-info]: https://gist.github.com/XVilka/8346728
 
 [job-pr]: https://github.com/neovim/neovim/pull/2247
-[job-wait]: http://neovim.org/doc/user/eval.html#jobwait()
-[job-close]: http://neovim.org/doc/user/eval.html#jobclose()
-[job-autocmd]: http://neovim.org/doc/user/autocmd.html#autocmd-intro
+[job-wait]: http://neovim.io/doc/user/eval.html#jobwait()
+[job-close]: http://neovim.io/doc/user/eval.html#jobclose()
+[job-autocmd]: http://neovim.io/doc/user/autocmd.html#autocmd-intro
 
 [events-pr]: https://github.com/neovim/neovim/pull/1717
-[events-autocmd]: http://neovim.org/doc/user/autocmd.html#autocmd-intro
-[events-list]: http://neovim.org/doc/user/autocmd.html#autocmd-events
-[events-tabnew]: http://neovim.org/doc/user/autocmd.html#TabNew
-[events-tabnewentered]: http://neovim.org/doc/user/autocmd.html#TabNewEntered
-[events-tabclosed]: http://neovim.org/doc/user/autocmd.html#TabClosed
+[events-autocmd]: http://neovim.io/doc/user/autocmd.html#autocmd-intro
+[events-list]: http://neovim.io/doc/user/autocmd.html#autocmd-events
+[events-tabnew]: http://neovim.io/doc/user/autocmd.html#TabNew
+[events-tabnewentered]: http://neovim.io/doc/user/autocmd.html#TabNewEntered
+[events-tabclosed]: http://neovim.io/doc/user/autocmd.html#TabClosed
 
 [in-vimdiff-pr]: https://github.com/neovim/neovim/pull/1849
 [in-vimdiff]: http://vimdoc.sourceforge.net/htmldoc/diff.html#vimdiff
@@ -401,9 +401,9 @@ Until next time. `:wq`
 
 [highlight-pr]: https://github.com/neovim/neovim/pull/1926
 [highlight-idea]: https://github.com/neovim/neovim/pull/1214
-[highlight-docs]: http://neovim.org/doc/user/syntax.html#:highlight
-[highlight-groups]: http://neovim.org/doc/user/syntax.html#highlight-groups
-[highlight-endofbuffer]: http://neovim.org/doc/user/syntax.html#hl-EndOfBuffer
+[highlight-docs]: http://neovim.io/doc/user/syntax.html#:highlight
+[highlight-groups]: http://neovim.io/doc/user/syntax.html#highlight-groups
+[highlight-endofbuffer]: http://neovim.io/doc/user/syntax.html#hl-EndOfBuffer
 [highlight-proposal]: https://groups.google.com/forum/#!topic/vim_dev/p3de1iU1GXI/discussion
 [highlight-vim-dev]: https://groups.google.com/forum/#!forum/vim_dev
 
@@ -411,7 +411,7 @@ Until next time. `:wq`
 [related-main-wiki]: https://github.com/neovim/neovim/wiki
 
 [patch-search]: https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=vim-patch+in%3Atitle+created%3A%222014-11-25+..+2015-04-02%22+
-[patch-report]: http://neovim.org/doc/reports/vimpatch/
+[patch-report]: http://neovim.io/doc/reports/vimpatch/
 
 [gui-list]: https://github.com/neovim/neovim/wiki/Related-projects#gui-projects
 [gui-oak]: https://github.com/oakes/SolidOak

@@ -8,10 +8,10 @@ description: "vim out of the box"
 news:
     name: Neovim Newsletter
     authors: Neovim Community
-    url: http://neovim.org/news
+    url: http://neovim.io/news
     feed: /news.xml
 
-url: "http://neovim.org"
+url: "http://neovim.io"
 
 gems:
     - jekyll-redirect-from

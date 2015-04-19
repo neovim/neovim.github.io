@@ -23,7 +23,7 @@ Let's take a look at some of the milestones of the months preceding May:
 
 ### General News
 
-- March 20: [Neovim.org][neovim.org] was redesigned and launched.
+- March 20: [Neovim.org][neovim.io](now neovim.io) was redesigned and launched.
 - March 23: [Fundraiser][fund] on [Bountysource][bountysource] ended with nearly
   $34,000 in backing.
 - April 2: Bountysource added the ability to [back a team][neovim-bountysource]
@@ -222,7 +222,7 @@ Until next time. `:wq`
 [bountysource]: https://www.bountysource.com/
 [backers]: https://github.com/neovim/neovim/blob/master/BACKERS.md
 [libuv]: https://github.com/joyent/libuv
-[style]: http://neovim.org/development-wiki/style-guide/style-guide.xml
+[style]: http://neovim.io/development-wiki/style-guide/style-guide.xml
 [vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
 [crypto-discussion]: https://github.com/neovim/neovim/issues/694
 [crypto-removal]: https://github.com/neovim/neovim/pull/699
@@ -270,7 +270,7 @@ Until next time. `:wq`
 [redraw]: https://github.com/neovim/neovim/pull/781
 [mailing]: https://groups.google.com/forum/#!forum/neovim
 [first-release]: https://groups.google.com/d/msg/neovim/KDgatetthQw/8rn4rdm8z8wJ
-[neovim.org]: http://neovim.org/
+[neovim.io]: http://neovim.io/
 [eval.c]: https://raw.githubusercontent.com/neovim/neovim/master/src/nvim/eval.c
 [coverity-neovim]: https://scan.coverity.com/projects/2227
 [coverity]: http://scan.coverity.com/
