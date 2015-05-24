@@ -1,11 +1,13 @@
+---
+---
 var sponsorOverride = {
   '32537-hautelook': {
     url: 'http://hautelook.github.io/',
-    frontImageUrl: '/images/sponsors/hautelook-logo.png',
+    frontImageUrl: '{{ site.baseurl }}/images/sponsors/hautelook-logo.png',
   },
   '32681-namely-labs-namelyhr-namely-com': {
     url: 'http://www.namely.com/',
-    frontImageUrl: '/images/sponsors/Namely_logo.jpg',
+    frontImageUrl: '{{ site.baseurl }}/images/sponsors/Namely_logo.jpg',
   },
   '347-stefanpenner': {
     url: 'http://iamstef.net/',

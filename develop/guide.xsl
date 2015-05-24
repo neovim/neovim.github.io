@@ -164,7 +164,7 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
                     <LI><A href="/">Neovim Home</A></LI>
                   </UL>
                 </DIV>
-                <A href="/"><IMG class="logo" alt="Neovim logo" src="/images/logo@2x.png" /></A>
+                <A href="/"><IMG class="logo" alt="Neovim logo" src="{{ site.baseurl }}/images/logo@2x.png" /></A>
               </DIV>
             </HEADER>
             <DIV class="container">
