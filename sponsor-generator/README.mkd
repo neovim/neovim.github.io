@@ -1,0 +1,14 @@
+# sponsor-generator
+
+#### Generates html with sponsors for Neovim website
+
+[![Build Status](https://travis-ci.org/tarruda/sponsor-generator.png)](https://travis-ci.org/tarruda/sponsor-generator)
+<br>
+[![browser support](https://ci.testling.com/tarruda/sponsor-generator.png)](https://ci.testling.com/tarruda/sponsor-generator)
+
+
+## Installation
+
+```sh
+npm install --save sponsor-generator
+```

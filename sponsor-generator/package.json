@@ -1,0 +1,43 @@
+{
+  "name": "sponsor-generator",
+  "description": "Generates html for Neovim sponsors",
+  "version": "0.0.0",
+  "homepage": "https://github.com/neovim/neovim.github.io",
+  "author": {
+    "name": "Thiago de Arruda",
+    "email": "tpadilha84@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neovim/neovim.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/neovim/neovim.github.io/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/neovim/neovim.github.io/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./index",
+  "private": true,
+  "dependencies": {
+    "has": "^1.0.0",
+    "superagent": "^1.2.0",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "ejsify": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "lodash": "^3.9.1",
+    "string-to-stream": "^1.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  }
+}

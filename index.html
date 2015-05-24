@@ -34,30 +34,11 @@ redirect_from:
       <p>Since Neovim will provide the interface to interacting with text, any program will be able to tap into this potential and be able to include Neovim commands right in the application.</p>
     </div>
     <div class="col-narrow">
-      <div class="sponsors">
-        <h3>Project sponsors</h3>
+      <div id="sponsors" class="sponsors-main">
+        <h3>Main sponsors</h3>
 
-        <div class="first-level-sponsor">
-          <a href="http://digitalocean.com"><img src="images/sponsors/digital-ocean@2x.png" alt="Logo of Digital Ocean" width="311"></a>
-        </div>
-
-        <table class="second-level-sponsors">
-          <tr>
-            <td>
-              <a href="http://bountysource.com"><img src="images/sponsors/bountysource@2x.png" alt="Logo of Bountysource" width="144"></a>
-            </td>
-            <td>
-              <a href="http://superjer.com"><img src="images/sponsors/superjer@2x.png" alt="Logo of SuperJer" width="119"></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://ryandurk.com"><img src="images/sponsors/ryan-durk@2x.png" alt="Logo of Ryan Durk" width="125"></a>
-            </td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
       </div>
+      <script>var sponsorsDivId = 'sponsors', sponsorsFront = true;</script>
     </div>
   </div>
 </section>
@@ -101,7 +82,7 @@ redirect_from:
     <div class="col-narrow">
       <h2>Stay informed</h2>
 
-      <p>Subscribe to the <a href="/news">quasi-monthly newsletter</a> or follow us
+      <p>Subscribe to the <a href="{{ site.baseurl }}/news">quasi-monthly newsletter</a> or follow us
       on Twitter to stay up-to-date on the latest project news.</p>
 
       <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
@@ -111,14 +92,14 @@ redirect_from:
 
       <p>
       Have a say in the development of Neovim by voting in the
-      <a href="/polls/">Community Polls</a>.
+      <a href="{{ site.baseurl }}/polls/">Community Polls</a>.
       </p>
 
       <h2>Logos</h2>
 
       <p>SVG and PNG versions of the Neovim logo are available in the following zip file.</p>
 
-      <p><a href="logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
+      <p><a href="{{ site.baseurl }}/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
 
       <p class="light small">The Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
     </div>
@@ -158,7 +139,7 @@ redirect_from:
       <h3>Bitcoin</h3>
       <div class="donate">
         <div class="icon">
-          <img src="/images/icons/bitcoin.png" alt="Bitcoin logo"/>
+          <img src="{{ site.baseurl }}/images/icons/bitcoin.png" alt="Bitcoin logo"/>
         </div>
         <input class="donate" type="text" value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ" readonly="readonly">
       </div>

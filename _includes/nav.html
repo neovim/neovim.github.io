@@ -8,11 +8,15 @@
             {% else %}
                 <li>
             {% endif %}
-                    <a href="{{ nav.url }}">{{ nav.title }}</a>
+                 {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+                  <a href="{{ nav.url }}">{{ nav.title }}</a>
+                 {% else %}
+                  <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.title }}</a>
+                 {% endif %}
                 </li>
         {% endfor %}
             </ul>
         </nav>
-        <a href="/"><img src="/images/logo@2x.png" class="logo" alt="Neovim"></a>
+        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo@2x.png" class="logo" alt="Neovim"></a>
     </div>
 </header>

@@ -9,7 +9,7 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet">
     <link rel="canonical" href="http://neovim.io{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,5 +32,7 @@
       ga('create', 'UA-48317591-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <script src="{{ site.baseurl }}/js/sponsors-override.js"></script>
+    <script src="{{ site.baseurl }}/js/sponsors.js"></script>
   </body>
 </html>
