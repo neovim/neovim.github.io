@@ -357,13 +357,13 @@ pre {
   padding-bottom: 20px;
 }
 
-.sponsor-logo {
+.sponsors-table .sponsor-logo {
   text-align: right;
   padding-bottom: 20px;
 }
 
-.sponsor-name,
-.sponsor-amount {
+.sponsors-table .sponsor-name,
+.sponsors-table .sponsor-amount {
   padding-left: 12px;
 }
 
@@ -383,6 +383,11 @@ footer .container {
   font-size: 12px;
   color: #777;
 }
+
+footer .col-narrow {
+  text-align: right;
+}
+
 @media (min-width: 568px) {
   footer .container {
     font-size: 14px;
