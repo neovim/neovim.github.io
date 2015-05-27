@@ -305,16 +305,8 @@ pre {
   width: 400px;
 }
 
-.sponsors-table {
-  margin-top: 20px;
-}
-
 .sponsors-main h3 {
   color: #54a23d;
-}
-
-.sponsor-name, .sponsor-amount {
-  padding-left: 30px;
 }
 
 .first-level-sponsor {
@@ -343,6 +335,40 @@ pre {
   .second-level-sponsor img {
     width: auto;
   }
+}
+
+
+/*
+ * Sponsors table
+ *
+ */
+.sponsors-table {
+  width: 100%;
+  margin-top: 20px;
+  line-height: 1;
+}
+
+.sponsors-table td {
+  vertical-align: middle;
+}
+
+.sponsors-table h3 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.sponsor-logo {
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.sponsor-name,
+.sponsor-amount {
+  padding-left: 12px;
+}
+
+.sponsor-amount {
+  white-space: nowrap;
 }
 
 /*
