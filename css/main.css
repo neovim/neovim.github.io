@@ -353,18 +353,34 @@ pre {
 }
 
 .sponsors-table h3 {
+  display: inline;
   margin: 0;
   padding-bottom: 20px;
+  position: relative;
+  top: -0.8rem;
 }
 
 .sponsors-table .sponsor-logo {
   text-align: right;
+  padding-right: 12px;
   padding-bottom: 20px;
+  width: 128px;
 }
 
-.sponsors-table .sponsor-name,
 .sponsors-table .sponsor-amount {
   padding-left: 12px;
+}
+
+.sponsors-table .sponsor-name {
+  background-image: linear-gradient(90deg, #fbfbfb 25%, #fbfbfb 75%, #ddd 75%);
+  background-size: 6px 2px;
+  background-position: 0 40%;
+  background-repeat: repeat-x;
+}
+
+.sponsors-table .sponsor-name h3 {
+  background-color: #fbfbfb;
+  padding-right: 10px;
 }
 
 .sponsor-amount {
