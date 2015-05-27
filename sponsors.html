@@ -9,55 +9,52 @@ title: Sponsors
 <div class="container">
   <div class="col-wide">
     <h2>Current sponsors</h2>
-    <table id="sponsors">
-    </table>
+    <table class="sponsors-table" id="sponsors"></table>
     <script>var sponsorsDivId = 'sponsors', sponsorsFront = false;</script>
   </div>
+
   <div class="col-narrow">
     <h2>FAQ</h2>
-    <ol>
-      <li>
-        <strong>What is this list?</strong>
-        <p>
-          These are the companies or individuals contributing a monthly amount to
-          help sustain Neovim's development. See the <a
-          href="https://salt.bountysource.com/teams/neovim">Bountysource campaign</a>
-          for more details.
-        </p>
-      </li>
-      <li>
-        <strong>I'm a sponsor contributing $5/month but my URL is not listed,
-          which is what I expected from the Bountysource reward description.
-          What is happening?</strong>
-        <p>
-          Bountysource does not yet provide a UI for sponsors to provide their
-          URL. Most URLs displayed in the list were obtained using the GitHub API
-          and a heuristic to match the Bountysource slug (a sort of sponsor
-          identifier) with the GitHub username, but this method was error prone
-          and failed for many sponsors, including those that don't have a GitHub
-          account.
-        </p>
-        <p>
-          If you are pledging $5/month or more and want to have your URL
-          listed, please send a pull request to <a
-          href="https://github.com/neovim/neovim.github.io/pulls">
-          neovim.github.io</a> with a new entry for your Bountysource slug in the <a
-          href="https://github.com/neovim/neovim.github.io/blob/master/js/sponsors-override.js">
-          js/sponsors-override.js</a> file.
+    <dl class="faqs">
+      <dt>What is this list?</dt>
+      <dd>
+        <p>These are the companies or individuals contributing a monthly amount to
+        help sustain Neovim development. See the
+        <a href="https://salt.bountysource.com/teams/neovim">bountysource
+        campaign</a> for more details.</p>
+      </dd>
 
-          If you don't have a GitHub account, you can write to the <a
-          href="https://groups.google.com/forum/#!forum/neovim">Neovim mailing list</a>
-          instead.
-        </p>
-        <p>
-          You can obtain your Bountysource slug with the following command:
-          <pre id="slug-instructions">curl --header 'Accept: application/vnd.bountysource+json; version=2' 'https://api.bountysource.com/supporters?team_slug=neovim&amp;per_page=10000&amp;page=1' 2&gt; /dev/null | python -m json.tool | grep -C5 $NAME | grep slug</pre>
-          <code>$NAME</code> should be replaced by your Bountysource display name (as shown in the sponsor list).
-        </p>
-      </li>
-      <li>
-        <strong>Where are the original sponsors that used to be shown on the front
-          page?</strong>
+      <dt>
+        <p>I'm a sponsor contributing $5/month but my URL is not listed,
+        which is what I expected from the bountysource reward description.
+        What is happening?</p>
+      </dt>
+      <dd>
+        <p>Bountysource does not yet provide a UI for sponsors to inform their
+        URL. Most URLs displayed in the list were obtained using the github API
+        and a heuristic to match the bountysource slug(a sort of sponsor
+        identifier) with the github username, but this method was error prone
+        and failed for many sponsors, including those that don't have a github
+        account.</p>
+
+        <p>If you are pledging $5/month or more and want to have your URL
+        listed, please send a PR to
+        <a href="https://github.com/neovim/neovim.github.io/pulls">
+        neovim.github.io</a> with a new entry for your bountysource slug in the
+        <a href="https://github.com/neovim/neovim.github.io/blob/master/js/sponsors-override.js">
+        js/sponsors-override.js</a> file. You can obtain your bountysource slug with the
+        following command:</p>
+
+        <pre><code>curl --header 'Accept: application/vnd.bountysource+json; version=2' 'https://api.bountysource.com/supporters?team_slug=neovim&amp;per_page=10000&amp;page=1' 2&gt; /dev/null | python -m json.tool | grep -C5 $NAME | grep slug</code></pre>
+
+        <p>where $NAME should be replaced by your bountysource display name(as shown in the sponsor list).</p>
+      </dd>
+
+      <dt>
+        Where are the original sponsors that used to be shown in the front page?
+      </dt>
+
+      <dd>
         <p>
           <div class="first-level-sponsor">
             <a href="http://digitalocean.com"><img src="{{ site.baseurl }}/images/sponsors/digital-ocean@2x.png" alt="Logo of Digital Ocean" width="311"></a>
@@ -80,7 +77,7 @@ title: Sponsors
             </tr>
           </table>
         </p>
-      </li>
-    </ol>
+      </dd>
+    </dl>
   </div>
 </div>
