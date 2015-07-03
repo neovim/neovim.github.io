@@ -1,12 +1,10 @@
-- title: Home
-  url: /
 - title: News
   url: /news/
-- title: Documentation
-  url: /doc/
-- title: Community
-  url: /community/
 - title: Development
   url: https://github.com/neovim/neovim
+- title: Community
+  url: /community/
+- title: Documentation
+  url: /doc/
 - title: Sponsors
   url: /sponsors/
