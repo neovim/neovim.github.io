@@ -1,5 +1,7 @@
 - title: News
   url: /news/
+- title: Charter
+  url: /charter/
 - title: Development
   url: https://github.com/neovim/neovim
 - title: Community

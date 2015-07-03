@@ -1,0 +1,70 @@
+---
+layout: default
+title: Project Charter
+---
+
+{% include nav.html active='Charter' %}
+
+<div class="container">
+
+<h1>Project Charter</h1>
+
+<p>Neovim is not a rewrite of Vim; it is a refactor (and sometimes redactor) in
+the tradition of Vim which itself derives from <a
+href="https://en.wikipedia.org/wiki/Stevie_%28text_editor%29">Stevie</a>.</p>
+
+<p>Neovim is a continuation and extension of Vim. Many rewrites, clones,
+emulators and imitators exist; some are very clever; none are Vim. Neovim
+strives to be a superset of Vim, notwithstanding some intentionally removed
+misfeatures; thus insofar as one accepts those few and carefully-considered
+excisions, Neovim <em>is</em> Vim. The project is built for users who want the good
+parts of Vim, without compromise, plus some new good parts.</p>
+
+<p>The design of Neovim is informed by established industry principles such as
+modularity, isolation, well-defined interfaces, in order to:</p>
+
+<ul>
+    <li> Simplify maintenance and comprehension</li>
+    <li> Encourage contributions, scale development work</li>
+    <li> Enable new applications (remote plugins, integrations) and frontends (UIs)</li>
+</ul>
+
+<p>This purpose of this charter is to clarify priorities and to guide
+decisions.</p>
+
+<h2>Project Goals</h2>
+
+<ul>
+    <li> Leverage existing and ongoing Vim development development</li>
+    <li> Maintain feature parity with Vim and avoid regressions</li>
+    <li> Continue the Vim tradition of backwards compatibility</li>
+    <li> Keep the core small and fast</li>
+    <li> Make the core more extensible</li>
+    <li> Target all platforms supported by libuv</li>
+    <li> Optimize "out of the box", for new users but especially regular users</li>
+    <li> Delegate functionality to plugins, but preserve the utility of the nvim core</li>
+    <li> Ship Luajit as first-class scripting alternative</li>
+</ul>
+
+<h2>Project Non-Goals</h2>
+
+<ul>
+    <li> Turn Vim into an IDE</li>
+    <li> Limit applications (such as IDEs) built with Neovim</li>
+    <li> Deprecate VimL</li>
+</ul>
+
+<h2>Guiding Principles</h2>
+
+<ul>
+    <li> <strong>Do Not Regress From Origin</strong></li>
+    <li> Decide outcomes by weighing cost and benefit</li>
+    <li> Use automation to solve problems</li>
+    <li> Enable new contributors: remove barriers to entry</li>
+    <li> Prefer usability over tradition if the benefit greatly outweighs the cost</li>
+    <li> In matters of taste or ambiguity, favor tradition/compatibility</li>
+    <li> Unblock contributors and plugin authors; allow progress</li>
+    <li> Give usability a chance</li>
+</ul>
+
+</div>
