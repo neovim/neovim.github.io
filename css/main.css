@@ -126,7 +126,14 @@ pre {
     float: right;
   }
   .site-nav ul {
+    position: relative;
     list-style: none;
+    display: inline-table;
+  }
+  .site-nav ul:after {
+      content: "";
+      clear: both;
+      display: block;
   }
   .site-nav li {
     display: inline-block;
@@ -135,6 +142,28 @@ pre {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     position: relative;
+  }
+  .site-nav ul ul {
+      background: #3C92D1;
+      font-size: 16px;
+      display: none;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+  }
+  .site-nav ul li:hover > ul {
+      display: block;
+  }
+  .site-nav ul ul li {
+      margin: 0px;
+      padding: 5px;
+      width: 100%;
+  }
+  .site-nav ul ul li:hover {
+      background: #47ACF5;
+  }
+  .site-nav ul ul li a {
+      color: #FFF;
   }
   .col-half {
     display: table-cell;

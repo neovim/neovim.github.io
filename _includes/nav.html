@@ -13,6 +13,19 @@
                  {% else %}
                   <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.title }}</a>
                  {% endif %}
+		 {% if nav.sections != null %}
+		 <ul>
+		     {% for section in nav.sections %}
+		     <li>
+			 {% if section.url contains 'http://' or section.url contains 'https://' %}
+			 <a href="{{ section.url }}">{{ section.title }}</a>
+			 {% else %}
+			 <a href="{{ site.baseurl }}{{ section.url }}">{{ section.title }}</a>
+			 {% endif %}
+		     </li>
+		     {% endfor %}
+		 </ul>
+		 {% endif %}
                 </li>
         {% endfor %}
             </ul>

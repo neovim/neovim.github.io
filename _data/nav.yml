@@ -1,5 +1,10 @@
 - title: About
   url: /about/
+  sections:
+    - title: Charter
+      url: /charter/
+    - title: Roadmap
+      url: /roadmap/
 - title: News
   url: /news/
 - title: Development
