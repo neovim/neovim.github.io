@@ -96,75 +96,12 @@ pre {
  * Logo and navigation at the top of the page
  */
 
-.navbar {
-  padding: 12px 0;
+#navbar-logo {
+    height: 3em;
 }
-@media (min-width: 568px) {
-  .navbar {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+.navbar-top-align {
+    margin-top:1em;
 }
-
-.logo {
-  width: 120px;
-  position: relative;
-  top: 4px;
-}
-@media (min-width: 568px) {
-  .logo {
-    width: 180px;
-  }
-}
-
-.site-nav {
-  display: none;
-}
-@media (min-width: 568px) {
-  .site-nav {
-    display: block;
-    float: right;
-  }
-  .site-nav ul {
-    position: relative;
-    list-style: none;
-    display: inline-table;
-  }
-  .site-nav ul:after {
-      content: "";
-      clear: both;
-      display: block;
-  }
-  .site-nav li {
-    display: inline-block;
-    margin-top: 5px;
-    margin-left: 20px;
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
-    position: relative;
-  }
-  .site-nav ul ul {
-      background: #3C92D1;
-      font-size: 16px;
-      display: none;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-  }
-  .site-nav ul li:hover > ul {
-      display: block;
-  }
-  .site-nav ul ul li {
-      margin: 0px;
-      padding: 5px;
-      width: 100%;
-  }
-  .site-nav ul ul li:hover {
-      background: #47ACF5;
-  }
-  .site-nav ul ul li a {
-      color: #FFF;
-  }
   .col-half {
     display: table-cell;
     width: 50%;
@@ -174,6 +111,8 @@ pre {
   .col-half.second {
     padding-left: 6%;
   }
+.navbar-right .dropdown-menu {
+    left: 0px;
 }
 
 /*
