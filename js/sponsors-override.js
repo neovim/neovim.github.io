@@ -365,5 +365,8 @@ var sponsorOverride = {
   },
   '32818-jordwest': {
     url: 'http://west.io/',
+  },
+  '18647-s0undt3ch': {
+    url: 'https://github.com/s0undt3ch'
   }
 };
