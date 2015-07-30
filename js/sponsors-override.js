@@ -368,5 +368,8 @@ var sponsorOverride = {
   },
   '18647-s0undt3ch': {
     url: 'https://github.com/s0undt3ch'
+  },
+  '25127-peter-edge': {
+    url: 'https://github.com/peter-edge'
   }
 };
