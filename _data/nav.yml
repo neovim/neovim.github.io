@@ -1,12 +1,17 @@
-- title: Home
-  url: /
+- title: About
+  url: /about/
+  sections:
+    - title: Charter
+      url: /charter/
+    - title: Roadmap
+      url: /roadmap/
 - title: News
   url: /news/
-- title: Documentation
-  url: /doc/
-- title: Community
-  url: /community/
 - title: Development
   url: https://github.com/neovim/neovim
+- title: Community
+  url: /community/
+- title: Documentation
+  url: /doc/
 - title: Sponsors
   url: /sponsors/

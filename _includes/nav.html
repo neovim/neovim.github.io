@@ -1,22 +1,47 @@
 <header class="navbar">
     <div class="container">
-        <nav class="site-nav">
-            <ul>
-        {% for nav in site.data.nav %}
-            {% if include.active == nav.title %}
-                <li class="current">
-            {% else %}
-                <li>
-            {% endif %}
-                 {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-                  <a href="{{ nav.url }}">{{ nav.title }}</a>
-                 {% else %}
-                  <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.title }}</a>
-                 {% endif %}
-                </li>
-        {% endfor %}
-            </ul>
+        <nav class="navbar">
+	    <div class="container-fluid">
+	    <div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+		    <span class="sr-only">Toggle navigation</span>
+		    <img src="{{ site.baseurl }}/images/icons/icon-menu.svg" alt="Toggle navigation" class="navbar-top-align">
+		</button>
+		<a href="{{ site.baseurl }}/" class="navbar-brand">
+		    <img src="{{ site.baseurl }}/images/logo@2x.png" id="navbar-logo" alt="Neovim">
+		</a>
+	    </div>
+	    <div class="collapse navbar-collapse navbar-top-align" id="menu">
+	        <ul class="nav navbar-nav navbar-right">
+		{% for nav in site.data.nav %}
+		    {% if include.active == nav.title %}
+		    <li class="current">
+		    {% else %}
+		    <li>
+		    {% endif %}
+		    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+		    <a {% if nav.sections != null %}href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"{% else %}href="{{ nav.url }}"{% endif %}>{{ nav.title }}</a>
+		    {% else %}
+		    <a {% if nav.sections != null %}href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"{% else %}href="{{ site.baseurl }}{{ nav.url }}"{% endif %}>{{ nav.title }}</a>
+		    {% endif %}
+		    {% if nav.sections != null %}
+			<ul class="dropdown-menu">
+			{% for section in nav.sections %}
+			    <li>
+			    {% if section.url contains 'http://' or section.url contains 'https://' %}
+				<a href="{{ section.url }}">{{ section.title }}</a>
+			    {% else %}
+				<a href="{{ site.baseurl }}{{ section.url }}">{{ section.title }}</a>
+			    {% endif %}
+			    </li>
+			{% endfor %}
+			</ul>
+		    {% endif %}
+		    </li>
+		{% endfor %}
+		</ul>
+	    </div>
+	    </div>
         </nav>
-        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo@2x.png" class="logo" alt="Neovim"></a>
     </div>
 </header>
