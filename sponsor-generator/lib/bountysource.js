@@ -34,12 +34,12 @@ module.exports = function bountysource(batchSize, count) {
 
     for (var i = 0; i < res.body.length; i++) {
       var rawSponsor = res.body[i];
-      // Sponsors without id are anonymous 
+      // Sponsors without id are anonymous
       if (has(rawSponsor, 'id')) {
         var sponsor = {
           id: rawSponsor.slug,
           name: rawSponsor.display_name,
-          amount: parseFloat(rawSponsor.amount),
+          amount: parseFloat(rawSponsor.monthly_amount),
           url: null,
           logoUrl: null,
           frontLogoUrl: null,
