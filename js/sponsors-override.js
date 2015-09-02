@@ -9,6 +9,9 @@ var sponsorOverride = {
     url: 'http://www.namely.com/',
     frontImageUrl: '{{ site.baseurl }}/images/sponsors/Namely_logo.jpg',
   },
+  '34279-pygeek': {
+    url: 'http://pygeek.com',
+  },
   '347-stefanpenner': {
     url: 'http://iamstef.net/',
   },
