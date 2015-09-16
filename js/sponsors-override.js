@@ -11,7 +11,6 @@ var sponsorOverride = {
   },
   '34279-pygeek': {
     url: 'http://pygeek.com',
-    frontImageUrl: '{{ site.baseurl }}/images/sponsors/pygeek.png',
   },
   '347-stefanpenner': {
     url: 'http://iamstef.net/',
