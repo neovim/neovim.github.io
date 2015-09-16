@@ -9,29 +9,37 @@ redirect_from:
 
 <section class="masthead">
   <div class="container">
-    <h1>The Vim text editor has been loved by a generation of users.</h1>
-    <p class="lead">This is the next generation.</p>
+    <h1>Neovim is <em>vim</em> out of the box.</h1>
   </div>
 </section>
 
 <section class="front-section">
   <div class="container">
     <div class="col-wide">
-      <h2>Planned features</h2>
+      <h2>Features</h2>
 
       <h3>More powerful plugins</h3>
+      <p>The <a href="http://msgpack.org/">msgpack</a> API enables structured
+      communication to and from any programming language. Remote plugins run as
+      co-processes that communicate with Neovim safely and asynchronously.</p>
 
-      <p>Neovim plans to think of plugins from the start and provide a system that allows for extension in any language. The idea is to allow plugins to be co-processes that communicate with Vim asynchronously. This allows the plugin to listen for events and to send commands to Vim at any time.</p>
+      <h3>Better out-of-the-box</h3>
+      <ul>
+        <li>Strong defaults</li>
+        <li>Modern terminal features such as truecolor and bracketed paste</li>
+        <li>Built-in <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">terminal emulator</a></li>
+      </ul>
 
-      <p>Your old plugins will still work with Neovim as a compatibility layer will be provided. Little to no modification will be required.</p>
+      <h3>First-class embedding</h3>
+      <p>GUIs (or TUIs—such as <a href="https://en.wikipedia.org/wiki/GNU_Readline">readline</a>)
+      can <code>nvim --embed</code> or communicate via TCP socket using the
+      discoverable msgpack API.</p>
 
-      <h3>Better GUI architecture</h3>
+      <h3>Drop-in replacement for Vim</h3>
+      <p>Neovim is an <em>extension</em> of Vim: feature-parity and backwards
+      compatibility are high priorities. See <code>:help nvim-from-vim</code>
+      if you already use Vim.</p>
 
-      <p>Neovim will focus on providing a headless text editing environment. This will allow any GUI to be written that ties into the native GUI of whatever operating system it is running on.</p>
-
-      <h3>First-class support for embedding</h3>
-
-      <p>Since Neovim will provide the interface to interacting with text, any program will be able to tap into this potential and be able to include Neovim commands right in the application.</p>
     </div>
     <div class="col-narrow">
       <div id="sponsors" class="sponsors-main">
@@ -48,7 +56,10 @@ redirect_from:
     <h2 id="getting-invovled">Getting involved</h2>
 
     <div class="col-wide">
-      <p>The development is happening in the <a href="https://github.com/neovim/neovim">GitHub repository</a>. We're discussing the project in IRC (the <strong>#neovim</strong> channel on <strong>irc.freenode.net</strong>) and in the <a href="https://groups.google.com/forum/#!forum/neovim">Neovim Google Group</a>, so join us there if you'd like to get involved in the development process.</p>
+      <p>Development happens in the <a href="https://github.com/neovim/neovim">GitHub repository</a>.
+      Discuss the project at <a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
+      IRC (<strong>#neovim</strong> on <strong>irc.freenode.net</strong>) or the
+      <a href="https://groups.google.com/forum/#!forum/neovim">mailing list</a>.</p>
     </div>
     <div class="col-narrow">
       <p><a href="https://github.com/neovim/neovim" class="btn full-width">View the GitHub project</a></p>
@@ -63,19 +74,22 @@ redirect_from:
 
       <dl class="faqs">
         <dt>Is it ready to download and run now with all the features?</dt>
-        <dd>No. Although some features are a work in progress, Neovim isn't at a stable point. Using Neovim should be done with caution as things may change.</dd>
+        <dd>The project is still undergoing frequent changes, but many people
+        use it for their day-to-day work.
+        <a href="https://github.com/neovim/neovim/wiki/Installing-Neovim">Install instructions</a>
+        are available if you want to try it out.</dd>
 
         <dt>When will a beta be available?</dt>
-        <dd>When it's ready.</dd>
-
-        <dt>What ways will we be able to install Neovim?</dt>
-        <dd>Neovim hopes to be available through common package managers such as Homebrew for OS X, apt-get, pacman, and yum.</dd>
+        <dd>We are working hard to reach the
+        <a href="https://github.com/neovim/neovim/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.1-first-public-release">0.1 milestone</a>.
+        Take a look if you want to help out ;)
+        </dd>
 
         <dt>Will Neovim improve upon the default configuration that was found in Vim?</dt>
-        <dd>This is being <a href="https://github.com/neovim/neovim/issues/276">discussed</a>, but the community seems to be in favor of it.</dd>
+        <dd>Yes.</dd>
 
-        <dt>Can I donate to Neovim's development?</dt>
-        <dd>Yes you can, take a look at the <a href="#donate">Donate section</a> to learn more.</dd>
+        <dt>Will Neovim deprecate Vimscript?</dt>
+        <dd>No.</dd>
       </dl>
     </div>
 
@@ -121,12 +135,6 @@ redirect_from:
       Neovim. Any amount donated is very much appreciated by the
       community.
       </p>
-      <p>
-      From time to time, the team will create a bounty for a certain
-      feature or bug with the money donated. If you successfully
-      implement the feature or fix the bug, you'll be rewarded for
-      your efforts.
-      </p>
     </div>
     <div class="col-half second">
       <h3>Bitcoin</h3>
@@ -146,8 +154,7 @@ redirect_from:
       <p>
       Donate to the
       <a href="https://www.bountysource.com/teams/neovim">Neovim Team</a>
-      using Bountysource. Bountysource supports Paypal &amp; Google
-      Wallet.
+      on Bountysource (accepts Paypal &amp; Google Wallet).
       </p>
     </div>
   </div>

@@ -12,7 +12,13 @@ the Neovim project.
 ## Setup
 
 ### Installing Ruby gems
-`sudo gem install bundler` to get bundler, then you can just `bundle install` to install all the gems.
+
+```
+sudo gem install bundler
+sudo gem install jekyll
+```
+
+ to get bundler, then you can just `bundle install` to install all the gems.
 
 ### Serving locally
 ```
