@@ -7,35 +7,51 @@ This repository contains the source for the neovim.io website; visit the
 the Neovim project.
 
 ## Contributing
-...
+
+Just fork this repository and send us a pull request! :-)
 
 ## Setup
 
+This assumes that you already have a recent Ruby with RubyGems.
+
 ### Installing Ruby gems
 
-```
-sudo gem install bundler
-sudo gem install jekyll
-```
+Install Bundler, either systemwide:
 
- to get bundler, then you can just `bundle install` to install all the gems.
+    $ sudo gem install bundler
+
+or for the current user:
+
+    $ gem install --user-install
+    $ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+In the latter case, you might want to add the `PATH` update to `.bashrc` or your shell's equivalent.
+
+To install the dependencies of this project, use Bundler:
+
+    $ bundle install --path .bundle
 
 ### Serving locally
-```
-jekyll serve --watch
-```
-Open on `http://localhost:4000`
+
+Execute the following command:
+
+    $ bundle exec jekyll serve --watch
+
+Open `http://localhost:4000` to view the website.
+
+If you encounter an error message saying `Could not find a JavaScript runtime`, follow the link indicated
+in the error message and install one of the listed runtimes.
 
 ### Running tests
-```
-bundle exec rake test
-```
+
+    $ bundle exec rake test
 
 ### (Optionally) Regenerate dependencies
-Install bower if you don't have it:
-```
-npm install bower
-```
+
+Install Bower if you don't have it:
+
+    npm install bower
+
 Then install the JS dependencies with `bower install`.
 
 ## License
