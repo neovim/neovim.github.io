@@ -343,7 +343,7 @@ var sponsorOverride = {
     url: 'http://davidbolton.net',
   },
   '32622-dev0x': {
-    url: 'www.dev0x.com',
+    url: 'http://dev0x.com',
   },
   '29935-benjohnson': {
     url: 'http://benjohnson.ca',
