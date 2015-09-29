@@ -9,11 +9,7 @@ task :test do
       /^\/doc\/$/ => '/doc_index/',
     }, :href_ignore => [
       # Ignore doc directories created by bot-ci.
-      '/doc/dev',
-      '/doc/reports/clang',
-      '/doc/reports/translations',
-      '/doc/reports/vimpatch',
-      '/doc/user',
+      /^\/doc\/.*$/,
       '#',
   ]).run
 end
