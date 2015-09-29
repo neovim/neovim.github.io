@@ -3,11 +3,11 @@
 var sponsorOverride = {
   '32537-hautelook': {
     url: 'http://hautelook.github.io/',
-    frontImageUrl: '{{ site.baseurl }}/images/sponsors/hautelook-logo.png',
+    frontImageUrl: '/images/sponsors/hautelook-logo.png',
   },
   '32681-namely-labs-namelyhr-namely-com': {
     url: 'http://www.namely.com/',
-    frontImageUrl: '{{ site.baseurl }}/images/sponsors/Namely_logo.jpg',
+    frontImageUrl: '/images/sponsors/Namely_logo.jpg',
   },
   '34279-pygeek': {
     url: 'http://pygeek.com',
