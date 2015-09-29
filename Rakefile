@@ -14,6 +14,7 @@ task :test do
       '/doc/reports/translations',
       '/doc/reports/vimpatch',
       '/doc/user',
+      '#',
   ]).run
 end
 

@@ -140,7 +140,7 @@ msgpack-rpc; the same mechanism that UI's will be using when communicating.
 #### Job Activity Bug Fix
 
 @splinterofchaos happened to [come across a bug][job-bug] in which a job
-activity's output may become corrupted. The [rstream][job-rstream] structure
+activity's output may become corrupted. The rstream structure
 could contain incomplete lines if the buffer fills up before reaching a `'\n'`
 character.
 
@@ -302,7 +302,6 @@ Until next time. `:wq`
 
 [box]: http://en.wikipedia.org/wiki/Out_of_the_box_feature
 
-[job-rstream]: https://github.com/neovim/neovim/blob/master/src/nvim/os/rstream.c
 [job-pr]: https://github.com/neovim/neovim/pull/1255
 [job-bug]: https://github.com/neovim/neovim/issues/1243
 

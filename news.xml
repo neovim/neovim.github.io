@@ -5,8 +5,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title type="text" xml:lang="en">{{ site.news.name }}</title>
-    <link type="application/atom+xml" href="{{ site.baseurl }}{{ site.news.feed }}" rel="self"/>
-    <link type="text" href="{{ site.news.url }}" rel="alternate"/>
+    <link type="application/atom+xml" href="{{ site.url }}{{ site.news.feed }}" rel="self"/>
+    <link type="text" href="{{ site.url }}{{ site.news.url }}" rel="alternate"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ site.news.url }}</id>
     <author>
@@ -16,7 +16,7 @@
     {% for post in site.categories.newsletter %}
     <entry>
         <title>{{ post.title | xml_escape }}</title>
-        <link href="{{ site.baseurl }}{{ post.url }}"/>
+        <link href="{{ site.url }}{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.news.url }}{{ post.id }}</id>
         <content type="html">{{ post.content | xml_escape }}</content>
