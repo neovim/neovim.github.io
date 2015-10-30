@@ -69,7 +69,6 @@ pre {
   border: solid 1px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.05);
   white-space: pre-wrap;
-  font-size: 0.9rem;
 }
 
 
@@ -231,6 +230,10 @@ pre {
   font-size: 15px;
   margin-left: 0;
   margin-bottom: 20px;
+}
+
+.faqs dd pre {
+  font-size: 0.9rem;
 }
 
 /*
