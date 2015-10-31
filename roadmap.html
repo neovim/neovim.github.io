@@ -9,12 +9,62 @@ title: Roadmap
 
 <h1>Roadmap</h1>
 
-<p>The roadmap is being defined still. For now, check the milestone issues in the tracker:</p>
+<p> As developers on a more-hackable and flexible Vim, we are drawn to evermore
+new ideas. But the relevance and impact of the project hinges on our ability to
+balance exploration of the New with execution of the Now. If "mostly-working"
+features are not reliable, they may as well not exist—because users will
+avoid them. The "multiplier effect" of users and plugin-authors depends on the
+reliability of Neovim as a platform.</p>
 
-<ol>
-    <li> <a href="https://github.com/neovim/neovim/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.1-first-public-release">0.1</a> (first public release)</li>
-    <li> <a href="https://github.com/neovim/neovim/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.2">0.2</a></li>
-    <li> <a href="https://github.com/neovim/neovim/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.3">0.3</a></li>
-</ol>
+<p>The roadmap and <a href="https://github.com/neovim/neovim/milestones">milestones</a>
+together define the project direction and priorities. Contributions are most
+valuable if they focus on these concrete objectives.
+Anything that doesn't advance the in-scope goals for the current milestone is postponed.
+</p>
+
+<h2>Milestones</h2>
+
+<h3>Meta</h3>
+<p>
+In addition to version-number milestones, there are meta-milestones used as
+"buckets" to separate triaged items from non-triaged items.
+</p>
+
+<ul>
+  <li>Release versions (<code>0.1</code>, <code>0.2</code>, <code>0.3</code>, …) are actual milestones.<ul>
+        <li>The nearest upcoming version is assigned a target date.</li>
+        <li>Low-risk fixes in the current branch are first committed to the
+            stable branch, then merged to master. For example, if the current
+            stable release is <code>0.1.1</code> and a bug-fix is assigned to the
+            <code>0.2</code> milestone, it does not mean users need to wait until
+            <code>0.2</code> to get the fix. The patch will first be committed to the
+            stable branch and released with <code>0.1.2</code>.
+        </li>
+      </ul>
+  </li>
+  <li><a href="https://github.com/neovim/neovim/milestones/todo">todo</a> is a
+      meta-milestone "bucket" for triaged tickets which should be on the
+      roadmap but cannot yet be assigned to a concrete milestone.</li>
+  <li><a href="https://github.com/neovim/neovim/milestones/wishlist">wishlist</a>
+      is a meta-milestone "bucket" for low-priority items, or items lacking any
+      reasonable path to completion under current conditions.</li>
+</ul>
+
+<h3><a href="https://github.com/neovim/neovim/milestones/0.1-first-public-release">0.1: "whoa"</a></h3>
+<p>The primary goal of the <code>0.1</code> release ("first public release") is to reach a
+stable, functional baseline that can be built upon and used as a benchmark for
+further progress. Releasing a stable product to a larger audience will increase
+feedback on potential "blind spots", and will signal the most effective next
+direction for the project to focus on.</p>
+
+<h3><a href="https://github.com/neovim/neovim/milestones/0.2">0.2: "keanu"</a></h3>
+
+High-level goals:
+<ul>
+    <li>GUI</li>
+    <li>Windows support</li>
+    <li>Pre-packaged "RelWithDebInfo" build for Windows</li>
+    <li>Pre-built binaries for non-Windows platforms (tentative)</li>
+</ul>
 
 </div>
