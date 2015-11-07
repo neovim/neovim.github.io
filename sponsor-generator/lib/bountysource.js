@@ -46,6 +46,10 @@ module.exports = function bountysource(batchSize, count) {
           imageUrl: rawSponsor.image_url_large
         };
 
+        if (sponsor.amount < 1) {
+          continue;
+        }
+
         if (has(override, sponsor.id)) {
           sponsor.url = override[sponsor.id].url;
           if (override[sponsor.id].imageUrl)
