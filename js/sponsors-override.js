@@ -3,7 +3,7 @@
 var sponsorOverride = {
   '37206-ganwell': {
     url: 'http://ganwell.github.io/neovim.html',
-    frontImageUrl: 'http://1042.ch/ganwell.png',
+    frontImageUrl: '/images/sponsors/ganwell.png',
   },
   '32537-hautelook': {
     url: 'http://hautelook.github.io/',
