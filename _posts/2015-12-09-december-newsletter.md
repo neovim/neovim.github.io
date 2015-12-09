@@ -37,7 +37,7 @@ supported).
 
 Neovim 0.1.0 and 0.1.1 are already available in the [releases
 page][nvim-releases] and for [Homebrew/Linuxbrew][homebrew-formula] and [Arch
-Linux][archlinux-pkgbuild].  Check the [installation page on the Neovim
+Linux][archlinux-package].  Check the [installation page on the Neovim
 Wiki][installing-neovim-package] for more possibilities to install Neovim
 (although, at the time of writing, most of these will install the latest
 development version of Neovim instead of a 0.1.x release).
@@ -209,7 +209,7 @@ The migration from [syntastic][syntastic] is also very trivial, great work
 
 ### FZF
 
-[fzf][fzf] is a command-line fuzzy finder that thanks to its author (@junnegun,
+[fzf][fzf] is a command-line fuzzy finder that thanks to its author (@junegunn,
 the same developer behind [vim-plug][vim-plug]), has great Neovim support
 through a plugin that uses our [builtin terminal emulator][terminal-emulator].
 
@@ -294,7 +294,7 @@ Very useful @kassio!
 [windows-instrutions]: https://github.com/neovim/neovim/wiki/Installing-Neovim#windows
 [neovim-qt]: https://github.com/equalsraf/neovim-qt
 [homebrew-formula]: https://github.com/neovim/homebrew-neovim
-[archlinux-pkgbuild]: https://aur.archlinux.org/packages/neovim
+[archlinux-package]: https://www.archlinux.org/packages/?q=neovim
 [installing-neovim-package]: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package
 [installing-neovim-source]: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
 [build-neovim]: https://github.com/neovim/neovim/wiki/Building-Neovim
