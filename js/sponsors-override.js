@@ -110,7 +110,7 @@ var sponsorOverride = {
     url: 'http://www.gotgenes.com/',
   },
   '25130-jwoudenberg': {
-    url: 'http://www.jasperwoudenberg.com',
+    url: 'http://jasperwoudenberg.com',
   },
   '32617-musically-ut': {
     url: 'http://musicallyut.in',
