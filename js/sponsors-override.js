@@ -13,6 +13,9 @@ var sponsorOverride = {
     url: 'http://www.namely.com/',
     frontImageUrl: '/images/sponsors/Namely_logo.jpg',
   },
+  '39969-blumenversand': {
+    url: 'https://blumenversender.com',
+  },
   '34279-pygeek': {
     url: 'http://pygeek.com',
   },
