@@ -1,6 +1,6 @@
 highlighter: rouge
 permalink: pretty
-markdown: redcarpet
+markdown: kramdown
 
 title: Neovim
 description: "vim out of the box"
