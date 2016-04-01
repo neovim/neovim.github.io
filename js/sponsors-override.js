@@ -227,7 +227,7 @@ var sponsorOverride = {
     url: 'http://www.kevinkuchta.com',
   },
   '23998-rolisz': {
-    url: 'rolisz.ro',
+    url: 'https://rolisz.ro',
   },
   '32383-objectivetruth': {
     url: 'http://www.objectivetruth.ca',
