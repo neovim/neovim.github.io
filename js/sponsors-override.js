@@ -381,5 +381,8 @@ var sponsorOverride = {
   },
   '25127-peter-edge': {
     url: 'https://github.com/peter-edge'
+  },
+  '20486-beau': {
+    url: 'https://beaugunderson.com/'
   }
 };
