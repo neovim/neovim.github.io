@@ -9,19 +9,14 @@ title: About
 
 <h1>Vision</h1>
 
-
 <p>
 Neovim is a refactor—and sometimes redactor—in the tradition of Vim, which
 itself derives from <a href="https://en.wikipedia.org/wiki/Stevie_%28text_editor%29">Stevie</a>.
-It is not a rewrite, but a <em>continuation</em> and extension of Vim. Many
-rewrites, clones, emulators and imitators exist; some are very clever, but none
-are Vim. Neovim strives to be a superset of Vim, notwithstanding some
-intentionally removed misfeatures; excepting those few and carefully-considered
-excisions, Neovim <em>is</em> Vim. It is built for users who want the good
-parts of Vim, without compromise, and more.
+It is not a rewrite but a continuation and extension of Vim. Many clones and
+derivatives exist; some are very clever, but none are Vim. Neovim strives to be
+a superset of Vim except for some intentionally-removed misfeatures. It is built
+for users who want the good parts of Vim, and more.
 </p>
-
-<p>This project statement serves to clarify priorities and guide decisions.</p>
 
 <h2>Project Goals</h2>
 
@@ -31,11 +26,11 @@ parts of Vim, without compromise, and more.
   <li>Leverage ongoing Vim development: harmony</li>
   <li>Maintain feature parity with Vim; avoid regressions</li>
   <li>Continue the Vim tradition of backwards compatibility, with few exceptions</li>
-  <li>Keep the core small, fast, and extensible</li>
+  <li>Keep the core small and fast</li>
   <li>Target all platforms supported by libuv</li>
   <li>Optimize <em>out of the box</em>, for new users but especially regular users</li>
-  <li>Delegate to plugins, but preserve the utility of the nvim core</li>
-  <li>Ship Luajit as first-class scripting alternative</li>
+  <li>Delegate to plugins, but preserve the utility of the editor core</li>
+  <li>Ship lua as first-class scripting alternative</li>
 </ul>
 
 <h2>Project Non-Goals</h2>
