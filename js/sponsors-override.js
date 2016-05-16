@@ -1,6 +1,10 @@
 ---
 ---
 var sponsorOverride = {
+  '41853-ergodox-ez': {
+    url: 'http://www.ergodox-ez.com',
+    frontImageUrl: '/images/sponsors/ergodox-ez-logo.png'
+  },
   '37206-ganwell': {
     url: 'http://ganwell.github.io/neovim.html',
     frontImageUrl: '/images/sponsors/ganwell.png',
