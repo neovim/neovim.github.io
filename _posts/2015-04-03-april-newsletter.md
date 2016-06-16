@@ -359,7 +359,7 @@ Until next time. `:wq`
 [tui-pr]: https://github.com/neovim/neovim/pull/1820
 [tui-libtermkey]: http://www.leonerd.org.uk/code/libtermkey/
 [tui-unibilium]: https://github.com/mauke/unibilium
-[tui-bindings]: http://neovim.io/doc/user/vim_diff.html#nvim-features-new
+[tui-bindings]: http://neovim.io/doc/user/vim_diff.html#nvim-features
 [tui-combining]: http://en.wikipedia.org/wiki/Combining_character
 [tui-terminfo]: http://en.wikipedia.org/wiki/Terminfo
 [tui-manpage]: http://manpages.debian.org/cgi-bin/man.cgi?query=terminfo&sektion=5
