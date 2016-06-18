@@ -349,7 +349,7 @@ redirect_from:
         if (1 == x) {
       </BAD_CODE_SNIPPET>
       <CODE_SNIPPET>
-        if (x == 1) { //use this order
+        if (x == 1) {  //use this order
       </CODE_SNIPPET>
       <BAD_CODE_SNIPPET>
         if ((x = f()) &amp;&amp; (y = g())) {
