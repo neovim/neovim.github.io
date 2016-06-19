@@ -348,6 +348,9 @@ redirect_from:
       <BAD_CODE_SNIPPET>
         if (1 == x) {
       </BAD_CODE_SNIPPET>
+      <CODE_SNIPPET>
+        if (x == 1) {  //use this order
+      </CODE_SNIPPET>
       <BAD_CODE_SNIPPET>
         if ((x = f()) &amp;&amp; (y = g())) {
       </BAD_CODE_SNIPPET>
@@ -785,7 +788,7 @@ redirect_from:
           Every file should have a comment at the top describing its contents.
         </p>
         <p>
-          Generally a <code>.h</code> file will describe the variabels and
+          Generally a <code>.h</code> file will describe the variables and
           functions
           that are declared in the file with an overview of what they
           are for and how they are used. A <code>.c</code> file
@@ -1666,7 +1669,7 @@ redirect_from:
         the easier it is to follow and understand the control flow of
         the program.  Of course, readability can suffer from code
         being too dense as well as too spread out, so use your
-        judgement.  But in general, minimize use of vertical
+        judgment.  But in general, minimize use of vertical
         whitespace.
       </p>
     </BODY>
