@@ -8,58 +8,18 @@ title: Roadmap
 <div class="container">
 
 <h1>Roadmap</h1>
-
-<p> As developers on a more-hackable and flexible Vim, we are drawn to evermore
-new ideas. But the relevance and impact of the project hinges on our ability to
-balance exploration of the New with execution of the Now. If "mostly-working"
-features are not reliable, they may as well not exist—because users will
-avoid them. The "multiplier effect" of users and plugin-authors depends on the
-reliability of Neovim as a platform.</p>
-
 <p>The roadmap and <a href="https://github.com/neovim/neovim/milestones">milestones</a>
-together define the project direction and priorities. Contributions are most
-valuable if they focus on these concrete objectives.
-Anything that doesn't advance the in-scope goals for the current milestone is postponed.
+define the project direction and priorities.</p>
+<p>As developers on a hackable, flexible Vim, we're drawn to evermore
+new ideas; but the relevance and impact of the project hinges on our ability to
+balance exploration of the New with execution of the Now. If a feature doesn't
+advance the current milestone, it may be postponed.
 </p>
 
-<h2>Milestones</h2>
+<h2>Current</h2>
 
-<h3>Meta</h3>
-<p>
-In addition to version-number milestones, there are meta-milestones used as
-"buckets" to separate triaged items from non-triaged items.
-</p>
+<h3><a href="https://github.com/neovim/neovim/milestone/10">0.2</a></h3>
 
-<ul>
-  <li>Release versions (<code>0.1</code>, <code>0.2</code>, <code>0.3</code>, …) are actual milestones.<ul>
-        <li>The nearest upcoming version is assigned a target date.</li>
-        <li>Low-risk fixes in the current branch are first committed to the
-            stable branch, then merged to master. For example, if the current
-            stable release is <code>0.1.1</code> and a bug-fix is assigned to the
-            <code>0.2</code> milestone, it does not mean users need to wait until
-            <code>0.2</code> to get the fix. The patch will first be committed to the
-            stable branch and released with <code>0.1.2</code>.
-        </li>
-      </ul>
-  </li>
-  <li><a href="https://github.com/neovim/neovim/milestones/todo">todo</a> is a
-      meta-milestone "bucket" for triaged tickets which should be on the
-      roadmap but cannot yet be assigned to a concrete milestone.</li>
-  <li><a href="https://github.com/neovim/neovim/milestones/unplanned">unplanned</a>
-      is a meta-milestone "bucket" for low-priority items, or items lacking a
-      feasible path to completion under current conditions.</li>
-</ul>
-
-<h3><a href="https://github.com/neovim/neovim/milestones/0.1-first-public-release">0.1: "whoa"</a></h3>
-<p>The primary goal of the <code>0.1</code> release ("first public release") is to reach a
-stable, functional baseline that can be built upon and used as a benchmark for
-further progress. Releasing a stable product to a larger audience will increase
-feedback on potential "blind spots", and will signal the most effective next
-direction for the project to focus on.</p>
-
-<h3><a href="https://github.com/neovim/neovim/milestones/0.2">0.2: "keanu"</a></h3>
-
-High-level goals:
 <ul>
     <li>GUI</li>
     <li>Windows support</li>
@@ -67,4 +27,45 @@ High-level goals:
     <li>Pre-built binaries for non-Windows platforms (tentative)</li>
 </ul>
 
+<h3><a href="https://github.com/neovim/neovim/milestone/10">0.3</a></h3>
+
+<ul>
+    <li>Lua host, lua becomes a runtime dependency, shipped with the core editor</li>
+    <li>Basic support for LSP et al.</li>
+</ul>
+
+<h2>Meta</h2>
+<p>
+There are <em>release</em> milestones and <em>meta</em> milestones ("buckets").
+</p>
+
+<ul>
+  <li>Version-number milestones (<code>0.1</code>, <code>0.2</code>, <code>0.3</code>, …)
+      assign issues to production releases.<ul>
+        <li>The nearest upcoming version is assigned a target date.</li>
+        <li>Low-risk fixes in the current branch are first committed to the
+            stable branch, then merged to master. For example, if the current
+            stable release is <code>0.1.1</code> and a bug-fix is assigned to the
+            <code>0.2</code> milestone, it does not mean users need to wait until
+            <code>0.2</code> to get the fix. The patch will be committed to the
+            stable branch and released in <code>0.1.2</code>.
+        </li>
+      </ul>
+  </li>
+  <li><em><a href="https://github.com/neovim/neovim/milestones/todo">todo</a></em>
+      is a bucket for triaged tickets which should be on the
+      roadmap but cannot yet be assigned to a concrete milestone.</li>
+  <li><em><a href="https://github.com/neovim/neovim/milestones/unplanned">unplanned</a></em>
+      is a bucket for low-priority items or items lacking a
+      feasible path to completion.</li>
+</ul>
+
+<h2>Completed</h2>
+
+<h3><a href="https://github.com/neovim/neovim/milestone/5">0.1</a></h3>
+<p>The primary goal of the <code>0.1</code> release ("first public release") is to reach a
+stable, functional baseline that can be built upon and used as a benchmark for
+further progress. Releasing a stable product to a larger audience will increase
+feedback on potential "blind spots" and will signal the most effective
+direction for the project.</p>
 </div>
