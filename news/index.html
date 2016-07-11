@@ -11,7 +11,8 @@ title: News
 
       <h1>{{ site.categories.newsletter.first.title }}</h1>
 
-      <a class="release-date" href="{{ site.categories.newsletter.first.url }}">{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a>
+      <a class="release-date" href="{{ site.categories.newsletter.first.url }}"
+        >{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a>
 
       {{ site.categories.newsletter.first.content }}
 
