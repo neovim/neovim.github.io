@@ -106,6 +106,7 @@ GEM
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
     public_suffix (1.5.3)
+    rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -128,7 +129,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  execjs
   github-pages
+  rake
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
