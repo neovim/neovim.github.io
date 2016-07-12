@@ -36,7 +36,7 @@ license][license-vim]. While the Vim license still applies to the original Vim
 code, newly written code wasn't explicitly being addressed and could be
 relicensed.
 
-The community settled on using [Apache 2.0][license-apache]. The license info
+The community settled on using Apache 2.0. The license info
 was then [updated][license-update] and all contributors have been asked to sign
 a [CLA][license-cla] by filling out [this document][license-cla-doc] and adding
 your name to [this Wiki page][license-cla-wiki].
@@ -193,7 +193,6 @@ Until next time. `:wq`
 [info-rss]: {{ site.news.feed }}
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
-[license-apache]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
 [license-cla-doc]: https://docs.google.com/forms/d/1u54bpbwzneDIRltFx1TGi2evKxY3w0cOV3vlpj8DPbg/viewform
 [license-cla-wiki]: https://github.com/neovim/neovim/wiki/CLA-confirmation-page
 [license-cla]: http://en.wikipedia.org/wiki/Contributor_License_Agreement
