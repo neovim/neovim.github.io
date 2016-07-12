@@ -8,6 +8,6 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 script:
   - bundle exec jekyll build --drafts
-  - htmlproofer ./_site
+  - bundle exec htmlproofer ./_site
 notifications:
   email: false
