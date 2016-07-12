@@ -165,6 +165,15 @@ pre {
   }
 }
 
+.masthead .btn {
+  margin-top: 0.5em;
+}
+@media (min-width: 568px) {
+  .masthead .btn {  
+    font-size: 20px;
+  }
+}
+
 /*
  * Columns
  *
