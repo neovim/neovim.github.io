@@ -6,5 +6,6 @@ rvm:
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+script: bundle exec jekyll build --drafts
 notifications:
   email: false
