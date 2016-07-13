@@ -263,6 +263,7 @@ pre {
 
 .btn:hover {
   background-color: #3889c4;
+  color: white;
 }
 
 .btn.full-width {
