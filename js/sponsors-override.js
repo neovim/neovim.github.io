@@ -388,5 +388,8 @@ var sponsorOverride = {
   },
   '20486-beau': {
     url: 'https://beaugunderson.com/'
+  },
+  '25255-mmikowski': {
+    url: 'http://michaelmikowski.com'
   }
 };
