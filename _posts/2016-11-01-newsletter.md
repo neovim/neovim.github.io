@@ -2,30 +2,21 @@
 layout: newsletter
 title: "Newsletter #7 - Summer of Road"
 category: newsletter
-permalink: /news/2016/07/
+permalink: /news/2016/11/
 ---
 
-Welcome to the Neovim annual newsletter, delivered months in advance.
-I'm @justinmk.
+It's time for the Neovim newsletter.
 
 What is Neovim?
 ---------------
 
-Neovim is a fork of Vim, a versatile text editor.
+Each minute, a new text editor is born (source: Hacker News). There are
+endless text editors that address the "common case".
 
-New text editors are created every three minutes (source: Hacker News). There
-are virtually unlimited choices to address the "common case" of text editor
-usage.
-
-Instead of creating another _Vim-like_ text editor, Neovim users and developers
-want a better Vim. Thousands of small decisions live in the Vim core,
-accumulated over decades; most of those decisions are still relevant, solving
-subtle problems that new projects have yet to encounter, digest and decide.
-
-When a new text editor is built, the "80% case" is solved neatly by today's more
-advanced frameworks and designs chosen with the benefit of hindsight. But the
-last 20% will take decades of tiny decisions, while yet more new text editors
-are written, and the old ones adapt...
+Instead of another _Vim-like_ text editor, Neovim users want a better Vim.
+Thousands of small decisions live in the Vim core, accumulated over decades;
+most of those decisions are still relevant, solving subtle problems that new
+projects have yet to encounter, digest and decide.
 
 Neovim is a refactor of Vim to make it viable for another 30 years of hacking.
 See [`:help vim-differences`](https://neovim.io/doc/user/vim_diff.html) for
@@ -35,69 +26,66 @@ Should I switch?
 ------------------
 
 Neovim very intentionally builds on the long history of Vim community knowledge
-and user habits. That means **"switching" to Neovim is just an upgrade**—like
-installing a new version of Vim—not a binary choice. If you need to work on
-a server where only Vim is installed, it's like using an older version of Neovim
-(or Vim)...
+and user habits. That means **"switching" from Vim to Neovim is just an
+"upgrade"**—like installing a new version of Vim. If you log onto a server or
+workstation with only Vim, you won't be lost. If you find an article about Vim,
+it likely also applies to Neovim, unless it's about `:smile`.
 
-So if you like it when Vim gets improvements, try Neovim ;)
+So if you like Vim, try Neovim. If you love Vim, try
+[this](https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md) ;)
 
-Hacking
--------
+Hacking... or plain old Engineering
+-----------------------------------
 
-Since the beginning, one of Neovim's explicit goals has been:
+From the start, one of Neovim's explicit goals has been:
 
 > Simplify maintenance and encourage contributions
 
-We want a "hackable Vim": a codebase and community that enables experimentation
-and low-cost trials of new features. Not easy to achieve on a 25-year-old
-codebase.
+We want a _hackable Vim_: a codebase and community that enables experimentation
+and low-cost trials of new features.
 
-But there's evidence of real progress towards that ambition. New features have
-been merged—humble features, not big-bang, sensational features that get a lot
-of hype. These features were merged because they
+And there's evidence of real progress towards that ambition. We've successfully
+executed non-trivial "off-the-roadmap" patches: features which are important to
+their authors, but not necessarily popular. These features were merged because
+they
 
 1. fit into existing conventions/design
 2. included robust test coverage (enabled by an advanced test framework and CI)
 3. received thoughtful review by other contributors
 
-Some contributors were self-described "C newbies"; yet they persevered, with
-help from other contributors in chat and code review, and the build system.
-
 Features like...
 
-- `:tcd`
-- unlimited alignment sections in `'statusline'`
-- `man.vim` manpage completion, text reflow, and more
+- [`:tchdir`](https://neovim.io/doc/user/editing.html#:tcd)
+- unlimited alignment sections in `'statusline'` ([PR #4489](https://github.com/neovim/neovim/pull/4489))
+- [TextYankPost](https://neovim.io/doc/user/autocmd.html#TextYankPost)
+  event
+- [QuickFixLine](https://neovim.io/doc/user/syntax.html#hl-QuickFixLine)
+  highlight group
+- Improved `man.vim` plugin
 
-were non-trivial to implement, but they exist in Neovim today. This isn't just
-hacking, it's engineering.
-These features are casually mentioned in `:help nvim-features`, you might miss
-them if you're not looking carefully :)
+These features are available today. They are casually mentioned in [`:help
+nvim-features`](https://neovim.io/doc/user/vim_diff.html#nvim-features) :)
 
-Now the fun starts
-------------------
+Fun without `:smile`?
+---------------------
 
 New clients and applications are popping up more frequently than ever.
 
-- Users love [deoplete](https://github.com/Shougo/deoplete.nvim), the first and
-  (so far) only **non-blocking auto-completion** plugin for Vim.
-- [NyaoVim](https://github.com/rhysd/NyaoVim) by @rhysd is innovating and
-  exploring new concepts. But my favorite part is its thoughtful,
-  convention-based, modular design. It offers the
-  [`<neovim-editor>`](https://github.com/rhysd/neovim-component)
-  **web component** which can be used in your electron- or nw.js-based project,
-  including VS Code (someone get to work on this!) and of course Atom. Stuff
-  like this is exactly what we had hoped for 2 years ago when Neovim started...
-- @qvacua recently turned his sights to `nvim`, making rapid progress on a new
-  `nvim`-based backend for his well-known
-  **[VimR](https://github.com/qvacua/vimr)** project, a polished GUI frontend
-  for macOS. There are ready-to-go `.app` bundles for macOS 10.11 at the
-  [releases](https://github.com/qvacua/vimr/releases) page.
-- [neovim-qt](https://github.com/equalsraf/neovim-qt), a Neovim GUI for Windows,
-  macOS, and unix, continues to get better and better: it is as fast as gVim (or
-  _faster_—try it out!), with **less flicker** when scrolling. It doesn't depend
-  GTK or KDE. and supports 
+- Users love [**deoplete**](https://github.com/Shougo/deoplete.nvim), the first
+  **non-blocking auto-completion** plugin for vim.
+- @rhysd is innovating and exploring new concepts with
+  [**NyaoVim**](https://github.com/rhysd/NyaoVim), a thoughtful,
+  convention-based, modular design.
+  - The [`<neovim-editor>`](https://github.com/rhysd/neovim-component) web
+    component can be used in **your own project**, including VS Code, Atom, and
+    other electron or nw.js projects!
+- @qvacua turned his sights to `nvim`, progressing rapidly on a new `nvim`-based
+  backend for his well-known **[VimR](https://github.com/qvacua/vimr)** project,
+  a polished GUI frontend for macOS. There are ready-to-go `.app` bundles for
+  macOS 10.11 at the [releases](https://github.com/qvacua/vimr/releases) page.
+- The cross-platform [**neovim-qt**](https://github.com/equalsraf/neovim-qt) GUI
+  continues to get better and better: it is as fast as gVim (or _faster_—try
+  it!), with less flicker, and it doesn't depend GTK/KDE.
 - [neovim.app](https://github.com/rogual/neovim-dot-app) is the original OS
   X Neovim GUI available via homebrew for macOS 10.9+.
 - [nvim-hs](https://github.com/neovimhaskell/nvim-hs) is a Haskell host for
@@ -105,33 +93,29 @@ New clients and applications are popping up more frequently than ever.
 - Keep an eye on [cl-neovim](https://github.com/adolenc/cl-neovim)
   for authoring **lisp plugins**. It also implements `:Lispdo`!
 - [nvr](https://github.com/mhinz/neovim-remote) recently published a release
-  that provides all of the legacy Vim "clientserver" command-line options, such
-  as `--servername`, `--remote`, etc. `nvr` is perfect for **communicating with
+  that provides the legacy Vim "clientserver" command-line options such as
+  `--servername`, `--remote`, etc. `nvr` is perfect for **communicating with
   a parent `nvim` instance** from a `:terminal` buffer.
 - Intero [users are excited](https://twitter.com/_simonyang/status/753365931896692736) about
   [intero.nvim](https://github.com/myfreeweb/intero.nvim) and
   [intero-neovim](https://github.com/parsonsmatt/intero-neovim)
-- @carlosdcastillo continues to update the Neovim-based
-  [**Atom** nvim-mode](https://github.com/carlosdcastillo/vim-mode).
 
 There are clients for go, julia, perl, Java, R, Elixir, and Clojure.
 Go to the [related projects](https://github.com/neovim/neovim/wiki/Related-projects)
 wiki page whenever you are curious about new work.
 
-And some long-awaited major features have landed in `nvim` core.
+And some long-awaited major features have landed in `nvim` core:
 
-- ruby support is now in master, release 0.1.5. This means you can write Neovim
-  plugins in ruby, _and_ the legacy Vim `:ruby`, `:rubydo`, and `:rubyfile`
-  commands are supported (so existing Vim+ruby plugins work in Neovim, such as
-  Command-t and vim-github-dashboard).
+- **Ruby support** landed in 0.1.5. This means you can write Neovim plugins in
+  ruby, _and_ the legacy Vim `:ruby`, `:rubydo`, and `:rubyfile` commands are
+  supported (so existing Vim+ruby plugins work in Neovim, such as Command-t and
+  vim-github-dashboard).
   - To enable Ruby support, just `gem install neovim`. You don't need to worry
     about compiling against a specific version.
 - `:CheckHealth` is like homebrew "doctor", conceived by @tweekmonster and
-  extended by @tjdevries. We look forward to adding more and more "sanity
-  checks" covering common problems. In the future, instead of wondering whether
-  your runtime is broken or your `$TERM` is wrong (or ...), reach for
-  `:CheckHealth`. Users should not need to fumble with the problems that
-  experienced users just "learn to deal with".
+  extended by @tjdevries. We'll continue to add healthchecks to detect and fix
+  common problems. Run `:CheckHealth` whenever you upgrade Neovim or install on
+  a new system.
 
 Project changes
 ---------------
