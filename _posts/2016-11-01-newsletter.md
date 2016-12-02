@@ -101,10 +101,11 @@ New clients and applications are popping up more frequently than ever.
   [intero-neovim](https://github.com/parsonsmatt/intero-neovim)
 
 There are clients for go, julia, perl, Java, R, Elixir, and Clojure.
-Go to the [related projects](https://github.com/neovim/neovim/wiki/Related-projects)
-wiki page whenever you are curious about new work.
+Visit the [related projects](https://github.com/neovim/neovim/wiki/Related-projects)
+wiki page to discover new projects as they emerge!
 
-And some long-awaited major features have landed in `nvim` core:
+More Features
+-------------
 
 - **Ruby support** landed in 0.1.5. This means you can write Neovim plugins in
   ruby, _and_ the legacy Vim `:ruby`, `:rubydo`, and `:rubyfile` commands are
@@ -145,29 +146,33 @@ Release strategy
 
 ### 0.1.x releases
 
-In November we announced our first release, `0.1.`. Since then we have
+One year ago we announced our first release, `0.1`. Since then we have
 streamlined our release process (versioning, tagging, changelogging,
-announcement-making, booty-shaking).
+announcement-making).
 
-I consider these releases reasonably stable, though we still have some bugs that
-we'd rather not have. With `0.2`, Windows will become a first-class target.
+Some users wonder if `0.1` means Neovim is unstable.
 
-Some question the lack of a `1.0` sticker. We follow
-[semver](https://semver.org), the recommendations there explain the status that
-we want to signal with the `0.x` version designations. We don't want to declare
-`1.0` until we have some features like providers, UIs, and the remote API
-designed to a spec that we want to commit to supporting for the (very) long
-term.
+- Each release since `0.1` is considered **stable for use** on all systems
+  except Windows (coming in 0.2).
+- With version `0.2`, Windows will become a first-class target.
+- Until `1.0`, some APIs or features may *change*. We may sometimes break
+  backwards compatibility. This is uncommon, and all cases are
+  [documented](https://github.com/neovim/neovim/wiki/Following-HEAD).
+- In `0.1.6` we introduced **API versioning**. Plugin authors and clients can
+  dynamically decide which functions to use, or to stay on an older version of
+  the API.
+
+We follow [semver](https://semver.org); the recommendations there explain
+the purpose of the `0.x` version series.
 
 ### OS Packages
 
-More OS packages are appearing. Thanks to @jamessan, @fwalch and others for
-building packages for their favorite systems and working with us
-to address inevitable compiler/platform quirks that come from
-supporting dozens of targets.
+More OS packages are appearing. Special thanks to @jamessan (Debian maintainer
+and Neovim contributor), @fwalch and others for building packages for their
+favorite systems and working with us to address inevitable compiler/platform
+quirks that come from supporting dozens of targets.
 
-**Neovim is part of Debian's
-[next release](https://packages.debian.org/stretch/neovim).**
+Neovim is part of **Debian's [next release](https://packages.debian.org/stretch/neovim)!**
 
 Progress
 --------
