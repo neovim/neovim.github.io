@@ -2,6 +2,7 @@
 layout: newsletter
 title: "Newsletter #7 - Summer of Road"
 category: newsletter
+published: false
 permalink: /news/2016/11/
 ---
 
