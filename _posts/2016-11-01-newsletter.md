@@ -2,11 +2,13 @@
 layout: newsletter
 title: "Newsletter #7 - Summer of Road"
 category: newsletter
-published: false
 permalink: /news/2016/11/
 ---
 
-It's time for the Neovim newsletter.
+It's time for the Neovim newsletter! Skip to the [Fun](#fun-without-smile) and
+[Features](#features) sections if you only care about new features. There are
+also changes in [project management](#project-management) that you should know
+about.
 
 What is Neovim?
 ---------------
@@ -47,158 +49,201 @@ and low-cost trials of new features.
 
 And there's evidence of real progress towards that ambition. We've successfully
 executed non-trivial "off-the-roadmap" patches: features which are important to
-their authors, but not necessarily popular. These features were merged because
-they
+their authors, but not necessarily popular. These patches were included because
+they:
 
 1. fit into existing conventions/design
 2. included robust test coverage (enabled by an advanced test framework and CI)
 3. received thoughtful review by other contributors
 
-Features like...
+standard for merging such
+patches These features were merged because
+Some features 
 
-- [`:tchdir`](https://neovim.io/doc/user/editing.html#:tcd)
-- unlimited alignment sections in `'statusline'` ([PR #4489](https://github.com/neovim/neovim/pull/4489))
+- [`:tchdir`](https://neovim.io/doc/user/editing.html#:tcd) enables tab-local
+  "working directory"
+- `'statusline'` supports unlimited alignment sections ([PR #4489](https://github.com/neovim/neovim/pull/4489))
 - [TextYankPost](https://neovim.io/doc/user/autocmd.html#TextYankPost)
-  event
-- [QuickFixLine](https://neovim.io/doc/user/syntax.html#hl-QuickFixLine)
-  highlight group
-- Improved `man.vim` plugin
+  event makes it trivial to implement a reliable
+  [yank ring](https://github.com/bfredl/nvim-miniyank), send yanks to an
+  external service, and
+  [applications we didn't anticipate](https://github.com/machakann/vim-highlightedyank)!
+- [QuickFixLine](https://neovim.io/doc/user/syntax.html#hl-QuickFixLine) is
+  a new highlight group
+- `man.vim` offers completion, improved highlighting, and more
 
-These features are available today. They are casually mentioned in [`:help
+They are casually mentioned in [`:help
 nvim-features`](https://neovim.io/doc/user/vim_diff.html#nvim-features) :)
 
 Fun without `:smile`?
 ---------------------
 
-New clients and applications are popping up more frequently than ever.
+New clients and applications are popping up with increasing frequency. The
+applications are becoming more innovative and imaginative.
 
+- [NyaoVim](https://github.com/rhysd/NyaoVim) is innovating and exploring
+  new concepts with a thoughtful, convention-based, modular **Electron GUI**.
+  - Its [`<neovim-editor>`](https://github.com/rhysd/neovim-component) web
+    component can be used in **your own project**, including VS Code, Atom, and
+    other Electron or nw.js projects!
+- [ONI](https://github.com/extr0py/oni) is an Electron-based **Neovim IDE**
+  showing many exciting possiblities. It also has a cool logo like NyaoVim :)
 - Users love [**deoplete**](https://github.com/Shougo/deoplete.nvim), the first
   **non-blocking auto-completion** plugin for vim.
-- @rhysd is innovating and exploring new concepts with
-  [**NyaoVim**](https://github.com/rhysd/NyaoVim), a thoughtful,
-  convention-based, modular design.
-  - The [`<neovim-editor>`](https://github.com/rhysd/neovim-component) web
-    component can be used in **your own project**, including VS Code, Atom, and
-    other electron or nw.js projects!
 - @qvacua turned his sights to `nvim`, progressing rapidly on a new `nvim`-based
-  backend for his well-known **[VimR](https://github.com/qvacua/vimr)** project,
-  a polished GUI frontend for macOS. There are ready-to-go `.app` bundles for
+  backend for his well-known [VimR](https://github.com/qvacua/vimr) project,
+  a polished **GUI for macOS**. There are pre-built `.app` bundles for
   macOS 10.11 at the [releases](https://github.com/qvacua/vimr/releases) page.
 - The cross-platform [**neovim-qt**](https://github.com/equalsraf/neovim-qt) GUI
-  continues to get better and better: it is as fast as gVim (or _faster_—try
-  it!), with less flicker, and it doesn't depend GTK/KDE.
-- [neovim.app](https://github.com/rogual/neovim-dot-app) is the original OS
-  X Neovim GUI available via homebrew for macOS 10.9+.
-- [nvim-hs](https://github.com/neovimhaskell/nvim-hs) is a Haskell host for
-  Neovim plugins. This means you can **write Neovim plugins in Haskell**.
-- Keep an eye on [cl-neovim](https://github.com/adolenc/cl-neovim)
-  for authoring **lisp plugins**. It also implements `:Lispdo`!
-- [nvr](https://github.com/mhinz/neovim-remote) recently published a release
-  that provides the legacy Vim "clientserver" command-line options such as
-  `--servername`, `--remote`, etc. `nvr` is perfect for **communicating with
-  a parent `nvim` instance** from a `:terminal` buffer.
-- Intero [users are excited](https://twitter.com/_simonyang/status/753365931896692736) about
-  [intero.nvim](https://github.com/myfreeweb/intero.nvim) and
+  continues to get better: it's as fast as gVim, with less flicker, and it
+  doesn't depend GTK/KDE.
+- [neovim.app](https://github.com/rogual/neovim-dot-app) is a macOS Neovim GUI
+  available via homebrew for macOS 10.9+.
+- [nvim-hs](https://github.com/neovimhaskell/nvim-hs) is a host to enable
+  **writing Neovim plugins in Haskell**.
+- Check out [cl-neovim](https://github.com/adolenc/cl-neovim) for authoring
+  **Neovim lisp plugins**. Includes `:Lispdo`!
+- [nvr](https://github.com/mhinz/neovim-remote) now supports the Vim
+  "clientserver" options `--servername`, `--remote`, etc. `nvr` is perfect for
+  **communicating with a parent `nvim` instance** from a `:terminal` buffer.
+- Intero [users are joyful](https://twitter.com/_simonyang/status/753365931896692736)
+  about [intero.nvim](https://github.com/myfreeweb/intero.nvim) and
   [intero-neovim](https://github.com/parsonsmatt/intero-neovim)
 
-There are clients for go, julia, perl, Java, R, Elixir, and Clojure.
-Visit the [related projects](https://github.com/neovim/neovim/wiki/Related-projects)
+There are clients for go, julia, perl, Java, R, Elixir, Clojure, and more. Visit
+the [related projects](https://github.com/neovim/neovim/wiki/Related-projects)
 wiki page to discover new projects as they emerge!
 
-More Features
--------------
+Project management
+------------------
 
-- **Ruby support** landed in 0.1.5. This means you can write Neovim plugins in
-  ruby, _and_ the legacy Vim `:ruby`, `:rubydo`, and `:rubyfile` commands are
-  supported (so existing Vim+ruby plugins work in Neovim, such as Command-t and
-  vim-github-dashboard).
-  - To enable Ruby support, just `gem install neovim`. You don't need to worry
-    about compiling against a specific version.
-- `:CheckHealth` is like homebrew "doctor", conceived by @tweekmonster and
-  extended by @tjdevries. We'll continue to add healthchecks to detect and fix
-  common problems. Run `:CheckHealth` whenever you upgrade Neovim or install on
-  a new system.
+> Clarity and consistency breed contribution. — @robertmeta
 
-Project changes
----------------
+### Benevolent Dictator For a Limited time
 
-> clarity and consistency breed contribution
-> — @robertmeta
+In July, Thiago (@tarruda) took a less active role in the project, for personal
+reasons. He hopes to resume active contributions in the future.
 
-### Funding: Nikolai Pavlov (ZyX) assumes Thiago's role
+Some have asked for a "BDFL" to be named. @justinmk has that role, unless you
+want it: we've made steps to document the role of maintainer, so that anyone
+trusted by most contributors can step up in the future.
 
-The enormously successful
-[salt campaign](https://salt.bountysource.com/teams/neovim) has funded
-Thiago's work, yielding libmpack, major refactors and improvements. For personal
-reasons Thiago will take a less active role in the project, and the 2-3 days of
-funded work will now be fulfilled by ZyX, the second-most [prolific](#note2)
-committer to Neovim _and Vim_ (~50,000 LOC contributed to Neovim, ~13,000 LOC
-contributed to Vim—including `if_python`, Vim's most mature FFI).
+The ultimate goal is to spread out tasks as horizontally as possible, and to
+continue to give the "commit bit" to people we've grown to trust. There are
+currently 14 core contributors; we'd like to scale that to 50. We don't want the
+project to depend on heroic effort, but a flow of interested parties working
+within the conventions and etiquette of the Vim community.
 
-ZyX's work on Neovim includes: first-class XDG support, shada, build-time
-generators, automated change-aware linter, lua-VimL. He gave careful
-attention to internals such as `msgpackparse()`/`msgpackdump()`, `string()`, and
-completely re-wrote `json_decode()`/`json_encode()` support (incl. granular
-error messages and comprehensive test coverage).
+### Funding
 
+The (ongoing) successful [funding campaign](https://salt.bountysource.com/teams/neovim)
+yielded [libmpack], `:terminal`, and major refactors and improvements (e.g.
+decoupling the UI logic from the TUI). With Thiago taking a less active role in
+the project, the funding is available to other developers.
+
+[@ZyX-I](https://github.com/ZyX-I), a prolific committer to Neovim (21 kLOC
+contributed) and Vim ([13 kLOC](#note1), including `if_python`), agreed to take
+the role of "lead developer", i.e. the developer who receives the funding. His
+work on Neovim includes:
+
+- first-class XDG support, shada, build-time generators, automated change-aware
+  linter, Lua-to-VimL translator
+- critical internals such as `msgpackparse()` and `os/fileio.c` (buffered I/O)
+- complete rewrite of Vim JSON support, including granular error messages
+- comprehensive test coverage for all of the above
+
+The funding does not always go to one person. It's available to any
+[core contributor](https://github.com/orgs/neovim/people) who wants to take
+a month or more to focus on Neovim.
+
+### Donations
+
+Because funding is monthly, it is (hopefully) a low-friction decision:
+
+- To donate $10, you could pledge $1 per month.
+- If the project makes you rage, just cancel your pledge.
+- If the project makes you happy (despite the lack of `:smile`, somehow), let
+  the pledge continue!
+
+API
+---
+
+The Neovim API is one of the defining technical and "soft" features of the
+project. In [PR #5535](https://github.com/neovim/neovim/pull/5535) we formed
+a strategy for **growing the API without breaking clients**.
+
+- We established the *API Level* concept, to enable trivial comparison and
+  emphasize that the API version is separate from the Neovim version.
+- We added version and deprecation fields to the API metadata.
+- We'll never break API function signatures published in a tagged release.
+- We won't remove deprecated API functions until Neovim version `2.0` (if ever).
+
+The API should only [**grow**](https://youtu.be/oyLBGkS5ICk?t=1557), not break.
+Each API function is marked by the API level where it first became available.
+This makes it practical for the numerous Neovim API clients to support any
+released version of Neovim.
+
+Since [PR #4934](https://github.com/neovim/neovim/pull/4934) you can call the
+API of the current `nvim` process **directly from VimL**:
+
+    :echo nvim_buf_get_lines(42, 1, 3, v:false)
+
+Try `:call nvim_<Tab>` at the command line to see the available API functions,
+or install the [nvim-api-viewer](https://github.com/tweekmonster/nvim-api-viewer)
+plugin to see a nice overview of available API functions.
+
+We take API reliability seriously, and we've tried to think carefully about the
+design. Feedback from plugin and client authors is appreciated!
 
 Release strategy
 ----------------
 
-### 0.1.x releases
+### Versioning
 
-One year ago we announced our first release, `0.1`. Since then we have
-streamlined our release process (versioning, tagging, changelogging,
-announcement-making).
+One year ago we announced our first release, `0.1`. We've streamlined the
+release process (versioning, tagging, changelogs, announcements).
 
 Some users wonder if `0.1` means Neovim is unstable.
 
 - Each release since `0.1` is considered **stable for use** on all systems
-  except Windows (coming in 0.2).
-- With version `0.2`, Windows will become a first-class target.
-- Until `1.0`, some APIs or features may *change*. We may sometimes break
-  backwards compatibility. This is uncommon, and all cases are
+  except Windows.
+    - Windows will be a first-class target starting with `0.2`.
+- Until `1.0`, some non-API features may break backwards compatibility. This is
+  uncommon, and these cases are always
   [documented](https://github.com/neovim/neovim/wiki/Following-HEAD).
-- In `0.1.6` we introduced **API versioning**. Plugin authors and clients can
-  dynamically decide which functions to use, or to stay on an older version of
-  the API.
+- In `0.1.6` we introduced **API versioning**. Clients can dynamically decide
+  which functions to use.
 
 We follow [semver](https://semver.org); the recommendations there explain
-the purpose of the `0.x` version series.
+the intention of the `0.x` series.
 
 ### OS Packages
 
-More OS packages are appearing. Special thanks to @jamessan (Debian maintainer
-and Neovim contributor), @fwalch and others for building packages for their
-favorite systems and working with us to address inevitable compiler/platform
-quirks that come from supporting dozens of targets.
-
-Neovim is part of **Debian's [next release](https://packages.debian.org/stretch/neovim)!**
+More OS packages are appearing. Neovim is part of **Debian's [next
+release](https://packages.debian.org/stretch/neovim)!** Special thanks to
+@jamessan (Debian maintainer and Neovim contributor), @fwalch and others who
+build packages for their favorite systems and work with us to address inevitable
+compiler/platform quirks.
 
 Progress
 --------
 
-What did we _really_ do?
+What did Neovim contributors accomplish since 2014?
 
-50,000 (TODO: exact number?) new lines of code have been written. That's 25% of the codebase we
-started with.
-1000 (TODO:?) _new_ tests (on top of Vim's existing test suite).
+By a [conservative estimate](#note2) at least 20,000 new lines of C code have
+been written. We've written 2200 _new_ tests, in addition to passing Vim's own
+test suite. 273 different people have contributed to the core project. The [core
+project](https://github.com/neovim/neovim) has more commits in 3 years than Vim
+in 12 years.
 
-Besides the major refactoring and feature work done in the first two years,
-a ton of time was put into the Neovim build and CI system. As many devops/SREs
-know, this is a major project by itself. An important part of a CI system is to
-"lock in" the gains by insisting on green builds and writing meaningful and
-robust tests.
+Besides major refactoring and feature work, a ton of time was put into the
+Neovim continuous integration (CI) system. In a stable but fragile C codebase,
+maintainers tend to ignore "small" features because they may be too risky. CI
+reduces fragility so we can [welcome](#hacking-or-plain-old-engineering) feature
+work large _and small_, instead of fearing change.
 
-Now the work is really starting to pay off. Instead of being
-petrified by far-reaching changes, we can welcome feature work large _and
-small_. In a stable but fragile C codebase, the tendency is to ignore "small"
-features because they may not be popular and the maintainers don't have the
-incentive to care for them.
-
-With the Neovim test infrastructure, new features can be tested thoroughly by
-**screen tests**. For example, here's a test that exercises Vim's `'wildmode'`
-feature:
+New features can be tested rigorously with **screen tests**. For example, here's
+a test that exercises the `'wildmode'` UI behavior:
 
 ```lua
 describe("'wildmenu'", function()
@@ -217,160 +262,152 @@ describe("'wildmenu'", function()
 end)
 ```
 
-Having built a sophisticated build/CI system, the next "inflection point" of
-safe, rapid enhancement is to make the core extensible with Lua. That is why
-ZyX's [PR #4411](https://github.com/neovim/neovim/pull/4411) will be the most
-important achievement for the project this year.
+After we forked Vim in 2014, there was an unstable period; that gap has become
+smaller and smaller, and will vanish in 2017. Each regression fix is covered by
+integration tests. Each pull request builds against 12 different environments.
+Special thanks to @jszakmeister, @fwalch and @ZyX-I for their work on the build
+system, and to @oni-link for fixing some very difficult bugs.
 
-Each Neovim PR now builds against 12(!) different systems. Thanks to
-@jszakmeister, @fwalch and @ZyX-I for maturing the CI pipeline.
-Reliable and meaningful CI/automation is central to our
-"Move Fast and Don't Break Things™" methodology.
+### Little things matter
 
-We did break some things though. Many of those regressions have been fixed
-thanks to @oni-link's insight, and many others. Two years ago when we forked
-Vim, there was an unstable period; that gap has become smaller and smaller. Each
-regression fix is covered by integration tests.
+One of the strongest impressions from
+[social media](https://twitter.com/search?q=neovim&src=typd) is that people
+really appreciate _less friction_ when they try Neovim. **Defaults matter.**
+Tim Pope deserves credit for [curating](https://github.com/tpope/vim-sensible/)
+many of the [defaults](https://neovim.io/doc/user/vim_diff.html#nvim-defaults)
+we chose.
 
+@fmoralesc and others thought carefully about how to
+[implement](https://github.com/neovim/neovim/issues/2676) these defaults without
+causing regressions (`encoding=utf8` and syntax/filetype were tricky). The work
+was tedious, but justified: it's a _one-time_ cost that helps new users, old
+users on new systems (which are everywhere these days: VMs, containers,
+servers...), and _all_ users by propagating Vim "best practices".
 
-(TODO: laundry list of the tons of work we've done in the last 2 years, which
-wasn't really addressed by previous newsletters and is obviously unknown to most
-people based on reddit conversations)
+Features
+--------
 
-- `:terminal`
-- remote API
-- first-class XDG support
-- better defaults
+Here are some new developments since the last newsletter.
 
-### New features
+- **Ruby support** landed in 0.1.5. This means you can write Neovim plugins in
+  ruby _and_ the legacy Vim `:ruby*` commands are supported (so existing
+  Vim+ruby plugins work in Neovim, such as Command-t and vim-github-dashboard).
+  - To enable Ruby support, just `gem install neovim`. You don't need to worry
+    about compiling against a specific version.
+- **Write plugins in Go** with the Neovim API
+  [Go client](https://godoc.org/github.com/neovim/go-client/nvim)!
+  (Thanks to @garyburd!)
+- `:CheckHealth` detects common problems (like Homebrew's `doctor`). Run it
+  whenever you install or upgrade Neovim.
+- **buffer-local highlighting** (`:help api-highlights`) is similar to
+  `matchaddpos()`, with some key differences: it is associated with a buffer and
+  **adapts to line insertions and deletions**. Useful for linter or semantic
+  highlighter plugins that monitor a buffer for changes and compute highlights
+  in the background.
 
-The definitive reference of user-facing features is
-[`:help nvim-features`](https://neovim.io/doc/user/vim_diff.html#nvim-features),
-but here are some highlights:
+### Externalized UI Widgets
 
-- API client for go https://godoc.org/github.com/neovim/go-client/nvim
+In [PR #4432](https://github.com/neovim/neovim/pull/4432) @bfredl made the first
+step to [give UIs more control](http://tarruda.github.io/articles/neovim-smart-ui-protocol/)
+over the display of "widgets". @romgrk quickly made a
+[proof of concept](https://www.youtube.com/watch?v=TI5azVeDUDo).
 
-- buffer-local highlighting (`:help api-highlights`). This is similar to
-  matchaddpos() but with some key differences. The added highlights are
-  associated with a buffer and adapts to line insertions and deletions, similar
-  to signs. It is also possible to manage a set of highlights as a group and
-  delete or replace all at once.
+It didn't take long for an [ambitious patch](https://github.com/neovim/neovim/pull/5686)
+to externalize **cmdline, tab, wildmenu, and preview window widgets**. The demo
+shows exciting potential:
 
-  The intended use cases are linter or semantic highlighter plugins that monitor
-  a buffer for changes, and in the background compute highlights to the buffer.
-- @tjdevries's [first PR](https://github.com/neovim/neovim/pull/4489) added
-  unlimited **alignment sections for the statusline**. This means you can
-  put `%=` in your `'statusline'` setting the separate sections equally.
+<iframe width="600" height="400" src="https://www.youtube.com/embed/rzclz1seo0g" frameborder="0" allowfullscreen></iframe>
 
-- The `TextYankPost` event allows scripts to reliably and easily hook into any
-  yank ("text copy") event. This makes it trivial to implement a
-  [yank ring](https://github.com/bfredl/nvim-miniyank)—or even send yanks to an
-  external service.
+This work was possible because @tarruda cleanly separated the terminal-UI (TUI)
+from the internal screen, so **even the built-in TUI is driven by UI events**
+like any other externalized UI.
 
-- API: externalized popup. [Demo](https://www.youtube.com/watch?v=TI5azVeDUDo)
+### Incremental ("live") `:substitute`
 
-### Around the corner
+In May 2016 a group of students mentored by Eric Burel contacted us about
+contributing to Neovim. From a list of ideas we provided, they decided to
+implement a "live preview" for `:substitute`. We merged it in
+[PR #5561](https://github.com/neovim/neovim/pull/5561), released in `0.1.7`.
+Set the `inccommand` option to try it:
 
-- ZyX lua work
-- timeyyy extended-marks
-- bfredl work
-- moar!!!!!!!!!
+    :set inccommand=split
 
-### Student project: live `:substitute`
+<script type="text/javascript" src="https://asciinema.org/a/92207.js" id="asciicast-92207" async></script>
 
-The initial idea came out of discussions I had with the students, suggesting
-several ideas and getting a feel for their time/effort budget. Eric Burel [wrote
-about the
-project](https://medium.com/@eric.burel/stop-using-open-source-5cb19baca44d#.4gz835f9y).
-Thanks to Eric, the students at ENSIMAG, and @KillTheMule!
+This feature was made possible by our development model: despite having "no
+time" for a side-project, we outlined the basic idea, the students made
+decisions out-of-band, and we provided clarification as needed.
 
-This is a feature that can, with some work, be merged back into Vim. Like other
-Neovim features adopted by Vim, this feature was **made possible by our
-development model**: despite having zero time for taking on a side-project,
-I outlined the basic idea, the students made most of the decisions out-of-band,
-coming back to us for clarification where needed.
+- The students posted a PR to allow ongoing feedback. The PR fork was updated
+  regularly, so reviewers could pull, build, and test.
+- Tests were written using [screen tests](#progress), helping coverity/ASan/etc
+  to exercise the feature and reviewers to **visualize the behavior**.
+- The automated build system continuously ran the changes against 12 different
+  systems.
 
-- The students posted a PR which allowed ongoing feedback from several
-  contributors. The PR was updated by pushing to the students' project fork,
-  which anyone could easily pull, build, and run.
-- Tests were written using screen tests (a unique Neovim feature), this allows
-  the feature to be checked against coverity/ASan/etc as well as helping
-  reviewers visualize the intended behavior by reading the tests instead of
-  deciphering [TTY tests](...).
-- The automated build system exercised the students' work against 12 different
-  systems, without needing to wait for other users and developers to try it out.
+Eric [wrote about the experience](https://medium.com/@eric.burel/stop-using-open-source-5cb19baca44d#.4gz835f9y).
+Thanks to Eric, the students at ENSIMAG,
+[@KillTheMule](https://github.com/KillTheMule), and @bfredl for carrying this
+feature to a conclusion we are proud of.
 
-Little things matter
---------------------
+### Upcoming
 
-Defaults really do matter. One of the impressions I most often see on twitter is
-the positive experience that people have in starting Neovim and encountering
-_less friction_. Tim Pope deserves credit for curating many of the defaults we
-chose. @fmoralesc and others put careful thought into implementing these
-defaults without causing regressions ('encoding=utf8', syntax/filetype, were the
-trickiest ones) or making things worse for users who _don't_ want the new
-defaults.
+Look for the following developments in 2017 for Neovim `0.3`.
 
-Changing the defaults ended up being a **lot of work**, in order to avoid making
-things _worse_ for existing users. But the work is justified: it is a _one-time_
-cost that helps new users, old users who just silently suffered, old users on
-new systems (which are everywhere these days: VMs, containers, server farms...),
-and _all_ users by spreading the Vim ecosystem "best practices".
-Insisting on strong defaults spreads knowledge to _all_ users implicitly, and
-avoids a lot of wasted time and effort of each user having to re-discover the
-baseline "sanity level" of Vim configuration. Culture and ecosystem are
-a significant part of the value of a long-lived software project; without good
-defaults, that advantage is undermined.
-
-Neovim's reach
---------------
-
-Neovim's ideas are finding their way into other projects.
-The coprocess architecture of Neovim [influenced Xi
-editor](https://news.ycombinator.com/item?id=11577160).
-
-For the last 7 months Vim has seen a flurry of commits to reach bullet-point
-parity with Neovim features (Bram often
-[recounts the fate of Elvis](https://groups.google.com/d/msg/vim_dev/IKha1xx6V8Y/tfHDcVcU0Y8J)
-as evidence that features are king): job control and `'viminfo'` merging were
-major Neovim-like features absorbed by Vim.
-
-Most users consider Neovim's job control to be easier to use than Vim's.
-Compare `:help job-control` to `:help channel` and let us know what you think.
-
-Fundraiser goals
-----------------
-
-I consider the original fundraiser goals to be met.
-
+- We will ship Lua as a default scripting alternative in 2017.
+  The next "inflection point" of reduced-risk, rapid enhancement is to make the
+  core extensible with Lua. For that
+  [PR #4411](https://github.com/neovim/neovim/pull/4411) is an important step.
+- With ZyX's [eval.c refactor](https://github.com/neovim/neovim/pull/5119)
+  the monolithic `eval.c` will be separated into
+  [modules](https://github.com/neovim/neovim/issues/5081#issuecomment-234772243),
+  marking a point where Neovim's VimL implementation diverges from Vim's. This
+  will be the world's second **alternative VimL implementation**
+  (ZyX's [VimL-to-Lua PR](https://github.com/neovim/neovim/pull/243) was the first).
+- [Extended marks](https://github.com/neovim/neovim/pull/5031) will give plugin
+  authors more powerful and flexible marks.
+- We will take a close look at the
+  [Microsoft Language Server Implementation](https://github.com/neovim/neovim/issues/5522)
+  to decide how it and similar middleware can integrate elegantly with Neovim.
 
 EOF
 ---
 
-There's a beehive of activity at the gitter and IRC channels (which are
-bridged together by the [matrix
-project](https://github.com/matrix-org/matrix-appservice-gitter) thanks to
-@leonerd!) .
-[Stop by our hangouts](https://neovim.io/community/) to talk about the project.
+So that was 2016 for Neovim. Could 2017 be the Year of the Neovim Desktop?
+
+Neovim's ideas are finding their way into other projects, such as
+[Xi editor](https://news.ycombinator.com/item?id=11576751) and Vim itself,
+which has seen
+[more activity this year than any other year in its history](https://github.com/vim/vim/graphs/contributors).
+
+<img src="/images/2016-vimfest.jpg" style="max-width:600px; height:auto;"
+     title="Neovim and Vim maintainers at VimFest 2016" />
+
+There's a beehive of activity in the gitter and IRC channels (which are
+bridged by [matrix](https://github.com/matrix-org/matrix-appservice-gitter)
+thanks to @leonerd!). [Visit us](https://neovim.io/community/) to talk about the
+project.
 
 And don't forget there's a [roadmap](https://neovim.io/roadmap/) at neovim.io if
 you want to check where the project is headed.
 
 Thanks for reading.
 
-—@justinmk
+—Justin M. Keyes (@justinmk)
 
 ---
 
 ##### note1
 
-* A primary goal of Neovim is to be positioned to "piggy-back" on whatever
-  editor or IDE "wins".
+    $ git log --grep='\([zZ]y[xX]\)\|\([nN]ikolai [pP]av\)\|\([nN]ikolay [pP]av\)' --numstat --pretty=tformat: --numstat|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }'
+    added lines: 22590 removed lines: 8620 total lines: 13970
+
+    $ git log --grep='[cC]hristian [bB]rab' --numstat --pretty=tformat: --numstat|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }'
+    added lines: 10000 removed lines: 3033 total lines: 6967
 
 ##### note2
 
-    $ git log --grep='\([zZ]y[xX]\)\|\([nN]ikolai [pP]av\)\|\([nN]ikolay [pP]av\)' --numstat --pretty=tformat: --numstat|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }' -
-    added lines: 22590 removed lines: 8620 total lines: 13970
+    $ ohcount msgpack_rpc/ api/ os/ event/ tui/ shada.c rbuffer.c terminal.c memory.c
+    c                    79      14576       2863      16.4%       2154      19593
 
-    $ git log --grep='[cC]hristian [bB]rab' --numstat --pretty=tformat: --numstat|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }' -
-    added lines: 10000 removed lines: 3033 total lines: 6967
+[libmpack]: https://github.com/tarruda/libmpack
