@@ -49,16 +49,7 @@ and low-cost trials of new features.
 
 And there's evidence of real progress towards that ambition. We've successfully
 executed non-trivial "off-the-roadmap" patches: features which are important to
-their authors, but not necessarily popular. These patches were included because
-they:
-
-1. fit into existing conventions/design
-2. included robust test coverage (enabled by an advanced test framework and CI)
-3. received thoughtful review by other contributors
-
-standard for merging such
-patches These features were merged because
-Some features 
+their authors, but not the highest priority for the project.
 
 - [`:tchdir`](https://neovim.io/doc/user/editing.html#:tcd) enables tab-local
   "working directory"
@@ -67,10 +58,16 @@ Some features
   event makes it trivial to implement a reliable
   [yank ring](https://github.com/bfredl/nvim-miniyank), send yanks to an
   external service, and
-  [applications we didn't anticipate](https://github.com/machakann/vim-highlightedyank)!
+  [applications we didn't anticipate](https://github.com/machakann/vim-highlightedyank)
 - [QuickFixLine](https://neovim.io/doc/user/syntax.html#hl-QuickFixLine) is
   a new highlight group
 - `man.vim` offers completion, improved highlighting, and more
+
+These patches were included because they:
+
+1. fit into existing conventions/design
+2. included robust test coverage (enabled by an advanced test framework and CI)
+3. received thoughtful review by other contributors
 
 They are casually mentioned in [`:help
 nvim-features`](https://neovim.io/doc/user/vim_diff.html#nvim-features) :)
@@ -78,11 +75,10 @@ nvim-features`](https://neovim.io/doc/user/vim_diff.html#nvim-features) :)
 Fun without `:smile`?
 ---------------------
 
-New clients and applications are popping up with increasing frequency. The
-applications are becoming more innovative and imaginative.
+New clients and innovative applications are appearing more frequently than ever.
 
-- [NyaoVim](https://github.com/rhysd/NyaoVim) is innovating and exploring
-  new concepts with a thoughtful, convention-based, modular **Electron GUI**.
+- [NyaoVim](https://github.com/rhysd/NyaoVim) is a thoughtfully-designed,
+  modular **Electron GUI**.
   - Its [`<neovim-editor>`](https://github.com/rhysd/neovim-component) web
     component can be used in **your own project**, including VS Code, Atom, and
     other Electron or nw.js projects!
