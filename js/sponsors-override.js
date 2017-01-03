@@ -23,7 +23,7 @@ var sponsorOverride = {
   '34279-pygeek': {
     url: 'http://pygeek.com',
   },
-  '34942-madis': {
+  '34942-madis-nomme': {
     url: 'https://mad.is',
     name: 'Madis Nõmme'
   },
