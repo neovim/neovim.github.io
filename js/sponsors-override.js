@@ -395,5 +395,8 @@ var sponsorOverride = {
   },
   '25255-mmikowski': {
     url: 'http://michaelmikowski.com'
+  },
+  '47915-wojtek-kruszewski': {
+    url: 'http://www.kruszewski.com'
   }
 };
