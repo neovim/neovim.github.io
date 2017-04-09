@@ -71,6 +71,28 @@ redirect_from:
 
 <section class="front-section shaded">
   <div class="container">
+    <div class="col-wide">
+      <h2 id="news">News</h2>
+
+      {% comment %} <dl class="nvim-posts"> {% endcomment %}
+      <table>
+      {% assign posts_to_show = 2 %}
+      {% for post in site.posts limit:posts_to_show %}
+        <tr>
+          <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td><td>Published on: {{ post.date | date:"%Y-%m-%d" }}</td>
+        </tr>
+        {% comment %} <dd></dd> {% endcomment %}
+      {% endfor %}
+      </table>
+      {% comment %} </dl> {% endcomment %}
+
+      <h3>For more posts, visit the <a href="/news/archive">Archive</a></h3>
+    </div>
+  </div>
+</section>
+
+<section class="front-section">
+  <div class="container">
     <h2 id="getting-invovled">Getting involved</h2>
 
     <div class="col-wide">
@@ -85,7 +107,7 @@ redirect_from:
   </div>
 </section>
 
-<section class="front-section">
+<section class="front-section shaded">
   <div class="container">
     <div class="col-wide">
       <h2 id="faqs">FAQs</h2>
@@ -135,7 +157,7 @@ redirect_from:
   </div>
 </section>
 
-<section class="front-section shaded">
+<section class="front-section">
   <div class="container">
     <h2 id="support">Supporting the project</h2>
 
