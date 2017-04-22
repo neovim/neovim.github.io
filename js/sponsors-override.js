@@ -398,5 +398,8 @@ var sponsorOverride = {
   },
   '47915-wojtek-kruszewski': {
     url: 'http://www.kruszewski.com'
+  },
+  '49943-sleekwristbands-com': {
+    url: 'https://www.sleekwristbands.com'
   }
 };
