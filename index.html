@@ -27,14 +27,13 @@ redirect_from:
       <h3>Better out-of-the-box</h3>
       <ul>
         <li>Strong defaults</li>
-        <li>Modern terminal features such as truecolor and bracketed paste</li>
+        <li>Modern terminal features such as cursor styling, truecolor and bracketed paste</li>
         <li>Built-in <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">terminal emulator</a></li>
       </ul>
 
       <h3>First-class embedding</h3>
-      <p>GUIs (or TUIs such as <a href="https://en.wikipedia.org/wiki/GNU_Readline">readline</a>)
-      can <code>nvim --embed</code> or communicate via named pipe using the
-      discoverable msgpack API.</p>
+      <p>GUIs can <code>nvim --embed</code> or communicate via named pipe using
+      the discoverable msgpack <a href="https://neovim.io/doc/user/api.html#api">API</a>.</p>
 
       <h3>Drop-in replacement for Vim</h3>
       <p>Neovim is an <em>extension</em> of Vim: feature-parity and backwards
@@ -79,46 +78,41 @@ redirect_from:
       {% assign posts_to_show = 2 %}
       {% for post in site.posts limit:posts_to_show %}
         <tr>
-          <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td><td>Published on: {{ post.date | date:"%Y-%m-%d" }}</td>
+          <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
+          <td style="text-align: right">Published on: {{ post.date | date:"%Y-%m-%d" }}</td>
         </tr>
         {% comment %} <dd></dd> {% endcomment %}
       {% endfor %}
       </table>
       {% comment %} </dl> {% endcomment %}
 
-      <h3>For more posts, visit the <a href="/news/archive">Archive</a></h3>
+      <p>More posts are in the <a href="/news/archive">Archive</a></p>
+
+      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
+
+    <div class="col-narrow">
+      <h2>Get Involved</h2>
+      Discuss the project at <a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
+      IRC (<strong>#neovim</strong> on <strong>irc.freenode.net</strong>) or the
+      <a href="https://groups.google.com/forum/#!forum/neovim">mailing list</a>.</p>
+      <p>Contribute code, report bugs and request features at <a href="https://github.com/neovim/neovim">GitHub</a>.
+    </div>
+
   </div>
 </section>
 
 <section class="front-section">
   <div class="container">
-    <h2 id="getting-invovled">Getting involved</h2>
-
     <div class="col-wide">
-      <p>Development happens in the <a href="https://github.com/neovim/neovim">GitHub repository</a>.
-      Discuss the project at <a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
-      IRC (<strong>#neovim</strong> on <strong>irc.freenode.net</strong>) or the
-      <a href="https://groups.google.com/forum/#!forum/neovim">mailing list</a>.</p>
-    </div>
-    <div class="col-narrow">
-      <p><a href="https://github.com/neovim/neovim" class="btn full-width">View the GitHub project</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="front-section shaded">
-  <div class="container">
-    <div class="col-wide">
-      <h2 id="faqs">FAQs</h2>
+      <h2 id="faqs">FAQ</h2>
 
       <dl class="faqs">
         <dt>What is the project status?</dt>
-        <dd>The current stable version is <code>0.1.7</code>.
-        See <a href="https://github.com/neovim/neovim/wiki/Installing-Neovim">the wiki</a>
-        for install instructions,
-        <a href="https://github.com/neovim/neovim/milestones?direction=desc&sort=completeness&state=open">milestones</a>
-        for current development progress, and the <a href="roadmap/">roadmap</a> for future plans.
+        <dd>The current stable version is <code>0.2.0</code> (now supports Windows!).
+        See the <a href="https://github.com/neovim/neovim/milestones">milestones page</a> for development progress
+        and the <a href="roadmap/">roadmap</a> for high-level plans.
         </dd>
 
         <dt>Is Neovim trying to turn Vim into an IDE?</dt>
@@ -138,14 +132,6 @@ redirect_from:
     </div>
 
     <div class="col-narrow">
-      <h2>Stay informed</h2>
-
-      <p>Subscribe to the <a href="/news">newsletter</a> or follow us
-      on Twitter to stay up-to-date on project news.</p>
-
-      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
       <h2>Logos</h2>
 
       <p>SVG and PNG versions of the Neovim logo are available in the following zip file.</p>
@@ -157,7 +143,7 @@ redirect_from:
   </div>
 </section>
 
-<section class="front-section">
+<section class="front-section shaded">
   <div class="container">
     <h2 id="support">Supporting the project</h2>
 
@@ -165,7 +151,7 @@ redirect_from:
       <h3>Bountysource</h3>
       <p>
       You can donate to the
-      <a href="https://www.bountysource.com/teams/neovim">Neovim project</a>
+      <a href="https://salt.bountysource.com/teams/neovim">Neovim project</a>
       on Bountysource.
       </p>
     </div>
