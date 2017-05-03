@@ -45,10 +45,11 @@ Some students have studied the Architecutre of Neovim. The [results](https://del
 
 Development Goodies
 -------------------
+### Features
 
 - **Externalized Tabline** - Thanks @dzhou121
     Every UI component that is externalized means that nvim can run faster.
-- More static analysis (PVS studio). We now have static analysis by coverity, clang-scan, clang ASan/UBSan, clint, luacheck, and PVS
+- PVS studio static analysis. We now have static analysis by coverity, clang-scan, clang ASan/UBSan, clint, luacheck, and PVS
 
 ### Upcoming
 
@@ -60,22 +61,38 @@ Development Goodies
 - pre-build packages(Appimage) for Linux (https://github.com/neovim/neovim/pull/6638)
 
 
-Misc
-----
+### Note
+
+- We unfortunately missed out on Google Summer of Code 2017, it is on the radar
+now and we are maintaining a list of [project ideas](https://github.com/neovim/neovim/wiki/GSoC-2018-Ideas).
+We should keep this brimming with ideas. It is required for our acceptance into GSOC;
+it can also spark creativity in contributors and students.
+
+- We are aiming to release newsletters more often, please add any relevant news
+to our website's [issue tracker](https://github.com/neovim/neovim.github.io).
+
+- We have a few contributors located in Europe, it would be cool to organize
+some events or sprints together!
+
+- @Sander2 (one of the students on the Architecture project mentioned above) has
+been experimenting with code fuzzing and successfully resulted in a [bug fix](https://github.com/neovim/neovim/pull/6557) in nvim and vim.
+
+- @ZyX-I 's [eval.c refactor](https://github.com/neovim/neovim/pull/5119) was also merged,
+paving the way for the built-in lua for 0.3. We cannot wait!
 
 - [Libuv](https://github.com/libuv/libuv/issues/1287) might be getting support
 for cygwin and other platforms. This is great new for Neovim!
 
-- [Neomutt](https://github.com/neomutt/neomutt/pull/415) may be getting a lua based testing infrastructure similar to ours.
 
-- ZyX's [eval.c refactor](https://github.com/neovim/neovim/pull/5119) was also merged,
-paving the way for the built-in lua for 0.3. We cannot wait!
+Misc
+----
+
+- [Neomutt](https://github.com/neomutt/neomutt/pull/415) may be getting a lua based testing infrastructure similar to ours.
 
 - The [road map](https://neovim.io/roadmap/) has got your back if you need a quick overview of
 what is to come.
 
 - For a complete list of Neovim features [:help vim-differences](https://neovim.io/doc/user/vim_diff.html)
-
 
 - @brammool (creator of vim), as well as @chrisbra (vim contributor) have left a few comments on our issue tracker, it's nice to be working together!
 
