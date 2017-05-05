@@ -7,7 +7,7 @@ permalink: /news/2017/05/
 
 @timeyyy here representing the Neovim Team.
 
-As One of Neovim's goals is to be welcoming to Contributors, I thought i would comment on my experiences being new to the team and all. In short, It has been a Blast!
+As one of Neovim's goals is to be welcoming to Contributors, I thought I would comment on my experiences being new to the team and all. In short, it has been a blast!
 I can strongly encourage anyone to get involved if you have been thinking about it. The community is a friendly place to be.  Come join us!
 
 We are very happy to announce the release of version [0.2](https://github.com/neovim/neovim/releases/tag/v0.2.0).
@@ -17,7 +17,7 @@ Features
 --------
 
 - **Windows Support** see [Install Instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim) and [ongoing work](https://github.com/neovim/neovim/issues/5229)
-- **Binares** For windows and OSX platforms
+- **Binaries** for windows and OSX platforms
 
 
 Community Projects
@@ -29,7 +29,7 @@ Let's take a look at some projects that have sprung up recently.
 
 Now this is a cool project - Bidirectional interface between Sublimetext and Neovim. This project could be used as a reference design to port to different editors as long as you have the ability to intercept all input.
 
-The steps required to make this work (Straight from the horse's mouth)
+The steps required to make this work (straight from the horse's mouth)
 
 - sublime-facing code intercepts keys and handles reading/writing sublime state and listening for sublime events
 - neovim-facing code inputs keys and handles reading/writing vim state
@@ -41,7 +41,7 @@ clients to draw the widget as they like. Actualvim has externalized the PUM in a
 
 ### The Architecture of Neovim.
 
-Some students have studied the Architecutre of Neovim. The [results](https://delftswa.gitbooks.io/desosa-2017/content/neovim/chapter.html) look awesome.
+Some students have studied the Architecture of Neovim. The [results](https://delftswa.gitbooks.io/desosa-2017/content/neovim/chapter.html) look awesome.
 
 Development Goodies
 -------------------
@@ -75,26 +75,26 @@ to our website's [issue tracker](https://github.com/neovim/neovim.github.io).
 some events or sprints together!
 
 - @Sander2 (one of the students on the Architecture project mentioned above) has
-been experimenting with code fuzzing and successfully resulted in a [bug fix](https://github.com/neovim/neovim/pull/6557) in nvim and vim.
+been experimenting with code fuzzing which resulted in a [bug fix](https://github.com/neovim/neovim/pull/6557) in both Neovim and Vim.
 
 - @ZyX-I 's [eval.c refactor](https://github.com/neovim/neovim/pull/5119) was also merged,
-paving the way for the built-in lua for 0.3. We cannot wait!
+paving the way for the built-in Lua for 0.3. We cannot wait!
 
 - [Libuv](https://github.com/libuv/libuv/issues/1287) might be getting support
-for cygwin and other platforms. This is great new for Neovim!
+for cygwin and other platforms. This is great news for Neovim!
 
 
 Misc
 ----
 
-- [Neomutt](https://github.com/neomutt/neomutt/pull/415) may be getting a lua based testing infrastructure similar to ours.
+- [Neomutt](https://github.com/neomutt/neomutt/pull/415) may be getting a Lua based testing infrastructure similar to ours.
 
 - The [road map](https://neovim.io/roadmap/) has got your back if you need a quick overview of
 what is to come.
 
 - For a complete list of Neovim features [:help vim-differences](https://neovim.io/doc/user/vim_diff.html)
 
-- @brammool (creator of vim), as well as @chrisbra (vim contributor) have left a few comments on our issue tracker, it's nice to be working together!
+- @brammool (creator of Vim), as well as @chrisbra (Vim contributor) have left a few comments on our issue tracker, it's nice to be working together!
 
 Thank you sponsors, and thank you @justinmk @brammool et al for the awesome project.
 
