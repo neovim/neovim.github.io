@@ -10,7 +10,7 @@ permalink: /news/2017/05/
 As one of Neovim's goals is to be welcoming to Contributors, I thought I would comment on my experiences being new to the team and all. In short, it has been a blast!
 I can strongly encourage anyone to get involved if you have been thinking about it. The community is a friendly place to be.  Come join us!
 
-We are very happy to announce the release of version [0.2](https://github.com/neovim/neovim/releases/tag/v0.2.0).
+We are very happy to announce the release of version 0.2 Please check the [release page](https://github.com/neovim/neovim/releases/tag/v0.2.0). for an extensive overview of features and fixes.
 
 
 Features
@@ -18,6 +18,11 @@ Features
 
 - **Windows Support** see [Install Instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim) and [ongoing work](https://github.com/neovim/neovim/issues/5229)
 - **Binaries** for windows and OSX platforms
+- **Timers** up to date with the vim implementation, they now can handle partials
+- **Ctrl r** will now paste into cmdline omitting trailing ^M
+- **:edit** now supports unescaped spaces in filenames
+- **Vim 8** features such as lambda and partials have been implemented
+- **New Autocmd** Welcome DirChanged !
 
 
 Community Projects
