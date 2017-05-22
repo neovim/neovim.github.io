@@ -11,13 +11,21 @@ title: Roadmap
 <p>The roadmap and <a href="https://github.com/neovim/neovim/milestones">milestones</a>
 define the project direction and priorities.</p>
 
-<h2>Current</h2>
+<h2>Next</h2>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/11">0.3</a></h3>
 <ul>
-  <li>Lua built-in + host</li>
+  <li>Lua built-in (<code>:lua</code>, <code>:luado</code>, <code>:luafile</code>, <code>lueval()</code>)</li>
+  <li>Lua <em>remote plugin</em> host</li>
   <li>Externalize more UI components: wildmenu, cmdline, cursorline/cursorcolumn</li>
-  <li>Basic support for LSP et al.</li>
+  <li>Basic support for externalized code navigation (e.g. <a href="https://github.com/Microsoft/language-server-protocol">LSP</a>).</li>
+</ul>
+
+<h3>Future/Long-term</h3>
+<ul>
+  <li>Embed Neovim everywhere</li>
+  <li>Externalize window layout ("Smart UI")</li>
+  <li>Syntax API: allow clients to query and define syntax groups, text attributes</li>
 </ul>
 
 <h2>Meta</h2>
@@ -52,14 +60,13 @@ There are <em>release</em> milestones and <em>meta</em> milestones ("buckets").
 <ul>
   <li>Windows support</li>
   <li>Externalize more UI components: tabline</li>
-  <li>Pre-packaged "RelWithDebInfo" build for Windows</li>
-  <li>Pre-built binaries for non-Windows platforms</li>
+  <li>Pre-packaged build for Windows</li>
+  <li>Pre-packaged build for macOS</li>
 </ul>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/5">0.1</a></h3>
 <ul>
-  <li>The primary goal of the <code>0.1</code> release ("first public release") is to reach a
-    stable, functional baseline that can be built upon and used as a benchmark for
-    further progress.</li>
+  <li>First public release</li>
+  <li>Publish a stable product that can be used as a benchmark for further progress</li>
 </ul>
 </div>
