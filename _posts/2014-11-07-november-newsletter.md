@@ -243,7 +243,7 @@ Until next time. `:wq`
 [unixstickers-iccf]: http://iccf-holland.org/
 
 [floobits-site]: https://floobits.com/
-[floobits-blog]: https://news.floobits.com/2014/11/04/neovim/
+[floobits-blog]: https://news.floobits.com/2014/11/04/floobits-now-supports-neovim/
 [floobits-repo]: https://github.com/Floobits/floobits-neovim
 
 [vim-patch-report]: http://neovim.io/doc/reports/vimpatch/
