@@ -19,7 +19,7 @@ redirect_from:
     <div class="col-wide">
       <h2>Features</h2>
 
-      <h3>More powerful plugins</h3>
+      <h3>Powerful plugins</h3>
       <p>The <a href="http://msgpack.org/">msgpack</a> API enables structured
       communication to and from any programming language. Remote plugins run as
       co-processes that communicate with Neovim safely and asynchronously.</p>
@@ -36,21 +36,41 @@ redirect_from:
       the discoverable msgpack <a href="https://neovim.io/doc/user/api.html#api">API</a>.</p>
 
       <h3>Drop-in replacement for Vim</h3>
-      <p>Neovim is an <em>extension</em> of Vim: feature-parity and backwards
-      compatibility are high priorities. If you are already familiar with Vim,
+      <p>Neovim is an <em>extension</em> of Vim: feature-parity and
+      backwards-compatibility are high priorities. If you already use Vim,
       see <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>
       to learn about the differences.</p>
 
     </div>
     <div class="col-narrow">
-      <div id="sponsors" class="sponsors-main">
+      <div id="sponsors" class="sponsors-main" style="display: none;">
         <h3>Main sponsors</h3>
 
       </div>
       <script>var sponsorsDivId = 'sponsors', sponsorsFront = true;</script>
 
-      <div id="sponsors" class="sponsors-main">
-        <h3>Impressions</h3>
+      <div class="news-section">
+        <h2 id="news">News</h2>
+
+        {% comment %} <dl class="nvim-posts"> {% endcomment %}
+        <table>
+        {% assign posts_to_show = 2 %}
+        {% for post in site.posts limit:posts_to_show %}
+          <tr>
+            <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
+            <td style="text-align: right">{{ post.date | date:"%Y-%m-%d" }}</td>
+          </tr>
+          {% comment %} <dd></dd> {% endcomment %}
+        {% endfor %}
+        </table>
+        {% comment %} </dl> {% endcomment %}
+
+        <br/>
+        <p>More in the <a href="/news/archive">Archive</a></p>
+
+        <br/>
+
+        <h2>Impressions</h2>
         <p>
           "Neovim is exactly what it claims to be. It fixes every issue I have with Vim."
           <a href="http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/">—Geoff Greer</a>
@@ -71,48 +91,19 @@ redirect_from:
 <section class="front-section shaded">
   <div class="container">
     <div class="col-wide">
-      <h2 id="news">News</h2>
-
-      {% comment %} <dl class="nvim-posts"> {% endcomment %}
-      <table>
-      {% assign posts_to_show = 2 %}
-      {% for post in site.posts limit:posts_to_show %}
-        <tr>
-          <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
-          <td style="text-align: right">Published on: {{ post.date | date:"%Y-%m-%d" }}</td>
-        </tr>
-        {% comment %} <dd></dd> {% endcomment %}
-      {% endfor %}
-      </table>
-      {% comment %} </dl> {% endcomment %}
-
-      <p>More posts are in the <a href="/news/archive">Archive</a></p>
-
-      <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </div>
-
-    <div class="col-narrow">
-      <h2>Chat</h2>
-      Discuss the project at <a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
-      IRC (<strong>#neovim</strong> on <strong>irc.freenode.net</strong>) or the
-      <a href="https://groups.google.com/forum/#!forum/neovim">mailing list</a>.</p>
-      <p>Contribute code, report bugs and request features at <a href="https://github.com/neovim/neovim">GitHub</a>.
-    </div>
-
-  </div>
-</section>
-
-<section class="front-section">
-  <div class="container">
-    <div class="col-wide">
       <h2 id="faqs">FAQ</h2>
 
       <dl class="faqs">
         <dt>What is the project status?</dt>
-        <dd>The current stable version is <code>0.2.0</code> (now supports Windows!).
-        See the <a href="https://github.com/neovim/neovim/milestones">milestones page</a> for development progress
-        and the <a href="roadmap/">roadmap</a> for high-level plans.
+        <dd>
+          The current release is <code>0.2.0</code> (now supports Windows!).
+          See <a href="https://github.com/neovim/neovim/milestones">milestones</a>
+          for development progress and the <a href="roadmap/">roadmap</a> for
+          high-level plans.
+          <br/>
+          <br/>
+          The <a href="https://github.com/neovim/neovim/releases">Releases</a>
+          page has pre-built archives for Linux, macOS and Windows.
         </dd>
 
         <dt>Is Neovim trying to turn Vim into an IDE?</dt>
@@ -121,33 +112,43 @@ redirect_from:
         traditional roles. </dd>
 
         <dt>Will Neovim deprecate Vimscript?</dt>
-        <dd>No.</dd>
+        <dd>
+          No. Lua is shipped as a first-class alternative (Nvim
+          <code>0.2.1</code>), but Vimscript will always be supported (and
+          there are some exciting features on the way).
+        </dd>
 
         <dt>Which plugins does Neovim support?</dt>
         <dd>Most Vim plugins, and more.
-            See the <a href="https://github.com/neovim/neovim/wiki/Related-projects#plugins">related projects</a>
-            wiki page for plugins that take advantage of Neovim features such as job-control.</dd>
+            See the <a href="https://github.com/neovim/neovim/wiki/Related-projects">related projects</a>
+            wiki page for plugins and applications that leverage the Neovim API.</dd>
 
       </dl>
     </div>
 
     <div class="col-narrow">
-      <h2>Logos</h2>
+      <h2>Chat</h2>
+      <p>
+        <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </p>
 
-      <p>SVG and PNG versions of the Neovim logo are available in the following zip file.</p>
+      <p>
+        Discuss the project at <a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
+        IRC (<strong>#neovim</strong> on <strong>irc.freenode.net</strong>)
+      </p>
 
-      <p><a href="/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
-
-      <p class="light small">The Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+      <p>Contribute code, report bugs and request features at <a href="https://github.com/neovim/neovim">GitHub</a>.</p>
     </div>
+
   </div>
 </section>
 
-<section class="front-section shaded">
+<section class="front-section">
   <div class="container">
     <h2 id="support">Supporting the project</h2>
 
-    <div class="col-half">
+    <div class="col-narrow">
       <h3>Bountysource</h3>
       <p>
       You can donate to the
@@ -155,7 +156,8 @@ redirect_from:
       on Bountysource.
       </p>
     </div>
-    <div class="col-half second">
+
+    <div class="col-narrow">
       <h3>Bitcoin</h3>
       <div class="donate">
         <div class="icon">
@@ -169,5 +171,12 @@ redirect_from:
       <a href="https://blockchain.info/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ">Blockchain.info</a>.
       </p>
     </div>
+
+    <div class="col-narrow">
+      <h3>Logo</h3>
+      <p><a href="/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
+      <p class="light small">The Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+    </div>
+
   </div>
 </section>
