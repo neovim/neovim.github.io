@@ -1,10 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/neovim/neovim.github.io.png?label=ready&title=Ready)](https://waffle.io/neovim/neovim.github.io)
+# neovim.io website
 
-![Neovim Logo](logos/neovim-logo.png)
-
-This repository contains the source for the neovim.io website; visit the
-[core repository](https://github.com/neovim/neovim) for details on
-the Neovim project.
+This repository contains the source for the neovim.io website. The Neovim core
+project is: https://github.com/neovim/neovim
 
 ## Contributing
 
