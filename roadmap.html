@@ -15,10 +15,9 @@ define the project direction and priorities.</p>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/11">0.3</a></h3>
 <ul>
-  <li>Lua built-in (<code>:lua</code>, <code>:luado</code>, <code>:luafile</code>, <code>lueval()</code>)</li>
   <li>Lua <em>remote plugin</em> host</li>
-  <li>Externalize more UI components: wildmenu, cmdline, cursorline/cursorcolumn</li>
-  <li>Basic support for externalized code navigation (e.g. <a href="https://github.com/Microsoft/language-server-protocol">LSP</a>).</li>
+  <li>Externalize more UI components</li>
+  <li>Basic support for externalized code navigation (<a href="https://github.com/Microsoft/language-server-protocol">LSP</a>)</li>
 </ul>
 
 <h3>Future/Long-term</h3>
@@ -35,38 +34,39 @@ There are <em>release</em> milestones and <em>meta</em> milestones ("buckets").
 
 <ul>
   <li>Version-number milestones (<code>0.1</code>, <code>0.2</code>, <code>0.3</code>, …)
-      assign issues to production releases.<ul>
+      assign issues to production releases.
+      <ul>
         <li>The nearest upcoming version is assigned a target date.</li>
-        <li>Low-risk fixes in the current branch are first committed to the
-            stable branch, then merged to master. For example, if the current
-            stable release is <code>0.1.1</code> and a bug-fix is assigned to the
-            <code>0.2</code> milestone, it does not mean users need to wait until
-            <code>0.2</code> to get the fix. The patch will be committed to the
-            stable branch and released in <code>0.1.2</code>.
-        </li>
       </ul>
   </li>
-  <li><em><a href="https://github.com/neovim/neovim/milestones/todo">todo</a></em>
-      is a bucket for triaged tickets which should be on the
-      roadmap but cannot yet be assigned to a concrete milestone.</li>
-  <li><em><a href="https://github.com/neovim/neovim/milestones/unplanned">unplanned</a></em>
-      is a bucket for low-priority items or items lacking a
-      feasible path to completion.</li>
+  <li>The <a href="https://github.com/neovim/neovim/milestones/todo">todo</a>
+      bucket holds triaged tickets with "medium" (not urgent) priority.</li>
+  <li>The <a href="https://github.com/neovim/neovim/milestones/unplanned">unplanned</a>
+      bucket holds low-priority items lacking a feasible path to
+      completion.</li>
 </ul>
 
 <h2>Completed</h2>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/10">0.2</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/15?closed=1">0.2.1</a></h3>
+<ul>
+  <li>Built-in Lua[Jit]:<code>vim.api</code>, <code>:lua</code>,
+     <code>nvim_execute_lua()</code>, …</li>
+  <li>Externalize UI components: cmdline, wildmenu</li>
+  <li>Windows <code>:terminal</code></li>
+  <li>Pre-packaged "universal" binary for Linux</li>
+</ul>
+
+<h3><a href="https://github.com/neovim/neovim/milestone/10?closed=1">0.2</a></h3>
 <ul>
   <li>Windows support</li>
   <li>Externalize UI components: popumenu, tabline</li>
-  <li>Pre-packaged build for Windows</li>
-  <li>Pre-packaged build for macOS</li>
+  <li>Pre-packaged builds for Windows and macOS</li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/5">0.1</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/5?closed=1">0.1</a></h3>
 <ul>
   <li>First public release</li>
-  <li>Publish a stable product that can be used as a benchmark for further progress</li>
+  <li>Publish a stable product that can be used as a benchmark for progress</li>
 </ul>
 </div>
