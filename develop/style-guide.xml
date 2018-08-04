@@ -229,11 +229,15 @@ redirect_from:
           you!
         </p>
         <CODE_SNIPPET>
-          void foo(const char *path, int size);
+          void foo(const char *p, int i);
           }
         </CODE_SNIPPET>
         <BAD_CODE_SNIPPET>
           int foo(const int a, const bool b) {
+          }
+        </BAD_CODE_SNIPPET>
+        <BAD_CODE_SNIPPET>
+          int foo(int *const p) {
           }
         </BAD_CODE_SNIPPET>
       </SUBSECTION>
