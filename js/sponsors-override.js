@@ -1,6 +1,9 @@
 ---
 ---
 var sponsorOverride = {
+  '62463-balzss': {
+    url: 'https://balzss.github.io/',
+  },
   '41853-ergodox-ez': {
     url: 'http://www.ergodox-ez.com',
     frontImageUrl: '/images/sponsors/ergodox-ez-logo.png'
