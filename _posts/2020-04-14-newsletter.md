@@ -1,8 +1,8 @@
 ---
 layout: newsletter
-title: "Newsletter #9 - Three's company
+title: "Newsletter #9 - Three's company"
 category: newsletter
-permalink: /news/2018/06/
+permalink: /news/2020/04/
 ---
 
 What is Neovim?
@@ -35,7 +35,7 @@ Old contributor shoutout: [@jamessan](https://github.com/jamessan) has been arou
 What's new
 ----------
 
-The [last newsletter](https://neovim.io/news/2017/12/) covered everything up to release 0.2.2 of Neovim. Half a year has passed, and the project has been as busy as ever improving both user and developer experience. The culmination of these efforts is release 0.3, which we'd like to introduce to you:
+The [last newsletter](https://neovim.io/news/2017/12/) covered everything up to release 0.2.2 of Neovim. Two years have passed, and the project has been as busy as ever improving both user and developer experience. Along the way we released in June 2018 the version 0.3. Though this newsletter arrives a bit late (after version 0.4 was released), we still deemed it worth to introduce 0.3 in case you missed anything:
 
 As always, check [Following HEAD](https://github.com/neovim/neovim/wiki/Following-HEAD) for any breaking changes.
 
@@ -119,12 +119,12 @@ Around Neovim
 
 ### GSOC
 
-Good news everyone! Neovim has been accepted into the [Google Summer of Code(GSOC)](https://summerofcode.withgoogle.com/). We've got two students working on interesting developments:
+Neovim had been accepted into the [Google Summer of Code(GSOC)](https://summerofcode.withgoogle.com/). We've had two students working on interesting developments:
 
-- @UtkarshMe will be working on [extending the UI protocol and externalizing window layout and control](https://github.com/neovim/neovim/issues/8320). He's been [getting his feet wet](https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=author%3AUtkarshMe+) before, and will be mentored by the ever restless @bfredl. Be sure to check out [his blog](https://utkarshme.github.io/blog/google-summer-of-code-with-neovim/) for up-to-date insights!
-- @b-r-o-c-k has been [active on the windows front](https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=author%3Ab-r-o-c-k+) before, and is now aiming to implement a [.NET API client](https://github.com/neovim/neovim/issues/8337) for Neovim. Our beloved BPLFHLHWTU<sup>1</sup> @justinmk will be taking care of this project!
+- @UtkarshMe worked on [extending the UI protocol and externalizing window layout and control](https://github.com/neovim/neovim/issues/8320). Be sure to check out [his blog](https://utkarshme.github.io/blog/progress-at-the-end-of-gsoc-with-neovim/) for a summary!
+- @b-r-o-c-k previously [active on the windows front](https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=author%3Ab-r-o-c-k+) before, implemented a [.NET API client](https://github.com/neovim/neovim/issues/8337) for Neovim.
 
-<sup>1</sup> Benevolent Project Leader For However Long He Will Tolerate Us
+Thanks for your awesome contributions, and thanks to the mentors @bfredl and @justinmk!
 
 ## Related projects
 
