@@ -204,6 +204,7 @@ redirect_from:
   <STYLEPOINT title="Use of const">
     <SUMMARY>
       Use <code>const</code> pointers whenever possible.
+      Avoid <code>const</code> on non-pointer parameter definitions.
     </SUMMARY>
     <BODY>
       <SUBSECTION title="Where to put the const">
@@ -227,6 +228,18 @@ redirect_from:
           we do not require it.  But be consistent with the code around
           you!
         </p>
+        <CODE_SNIPPET>
+          void foo(const char *p, int i);
+          }
+        </CODE_SNIPPET>
+        <BAD_CODE_SNIPPET>
+          int foo(const int a, const bool b) {
+          }
+        </BAD_CODE_SNIPPET>
+        <BAD_CODE_SNIPPET>
+          int foo(int *const p) {
+          }
+        </BAD_CODE_SNIPPET>
       </SUBSECTION>
     </BODY>
   </STYLEPOINT>
