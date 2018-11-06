@@ -9,8 +9,6 @@
   url: /news/
 - title: Development
   url: https://github.com/neovim/neovim
-- title: Community
-  url: /community/
 - title: Documentation
   url: /doc/
 - title: Sponsors
