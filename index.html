@@ -27,6 +27,7 @@ redirect_from:
       <h3>Usable</h3>
       <ul>
         <li>Strong defaults</li>
+        <li>Works the same everywhere: one build-type, one command</li>
         <li>Modern terminal features such as cursor styling, focus events, bracketed paste</li>
         <li>Built-in <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">terminal emulator</a></li>
       </ul>
@@ -92,8 +93,8 @@ redirect_from:
       <dl class="faqs">
         <dt>What is the project status?</dt>
         <dd>
-          <code>0.3.1</code> is the
-          current <a href="https://github.com/neovim/neovim/releases/latest">release</a>.
+          The current <a href="https://github.com/neovim/neovim/releases/latest">stable release</a>
+          version is <code>0.3.2</code>.
           See the <a href="roadmap/">roadmap</a> for progress and plans.
         </dd>
 
@@ -104,10 +105,9 @@ redirect_from:
 
         <dt>Will Neovim deprecate Vimscript?</dt>
         <dd>
-          No. Lua is built-in and always available, but Vimscript will always
-          be supported.
+          No. Lua is built-in, but Vimscript will always be supported.
           Neovim has the <b>most advanced Vimscript engine in the world</b>,
-          featuring an AST-producing parser.
+          featuring an AST-producing <a href="https://neovim.io/doc/user/api.html#nvim_parse_expression()">parser</a>.
         </dd>
 
         <dt>Which plugins does Neovim support?</dt>
