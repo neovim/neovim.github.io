@@ -404,5 +404,8 @@ var sponsorOverride = {
   },
   '49943-sleekwristbands-com': {
     url: 'https://www.sleekwristbands.com'
+  },
+  '66308-danmikita': {
+    url: 'https://github.com/danmikita'
   }
 };
