@@ -407,7 +407,7 @@ var sponsorOverride = {
   },
   '66308-danmikita': {
     url: 'https://github.com/danmikita'
-  }
+  },
   '65509-lukas-waymann-meribold': {
     url: 'https://meribold.xyz'
   }
