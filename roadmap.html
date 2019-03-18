@@ -6,6 +6,7 @@ title: Roadmap
 {% include nav.html active='About' %}
 
 <div class="container">
+<div class="col-wide">
 
 <h1>Roadmap</h1>
 <p>The roadmap defines the project direction. Priorities are tracked by <a href="https://github.com/neovim/neovim/milestones">milestones</a>.
@@ -32,7 +33,6 @@ title: Roadmap
   <li>Lua user-config: <code>init.lua</code></li>
   <li>Externalized UI: multigrid
   <li>Externalized UI: floating windows</li>
-  <li>Externalized UI: window layout events</li>
   <li>Externalized UI: messages</li>
   <li>Extended marks (text properties)</li>
 </ul>
@@ -41,13 +41,14 @@ title: Roadmap
 <ul>
   <li>Lua <em>remote plugin</em> host</li>
   <li>Code navigation client (<a href="https://github.com/Microsoft/language-server-protocol">LSP</a>)</li>
+  <li>Better file-change detection</li>
 </ul>
 
 <h3>Future/Long-term</h3>
 <ul>
   <li>Embed Neovim everywhere</li>
+  <li>Externalized UI: window layout events</li>
   <li>Syntax API: allow clients to query and define syntax groups, text attributes</li>
-  <li>Better file-change detection</li>
 </ul>
 
 
@@ -78,4 +79,7 @@ title: Roadmap
   <li>First public release</li>
   <li>Publish a stable product that can be used as a benchmark for progress</li>
 </ul>
+
+</div>
+{% include post_sidebar.html %}
 </div>

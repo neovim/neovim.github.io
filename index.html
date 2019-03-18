@@ -8,10 +8,8 @@ redirect_from:
 {% include nav.html active='Home' %}
 
 <section class="masthead">
-  <div class="container">
-    <h1>literally the future of <a href="https://twitter.com/nelstrom/status/881813223997153280">vim</a></h1>
-    <p><a href="https://github.com/neovim/neovim/wiki/Installing-Neovim" class="btn">Install Now</a></p>
-  </div>
+  <h1>hyperextensible Vim-based text editor</h1>
+  <p><a href="https://github.com/neovim/neovim/wiki/Installing-Neovim" class="btn">Install Now</a></p>
 </section>
 
 <section class="front-section">
@@ -19,10 +17,19 @@ redirect_from:
     <div class="col-wide">
       <h2>Features</h2>
 
-      <h3>Powerful</h3>
-      <p>The Nvim <a href="http://msgpack.org/">msgpack</a> API enables structured
-      communication to and from any programming language. Remote plugins run as
-      co-processes that communicate with Neovim safely and asynchronously.</p>
+      <h3>Extensible</h3>
+      <ul>
+        <li>
+          The <a href="https://neovim.io/doc/user/api.html#api">Nvim API</a>
+          enables structured communication to and from any programming
+          language. Remote plugins run as co-processes, safely and
+          asynchronously.
+        </li>
+        <li>
+          GUIs and other applications can <code>nvim --embed</code> to discover
+          the <a href="http://msgpack.org/">msgpack</a> API dynamically.
+        </li>
+      </ul>
 
       <h3>Usable</h3>
       <ul>
@@ -32,14 +39,17 @@ redirect_from:
         <li>Built-in <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">terminal emulator</a></li>
       </ul>
 
-      <h3>Embeddable</h3>
-      <p>GUIs and other applications can <code>nvim --embed</code> to discover the msgpack
-      <a href="https://neovim.io/doc/user/api.html#api">API</a> dynamically.</p>
-
       <h3>Drop-in Vim</h3>
-      <p>Neovim is an <em>extension</em> of Vim: feature-parity and
-      backwards-compatibility are high priorities. If you already use Vim,
-      see <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>.</p>
+      <ul>
+        <li>
+          Fully compatible with Vim's editing model and the Vimscript language.
+        </li>
+        <li>
+          Start with
+          <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>
+          if you already use Vim.
+        </li>
+      </ul>
 
     </div>
     <div class="col-narrow">
@@ -105,9 +115,9 @@ redirect_from:
 
         <dt>Will Neovim deprecate Vimscript?</dt>
         <dd>
-          No. Lua is built-in, but Vimscript will always be supported.
-          Neovim has the <b>most advanced Vimscript engine in the world</b>,
-          featuring an AST-producing <a href="https://neovim.io/doc/user/api.html#nvim_parse_expression()">parser</a>.
+          No. Lua is built-in, but Vimscript will always be supported
+          with <b>most advanced Vimscript engine in the world</b>
+          (featuring an AST-producing <a href="https://neovim.io/doc/user/api.html#nvim_parse_expression()">parser</a>).
         </dd>
 
         <dt>Which plugins does Neovim support?</dt>
@@ -126,9 +136,8 @@ redirect_from:
       </p>
 
       <p>
-        Discuss the&nbsp;project at&nbsp;<a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>,
-        IRC&nbsp;(<strong>#neovim</strong> on&nbsp;<strong>irc.freenode.net</strong>),
-        Matrix&nbsp;(<a href="https://riot.im/app/#/room/#neovim:matrix.org">#neovim:matrix.org</a>).
+        Discuss the&nbsp;project at&nbsp;<a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>
+        or <a href="https://riot.im/app/#/room/#neovim:matrix.org">IRC</a>&nbsp;(#neovim&nbsp;on&nbsp;irc.freenode.net).
       </p>
 
       <p>

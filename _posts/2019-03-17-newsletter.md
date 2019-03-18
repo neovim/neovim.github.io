@@ -44,27 +44,8 @@ Looking forward
 ---------------
 
 Our mentors are looking forward to your GSoC proposals in the next weeks!
-The best way to get familiar with the Neovim development is to
+The best way to get familiar with Neovim development is to
 [send a pull request](https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md#getting-started)
 to help out with a small bug or feature request. Working with students on pull
 requests is _extremely helpful_ for determining mentor-student workflow.
 
-What is Neovim?
----------------
-
-Neovim is a text-editor based on Vim, focused on extensibility and usability.
-It is built for users who want the good parts of Vim and more. Features and
-differences are documented at
-[:help vim-differences](https://neovim.io/doc/user/vim_diff.html).
-
-Participating
--------------
-
-Neovim is designed to encourage contributions, and we want your help.
-Read [CONTRIBUTING.md](https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md#getting-started)
-to get started.
-
-To chat with the team, join the [gitter channel](gitter.im/neovim) (also
-accessible via [IRC](https://webchat.freenode.net/?channels=neovim)), or visit
-the [Neovim subreddit](https://www.reddit.com/r/neovim/), which many of the
-developers read. Taking part in conversations is a contribution, too!
