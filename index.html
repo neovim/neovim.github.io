@@ -20,14 +20,20 @@ redirect_from:
       <h3>Extensible</h3>
       <ul>
         <li>
-          The <a href="https://neovim.io/doc/user/api.html#api">Nvim API</a>
-          enables structured communication to and from any programming
-          language. Remote plugins run as co-processes, safely and
-          asynchronously.
+          API is first-class:
+          <a href="https://neovim.io/doc/user/msgpack_rpc.html#rpc-api">discoverable</a>,
+          <a href="https://neovim.io/doc/user/api.html#api-contract">versioned</a>,
+          <a href="https://neovim.io/doc/user/api.html#api-global">documented</a>.
         </li>
         <li>
-          GUIs and other applications can <code>nvim --embed</code> to discover
-          the <a href="http://msgpack.org/">msgpack</a> API dynamically.
+          <a href="http://msgpack.org/">MessagePack</a> structured communication
+          enables extensions in any language.
+        </li>
+        <li>
+          Remote plugins run as co-processes, safely and asynchronously.
+        </li>
+        <li>
+          GUIs, IDEs, web browsers can <code>--embed</code> Nvim as an editor or script host.
         </li>
       </ul>
 
