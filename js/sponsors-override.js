@@ -410,5 +410,8 @@ var sponsorOverride = {
   },
   '65509-lukas-waymann-meribold': {
     url: 'https://meribold.xyz'
+  },
+  '68000-agence-web-maroc': {
+    url: 'https://marozed.ma'
   }
 };
