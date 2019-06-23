@@ -413,5 +413,8 @@ var sponsorOverride = {
   },
   '68000-agence-web-maroc': {
     url: 'https://marozed.ma'
+  },
+  '67955-alex-gude': {
+    url: 'https://alexgude.com'
   }
 };
