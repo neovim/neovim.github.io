@@ -155,7 +155,7 @@ If you happen to prefer a language with no API client listed, a good starting po
 Three new GUIs were added since the last newsletter:
 
 - [javafx](https://github.com/jebberjeb/javafx-neovimpane)
-- [sassanh/qnvim](https://github.com/sassanh/qnvim)  
+- [sassanh/qnvim](https://github.com/sassanh/qnvim)
 - [vv](https://github.com/igorgladkoborodov/vv)
 
 
@@ -192,18 +192,22 @@ Stats
 Changes lines since the last newsletter:
 
     git log  --since="2017-12-16" --numstat --pretty=tformat: --numstat|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }'
+    added lines: 109127 removed lines: 40267 total lines: 68860
 
 Merged commits:
 
     git log  --since="2017-12-16"|wc -l
+    24167
 
 Different commit authors:
 
     git shortlog -e -s -n --since="2017-12-16"|wc -l
+    129
 
 Documentation changes:
 
     git log  --since="2017-12-16" --numstat --pretty=tformat: --numstat runtime/doc|gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }'
+    added lines: 4369 removed lines: 3645 total lines: 724
 
 
 Thanks
