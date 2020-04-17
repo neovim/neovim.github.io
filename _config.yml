@@ -13,7 +13,7 @@ news:
 
 url: "https://neovim.io"
 
-gems:
+plugins:
     - jekyll-redirect-from
     - jekyll-mentions
 
