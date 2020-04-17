@@ -35,7 +35,7 @@ Old contributor shoutout: [@jamessan](https://github.com/jamessan) has been arou
 What's new
 ----------
 
-The [last newsletter](https://neovim.io/news/2017/12/) covered everything up to release 0.2.2 of Neovim. Two years have passed, and the project has been as busy as ever improving both user and developer experience. Along the way we released in June 2018 the version 0.3. Though this newsletter arrives a bit late (after version 0.4 was released), we still deemed it worth to introduce 0.3 in case you missed anything:
+The [last newsletter](https://neovim.io/news/2017/12/) covered everything up to release 0.2.2 of Neovim. Two years have passed, and the project has been as busy as ever improving both user and developer experience. Along the way we released in June 2018 the version 0.3. Though this newsletter arrives late (after version 0.4 was released), we still deemed it worth to introduce 0.3 in case you missed anything (0.4 will be covered in a future newsletter):
 
 As always, check [Following HEAD](https://github.com/neovim/neovim/wiki/Following-HEAD) for any breaking changes.
 
