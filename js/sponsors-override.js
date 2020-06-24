@@ -416,5 +416,8 @@ var sponsorOverride = {
   },
   '67955-alex-gude': {
     url: 'https://alexgude.com'
+  },
+  '71819-abenz1267': {
+    url: 'https://benz.dev'
   }
 };
