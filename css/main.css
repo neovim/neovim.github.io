@@ -1,5 +1,5 @@
 :root {
-	--font-size: 16px;
+	--font-size: 1rem;
 
 	--main-breakpoint: 60em;
 
@@ -29,8 +29,7 @@
 }
 
 body {
-	font-family: "Public Sans", "Helvetica Neue", Helvetica, Calibri, Arial,
-		sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
 	font-size: var(--font-size);
 	line-height: 1.5;
 	color: var(--fg-color);
@@ -123,10 +122,18 @@ code {
 	gap: 1em;
 	justify-content: space-between;
 }
+
 .col3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media (max-width: 525px) {
+	.col3 {
+		grid-template-columns: 1fr;
+	}
+}
+
 .golden-grid {
 	display: grid;
 	grid-template-columns: 61% auto;
