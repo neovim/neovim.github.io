@@ -1,6 +1,4 @@
 :root {
-	--font-size: 1rem;
-
 	--main-breakpoint: 60em;
 
 	/* Colors */
@@ -30,7 +28,7 @@
 
 body {
 	font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
-	font-size: var(--font-size);
+	font-size: initial;
 	line-height: 1.5;
 	color: var(--fg-color);
 	background-color: var(--bg-color);
