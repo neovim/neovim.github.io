@@ -1,39 +1,68 @@
 <header class="navbar">
-    <div class="container">
-        <nav class="navbar">
-	    <div class="container-fluid">
-	    <div class="navbar-header">
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-		    <span class="sr-only">Toggle navigation</span>
-		    <img src="/images/icons/icon-menu.svg" alt="Toggle navigation" class="navbar-top-align">
-		</button>
-		<a href="/" class="navbar-brand">
-		    <img src="/images/logo@2x.png" id="navbar-logo" alt="Neovim">
-		</a>
-	    </div>
-	    <div class="collapse navbar-collapse navbar-top-align" id="menu">
-	        <ul class="nav navbar-nav navbar-right">
-		{% for nav in site.data.nav %}
-		    {% if include.active == nav.title %}
-		    <li class="current">
-		    {% else %}
-		    <li>
-		    {% endif %}
-		    <a {% if nav.sections != null %}href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"{% else %}href="{{ nav.url }}"{% endif %}>{{ nav.title }}</a>
-		    {% if nav.sections != null %}
-			<ul class="dropdown-menu">
-			{% for section in nav.sections %}
-			    <li>
-				<a href="{{ section.url }}">{{ section.title }}</a>
-			    </li>
-			{% endfor %}
-			</ul>
-		    {% endif %}
-		    </li>
-		{% endfor %}
-		</ul>
-	    </div>
-	    </div>
-        </nav>
-    </div>
+	<div class="container">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<div>
+						<a href="/" class="navbar-brand">
+							<img src="/images/logo@2x.png" id="navbar-logo" alt="Neovim" />
+						</a>
+					</div>
+					<div>
+						<button
+							type="button"
+							class="navbar-toggle collapsed"
+							data-toggle="collapse"
+							data-target="#menu"
+							aria-expanded="false"
+						>
+							<span class="sr-only">Toggle navigation</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="12"
+								fill="currentColor"
+								stroke="currentColor"
+							>
+								<path d="M0 0h18v2H0zM0 5h18v2H0zM0 10h18v2H0z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav navbar-right">
+						{% for nav in site.data.nav %} {% if include.active == nav.title %}
+						<li class="current">
+							{% else %}
+						</li>
+
+						<li>
+							{% endif %} {% if nav.sections != null %}
+							<a
+								href="#"
+								class="dropdown-toggle"
+								data-toggle="dropdown"
+								role="button"
+								aria-haspopup="true"
+								aria-expanded="false"
+								>{{ nav.title }}</a
+							>
+							{% else %}
+							<a href="{{ nav.url }}">{{ nav.title }}</a>
+							{% endif %} {% if nav.sections != null %}
+							<ul class="dropdown-menu">
+								{% for section in nav.sections %}
+								<li>
+									<a href="{{ section.url }}">{{ section.title }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+							{% endif %}
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 </header>
