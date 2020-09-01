@@ -8,285 +8,189 @@ redirect_from:
 {% include nav.html active='Home' %}
 
 <section class="masthead">
-	<h1>hyperextensible Vim-based text editor</h1>
-	<div>
-		<a
-			href="https://github.com/neovim/neovim/wiki/Installing-Neovim"
-			class="btn primary"
-			>Install Now</a
-		>
-	</div>
+  <h1>hyperextensible Vim-based text editor</h1>
+  <p><a href="https://github.com/neovim/neovim/wiki/Installing-Neovim" class="btn">Install Now</a></p>
 </section>
 
 <section class="front-section">
-	<div class="container golden-grid">
-		<div class="col-wide">
-			<h2>Features</h2>
+  <div class="container">
+    <div class="col-wide">
+      <h2>Features</h2>
 
-			<h3>Extensible</h3>
-			<ul>
-				<li>
-					API is first-class:
-					<a href="https://neovim.io/doc/user/api.html#api-mapping"
-						>discoverable</a
-					>,
-					<a href="https://neovim.io/doc/user/api.html#api-contract"
-						>versioned</a
-					>,
-					<a href="https://neovim.io/doc/user/api.html#api-global">documented</a
-					>.
-				</li>
-				<li>
-					<a href="http://msgpack.org/">MessagePack</a> structured communication
-					enables extensions in any language.
-				</li>
-				<li>
-					Remote plugins run as co-processes, safely and asynchronously.
-				</li>
-				<li>
-					GUIs, IDEs, web browsers can <code>--embed</code> Nvim as an editor or
-					script host.
-				</li>
-			</ul>
+      <h3>Extensible</h3>
+      <ul>
+        <li>
+          API is first-class:
+          <a href="https://neovim.io/doc/user/api.html#api-mapping">discoverable</a>,
+          <a href="https://neovim.io/doc/user/api.html#api-contract">versioned</a>,
+          <a href="https://neovim.io/doc/user/api.html#api-global">documented</a>.
+        </li>
+        <li>
+          <a href="http://msgpack.org/">MessagePack</a> structured communication
+          enables extensions in any language.
+        </li>
+        <li>
+          Remote plugins run as co-processes, safely and asynchronously.
+        </li>
+        <li>
+          GUIs, IDEs, web browsers can <code>--embed</code> Nvim as an editor or script host.
+        </li>
+      </ul>
 
-			<h3>Usable</h3>
-			<ul>
-				<li>Strong defaults</li>
-				<li>Works the same everywhere: one build-type, one command</li>
-				<li>
-					Modern terminal features such as cursor styling, focus events,
-					bracketed paste
-				</li>
-				<li>
-					Built-in
-					<a href="https://www.youtube.com/watch?v=xZbMVj9XSUo"
-						>terminal emulator</a
-					>
-				</li>
-			</ul>
+      <h3>Usable</h3>
+      <ul>
+        <li>Strong defaults</li>
+        <li>Works the same everywhere: one build-type, one command</li>
+        <li>Modern terminal features such as cursor styling, focus events, bracketed paste</li>
+        <li>Built-in <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">terminal emulator</a></li>
+      </ul>
 
-			<h3>Drop-in Vim</h3>
-			<ul>
-				<li>
-					Fully compatible with Vim's editing model and the Vimscript language.
-				</li>
-				<li>
-					Start with
-					<a href="/doc/user/nvim.html#nvim-from-vim"
-						><code>:help nvim-from-vim</code></a
-					>
-					if you already use Vim.
-				</li>
-			</ul>
-		</div>
-		<div class="col-narrow">
-			<div id="sponsors" class="sponsors-main" style="display: none;">
-				<h3>Main sponsors</h3>
-			</div>
-			<script>
-				var sponsorsDivId = "sponsors",
-					sponsorsFront = true;
-			</script>
+      <h3>Drop-in Vim</h3>
+      <ul>
+        <li>
+          Fully compatible with Vim's editing model and the Vimscript language.
+        </li>
+        <li>
+          Start with
+          <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>
+          if you already use Vim.
+        </li>
+      </ul>
 
-			<div class="news-section">
-				<h2 id="news">News</h2>
+    </div>
+    <div class="col-narrow">
+      <div id="sponsors" class="sponsors-main" style="display: none;">
+        <h3>Main sponsors</h3>
 
-				{% comment %}
-				<dl class="nvim-posts">
-					{% endcomment %}
-					<table>
-						{% assign posts_to_show = 2 %} {% for post in site.posts
-						limit:posts_to_show %}
-						<tr>
-							<td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;</td>
-							<td style="white-space: nowrap; text-align: right;">
-								{{ post.date | date:"%Y.%m" }}
-							</td>
-						</tr>
-						{% comment %}
-						<dd></dd>
-						{% endcomment %} {% endfor %}
-					</table>
-					{% comment %}
-				</dl>
-				{% endcomment %}
+      </div>
+      <script>var sponsorsDivId = 'sponsors', sponsorsFront = true;</script>
 
-				<p><a href="/news/archive">More…</a></p>
+      <div class="news-section">
+        <h2 id="news">News</h2>
 
-				<h2>Impressions</h2>
-				<p>
-					"Neovim is exactly what it claims to be. It fixes every issue I have
-					with Vim."
-					<a
-						href="http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/"
-						>—Geoff Greer</a
-					>
-				</p>
-				<p>
-					"OMG! @Neovim just works :)"
-					<a href="https://twitter.com/mehowte/status/721639254938533889"
-						>—@mehowte</a
-					>
-				</p>
-				<p>
-					"A nice looking website, that’s one thing Neovim did right."
-					<a
-						href="https://www.binpress.com/blog/2014/11/19/vim-creator-bram-moolenaar-interview/"
-						>—Bram Moolenaar</a
-					>
-				</p>
-			</div>
-		</div>
-	</div>
+        {% comment %} <dl class="nvim-posts"> {% endcomment %}
+        <table>
+        {% assign posts_to_show = 2 %}
+        {% for post in site.posts limit:posts_to_show %}
+          <tr>
+            <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
+            <td style="white-space: nowrap; text-align: right">{{ post.date | date:"%Y.%m" }}</td>
+          </tr>
+          {% comment %} <dd></dd> {% endcomment %}
+        {% endfor %}
+        </table>
+        {% comment %} </dl> {% endcomment %}
+
+        <p><a href="/news/archive">More…</a></p>
+
+        <h2>Impressions</h2>
+        <p>
+          "Neovim is exactly what it claims to be. It fixes every issue I have with Vim."
+          <a href="http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/">—Geoff Greer</a>
+        </p>
+        <p>
+          "OMG! @Neovim just works :)"
+          <a href="https://twitter.com/mehowte/status/721639254938533889">—@mehowte</a>
+        </p>
+        <p>
+          "A nice looking website, that’s one thing Neovim did right."
+          <a href="https://www.binpress.com/blog/2014/11/19/vim-creator-bram-moolenaar-interview/">—Bram Moolenaar</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="front-section shaded">
-	<div class="container golden-grid">
-		<div class="col-wide">
-			<h2 id="faqs">FAQ</h2>
+  <div class="container">
+    <div class="col-wide">
+      <h2 id="faqs">FAQ</h2>
 
-			<dl class="faqs">
-				<dt>What is the project status?</dt>
-				<dd>
-					The current
-					<a href="https://github.com/neovim/neovim/releases/latest"
-						>stable release</a
-					>
-					version is <code>0.4.4</code> (<a
-						href="https://github.com/neovim/neovim/tags.atom"
-						>RSS</a
-					>). See the <a href="roadmap/">roadmap</a> for progress and plans.
-				</dd>
+      <dl class="faqs">
+        <dt>What is the project status?</dt>
+        <dd>
+          The current <a href="https://github.com/neovim/neovim/releases/latest">stable release</a>
+          version is <code>0.4.4</code> (<a href="https://github.com/neovim/neovim/tags.atom">RSS</a>).
+          See the <a href="roadmap/">roadmap</a> for progress and plans.
+        </dd>
 
-				<dt>Is Neovim trying to turn Vim into an IDE?</dt>
-				<dd>
-					With 30% less source-code than Vim, the
-					<a href="charter/">vision</a> of Neovim is to enable new applications
-					without compromising Vim's traditional roles.
-				</dd>
+        <dt>Is Neovim trying to turn Vim into an IDE?</dt>
+        <dd>With 30% less source-code than Vim, the <a href="charter/">vision</a>
+        of Neovim is to enable new applications without compromising Vim's
+        traditional roles. </dd>
 
-				<dt>Will Neovim deprecate Vimscript?</dt>
-				<dd>
-					No. Lua is built-in, but Vimscript will always be supported with the
-					<b>most advanced Vimscript engine in the world</b> (featuring an
-					AST-producing
-					<a href="https://neovim.io/doc/user/api.html#nvim_parse_expression()"
-						>parser</a
-					>).
-				</dd>
+        <dt>Will Neovim deprecate Vimscript?</dt>
+        <dd>
+          No. Lua is built-in, but Vimscript will always be supported
+          with the <b>most advanced Vimscript engine in the world</b>
+          (featuring an AST-producing <a href="https://neovim.io/doc/user/api.html#nvim_parse_expression()">parser</a>).
+        </dd>
 
-				<dt>Which plugins does Neovim support?</dt>
-				<dd>
-					Most Vim plugins, and more. See
-					<a href="https://github.com/neovim/neovim/wiki/Related-projects"
-						>related projects</a
-					>
-					for plugins and applications that leverage the Neovim API.
-				</dd>
-			</dl>
-		</div>
+        <dt>Which plugins does Neovim support?</dt>
+        <dd>Most Vim plugins, and more.
+            See <a href="https://github.com/neovim/neovim/wiki/Related-projects">related projects</a>
+            for plugins and applications that leverage the Neovim API.</dd>
 
-		<div class="col-narrow">
-			<h2 id="chat">Chat</h2>
-			<p>
-				<a
-					href="https://twitter.com/Neovim"
-					class="twitter-follow-button"
-					data-show-count="false"
-					data-size="large"
-					>Follow &#64;Neovim</a
-				>
-				<script>
-					!(function (d, s, id) {
-						var js,
-							fjs = d.getElementsByTagName(s)[0],
-							p = /^http:/.test(d.location) ? "http" : "https";
-						if (!d.getElementById(id)) {
-							js = d.createElement(s);
-							js.id = id;
-							js.src = p + "://platform.twitter.com/widgets.js";
-							fjs.parentNode.insertBefore(js, fjs);
-						}
-					})(document, "script", "twitter-wjs");
-				</script>
-			</p>
+      </dl>
+    </div>
 
-			<p>
-				Discuss the&nbsp;project at&nbsp;<a
-					href="https://gitter.im/neovim/neovim"
-					>gitter.im/neovim</a
-				>
-				or
-				<a href="https://riot.im/app/#/room/#neovim:matrix.org">IRC</a
-				>&nbsp;(#neovim&nbsp;on&nbsp;irc.freenode.net).
-			</p>
+    <div class="col-narrow">
+      <h2 id="chat">Chat</h2>
+      <p>
+        <a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow &#64;Neovim</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </p>
 
-			<p>
-				Contribute code, report bugs and request features at
-				<a href="https://github.com/neovim/neovim">GitHub</a>.
-			</p>
+      <p>
+        Discuss the&nbsp;project at&nbsp;<a href="https://gitter.im/neovim/neovim">gitter.im/neovim</a>
+        or <a href="https://riot.im/app/#/room/#neovim:matrix.org">IRC</a>&nbsp;(#neovim&nbsp;on&nbsp;irc.freenode.net).
+      </p>
 
-			<p>
-				Ask about usage and configuration at
-				<a href="https://vi.stackexchange.com">vi.stackexchange.com</a>.
-			</p>
-		</div>
-	</div>
+      <p>
+        Contribute code, report bugs and request features at <a href="https://github.com/neovim/neovim">GitHub</a>.
+      </p>
+
+      <p>
+        Ask about usage and configuration at <a href="https://vi.stackexchange.com">vi.stackexchange.com</a>.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section class="front-section">
-	<div class="container">
-		<h2 id="sponsor">Support the project</h2>
-	</div>
-	<div class="container flex col3">
-		<div>
-			<h3>Bountysource</h3>
-			<p>
-				You can donate to the
-				<a href="https://salt.bountysource.com/teams/neovim">Neovim project</a>
-				on Bountysource.
-			</p>
-		</div>
+  <div class="container">
+    <h2 id="sponsor">Support the project</h2>
 
-		<div class="bitcoin-donate">
-			<h3>Bitcoin</h3>
-			<div class="donate">
-				<div class="icon">
-					<img src="/images/icons/bitcoin.png" alt="Bitcoin logo" />
-				</div>
-				<div>
-					<input
-						class="donate"
-						type="text"
-						value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ"
-						readonly="readonly"
-					/>
-				</div>
-			</div>
+    <div class="col-narrow">
+      <h3>Bountysource</h3>
+      <p>
+      You can donate to the
+      <a href="https://salt.bountysource.com/teams/neovim">Neovim project</a>
+      on Bountysource.
+      </p>
+    </div>
 
-			<p>
-				View the address at
-				<a
-					href="https://blockchain.info/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ"
-					>Blockchain.info</a
-				>.
-			</p>
-		</div>
+    <div class="col-narrow">
+      <h3>Bitcoin</h3>
+      <div class="donate">
+        <div class="icon">
+          <img src="/images/icons/bitcoin.png" alt="Bitcoin logo"/>
+        </div>
+        <input class="donate" type="text" value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ" readonly="readonly">
+      </div>
 
-		<div>
-			<h3>Logo</h3>
-			<p>
-				<a href="/logos/neovim-logos.zip">Neovim-logos.zip</a>
-				<span class="light">(1.1 MB)</span>
-			</p>
-			<p class="light small">
-				The Neovim logo by
-				<a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under
-				the
-				<a href="http://creativecommons.org/licenses/by/3.0/"
-					>Creative Commons Attribution 3.0 Unported License</a
-				>.
-			</p>
-		</div>
-	</div>
+      <p>
+      View the address at
+      <a href="https://blockchain.info/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ">Blockchain.info</a>.
+      </p>
+    </div>
+
+    <div class="col-narrow">
+      <h3>Logo</h3>
+      <p><a href="/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></p>
+      <p class="light small">The Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a> is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+    </div>
+
+  </div>
 </section>

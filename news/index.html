@@ -6,21 +6,21 @@ title: News
 {% include nav.html active='News' %}
 
 <section class="front-section">
-	<div class="newsletter container golden-grid">
-		<div class="col-wide">
-			<h1>{{ site.categories.newsletter.first.title }}</h1>
+  <div class="newsletter container golden-grid">
+    <div class="col-wide">
+      <h1>{{ site.categories.newsletter.first.title }}</h1>
 
-			<div style="margin-top: 0.5em; margin-bottom: 0.5em;">
-				<a
-					class="release-date"
-					href="{{ site.categories.newsletter.first.url }}"
-					>{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a
-				>
-			</div>
+      <div style="margin-top: 0.5em; margin-bottom: 0.5em;">
+        <a
+          class="release-date"
+          href="{{ site.categories.newsletter.first.url }}"
+          >{{ site.categories.newsletter.first.date | date: "%B %Y" }}</a
+        >
+      </div>
 
-			{{ site.categories.newsletter.first.content }}
-		</div>
+      {{ site.categories.newsletter.first.content }}
+    </div>
 
-		{% include news_sidebar.html %}
-	</div>
+    {% include news_sidebar.html %}
+  </div>
 </section>
