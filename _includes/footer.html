@@ -1,6 +1,6 @@
 <footer>
-  <div class="container">
-    <div class="col-wide">
+  <div class="container flex">
+    <div>
     {% for nav in site.data.nav %}
       <a href="{{ nav.url }}">{{ nav.title }}</a>
       {% unless forloop.last %}
@@ -9,7 +9,7 @@
     {% endfor %}
     </div>
 
-    <div class="col-narrow">
+    <div>
       This site's source is <a href="https://github.com/neovim/neovim.github.io/">hosted on GitHub</a>.
     </div>
   </div>
