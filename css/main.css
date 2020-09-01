@@ -80,6 +80,7 @@ blockquote small:before {
 
 pre {
   overflow: auto;
+  font-size: initial;
   padding: 0.8em;
   color: var(--fg-color);
   border-radius: 0.2em;
