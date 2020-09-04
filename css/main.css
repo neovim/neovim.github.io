@@ -87,6 +87,7 @@ pre {
   border: solid 1px var(--border-color);
   background-color: var(--accent-bg-color);
   white-space: pre-wrap;
+  word-break: normal;
 }
 
 code {
