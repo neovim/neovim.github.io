@@ -16,6 +16,7 @@ url: "https://neovim.io"
 plugins:
     - jekyll-redirect-from
     - jekyll-mentions
+    - jekyll-feed
 
 exclude:
     - CNAME
