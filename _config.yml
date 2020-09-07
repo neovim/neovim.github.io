@@ -18,6 +18,9 @@ plugins:
     - jekyll-mentions
     - jekyll-feed
 
+feed:
+    path: news.xml
+
 exclude:
     - CNAME
     - Gemfile
