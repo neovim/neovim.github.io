@@ -121,7 +121,7 @@ Around Neovim
 
 Neovim had been accepted into the [Google Summer of Code(GSOC)](https://summerofcode.withgoogle.com/). We've had two students working on interesting developments:
 
-- @UtkarshMe worked on [extending the UI protocol and externalizing window layout and control](https://github.com/neovim/neovim/issues/8320). Be sure to check out [his blog](https://utkarshme.github.io/blog/progress-at-the-end-of-gsoc-with-neovim/) for a summary!
+- @UtkarshMe worked on [extending the UI protocol and externalizing window layout and control](https://github.com/neovim/neovim/issues/8320). Be sure to check out [his blog](https://utkarshme.github.io/blog/progress-at-the-end-of-gsoc-with-neovim) for a summary!
 - @b-r-o-c-k previously [active on the windows front](https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=author%3Ab-r-o-c-k+) before, implemented a [.NET API client](https://github.com/neovim/neovim/issues/8337) for Neovim.
 
 Thanks for your awesome contributions, and thanks to the mentors @bfredl and @justinmk!
