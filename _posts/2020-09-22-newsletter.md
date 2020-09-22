@@ -144,7 +144,7 @@ Standard modules:
 
 ### Lua Plugins and Configuration
 
-Community member 'Nanotee' has created a collection of resources in his [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide) guide, that are good referene if you're starting out.
+Community member 'Nanotee' has created a collection of resources in his [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide) guide that provide a good starting point for developers.
 
 ---
 - [architext](https://github.com/vigoux/architext.nvim) A structural editing plugin for neovim, powered by treesitter.
