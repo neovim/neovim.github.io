@@ -40,11 +40,11 @@ Neovim release that happened since then: v0.4.4!
 
 - The 'maxcombine' option has been removed, it now always default to 6 (**@bfredl**, [#7992](https://github.com/neovim/neovim/pull/7992))
 
-- The 'fillchars' setting now has an 'eob' option, letting users configure the character that should be used to represent lines after the end of a buffer (previously hardcoded to '~') (**@FriedSock**, [#8546](https://github.com/neovim/neovim/pull/8546))
+- The 'fillchars' setting now has an 'eob' option, letting users configure the character used to represent lines after the end of a buffer (previously hardcoded to '~') (**@FriedSock**, [#8546](https://github.com/neovim/neovim/pull/8546))
 
 - `F` has been added to the default `shortmess` option and `S` has been removed (**@justinmk**, [#8619](https://github.com/neovim/neovim/pull/8619), [#10136](https://github.com/neovim/neovim/pull/10136))
 
-- The CurslorLine type will now be smarter: if its foreground color is not net, the text of the CursorLine will use the CursorLine's background color and default syntax highliting colors as foreground (**@zhou13**, [#8578](https://github.com/neovim/neovim/pull/8578)).
+- The CursorLine type will now be smarter: if its foreground color is not net, the text of the CursorLine will use the CursorLine's background color and default syntax highlighting colors as foreground (**@zhou13**, [#8578](https://github.com/neovim/neovim/pull/8578)).
 
 - The terminal UI can now support undercurl and colored underline, provided that your terminal has support for that (**@blueyed**, [#9052](https://github.com/neovim/neovim/pull/9052)).
 
@@ -89,10 +89,10 @@ Neovim release that happened since then: v0.4.4!
   - `nvim_win_set_buf`: sets the current buffer of a window (**@justinmk**, [#9100](https://github.com/neovim/neovim/pull/9100))
   - `nvim_win_set_config`: configure the layout of a window (**@mhinz**, [#9626](https://github.com/neovim/neovim/pull/9626)).
 
-- Changed API functions: 
+- Changed API functions:
   - `nvim_buf_lines_event` will now send events for terminal buffers (**@justinmk**, [#8616](https://github.com/neovim/neovim/pull/8616)).
 
-- Neovim now always waits for a UI when usied with --embed, unless --headless is also supplied (**@bfredl**, [#9024](https://github.com/neovim/neovim/pull/9024)).
+- Neovim now always waits for a UI when launched with --embed, unless --headless is also supplied (**@bfredl**, [#9024](https://github.com/neovim/neovim/pull/9024)).
 
 - Neovim's libuv loop has been exposed to lua as `vim.loop` (**@zhaozg**, **@andreypopp**, [#10123](https://github.com/neovim/neovim/pull/10123)).
 
@@ -114,7 +114,7 @@ The following plugins have found their way into our [wiki](https://github.com/ne
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim): Language Server Protocol client that aims to replicate VSCode's functionnalities
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim): Provides preview of your markdown files in your browser, with synchronized scrolling.
-- [nvim-gdb](https://github.com/sakhnik/nvim-gdb): Neovim thin wrapper for GDB, LLDB and PDB
+- [nvim-gdb](https://github.com/sakhnik/nvim-gdb): thin wrapper for GDB, LLDB and PDB
 - [nero.nvim](https://github.com/Vigemus/nero.nvim): A REPL for Neovim
 - [neogdb.vim](https://github.com/huawenyu/neogdb.vim): Vim GDB front-end for neovim
 - [nvim-luadev](https://github.com/bfredl/nvim-luadev): REPL for developing lua plugins
@@ -149,20 +149,20 @@ Maybe 2018/2019 weren't the years of the Linux desktop, but they sure were the y
 - [glrnvim](https://github.com/beeender/glrnvim): A terminal wrapper that launches neovim inside of alacritty.
 - [yatli/fvim](https://github.com/yatli/fvim): A beautiful UI written in F# - who knew functionnal languages could actually be used for writing software?
 - [Neo Vim](https://github.com/asvetliakov/vscode-neovim): A new attempt at integration neovim into VSCode.
-- [kethku/neovide](https://github.com/Kethku/neovide): A "No nonsense Neovim client writen in rust" with a tiny bit of cursor nonsense.
+- [kethku/neovide](https://github.com/Kethku/neovide): A "No nonsense Neovim client writen in rust" with a tiny bit of cursor madness.
 - [dontpanic92/dotnvim](https://github.com/dontpanic92/dotnvim): A C# neovim client with transparent backgrounds!
 
 ### Blog posts
 
-Some blog posts that talk about some specifically Neovim things:
+Some posts that talk specifically about Neovim things:
 
-Writing Neovim plugins in lua: https://www.2n.pl/blog/how-to-write-neovim-plugins-in-lua
-Writing your init.vim in lua: https://teukka.tech/luanvim.html
-Using Neovim's event loop from lua: https://teukka.tech/vimloop.html
+- Writing Neovim plugins in lua: https://www.2n.pl/blog/how-to-write-neovim-plugins-in-lua
+- Writing your init.vim in lua: https://teukka.tech/luanvim.html
+- Using Neovim's event loop from lua: https://teukka.tech/vimloop.html
 
 ## Stats
 
-Changed lines since the lat newsletter:
+Changed lines since the last newsletter:
 ```
 git log v0.3.0..v0.4.4 --numstat --pretty=tformat: --numstat | nawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }'
 added lines: 168844 removed lines: 75466 total lines: 93378
@@ -170,8 +170,8 @@ added lines: 168844 removed lines: 75466 total lines: 93378
 
 Merged commits:
 ```
-git log v0.3.0..v0.4.4 | wc -l
-35712
+git log v0.3.0..v0.4.4 --pretty=oneline | wc -l
+3477
 ```
 
 Different commit authors:
@@ -188,5 +188,6 @@ added lines: 9226 removed lines: 7002 total lines: 2224
 
 ## Thanks
 
-Thank you contributors, sponsors, bug-reporters, supporters. Thank you **@justinmk** for the awesome
-project and thank you **@brammool** for your foundational work.
+Thank you contributors, sponsors, bug-reporters, supporters.
+Note that you can now sponsor neovim via [github Sponsors](https://github.com/sponsors/neovim) or on [OpenCollective](https://opencollective.com/neovim).
+Thank you **@justinmk** for the awesome project and thank you **@brammool** for your foundational work.
