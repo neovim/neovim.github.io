@@ -38,19 +38,19 @@ Neovim release that happened since then: v0.4.4!
 
 - Neovim started detecting the background color of the terminal for xterm-compatible terminals (**@joshtriplett**, [#9509](https://github.com/neovim/neovim/pull/9509))
 
-- The 'maxcombine' option has been removed, it now always default to 6 (**@bfredl**, [#7992](https://github.com/neovim/neovim/pull/7992))
+- The `'maxcombine'` option has been removed, it now always default to 6 (**@bfredl**, [#7992](https://github.com/neovim/neovim/pull/7992))
 
-- The 'fillchars' setting now has an 'eob' option, letting users configure the character used to represent lines after the end of a buffer (previously hardcoded to '~') (**@FriedSock**, [#8546](https://github.com/neovim/neovim/pull/8546))
+- The `'fillchars'` setting now has an `eob` option, letting users configure the character used to represent lines after the end of a buffer (previously hardcoded to `~`) (**@FriedSock**, [#8546](https://github.com/neovim/neovim/pull/8546))
 
-- `F` has been added to the default `shortmess` option and `S` has been removed (**@justinmk**, [#8619](https://github.com/neovim/neovim/pull/8619), [#10136](https://github.com/neovim/neovim/pull/10136))
+- `F` has been added to the default `'shortmess'` option and `S` has been removed (**@justinmk**, [#8619](https://github.com/neovim/neovim/pull/8619), [#10136](https://github.com/neovim/neovim/pull/10136))
 
-- The CursorLine type will now be smarter: if its foreground color is not net, the text of the CursorLine will use the CursorLine's background color and default syntax highlighting colors as foreground (**@zhou13**, [#8578](https://github.com/neovim/neovim/pull/8578)).
+- The `CursorLine` type will now be smarter: if its foreground color is not set, the text of the `CursorLine` will use the `CursorLine`'s background color and default syntax highlighting colors as foreground (**@zhou13**, [#8578](https://github.com/neovim/neovim/pull/8578)).
 
 - The terminal UI can now support undercurl and colored underline, provided that your terminal has support for that (**@blueyed**, [#9052](https://github.com/neovim/neovim/pull/9052)).
 
-- Neovim's `background` setting now defaults to `dark` to get a consistent setting across platforms (**@justinmk**, [#9205](https://github.com/neovim/neovim/pull/9205)).
+- Neovim's `'background'` setting now defaults to `dark` to get a consistent setting across platforms (**@justinmk**, [#9205](https://github.com/neovim/neovim/pull/9205)).
 
-- `fillchars` and `listchars` now are window-local options (**@mhinz**, [#9539](https://github.com/neovim/neovim/pull/9539)).
+- `'fillchars'` and `'listchars'` now are window-local options (**@mhinz**, [#9539](https://github.com/neovim/neovim/pull/9539)).
 
 - The popupmenu can now be made (pseudo) transparent (**@bfredl**, [#9571](https://github.com/neovim/neovim/pull/9571)).
 
@@ -66,15 +66,15 @@ Neovim release that happened since then: v0.4.4!
 
 - There now are two events triggered when a UI connects to and disconnects from Neovim: UIEnter and UILeave (**@equalsraf**, [#6917](https://github.com/neovim/neovim/6917)).
 
-- There also are TermEnter and TermLeave autocommands triggered when entering/leaving a terminal (**usama54321**, [#8550](https://github.com/neovim/neovim/8550)).
+- There also are `TermEnter` and `TermLeave` autocommands triggered when entering/leaving a terminal (**usama54321**, [#8550](https://github.com/neovim/neovim/8550)).
  
 #### 0.4.4 for Developers
 
 - New UI extensions:
-  - The ext_hlstate extension allows semantic identification of builtin and syntax highlights (**@bfredl**, [#8221](https://github.com/neovim/neovim/pull/8221)).
-  - The ext_linegrid extension sends more gradual screen updates for improved performance (**@bfredl**, [#9064](https://github.com/neovim/neovim/pull/9064)).
-  - The ext_multigrid extension introduces the concept of a "grid" which is just a rendering surface (**@bfredl**, **@UtkarshMe** [#8455](https://github.com/neovim/neovim/pull/8455])).
-  - The ext_messages extension enables UIs to provide an external command line (**@bfredl**, **@dzhou121** [#7466](https://github.com/neovim/neovim/pull/7466))
+  - The `ext_hlstate` extension allows semantic identification of builtin and syntax highlights (**@bfredl**, [#8221](https://github.com/neovim/neovim/pull/8221)).
+  - The `ext_linegrid` extension sends more gradual screen updates for improved performance (**@bfredl**, [#9064](https://github.com/neovim/neovim/pull/9064)).
+  - The `ext_multigrid` extension introduces the concept of a "grid" which is just a rendering surface (**@bfredl**, **@UtkarshMe** [#8455](https://github.com/neovim/neovim/pull/8455])).
+  - The `ext_messages` extension enables UIs to provide an external command line (**@bfredl**, **@dzhou121** [#7466](https://github.com/neovim/neovim/pull/7466))
   - `ext_popupmenu` makes neovim send information about its popup menu (**@bfredl** [#9607](https://github.com/neovim/neovim/pull/9607)).
 
 - New API function:
@@ -98,7 +98,7 @@ Neovim release that happened since then: v0.4.4!
 
 ### What's next?
 
-Neovim contributors have been hard at work and added a lot of new features to v0.5.0 like an [LSP client](https://microsoft.github.io/language-server-protocol/) written in Lua and [TreeSitter](https://github.com/tree-sitter/tree-sitter) integration. The next Neovim release promises to be really interesting!
+Neovim contributors have been hard at work and added a lot of new features to v0.5.0 like an [LSP client](https://microsoft.github.io/language-server-protocol/) written in Lua and [TreeSitter](https://github.com/tree-sitter/tree-sitter) integration. The next Neovim release promises to be fascinating!
 
 Around Neovim
 -------------
