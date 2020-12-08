@@ -1,47 +1,59 @@
 :root {
   --main-breakpoint: 60em;
 
+	/* Serif fonts for body text. Easier to read for larger chunks */
+	--serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
+
+	/* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
+	--sans-serif-fonts: Lato, sans-serif;
   /* Colors */
 
-  --fg-color: #444;
-  --bg-color: #fbfbfb;
+	/* Hue is between neovim green and blue for text/background */
+	/* Saturation is low */
 
-  --link-color: #3c92d1;
-  --accent-color: #54a23d;
-  --accent-bg-color: #ddd;
+  --fg-color: #313833;
+  --bg-color:#dbecdd; 
 
-  --border-color: #eeeeee;
+  --link-color: #195174;
+  --accent-color: #202e18;
+  --accent-bg-color: #d2e9d7;
+
+  --border-color: #bce3c2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-color: #f0f0f0;
-    --bg-color: #171717;
+    --fg-color: #c7d6d0;
+    --bg-color: #202823;
 
-    --accent-bg-color: #262626;
-    --link-color: #3c92d1;
+    --accent-bg-color: #1c231e;
+    --link-color:#229bd1;
     --accent-color: #54a23d;
 
-    --border-color: #3c3c3c;
+    --border-color: #353e39;
   }
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; */
+	font-family: var(--serif-fonts);
   font-size: initial;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--fg-color);
   background-color: var(--bg-color);
 }
 
 a {
   color: var(--link-color);
-  text-decoration: none;
+	transition: all ease-in 96ms;
+	text-decoration: underline var(--link-color);
 }
 
 a:focus,
 a:hover {
   color: var(--accent-color);
+	background-color: var(--accent-bg-color);
+	box-shadow: 0 0 2px gold;
 }
 
 .current a {
@@ -50,15 +62,16 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5{
   font-family: "Lato", sans-serif;
-  line-height: 1.1;
-  margin: 0.67em 0;
+  line-height: 1.6;
+  margin: 0.66em 0;
+	font-weight: bold;
 }
 
 h2 {
-  font-size: 1.8em;
-  font-weight: 400;
   color: var(--accent-color);
 }
 
@@ -80,19 +93,21 @@ blockquote small:before {
 
 pre {
   overflow: auto;
-  font-size: initial;
   padding: 0.8em;
   color: var(--fg-color);
   border-radius: 0.2em;
-  border: solid 1px var(--border-color);
+  border: solid 2pt var(--border-color);
+	box-shadow: 0 0 2px var(--accent-bg-color);
   background-color: var(--accent-bg-color);
   white-space: pre-wrap;
   word-break: normal;
 }
 
-code {
+code, pre, kbd, samp {
   background-color: var(--accent-bg-color);
-  color: var(--accent-color);
+  color: var(--fg-color);
+	font-family: monospace;
+	font-size: 1em;
 }
 
 /*
@@ -126,6 +141,7 @@ code {
 .col3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
 }
 
 @media (max-width: 525px) {
@@ -174,6 +190,14 @@ code {
   margin-top: 1em;
 }
 
+.navbar-brand {
+	float: none;
+	height: auto;
+	padding: 0;
+	font-size: inherit;
+	line-height: inherit;
+}
+
 /**
  * Menu dropdown
  */
@@ -200,8 +224,9 @@ code {
  */
 
 .masthead {
-  border-top: solid 1px var(--border-color);
-  border-bottom: solid 1px var(--border-color);
+  border-top: solid 1pt var(--border-color);
+  border-bottom: solid 1pt var(--border-color);
+	background-color: var(--accent-bg-color);
   text-align: center;
   padding: 1.5em 0.8em;
   display: grid;
@@ -209,8 +234,8 @@ code {
 
 .masthead .lead {
   font-weight: 900;
-  color: var(--accent-color);
-  font-family: "Lato", sans-serif;
+	font-size: 2em;
+  font-family: var(--sans-serif-fonts);
 }
 
 /*
@@ -254,13 +279,18 @@ code {
   color: var(--bg-color);
   border-radius: 0.3em;
   padding: 1em 2em;
+	font-family: var(--sans-serif-fonts);
+	font-weight: bold;
+	font-size: 1.2em;
 
   vertical-align: initial;
   text-align: initial;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
+	color: var(--accent-bg-color);
   background-color: var(--accent-color);
+	box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
 }
 
 a.primary {
