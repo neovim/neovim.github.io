@@ -7,9 +7,8 @@
     <meta name="description" content="{{site.description}}">
     {% feed_meta %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="/css/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="/css/main.css" rel="stylesheet">
     <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
     <!--[if lt IE 9]>
@@ -23,9 +22,9 @@
 
     {% include footer.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/sponsors-override.js"></script>
     <script src="/js/sponsors.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
