@@ -416,5 +416,8 @@ var sponsorOverride = {
   },
   '67955-alex-gude': {
     url: 'https://alexgude.com'
-  }
+  },
+  '84887-tmm': {
+    url: 'https://meagher.co'
+  },
 };
