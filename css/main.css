@@ -11,12 +11,12 @@
 	/* Hue is between neovim green and blue for text/background */
 	/* Saturation is low */
 
-  --fg-color: #313833;
-  --bg-color:#dbecdd; 
+  --fg-color: #292f2b;
+  --bg-color:#e7eee8; 
 
   --link-color: #195174;
   --accent-color: #202e18;
-  --accent-bg-color: #d2e9d7;
+  --accent-bg-color:#d3e4db;
 
   --border-color: #bce3c2;
 }
@@ -27,8 +27,9 @@
     --bg-color: #202823;
 
     --accent-bg-color: #1c231e;
-    --link-color:#229bd1;
-    --accent-color: #54a23d;
+    /* --link-color:#81e771; */
+		--link-color: #b2e7aa;
+    --accent-color: #85dbef;
 
     --border-color: #353e39;
   }
