@@ -25,16 +25,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-color: #c7d6d0;
-    --bg-color: #202823;
-
-    --accent-bg-color: #1c231e;
-    /* --link-color:#81e771; */
-		--link-color: #b2e7aa;
-    --accent-color: #85dbef;
-
-    --border-color: #353e39;
-  }
+		--fg-color: #c7d6d0;
+		--bg-color: #0f191f;
+		--accent-bg-color: #0b151b;
+		--link-color:#8ec77e;
+		--accent-color: #8fff6d;
+		--border-color: #203f57;
+	}
 }
 
 body {
@@ -49,7 +46,8 @@ body {
 a {
   color: var(--link-color);
 	transition: all ease-in 96ms;
-	text-decoration: underline var(--link-color);
+	/* text-decoration: underline var(--link-color); */
+	text-decoration: underline var(--accent-color);
 }
 
 a:focus,
@@ -74,7 +72,7 @@ h5{
 	font-weight: bold;
 }
 
-h2 {
+h2, h4 {
   color: var(--accent-color);
 }
 
@@ -186,20 +184,20 @@ code, pre, kbd, samp {
 }
 
 #navbar-logo {
-  height: 50px;
+  height: 2.5em;
 }
 
-.navbar-top-align {
-  margin-top: 1em;
-}
+/* .navbar-top-align { */
+/*   margin-top: 1em; */
+/* } */
 
-.navbar-brand {
-	float: none;
-	height: auto;
-	padding: 0;
-	font-size: inherit;
-	line-height: inherit;
-}
+/* .navbar-brand { */
+/* 	float: none; */
+/* 	height: auto; */
+/* 	padding: 0; */
+/* 	font-size: inherit; */
+/* 	line-height: inherit; */
+/* } */
 
 /**
  * Menu dropdown
@@ -278,7 +276,7 @@ code, pre, kbd, samp {
  */
 
 .btn {
-  background-color: var(--link-color);
+  background-color: var(--accent-color);
   color: var(--bg-color);
   border-radius: 0.3em;
   padding: 1em 2em;
@@ -288,6 +286,7 @@ code, pre, kbd, samp {
 
   vertical-align: initial;
   text-align: initial;
+	transition: all 96ms ease-in;
 }
 
 .btn:hover, .btn:focus {
@@ -431,23 +430,16 @@ footer {
  */
 
 .light {
-  color: var(--fg-light-color);
-}
-
-.light a {
-  color: var(--accent-color);
+	opacity: .9;
 }
 
 .small {
-  font-size: 70%;
+  font-size: .8em;
 }
 
 /*
  * Newsletter CSS
  */
-
-.newsletter {
-}
 
 .newsletter img {
   width: 100%;

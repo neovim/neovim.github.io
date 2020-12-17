@@ -8,13 +8,9 @@
     {% feed_meta %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link href="/css/normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
     <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -22,9 +18,10 @@
 
     {% include footer.html %}
 
-    <script src="/js/jquery.min.js"></script>
+		{%- comment -%}Only used in bountysource{%- endcomment -%}	
+		<script src="/js/jquery.js"></script>
     <script src="/js/sponsors-override.js"></script>
     <script src="/js/sponsors.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.js"></script>
   </body>
 </html>
