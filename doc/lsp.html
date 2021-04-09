@@ -1,0 +1,36 @@
+---
+layout: default
+title: LSP documentation
+---
+
+{% include nav.html active='Documentation' %}
+
+<section class="front-section">
+  <div class="container">
+    <h1>Language Server Protocol Documentation</h1>
+  </div>
+	<div class="container golden-grid">
+    <div>
+      <h2>What is the Language Server Protocol ?</h2>
+	  <p>
+	  <a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol (LSP)</a> is an open, JSON-RPC-based protocol for communication between source code editors and language servers, which provide programming language-specific features such as:
+
+	  <ul>
+		  <li>Go to definition</li>
+		  <li>(auto)completion</li>
+		  <li>Code Actions (automatic formatting, organize imports, ...)</li>
+		  <li>Show method signatures</li>
+		  <li>Show/go to references</li>
+		  <li>Snippets</li>
+	  </ul>
+	  </p>
+
+	  <p>
+	  Starting with version 0.5, neovim natively supports this protocol.
+	  To enjoy these features, you need to install and configure a LSP server for the languages you are interested in.
+	  The neovim organization maintains a list of configurations in the <a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig plugin</a>.
+	  The repository contains instructions to setup and troubleshoot many servers.
+	  </p>
+  </div>
+  </div>
+</section>
