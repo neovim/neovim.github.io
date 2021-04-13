@@ -11,5 +11,7 @@
   url: https://github.com/neovim/neovim
 - title: Documentation
   url: /doc/
+- title: Forum
+  url: http://discourse.neovim.io
 - title: Sponsors
   url: /sponsors/
