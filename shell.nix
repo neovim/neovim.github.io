@@ -18,5 +18,6 @@ pkgs.mkShell {
   shellHook = ''
     echo "bundle install --path .bundle"
     echo "bundle exec jekyll build --verbose"
+    echo "bundle exec jekyll serve --watch"
   '';
 }
