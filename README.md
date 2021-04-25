@@ -19,37 +19,23 @@ Install Bundler, either systemwide:
 
 or for the current user:
 
-    $ gem install --user-install
+    $ gem install --user-install bundler
     $ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 In the latter case, you might want to add the `PATH` update to `.bashrc` or your shell's equivalent.
 
-To install the dependencies of this project, use Bundler:
+To install the dependencies for this project only:
 
-    $ bundle install --path .bundle
+    $ bundle config set --local path .bundle
+    $ bundle install
 
 ### Serving locally
 
 Execute the following command:
 
-    $ bundle exec jekyll serve --watch
+    $ bundle exec jekyll serve --watch --livereload
 
 Open `http://localhost:4000` to view the website.
-
-If you encounter an error message saying `Could not find a JavaScript runtime`, follow the link indicated
-in the error message and install one of the listed runtimes.
-
-### Running tests
-
-    $ bundle exec rake test
-
-### (Optionally) Regenerate dependencies
-
-Install Bower if you don't have it:
-
-    npm install bower
-
-Then install the JS dependencies with `bower install`.
 
 ## License
 
