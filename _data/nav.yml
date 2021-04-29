@@ -15,13 +15,13 @@
   url: /doc/
   sections:
     - title: General
-      url: /doc/general/
+      href: /doc/general/
     - title: Lua resources
-      url: /doc/lua-resources/
+      href: /doc/lua-resources/
     - title: LSP
-      url: /doc/lsp/
+      href: /doc/lsp/
     - title: Tree-sitter
-      url: /doc/treesitter/
+      href: /doc/treesitter/
 - title: Forum
   url: http://discourse.neovim.io
 - title: Sponsors
