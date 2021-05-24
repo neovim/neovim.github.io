@@ -157,7 +157,7 @@ have been implemented but take a look at it to learn more.
 The following is a list of things that are either in progress or on the roadmap.
 
 1. Finish [porting][port-os] the rest of the OS layer to libuv.
-2. Continue work on [VimL -> Lua translator][translator] by @ZyX-I.
+2. Continue work on [Vimscript -> Lua translator][translator] by @ZyX-I.
 3. Use [include-what-you-use][iwyu] to clean up headers and includes as
    [discussed][iwyu-issue].
 4. Remove the use of temp files when using `system()` and [use pipes
@@ -165,10 +165,10 @@ The following is a list of things that are either in progress or on the roadmap.
 5. Add the functionality of [redraw events][redraw].
 6. Add [Travis builds for OS X][travis-osx].
 
-### A Note on the VimL to Lua Translator
+### A Note on the Vimscript to Lua Translator
 
 There has been some questioning on the motivation for this feature. The
-reasoning is that the evaluation of the VimL language is housed in the file
+reasoning is that the evaluation of the Vimscript language is housed in the file
 called [`eval.c`][eval.c].
 
 The file currently has 19,164 lines of code. By creating the translator, it

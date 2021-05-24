@@ -143,7 +143,7 @@ the role of "lead developer", i.e. the developer who receives the funding. His
 work on Neovim includes:
 
 - first-class XDG support, shada, build-time generators, automated change-aware
-  linter, Lua-to-VimL translator
+  linter, Lua-to-Vimscript translator
 - critical internals such as `msgpackparse()` and `os/fileio.c` (buffered I/O)
 - complete rewrite of Vim JSON support, including granular error messages
 - comprehensive test coverage for all of the above
@@ -180,7 +180,7 @@ This makes it practical for the numerous Neovim API clients to support any
 released version of Neovim.
 
 Since [PR #4934](https://github.com/neovim/neovim/pull/4934) you can call the
-API of the current `nvim` process **directly from VimL**:
+API of the current `nvim` process **directly from Vimscript**:
 
     :echo nvim_buf_get_lines(42, 1, 3, v:false)
 
@@ -357,8 +357,8 @@ Look for the following developments in 2017 for Neovim `0.3`.
 - With ZyX's [eval.c refactor](https://github.com/neovim/neovim/pull/5119)
   the monolithic `eval.c` will be separated into
   [modules](https://github.com/neovim/neovim/issues/5081#issuecomment-234772243),
-  marking a point where Neovim's VimL implementation diverges from Vim's. This
-  will be the world's second **alternative VimL implementation**
+  marking a point where Neovim's Vimscript implementation diverges from Vim's. This
+  will be the world's second **alternative Vimscript implementation**
   (ZyX's [VimL-to-Lua PR](https://github.com/neovim/neovim/pull/243) was the first).
 - [Extended marks](https://github.com/neovim/neovim/pull/5031) will give plugin
   authors more powerful and flexible marks.

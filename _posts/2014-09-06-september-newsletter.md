@@ -37,7 +37,7 @@ In no particular order, here are the top stories in the last two months.
 This issue was mentioned in the [June newsletter][newsletters-june] on things
 that were yet to come.
 
-@aktau has [finished implementing][pipes-pr] the VimL `system()` function to use
+@aktau has [finished implementing][pipes-pr] the Vimscript `system()` function to use
 pipes and the job system instead of redirecting to temporary files. The change
 provides a nice speed boost and avoids some permission issues (mainly affecting
 Windows, which is not supported yet).

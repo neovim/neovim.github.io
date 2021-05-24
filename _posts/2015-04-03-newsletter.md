@@ -200,7 +200,7 @@ This improvement is to make use of function callbacks (for input, output events)
 instead of the previous way of using [autocommands][job-autocmd] for responding
 to events.
 
-In addition to that, there are more job control functions in VimL including
+In addition to that, there are more job control functions in Vimscript including
 [`jobwait()`][job-wait] and [`jobclose()`][job-close].
 
 ### So Long `long_u`

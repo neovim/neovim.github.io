@@ -97,15 +97,15 @@ The merging of this latest pull request chips away at the long standing
 refactoring goal by @tarruda to [remove all project specific
 types][int-types-master].
 
-### VimL -> Lua and Vim Bug Reports
+### Vimscript -> Lua and Vim Bug Reports
 
-@ZyX-I is still hard at work on advancing [his VimL to Lua
-translator][viml-translator]. More than **80%** of Vim commands have been
+@ZyX-I is still hard at work on advancing [his Vimscript to Lua
+translator][vimscript-translator]. More than **80%** of Vim commands have been
 implemented in the parser.
 
 In the process of writing the translator, he has come across various bugs
-([1][viml-1], [2][viml-2], [3][viml-3], [4][viml-4], [5][viml-5]). He continues
-to report them to the [vim\_dev][viml-dev] mailing list as well as contributing
+([1][vimscript-1], [2][vimscript-2], [3][vVimscriptimscript-3], [4][vimscript-4], [5][vimscript-5]). He continues
+to report them to the [vim\_dev][vimscript-dev] mailing list as well as contributing
 patches when possible.
 
 ### Upstream Vim Patches
@@ -261,13 +261,13 @@ Until next time. `:wq`
 [vim-jp-conf]: http://vimconf.vim-jp.org/
 [vim-jp-slides]: http://www.slideshare.net/Shougo/lets-talk-about-neovim
 
-[viml-translator]: https://github.com/neovim/neovim/pull/243
-[viml-dev]: https://groups.google.com/forum/#!forum/vim_dev
-[viml-1]: https://groups.google.com/forum/#!msg/vim_dev/IkKbzECTX44/SXNDmu0gDOcJ
-[viml-2]: https://groups.google.com/forum/#!msg/vim_dev/NVmW5hRfpyo/Ny2VZ_CN478J
-[viml-3]: https://groups.google.com/forum/#!msg/vim_dev/s9ONFXMz0RQ/b3cptV0ZP8MJ
-[viml-4]: https://groups.google.com/forum/#!msg/vim_dev/-IYtF6S4EjM/AHiXDwQH0t4J
-[viml-5]: https://groups.google.com/forum/#!msg/vim_dev/exZH82jp5ww/3lHGDe8c--kJ
+[vimscript-translator]: https://github.com/neovim/neovim/pull/243
+[vimscript-dev]: https://groups.google.com/forum/#!forum/vim_dev
+[vimscript-1]: https://groups.google.com/forum/#!msg/vim_dev/IkKbzECTX44/SXNDmu0gDOcJ
+[vimscript-2]: https://groups.google.com/forum/#!msg/vim_dev/NVmW5hRfpyo/Ny2VZ_CN478J
+[vimscript-3]: https://groups.google.com/forum/#!msg/vim_dev/s9ONFXMz0RQ/b3cptV0ZP8MJ
+[vimscript-4]: https://groups.google.com/forum/#!msg/vim_dev/-IYtF6S4EjM/AHiXDwQH0t4J
+[vimscript-5]: https://groups.google.com/forum/#!msg/vim_dev/exZH82jp5ww/3lHGDe8c--kJ
 
 [iconv-aktau]: http://www.aktau.be/2014/11/04/neovim-input-encoding-and-you/
 [iconv-pr]: https://github.com/neovim/neovim/pull/1370

@@ -90,7 +90,7 @@ The [latest addition][garray-append-init] by @philix gives an easier way to
 append to the array. While `garray` is still being improved, eventually it will
 be phased out by a more robust solution.
 
-### Fixing VimL Libcall
+### Fixing Vimscript Libcall
 
 A function called `mch_libcall()` was temporarily removed during some of the
 cleanup. It is called in Vim by using the [`libcall()`][libcall-docs] function
