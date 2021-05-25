@@ -104,7 +104,7 @@ translator][vimscript-translator]. More than **80%** of Vim commands have been
 implemented in the parser.
 
 In the process of writing the translator, he has come across various bugs
-([1][vimscript-1], [2][vimscript-2], [3][vVimscriptimscript-3], [4][vimscript-4], [5][vimscript-5]). He continues
+([1][vimscript-1], [2][vimscript-2], [3][vimscript-3], [4][vimscript-4], [5][vimscript-5]). He continues
 to report them to the [vim\_dev][vimscript-dev] mailing list as well as contributing
 patches when possible.
 
