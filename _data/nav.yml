@@ -12,7 +12,7 @@
 - title: Development
   url: https://github.com/neovim/neovim
 - title: Documentation
-  url: /doc/
+  url: /doc/user/index.html
   sections:
     - title: General
       url: /doc/general/
