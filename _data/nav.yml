@@ -15,7 +15,7 @@
   url: /doc/
   sections:
     - title: General
-      url: /doc/general/
+      url: /doc/
     - title: Lua resources
       url: /doc/lua-resources/
     - title: LSP
