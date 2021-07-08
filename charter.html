@@ -6,49 +6,65 @@ title: About
 {% include nav.html active='About' %}
 
 <div class="container golden-grid">
-<div>
+  <div>
+    <h1>Vision</h1>
 
-<h1>Vision</h1>
+    <p>
+      Neovim is a refactor, and sometimes redactor, in the tradition of Vim
+      (which itself derives from
+      <a href="https://en.wikipedia.org/wiki/Stevie_%28text_editor%29">Stevie</a
+      >). It is not a rewrite but a continuation and extension of Vim. Many
+      clones and derivatives exist, some very clever—but none are Vim. Neovim is
+      built for users who want the good parts of Vim, and more.
+    </p>
 
-<p>
-Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which
-itself derives from <a href="https://en.wikipedia.org/wiki/Stevie_%28text_editor%29">Stevie</a>).
-It is not a rewrite but a continuation and extension of Vim. Many clones and
-derivatives exist, some very clever—but none are Vim. Neovim is built
-for users who want the good parts of Vim, and more.
-</p>
+    <h3>Goals</h3>
 
-<h3>Goals</h3>
+    <ul>
+      <li>Enable <b>new contributors</b>, remove barriers to entry.</li>
+      <li>Unblock plugin authors.</li>
+      <li>
+        Develop first-class <b>Lua/LuaJIT</b> scripting alternative to
+        Vimscript.
+      </li>
+      <li>Target all platforms supported by libuv.</li>
+      <li>Leverage ongoing Vim development.</li>
+      <li>
+        Optimize <b>out of the box</b>, for new users but especially regular
+        users.
+      </li>
+      <li>Deliver consistent cross-platform experience.</li>
+      <li>In matters of taste/ambiguity, favor tradition/compatibility...</li>
+      <li>...but prefer usability if the benefits are extreme.</li>
+    </ul>
 
-<ul>
-  <li>Enable <b>new contributors</b>, remove barriers to entry.</li>
-  <li>Unblock plugin authors.</li>
-  <li>Develop first-class <b>Lua/LuaJIT</b> scripting alternative to VimL.</li>
-  <li>Target all platforms supported by libuv.</li>
-  <li>Leverage ongoing Vim development.</li>
-  <li>Optimize <b>out of the box</b>, for new users but especially regular users.</li>
-  <li>Deliver consistent cross-platform experience.</li>
-  <li>In matters of taste/ambiguity, favor tradition/compatibility...</li>
-  <li>...but prefer usability if the benefits are extreme.</li>
-</ul>
+    <h3>Non-goals</h3>
 
-<h3>Non-goals</h3>
+    <ul>
+      <li>Turn Vim into an IDE</li>
+      <li>Limit third-party applications (such as IDEs!) built with Neovim</li>
+      <li>Deprecate Vimscript</li>
+      <li>POSIX vi-compatibility</li>
+    </ul>
 
-<ul>
-    <li>Turn Vim into an IDE</li>
-    <li>Limit third-party applications (such as IDEs!) built with Neovim</li>
-    <li>Deprecate VimL</li>
-    <li>POSIX vi-compatibility</li>
-</ul>
+    <h3>Project management</h3>
 
-<h3>Project management</h3>
-
-<ul>
-    <li>Lead maintainer: <a href="https://github.com/justinmk">Justin M. Keyes</a></li>
-    <li>Maintainers: <a href="https://github.com/orgs/neovim/people">Neovim team</a></li>
-    <li>Maintainer notes: <a href="https://github.com/neovim/neovim/blob/master/MAINTAIN.md">MAINTAIN.md</a></li>
-</ul>
-
-</div>
-{% include post_sidebar.html %}
+    <ul>
+      <li>
+        Lead maintainer:
+        <a href="https://github.com/justinmk">Justin M. Keyes</a>
+      </li>
+      <li>
+        Maintainers:
+        <a href="https://github.com/orgs/neovim/people">Neovim team</a>
+      </li>
+      <li>
+        Maintainer notes:
+        <a href="https://github.com/neovim/neovim/blob/master/MAINTAIN.md"
+          >MAINTAIN.md</a
+        >
+      </li>
+    </ul>
+  </div>
+  {% include post_sidebar.html %}
 </div>
