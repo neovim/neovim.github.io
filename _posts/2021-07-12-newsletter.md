@@ -2,10 +2,8 @@
 layout: newsletter
 title: "Neovim News #11 - The Christmas Issue"
 category: newsletter
-permalink: /news/2021/07/12
+permalink: /news/2021/07
 ---
-
-# Neovim News #11 - The Christmas Issue
 
 > The _real_ 0.5 was the friends we made along the way
 
