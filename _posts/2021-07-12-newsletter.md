@@ -169,7 +169,7 @@ Due to the global COVID-19 pandemic, VimConf 2020 unfortunately had to be cancel
 
 ### Twitch
 
-Another effect of the pandemic was the rise of interest in the live streaming of open source development on [Twitch](https://twitch.tv). Many of the speakers at Vimconf.live are active streamers; in particularly, [TJ DeVries](https://www.twitch.tv/teej_dv) regularly streams his work on Neovim as "open open source", and the release of Neovim 0.5 was streamed [live on his channel](https://www.twitch.tv/videos/1074486936).
+Another effect of the pandemic was the rise of interest in the live streaming of open source development on [Twitch](https://twitch.tv). Many of the speakers at Vimconf.live are active streamers; in particularly, [TJ DeVries](https://www.twitch.tv/teej_dv) regularly streams his work on Neovim as "open open source", and the release of Neovim 0.5 was streamed [live on his channel](https://www.twitch.tv/videos/1074486936). (**Update:** An edited playlist of the release stream is now on [YouTube](https://www.youtube.com/playlist?list=PLep05UYkc6wSN7MRsO0nvRz9FzsnE49z9).)
 
 ### Neovim development
 
