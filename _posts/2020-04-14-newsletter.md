@@ -65,7 +65,7 @@ As always, check [Following HEAD](https://github.com/neovim/neovim/wiki/Followin
 
  
  - New flag `msgsep` for `display` to avoid fullscreen scrolling for messages (**@bfredl**, [#8088](https://github.com/neovim/neovim/pull/8088))
-   - See it in action: ![Demonstration of the new multiline message functionality](../images/news9_msgsep.gif)
+   - See it in action: ![Demonstration of the new multiline message functionality](/images/news9_msgsep.gif)
  
  - Numbered marks are now saved in shada files (**@ZyX-I**, [#5908](https://github.com/neovim/neovim/pull/5908))
  
@@ -102,7 +102,7 @@ As always, check [Following HEAD](https://github.com/neovim/neovim/wiki/Followin
 - Channels: support buffered output and bytes sockets/stdio (**@bfredl**, [#6844](https://github.com/neovim/neovim/pull/6844))
 
 - A proper viml expression parser is now available (**@ZyX-l**, [#7234](https://github.com/neovim/neovim/pull/7234))
-  - It comes with various highlight groups, have a look at the following screen recording: ![Demonstration of expression highlighting](../images/news9_expression_highlight.gif)
+  - It comes with various highlight groups, have a look at the following screen recording: ![Demonstration of expression highlighting](/images/news9_expression_highlight.gif)
 
   
 ### The near future: Upcoming

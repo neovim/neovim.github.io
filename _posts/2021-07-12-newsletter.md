@@ -127,10 +127,9 @@ Of course, these were not the only [major changes in 0.5](https://github.com/neo
 
 There is an improved decoration provider API that allows setting and interacting with extmarks (invisible anchored text markers that move when surrounding text is edited), virtual text (text overlays that can now be drawn at any position on screen), and highlights (which is heavily leveraged by nvim-treesitter).
 
-The following notification mockups taken from a [Discourse post](https://neovim.discourse.group/t/wip-animated-notifications-plugin/448) by [@sunjon](https://github.com/sunjon) show what can be achieved with this API in combination with LuaJIT:
+This mockup from a [post](https://neovim.discourse.group/t/wip-animated-notifications-plugin/448) by [@sunjon](https://github.com/sunjon) shows what can be achieved with this API:
 
-![Notification mockup 1](../images/news11_notif1.gif)
-![Notification mockup 2](../images/news11_notif2.gif)
+![Notification mockup 1](/images/news11_notif1.gif)
 
 ### Floats
 
