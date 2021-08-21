@@ -129,7 +129,8 @@ There is an improved decoration provider API that allows setting and interacting
 
 This mockup from a [post](https://neovim.discourse.group/t/wip-animated-notifications-plugin/448) by [@sunjon](https://github.com/sunjon) shows what can be achieved with this API:
 
-![Notification mockup 1](/images/news11_notif1.gif)
+<img src="/images/news11_notif1.gif" style="max-width:400px; height:auto;"
+     title="Notification mockup 1" />
 
 ### Floats
 
