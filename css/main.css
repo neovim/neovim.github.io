@@ -315,14 +315,6 @@ a.primary {
   margin-top: 0.6em;
 }
 
-.original-sponsors {
-  width: 400px;
-}
-
-.sponsors-main h3 {
-  color: var(--accent-color);
-}
-
 .first-level-sponsor {
   margin-bottom: 20px;
 }
