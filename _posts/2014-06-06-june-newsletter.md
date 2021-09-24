@@ -222,7 +222,7 @@ Until next time. `:wq`
 [bountysource]: https://www.bountysource.com/
 [backers]: https://github.com/neovim/neovim/blob/master/BACKERS.md
 [libuv]: https://github.com/joyent/libuv
-[style]: http://neovim.io/development-wiki/style-guide/style-guide.xml
+[style]: http://neovim.io/doc/user/?
 [vim-import]: https://github.com/neovim/neovim/commit/72cf89bce8e4230dbc161dc5606f48ef9884ba70
 [crypto-discussion]: https://github.com/neovim/neovim/issues/694
 [crypto-removal]: https://github.com/neovim/neovim/pull/699
