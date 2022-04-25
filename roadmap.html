@@ -21,15 +21,36 @@ title: Roadmap
 
 <p>Note that all of these are tentative and can be changed, moved, or dropped at any time.</p>
 
+<h2>Major Topics</h2>
+
+These are the current themes driving our work.
+
+<ul>
+  <li>Architecture, Interfaces, Editor: (API, Lua, treesitter, UI)</li>
+  <li>Surface area. Deprecate old APIs, delete/rename/unify some Lua interface.</li>
+  <li>Constraints. Vimscript 1 is frozen (no new syntax). New features are that way 👉</li>
+  <li>Ubiquity. Embed Neovim everywhere</li>
+</ul>
+
+
 <h2>Next</h2>
 
-<h3>0.8+</h3>
+Concrete high-level feature areas and changes.
+
+<h3><a href="https://github.com/neovim/neovim/milestone/28">0.8+</a></h3>
 <ul>
-  <li>Better file-change detection</li>
-  <li>TUI as a remote UI (<code>$NVIM</code>, <code>--remote</code>)</li>
+  <li>TUI as a remote UI</li>
+  <li>Lua script runner: <code>nvim -l</code></li>
+  <li>Lua API improvements</li>
+  <li>LSP support improvements (v3.16 spec coverage, configuration)</li>
+</ul>
+
+<h3>0.9+</h3>
+<ul>
+  <li>File-change detection</li>
+  <li>Default colorscheme</li>
   <li>Externalized UI: window layout events, <code>ext_statusline</code></li>
   <li>Lua remote plugin host</li>
-  <li>Embed Neovim everywhere</li>
 </ul>
 
 <h2>Completed</h2>
@@ -39,6 +60,8 @@ title: Roadmap
 <h3><a href="https://github.com/neovim/neovim/milestone/29">0.7</a></h3>
 <ul>
   <li>Tree-sitter integration (highlighting, folds)</li>
+  <li>TUI: extended keys (CTRL-i vs TAB, SHIFT modifier, …!)</li>
+  <li>Global statusline: <code>laststatus=3</code></li>
 </ul>
   
 <h3><a href="https://github.com/neovim/neovim/milestone/11">0.6</a></h3>
@@ -47,7 +70,7 @@ title: Roadmap
   <li>Updated <a href="https://github.com/neovim/neovim/issues/6289">defaults</a></li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/27">0.5.1</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/25">0.5.1</a></h3>
 <ul>
   <li>Lua API improvements</li>
   <li>LSP support improvements (v3.16 spec coverage, configuration)</li>
