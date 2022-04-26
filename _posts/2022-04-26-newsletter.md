@@ -5,6 +5,8 @@ category: newsletter
 permalink: /news/2022/04
 ---
 
+> Original article: <https://gpanders.com/blog/whats-new-in-neovim-0-7>
+
 Neovim 0.7 was just released, bringing with it lots of new features (and of
 course plenty of bug fixes). You can find the full release notes
 [here][release notes], but in this post I'll cover just a few of the new
