@@ -21,8 +21,8 @@ Install Bundler, either systemwide:
 
 or for the current user:
 
-    $ gem install --user-install bundler
     $ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+    $ gem install --user-install bundler
 
 In the latter case, you might want to add the `PATH` update to `.bashrc` or your shell's equivalent.
 
