@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="height: 2.5em" viewBox="0 0 742 214">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="173" height="50" viewBox="0 0 742 214" aria-label="Neovim">
+  <title>Neovim</title>
   <defs>
     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
       <stop stop-color="#16B0ED" stop-opacity=".8" offset="0%" />
