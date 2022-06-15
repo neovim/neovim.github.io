@@ -22,7 +22,5 @@
       url: /doc/lsp/
     - title: Tree-sitter
       url: /doc/treesitter/
-- title: Forum
-  url: http://discourse.neovim.io
 - title: Sponsors
   url: /sponsors/
