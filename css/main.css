@@ -3,15 +3,15 @@
 :root {
   --main-breakpoint: 60em;
 
-	/* Serif fonts for body text. Easier to read for larger chunks */
-	--serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
+  /* Serif fonts for body text. Easier to read for larger chunks */
+  --serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
 
-	/* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
-	--sans-serif-fonts: Lato, sans-serif;
+  /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
+  --sans-serif-fonts: Lato, sans-serif;
   /* Colors */
 
-	/* Hue is between neovim green and blue for text/background */
-	/* Saturation is low */
+  /* Hue is between neovim green and blue for text/background */
+  /* Saturation is low */
 
   --fg-color: #292f2b;
   --bg-color:#e7eee8; 
@@ -25,18 +25,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-		--fg-color: #c7d6d0;
-		--bg-color: #0f191f;
-		--accent-bg-color: #0b151b;
-		--link-color:#8ec77e;
-		--accent-color: #8fff6d;
-		--border-color: #203f57;
-	}
+    --fg-color: #c7d6d0;
+    --bg-color: #0f191f;
+    --accent-bg-color: #0b151b;
+    --link-color:#8ec77e;
+    --accent-color: #8fff6d;
+    --border-color: #203f57;
+  }
 }
 
 body {
   /* font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; */
-	font-family: var(--serif-fonts);
+  font-family: var(--serif-fonts);
   font-size: initial;
   line-height: 1.6;
   color: var(--fg-color);
@@ -45,16 +45,16 @@ body {
 
 a {
   color: var(--link-color);
-	transition: all ease-in 96ms;
-	/* text-decoration: underline var(--link-color); */
-	text-decoration: underline var(--accent-color);
+  transition: all ease-in 96ms;
+  /* text-decoration: underline var(--link-color); */
+  text-decoration: underline var(--accent-color);
 }
 
 a:focus,
 a:hover {
   color: var(--accent-color);
-	background-color: var(--accent-bg-color);
-	box-shadow: 0 0 2px gold;
+  background-color: var(--accent-bg-color);
+  box-shadow: 0 0 2px gold;
 }
 
 .current a {
@@ -69,7 +69,7 @@ h5{
   font-family: "Lato", sans-serif;
   line-height: 1.6;
   margin: 0.66em 0;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 h2, h4 {
@@ -98,7 +98,7 @@ pre {
   color: var(--fg-color);
   border-radius: 0.2em;
   border: solid 2pt var(--border-color);
-	box-shadow: 0 0 2px var(--accent-bg-color);
+  box-shadow: 0 0 2px var(--accent-bg-color);
   background-color: var(--accent-bg-color);
   white-space: pre-wrap;
   word-break: normal;
@@ -107,8 +107,8 @@ pre {
 code, pre, kbd, samp {
   background-color: var(--accent-bg-color);
   color: var(--fg-color);
-	font-family: monospace;
-	font-size: 1em;
+  font-family: monospace;
+  font-size: 1em;
 }
 
 /*
@@ -142,7 +142,7 @@ code, pre, kbd, samp {
 .col3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 1em;
+  grid-gap: 1em;
 }
 
 @media (max-width: 525px) {
@@ -192,11 +192,11 @@ code, pre, kbd, samp {
 /* } */
 
 /* .navbar-brand { */
-/* 	float: none; */
-/* 	height: auto; */
-/* 	padding: 0; */
-/* 	font-size: inherit; */
-/* 	line-height: inherit; */
+/* float: none; */
+/* height: auto; */
+/* padding: 0; */
+/* font-size: inherit; */
+/* line-height: inherit; */
 /* } */
 
 /**
@@ -227,7 +227,7 @@ code, pre, kbd, samp {
 .masthead {
   border-top: solid 1pt var(--border-color);
   border-bottom: solid 1pt var(--border-color);
-	background-color: var(--accent-bg-color);
+  background-color: var(--accent-bg-color);
   text-align: center;
   padding: 1.5em 0.8em;
   display: grid;
@@ -235,7 +235,7 @@ code, pre, kbd, samp {
 
 .masthead .lead {
   font-weight: 900;
-	font-size: 2em;
+  font-size: 2em;
   font-family: var(--sans-serif-fonts);
 }
 
@@ -280,19 +280,19 @@ code, pre, kbd, samp {
   color: var(--bg-color);
   border-radius: 0.3em;
   padding: 1em 2em;
-	font-family: var(--sans-serif-fonts);
-	font-weight: bold;
-	font-size: 1.2em;
+  font-family: var(--sans-serif-fonts);
+  font-weight: bold;
+  font-size: 1.2em;
 
   vertical-align: initial;
   text-align: initial;
-	transition: all 96ms ease-in;
+  transition: all 96ms ease-in;
 }
 
 .btn:hover, .btn:focus {
-	color: var(--accent-bg-color);
+  color: var(--accent-bg-color);
   background-color: var(--accent-color);
-	box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
+  box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
 }
 
 a.primary {
@@ -422,7 +422,7 @@ footer {
  */
 
 .light {
-	opacity: .9;
+  opacity: .9;
 }
 
 .small {
