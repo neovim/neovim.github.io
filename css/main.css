@@ -5,21 +5,17 @@
 
   /* Serif fonts for body text. Easier to read for larger chunks */
   --serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
-
   /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
   --sans-serif-fonts: Lato, sans-serif;
-  /* Colors */
 
+  /* Colors */
   /* Hue is between neovim green and blue for text/background */
   /* Saturation is low */
-
   --fg-color: #292f2b;
   --bg-color:#e7eee8; 
-
   --link-color: #195174;
   --accent-color: #202e18;
   --accent-bg-color:#d3e4db;
-
   --border-color: #bce3c2;
 }
 
@@ -107,8 +103,9 @@ pre {
 code, pre, kbd, samp {
   background-color: var(--accent-bg-color);
   color: var(--fg-color);
-  font-family: monospace;
-  font-size: 1em;
+  /* Use bootstrap font defaults. */
+  /* font-family: var(--bs-font-monospace); */
+  /* font-size: …; */
 }
 
 /*
@@ -456,7 +453,7 @@ footer {
 }
 
 .donate input {
-  font-family: monospace;
+  font-family: var(--bs-font-monospace);
 
   line-height: 2;
   width: 100%;
