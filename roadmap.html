@@ -51,13 +51,16 @@ Concrete high-level feature areas and changes.
 
 <p>Here are the headline features of the previous releases; for details see the corresponding release notes.</p>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/32">0.8+</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/32">0.8</a></h3>
 <ul>
-  <li>LSP improvements (v3.16 spec coverage, configuration)</li>
-  <li>Lua API improvements</li>
-  <li>UI improvements</li>
-  <li>treesitter API improvements</li>
-  <li>spellsitter</li>
+  <li>LSP improvements (v3.16 spec coverage, configuration, <code>LspAttach</code>)</li>
+  <li>Lua API: <code>vim.fs</code>, <code>vim.cmd{}</code>, measure require() in <code>--startuptime</code>, <code>:map</code>/<code>:command</code>/<code>:au</code> can print Lua source location</li>
+  <li>treesitter API: use queries to define spellcheck regions (aka "spellsitter")</li>
+  <li><code>vim.ui_attach()</code></li>
+  <li>UI and RPC performance</li>
+  <li>user-defined <a href="https://neovim.io/doc/user/options.html#'inccommand'">command preview</a></li>
+  <li><code>cmdheight=0</code></li>
+  <li>clickable statusline</li>
 </ul>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/29">0.7</a></h3>
