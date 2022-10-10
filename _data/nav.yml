@@ -13,14 +13,5 @@
   url: https://github.com/neovim/neovim
 - title: Documentation
   url: /doc/
-  sections:
-    - title: General
-      url: /doc/
-    - title: Lua resources
-      url: /doc/lua-resources/
-    - title: LSP
-      url: /doc/lsp/
-    - title: Tree-sitter
-      url: /doc/treesitter/
 - title: Sponsors
   url: /sponsors/
