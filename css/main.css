@@ -5,10 +5,9 @@
   --main-breakpoint: 60em;
 
   /* Serif fonts for body text. Easier to read for larger chunks */
-  --serif-fonts: "Inter", "IBM Plex Serif", Cambria, Garamon, Palatino, P052,
-    serif;
+  --serif-fonts: "Inter",  var(--bs-font-serif);
   /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
-  --sans-serif-fonts: "Inter V", sans-serif;
+  --sans-serif-fonts: "Inter", var(--bs-font-sans-serif);
 
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
@@ -36,8 +35,9 @@
 }
 
 @supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", var(--sans-seif-fonts);
+  :root {
+		--sans-serif-fonts: "Inter var", var(--sans-serif-fonts), var(--bs-font-sans-serif);
+		--serif-fonts: "Inter var", var(--serif-fonts), var(--bs-font-serif);
   }
 }
 
@@ -89,7 +89,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 h3 {
