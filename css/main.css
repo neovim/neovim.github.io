@@ -1,21 +1,23 @@
 @import "lato.css";
+@import "../fonts/inter/inter.css";
 
 :root {
   --main-breakpoint: 60em;
 
   /* Serif fonts for body text. Easier to read for larger chunks */
-  --serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
+  --serif-fonts: "Inter", "IBM Plex Serif", Cambria, Garamon, Palatino, P052,
+    serif;
   /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
-  --sans-serif-fonts: Lato, sans-serif;
+  --sans-serif-fonts: "Inter V", sans-serif;
 
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
   /* Saturation is low */
   --fg-color: #292f2b;
-  --bg-color:#e7eee8; 
+  --bg-color: #e7eee8;
   --link-color: #195174;
   --accent-color: #202e18;
-  --accent-bg-color:#d3e4db;
+  --accent-bg-color: #d3e4db;
   --border-color: #bce3c2;
 }
 
@@ -24,9 +26,18 @@
     --fg-color: #c7d6d0;
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
-    --link-color:#8ec77e;
+    --link-color: #8ec77e;
     --accent-color: #8fff6d;
     --border-color: #203f57;
+
+    --link-color: #78d55b;
+    --accent-color: #66b54e;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", var(--sans-seif-fonts);
   }
 }
 
@@ -66,15 +77,27 @@ h1,
 h2,
 h3,
 h4,
-h5{
-  font-family: "Lato", sans-serif;
+h5 {
+  font-family: var(--sans-serif-fonts);
   line-height: 1.6;
   margin: 0.66em 0;
   font-weight: bold;
 }
 
-h2, h4 {
-  color: var(--accent-color);
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
 }
 
 blockquote {
@@ -105,7 +128,10 @@ pre {
   word-break: normal;
 }
 
-code, pre, kbd, samp {
+code,
+pre,
+kbd,
+samp {
   background-color: var(--accent-bg-color);
   color: var(--fg-color);
   /* Use bootstrap font defaults. */
@@ -236,7 +262,7 @@ code, pre, kbd, samp {
 }
 
 .masthead .lead {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 2em;
   font-family: var(--sans-serif-fonts);
 }
@@ -246,6 +272,10 @@ code, pre, kbd, samp {
  *
  * Big section blocks for the front page
  */
+
+.front-section {
+  padding: 4vh 0;
+}
 
 .front-section.shaded {
   background-color: var(--accent-bg-color);
@@ -278,8 +308,9 @@ code, pre, kbd, samp {
  */
 
 .btn {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: #37b026;
+  background: linear-gradient(#00b952 0 95%, #378ccc 95% 100%);
+  color: white;
   border-radius: 0.3em;
   padding: 1em 2em;
   font-family: var(--sans-serif-fonts);
@@ -291,10 +322,12 @@ code, pre, kbd, samp {
   transition: all 96ms ease-in;
 }
 
-.btn:hover, .btn:focus {
-  color: var(--accent-bg-color);
+.btn:hover,
+.btn:focus {
+  color: white;
   background-color: var(--accent-color);
   box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
+  outline: 4px solid white;
 }
 
 a.primary {
@@ -424,11 +457,11 @@ footer {
  */
 
 .light {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .small {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /*
