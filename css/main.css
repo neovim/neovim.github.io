@@ -11,26 +11,39 @@
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
   /* Saturation is low */
-  --fg-color: #292f2b;
+  --fg-color: #464f49;
   --bg-color: #e7eee8;
   --link-color: #195174;
-  --accent-color: #202e18;
+  --accent-color: #000;
   --accent-bg-color: #d3e4db;
-  --border-color: #bce3c2;
+  --border-color: #658fac;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --fg-color: #c7d6d0;
+		--fg-color: #8aaea0;
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
-    --link-color: #8ec77e;
-    --accent-color: #8fff6d;
-    --border-color: #203f57;
-
+    --border-color: #1174b1;
     --link-color: #78d55b;
-    --accent-color: #66b54e;
+    --accent-color: #61ff00;
+
+		--link-color: #5fb950;
+    --accent-color: #61ff00;
   }
+}
+
+@media (prefers-contrast: more) {
+	:root {
+    --fg-color: #000;
+	}
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+	:root {
+    --fg-color: #FFF;
+	}
 }
 
 @supports (font-variation-settings: normal) {
@@ -57,9 +70,9 @@ body {
 
 a {
   color: var(--link-color);
-  transition: all ease-in 96ms;
+  transition: all ease-in-out 140ms;
   /* text-decoration: underline var(--link-color); */
-  text-decoration: underline var(--accent-color);
+  text-decoration: underline var(--border-color);
 }
 
 /* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
@@ -71,7 +84,8 @@ a:focus,
 a:hover {
   color: var(--accent-color);
   background-color: var(--accent-bg-color);
-  box-shadow: 0 0 2px gold;
+	text-decoration-thickness: .2em;
+	text-decoration-color: var(--border-color);
 }
 
 .current a {
@@ -141,7 +155,7 @@ samp {
   color: var(--fg-color);
   /* Use bootstrap font defaults. */
   /* font-family: var(--bs-font-monospace); */
-  /* font-size: …; */
+	font-size: 0.9em;
 }
 
 /*
@@ -258,11 +272,9 @@ samp {
  */
 
 .masthead {
-  border-top: solid 1pt var(--border-color);
-  border-bottom: solid 1pt var(--border-color);
   background-color: var(--accent-bg-color);
   text-align: center;
-  padding: 1.5em 0.8em;
+  padding: 4vh 1em;
   display: grid;
 }
 
