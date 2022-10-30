@@ -49,6 +49,12 @@ body {
   background-color: var(--bg-color);
 }
 
+@media (min-width: 50em) {
+	body {
+		font-size: 1.1rem;
+	}
+}
+
 a {
   color: var(--link-color);
   transition: all ease-in 96ms;
