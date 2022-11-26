@@ -14,9 +14,12 @@
   --fg-color: #29332f;
   --bg-color:#e7eee8; 
   --link-color: #195174;
-  --accent-color: #000;
-  --accent-bg-color: #d3e4db;
-  --border-color: #658fac;
+  --accent-color: #202e18;
+  --accent-bg-color:#d3e4db;
+  --border-color: #bce3c2;
+
+  overflow: auto;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +63,7 @@ body {
   line-height: 1.6;
   color: var(--fg-color);
   background-color: var(--bg-color);
+  overflow: unset;
 }
 
 @media (min-width: 50em) {
@@ -96,27 +100,38 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: var(--sans-serif-fonts);
-  line-height: 1.6;
+h5{
+  font-family: "Lato", sans-serif;
+  line-height: 2.5rem;
   margin: 0.66em 0;
   font-weight: bold;
+
 }
 
-h1 {
-  font-size: 1.6em;
+/* STICKY HEADERS START */
+
+h1,
+h2.help-heading,
+h3.help-heading
+{
+  position: sticky;
+  background-color: var(--bg-color);
 }
 
-h2 {
-  font-size: 1.3em;
+h1 { top: 0; }
+h2 { top: 0; }
+h3 { top: 0; }
+
+/* STICKY HEADERS END */
+
+
+h2, h4 {
+  color: var(--accent-color);
 }
 
-h3 {
-  font-size: 1.1em;
-}
-
-h4 {
-  font-size: 1em;
+div.old-help-para {
+    overflow: unset;
+    display: inline;
 }
 
 blockquote {
@@ -167,6 +182,7 @@ samp {
 .container {
   width: 100%;
   max-width: 1200px;
+  overflow: unset;
 }
 
 .container:before {
