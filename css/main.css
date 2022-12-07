@@ -4,7 +4,7 @@
   --main-breakpoint: 60em;
 
   /* Serif fonts for body text. Easier to read for larger chunks */
-  --serif-fonts: "Inter",  var(--bs-font-serif);
+  --serif-fonts: "Inter", var(--bs-font-serif);
   /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
   --sans-serif-fonts: "Inter", var(--bs-font-sans-serif);
 
@@ -22,34 +22,35 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --fg-color: #c7d6d0;
-		--fg-color: #8aaea0;
+    --fg-color: #8aaea0;
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
     --border-color: #1174b1;
     --link-color: #78d55b;
     --accent-color: #61ff00;
 
-		--link-color: #5fb950;
+    --link-color: #5fb950;
     --accent-color: #61ff00;
   }
 }
 
 @media (prefers-contrast: more) {
-	:root {
+  :root {
     --fg-color: #000;
-	}
+  }
 }
 
 @media (prefers-contrast: more) and (prefers-color-scheme: dark) {
-	:root {
-    --fg-color: #FFF;
-	}
+  :root {
+    --fg-color: #fff;
+  }
 }
 
 @supports (font-variation-settings: normal) {
   :root {
-		--sans-serif-fonts: "Inter var", var(--sans-serif-fonts), var(--bs-font-sans-serif);
-		--serif-fonts: "Inter var", var(--serif-fonts), var(--bs-font-serif);
+    --sans-serif-fonts: "Inter var", var(--sans-serif-fonts),
+      var(--bs-font-sans-serif);
+    --serif-fonts: "Inter var", var(--serif-fonts), var(--bs-font-serif);
   }
 }
 
@@ -63,9 +64,9 @@ body {
 }
 
 @media (min-width: 50em) {
-	body {
-		font-size: 1.1rem;
-	}
+  body {
+    font-size: 1.1rem;
+  }
 }
 
 a {
@@ -84,8 +85,8 @@ a:focus,
 a:hover {
   color: var(--accent-color);
   background-color: var(--accent-bg-color);
-	text-decoration-thickness: .2em;
-	text-decoration-color: var(--border-color);
+  text-decoration-thickness: 0.2em;
+  text-decoration-color: var(--border-color);
 }
 
 .current a {
@@ -155,7 +156,7 @@ samp {
   color: var(--fg-color);
   /* Use bootstrap font defaults. */
   /* font-family: var(--bs-font-monospace); */
-	font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 /*
