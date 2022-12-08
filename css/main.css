@@ -1,12 +1,12 @@
-@import "lato.css";
+@import "../fonts/inter/inter.css";
 
 :root {
   --main-breakpoint: 60em;
 
   /* Serif fonts for body text. Easier to read for larger chunks */
-  --serif-fonts: Lato, Cambria, Garamon, Palatino, P052, serif;
+  --serif-fonts: "Inter", var(--bs-font-serif);
   /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
-  --sans-serif-fonts: Lato, sans-serif;
+  --sans-serif-fonts: "Inter", var(--bs-font-sans-serif);
 
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
@@ -14,9 +14,9 @@
   --fg-color: #31403a;
   --bg-color:#e7eee8; 
   --link-color: #195174;
-  --accent-color: #202e18;
-  --accent-bg-color:#d3e4db;
-  --border-color: #bce3c2;
+  --accent-color: #000;
+  --accent-bg-color: #d3e4db;
+  --border-color: #658fac;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +24,32 @@
     --fg-color: #a5c2b6;
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
-    --link-color:#8ec77e;
-    --accent-color: #8fff6d;
-    --border-color: #203f57;
+    --border-color: #1174b1;
+    --link-color: #78d55b;
+    --accent-color: #61ff00;
+
+    --link-color: #5fb950;
+    --accent-color: #61ff00;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --fg-color: #000;
+  }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #fff;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --sans-serif-fonts: "Inter var", var(--sans-serif-fonts),
+      var(--bs-font-sans-serif);
+    --serif-fonts: "Inter var", var(--serif-fonts), var(--bs-font-serif);
   }
 }
 
@@ -39,11 +62,17 @@ body {
   background-color: var(--bg-color);
 }
 
+@media (min-width: 50em) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
 a {
   color: var(--link-color);
-  transition: all ease-in 96ms;
+  transition: all ease-in-out 140ms;
   /* text-decoration: underline var(--link-color); */
-  text-decoration: underline var(--accent-color);
+  text-decoration: underline var(--border-color);
 }
 
 /* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
@@ -55,7 +84,8 @@ a:focus,
 a:hover {
   color: var(--accent-color);
   background-color: var(--accent-bg-color);
-  box-shadow: 0 0 2px gold;
+  text-decoration-thickness: 0.2em;
+  text-decoration-color: var(--border-color);
 }
 
 .current a {
@@ -66,15 +96,27 @@ h1,
 h2,
 h3,
 h4,
-h5{
-  font-family: "Lato", sans-serif;
+h5 {
+  font-family: var(--sans-serif-fonts);
   line-height: 1.6;
   margin: 0.66em 0;
   font-weight: bold;
 }
 
-h2, h4 {
-  color: var(--accent-color);
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
 }
 
 blockquote {
@@ -105,12 +147,15 @@ pre {
   word-break: normal;
 }
 
-code, pre, kbd, samp {
+code,
+pre,
+kbd,
+samp {
   background-color: var(--accent-bg-color);
   color: var(--fg-color);
   /* Use bootstrap font defaults. */
   /* font-family: var(--bs-font-monospace); */
-  /* font-size: …; */
+  font-size: 0.9em;
 }
 
 /*
@@ -227,16 +272,14 @@ code, pre, kbd, samp {
  */
 
 .masthead {
-  border-top: solid 1pt var(--border-color);
-  border-bottom: solid 1pt var(--border-color);
   background-color: var(--accent-bg-color);
   text-align: center;
-  padding: 1.5em 0.8em;
+  padding: 4vh 1em;
   display: grid;
 }
 
 .masthead .lead {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 2em;
   font-family: var(--sans-serif-fonts);
 }
@@ -246,6 +289,10 @@ code, pre, kbd, samp {
  *
  * Big section blocks for the front page
  */
+
+.front-section {
+  padding: 4vh 0;
+}
 
 .front-section.shaded {
   background-color: var(--accent-bg-color);
@@ -278,8 +325,9 @@ code, pre, kbd, samp {
  */
 
 .btn {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: #37b026;
+  background: linear-gradient(#00b952 0 95%, #378ccc 95% 100%);
+  color: white;
   border-radius: 0.3em;
   padding: 1em 2em;
   font-family: var(--sans-serif-fonts);
@@ -291,10 +339,12 @@ code, pre, kbd, samp {
   transition: all 96ms ease-in;
 }
 
-.btn:hover, .btn:focus {
-  color: var(--accent-bg-color);
+.btn:hover,
+.btn:focus {
+  color: white;
   background-color: var(--accent-color);
   box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
+  outline: 4px solid white;
 }
 
 a.primary {
@@ -424,11 +474,11 @@ footer {
  */
 
 .light {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .small {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /*

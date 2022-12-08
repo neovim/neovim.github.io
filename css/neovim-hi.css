@@ -1,0 +1,69 @@
+
+:root {
+  /* regular */
+  --hi-black: #565f89;
+  --hi-red: #8c4351;
+  --hi-green: #145126;
+  --hi-yellow: #965027;
+  --hi-blue: #0f2d86;
+  --hi-purple: #5a4a78;
+  --hi-cyan: #166775;
+  --hi-white: #444;
+
+  /* bright */
+  --hi-b-black: #565f89;
+  --hi-b-red: #8c4351;
+  --hi-b-green: #005136;
+  --hi-b-yellow: #8f5e15;
+  --hi-b-blue: #34548a;
+  --hi-b-purple: #5329a2;
+  --hi-b-cyan: #166775;
+  --hi-b-white: #343b58;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* regular */
+    --hi-black: #565f89;
+    --hi-red: #f7768e;
+    --hi-green: #73daca;
+    --hi-yellow: #a7d012 ;
+    --hi-blue: #7aa2f7;
+    --hi-purple: #bb9af7;
+    --hi-cyan: #4baebf;
+    --hi-white: #9aa5ce;
+
+    /* bright */
+    --hi-b-black: #565f89;
+    --hi-b-red: #f7768e;
+    --hi-b-green: #9ece6a;
+    --hi-b-yellow: #ff9e64;
+    --hi-b-blue: #7aa2f7;
+    --hi-b-purple: #bb9af7;
+    --hi-b-cyan: #2ac3de;
+    --hi-b-white: #c0caf5;
+  }
+}
+
+/*! zenburn syntax highlighting - from http://userstyles.org/styles/88895/github-zenburn */
+.highlight,.highlight pre,.highlight table { color: var(--hi-b-white) !important; }
+.highlight .err { color: var(--hi-yellow) !important; }
+.highlight .cs { color:#dca3a3 !important; }
+.highlight .nf { color: var(--hi-b-blue) !important; }
+.highlight .c,.highlight .cm,.highlight .c1 { color: var(--hi-white) !important; }
+.highlight .g,.highlight .l,.highlight .x,.highlight .ge,.highlight .gs,.highlight .ld,.highlight .ni,
+.highlight .nl,.highlight .nx,.highlight .py,.highlight .n,.highlight .go,
+.highlight .h { color: var(--hi-cyan) !important; }
+.highlight .k { color: var(--hi-b-yellow) !important; }
+.highlight .s1 { color:#bc8383 !important; }
+.highlight .nb,.highlight .bp { color: var(--hi-yellow) !important; }
+.highlight .nc,.highlight .nn { color:var(--hi-cyan) !important; }
+.highlight .o,.highlight .p,.highlight .na,.highlight .ne { color: var(--hi-purple) !important; }
+.highlight .gp,.highlight .w,.highlight .gh,.highlight .gu { color:#656555 !important; }
+.highlight .cp,.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,
+.highlight .sh,.highlight .si,.highlight .ss,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,
+.highlight .kr,.highlight .kt,.highlight .nt,.highlight .ow { color: var(--hi-green) !important; }
+.highlight .gr,.highlight .gt,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,
+.highlight .mo,.highlight .sr,.highlight .il { color:#9c6363 !important; }
+.highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi,.highlight .nd,
+.highlight .sx { color:#dfaf8f !important; }
