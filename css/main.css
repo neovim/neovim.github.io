@@ -11,7 +11,7 @@
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
   /* Saturation is low */
-  --fg-color: #31403a;
+  --fg-color: #29332f;
   --bg-color:#e7eee8; 
   --link-color: #195174;
   --accent-color: #000;
@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-color: #a5c2b6;
+    --fg-color: #a9d5c4;
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
     --border-color: #1174b1;
