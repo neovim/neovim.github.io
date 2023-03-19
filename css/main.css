@@ -529,3 +529,11 @@ iframe.poll {
   width: 100%;
   overflow-y: hidden;
 }
+
+/*
+ * News section
+ */
+
+ .news-section table {
+    margin-top: 1rem;
+ }
