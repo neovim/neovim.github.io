@@ -17,27 +17,29 @@ This assumes that you already have a recent Ruby with RubyGems.
 
 Install Bundler, either systemwide:
 
-    $ sudo gem install bundler
+    sudo gem install bundler
 
 or for the current user:
 
-    $ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-    $ gem install --user-install bundler
+    export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+    gem install --user-install bundler
 
 In the latter case, you might want to add the `PATH` update to `.bashrc` or your shell's equivalent.
 
 To install the dependencies for this project only:
 
-    $ bundle config set --local path .bundle
-    $ bundle install
+    bundle config set --local path .bundle
+    # To _update_ deps, remove the lockfile.
+    # rm Gemfile.lock
+    bundle install
 
 ### Serving locally
 
 Execute the following command:
 
-    $ bundle exec jekyll serve --watch --livereload
+    bundle exec jekyll serve --watch --livereload
 
-Open `http://localhost:4000` to view the website.
+Open http://localhost:4000 to view the website.
 
 ## License
 
