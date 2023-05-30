@@ -41,6 +41,13 @@ Execute the following command:
 
 Open http://localhost:4000 to view the website.
 
+## Maintenance
+
+* Site search (for `:help` docs) is served by [Algolia Docsearch](https://docsearch.algolia.com/).
+    * The javascript and UI container were setup in [this commit](https://github.com/neovim/neovim.github.io/commit/ce9aef12eb1c98135965e3a9c5c792bf9e506a76).
+    * The docs pages don't use the jekyll layout so they also need to [manually include](https://github.com/neovim/neovim/pull/23839) the javascript and define a UI container.
+    * Admin: https://www.algolia.com/apps/X185E15FPG/dashboard
+
 ## License
 
 &copy; 2014 Cameron Eagans and Josh Branchaud
