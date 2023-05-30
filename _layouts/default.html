@@ -13,21 +13,15 @@
     <link href="/css/neovim-hi.css" rel="stylesheet">
     <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
 
-    <!-- v3 -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" /> -->
-    <!-- legacy -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="preconnect" href="https://X185E15FPG-dsn.algolia.net" crossorigin />
+
   </head>
 
   <body>
-    testtttttttttttt
-    <!-- <div id="docsearch"></div> -->
-    <input id="docsearch"></input>
-
-    testtttttttttttt
     {{ content }}
 
-    testtttttttttttt
     {% include footer.html %}
 
     {%- comment -%}Only used in bountysource{%- endcomment -%}      
@@ -36,42 +30,16 @@
     <script src="/js/sponsors.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
-    <!-- Before the closing </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-    <script>
-      docsearch({
-        // Your Algolia Application ID
-        appId: 'R2IYF7ETH7',
-        // Your Search API Key
-        apiKey: '599cec31baffa4868cae4e79f180729b',
-        // The index populated by the DocSearch scraper
-        indexName: 'docsearch',
-        inputSelector: '#docsearch',
-        // Set debug to true to inspect the dropdown
-        debug: true,
-      });
-    </script>
-
-    <!--
+    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     <script type="module">
-      import docsearch from '@docsearch/js';
-
-      import '@docsearch/css';
-
       docsearch({
         container: '#docsearch',
-        appId: 'R2IYF7ETH7',
-        apiKey: '599cec31baffa4868cae4e79f180729b',
-        indexName: 'docsearch',
+        appId: 'X185E15FPG',
+        apiKey: 'b5e6b2f9c636b2b471303205e59832ed',
+        indexName: 'nvim',
       });
-      //docsearch({
-      //  container: '#docsearch',
-      //  appId: 'YOUR_APP_ID',
-      //  indexName: 'YOUR_INDEX_NAME',
-      //  apiKey: 'YOUR_SEARCH_API_KEY',
-      //});
     </script>
-    -->
+
   </body>
 </html>
