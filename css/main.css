@@ -140,7 +140,7 @@ pre {
   padding: 0.8em;
   color: var(--fg-color);
   border-radius: 0.2em;
-  border: solid 2pt var(--border-color);
+  border: solid 1pt var(--border-color);
   box-shadow: 0 0 2px var(--accent-bg-color);
   background-color: var(--accent-bg-color);
   white-space: pre-wrap;
