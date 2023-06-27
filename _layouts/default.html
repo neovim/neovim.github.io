@@ -7,16 +7,16 @@
     <meta name="description" content="{{site.description}}">
     {% feed_meta %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link href="/css/normalize.min.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/neovim-hi.css" rel="stylesheet">
-    <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
 
     <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://X185E15FPG-dsn.algolia.net" crossorigin />
 
+    <link href="/css/normalize.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/neovim-hi.css" rel="stylesheet">
+    <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
   </head>
 
   <body>
