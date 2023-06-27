@@ -1,8 +1,9 @@
 # neovim.io website
 
-This repository contains the source for the neovim.io website. The Neovim core
-project is: https://github.com/neovim/neovim
-Note that www.neovim.io/doc is served by https://github.com/neovim/doc (which
+This repository hosts the source code for the neovim.io website. The Neovim core
+project can be found at: https://github.com/neovim/neovim
+Please note that the documentation available at www.neovim.io/doc is served by
+the https://github.com/neovim/doc repository (which
 previously crawled neovim.io/doc2 generated from this repository).
 
 ## Contributing
