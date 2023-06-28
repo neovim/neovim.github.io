@@ -560,3 +560,11 @@ iframe.poll {
  .news-section table {
     margin-top: 1rem;
  }
+
+/*
+ * DocSearch overrides
+ */
+
+ .DocSearch mark {
+   padding: 0;
+ }
