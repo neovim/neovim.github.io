@@ -28,7 +28,7 @@ These are the current themes driving our work.
 <ul>
   <li>Architecture, Interfaces, Editor: (API, Lua, treesitter, UI)</li>
   <li>Surface area. Deprecate old APIs, delete/rename/unify some Lua interface.</li>
-  <li>Constraints. Vimscript 1 is frozen (no new syntax). New features are that way 👉</li>
+  <li>Constraints. Vimscript 1 is frozen (no new syntax).</li>
   <li>Ubiquity. Embed Neovim everywhere</li>
 </ul>
 
@@ -37,10 +37,13 @@ These are the current themes driving our work.
 
 Concrete high-level feature areas and changes.
 
-<h3><a href="https://github.com/neovim/neovim/milestone/28">0.9+</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/36">0.10+</a></h3>
 <ul>
-  <li>TUI as a remote UI</li>
-  <li>Lua script runner: <code>nvim -l</code></li>
+  <li><code>--remote<code></li>
+  <li>multicursor</li>
+  <li>treesitter: builtin parsers for markdown, ...</li>
+  <li><code>vim.iter<code></li>
+  <li><code>vim.lsp.server()<code></li>
   <li>Default colorscheme</li>
   <li>Externalized UI: window layout events, <code>ext_statusline</code></li>
   <li>File-change detection</li>
@@ -51,7 +54,22 @@ Concrete high-level feature areas and changes.
 
 <p>Here are the headline features of the previous releases; for details see the corresponding release notes.</p>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/32">0.8</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/28?closed=1">0.9</a></h3>
+<ul>
+  <li>TUI as a remote UI</li>
+  <li>LSP semantic token highlighting</li>
+  <li><a href="https://neovim.io/doc/user/editorconfig.html">EditorConfig</a> support</li>
+  <li><a href="https://neovim.io/doc/user/options.html#'exrc'">'exrc'</a> and related "trust database" features</li>
+  <li><a href="https://neovim.io/doc/user/options.html#'statuscolumn'">'statuscolumn'</a></li>
+  <li><a href="https://neovim.io/doc/user/options.html#'diffopt'">'diffopt' "linematch" feature</a></li>
+  <li><a href="https://neovim.io/doc/user/lua.html#%3AInspect">:Inspect</a>, <a href="https://neovim.io/doc/user/treesitter.html#%3AInspectTree">:InspectTree</a></li>
+  <li><a href="https://neovim.io/doc/user/lua.html#vim.loader">vim.loader</a> optimized Lua module loader</li>
+  <li><a href="https://neovim.io/doc/user/lua.html#vim.version">vim.version</a> semver module</li>
+  <li><code>$NVIM_APPNAME</code></li>
+  <li>Lua script runner: <code>nvim -l</code></li>
+</ul>
+
+<h3><a href="https://github.com/neovim/neovim/milestone/32?closed=1">0.8</a></h3>
 <ul>
   <li>LSP improvements (v3.16 spec coverage, configuration, <code>LspAttach</code>)</li>
   <li>Lua API: <code>vim.fs</code>, <code>vim.cmd{}</code>, measure require() in <code>--startuptime</code>, <code>:map</code>/<code>:command</code>/<code>:au</code> can print Lua source location</li>
@@ -63,26 +81,26 @@ Concrete high-level feature areas and changes.
   <li>clickable statusline</li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/29">0.7</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/29?closed=1">0.7</a></h3>
 <ul>
   <li>Tree-sitter integration (highlighting, folds)</li>
   <li>TUI: extended keys (CTRL-i vs TAB, SHIFT modifier, …!)</li>
   <li>Global statusline: <code>laststatus=3</code></li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/11">0.6</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/11?closed=1">0.6</a></h3>
 <ul>
   <li>Unified diagnostics API</li>
   <li>Updated <a href="https://github.com/neovim/neovim/issues/6289">defaults</a></li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/25">0.5.1</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/25?closed=1">0.5.1</a></h3>
 <ul>
   <li>Lua API improvements</li>
   <li>LSP support improvements (v3.16 spec coverage, configuration)</li>
 </ul>
 
-<h3><a href="https://github.com/neovim/neovim/milestone/19">0.5</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/19?closed=1">0.5</a></h3>
 <ul>
   <li><a href="https://neovim.io/doc/lua-resources/">Expanded Lua API and user config</a> (<code>init.lua</code>)</li>
   <li><a href="https://neovim.io/doc/lsp">Built-in Language Server Protocol (LSP) support</a></li>
