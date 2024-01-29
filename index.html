@@ -84,6 +84,20 @@ redirect_from:
       </div>
 
       <div class="news-section">
+        <h2 id="news">News</h2>
+        {% comment %} <dl class="nvim-posts"> {% endcomment %}
+        <table>
+        {% assign posts_to_show = 2 %}
+        {% for post in site.posts limit:posts_to_show %}
+          <tr>
+            <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
+            <td style="white-space: nowrap; text-align: right">{{ post.date | date:"%Y.%m" }}</td>
+          </tr>
+          {% comment %} <dd></dd> {% endcomment %}
+        {% endfor %}
+        </table>
+        {% comment %} </dl> {% endcomment %}
+        <p><a href="/news/archive">More…</a></p>
 
         <h2>Impressions</h2>
         <p>
@@ -114,22 +128,6 @@ redirect_from:
     </div>
 
     <div>
-      <h2 id="news">News</h2>
-      {% comment %} <dl class="nvim-posts"> {% endcomment %}
-      <table>
-      {% assign posts_to_show = 2 %}
-      {% for post in site.posts limit:posts_to_show %}
-        <tr>
-          <td><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; </td>
-          <td style="white-space: nowrap; text-align: right">{{ post.date | date:"%Y.%m" }}</td>
-        </tr>
-        {% comment %} <dd></dd> {% endcomment %}
-      {% endfor %}
-      </table>
-      {% comment %} </dl> {% endcomment %}
-
-      <p><a href="/news/archive">More…</a></p>
-
       <h2 id="chat">Chat</h2>
       <ul>
         <li><a href="https://twitter.com/Neovim" class="twitter-follow-button">Follow &#64;Neovim</a></li>
