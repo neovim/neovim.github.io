@@ -27,7 +27,7 @@ These are the current themes driving our work.
 
 <ul>
   <li>Architecture, Interfaces, Editor: (API, Lua, treesitter, UI)</li>
-  <li>Surface area. Deprecate old APIs, delete/rename/unify some Lua interface.</li>
+  <li>Surface area. Deprecate old APIs, delete/rename/unify some interfaces. Fewer, more-composable concepts.</li>
   <li>Constraints. Vimscript 1 is frozen (no new syntax).</li>
   <li>Ubiquity. Embed Neovim everywhere</li>
 </ul>
@@ -40,20 +40,21 @@ Concrete high-level feature areas and changes.
 <h3><a href="https://github.com/neovim/neovim/milestone/41">0.11+</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/issues/20451">Prepare for 1.0</a></li>
-  <li>Redesign <code>--remote<code></li>
-  <li><code>vim.lsp.server()<code></li>
+  <li>Redesign <code>--remote</code></li>
+  <li><code>vim.lsp.server()</code></li>
   <li>Externalized UI: window layout events, <code>ext_statusline</code></li>
   <li>File-change detection</li>
   <li>multicursor</li>
   <li>Lua remote plugin host</li>
-  <li>Task/Promise/Future abstraction, structured concurrency: <code>vim.task<code></li>
+  <li>Redesign (simplify) remote plugin concept, eliminate <code>:UpdateRemotePlugins</code></li>
+  <li>Task/Promise/Future abstraction, structured concurrency: <code>vim.task</code></li>
 </ul>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/36">0.10</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/pull/26334">Default colorscheme</a></li>
   <li>treesitter: builtin parsers for bash, markdown, python</li>
-  <li><code>vim.iter<code></li>
+  <li><code>vim.iter</code></li>
 </ul>
 
 <h2>Completed</h2>
