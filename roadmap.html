@@ -37,29 +37,36 @@ These are the current themes driving our work.
 
 Concrete high-level feature areas and changes.
 
-<h3><a href="https://github.com/neovim/neovim/milestone/41">0.11+</a></h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/43">0.12+</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/issues/20451">Prepare for 1.0</a></li>
   <li>Redesign <code>--remote</code></li>
-  <li><code>vim.lsp.server()</code></li>
-  <li>Externalized UI: window layout events, <code>ext_statusline</code></li>
   <li>File-change detection</li>
   <li>multicursor</li>
-  <li>Lua remote plugin host</li>
-  <li>Redesign (simplify) remote plugin concept, eliminate <code>:UpdateRemotePlugins</code></li>
-  <li>Task/Promise/Future abstraction, structured concurrency: <code>vim.task</code></li>
 </ul>
+
+<h3><a href="https://github.com/neovim/neovim/milestone/41">0.11</a></h3>
+<ul>
+  <li>Redesign (simplify) remote plugin concept, eliminate <code>:UpdateRemotePlugins</code></li>
+  <ul>
+    <li>Lua remote plugin host</li>
+  </ul>
+  <li>Task/Promise/Future abstraction, structured concurrency: <code>vim.async</code></li>
+  <li>Externalized UI: window layout events, messages</li>
+  <li><code>vim.lsp.server()</code></li>
+</ul>
+
+<h2>Completed</h2>
+
+<p>Here are the headline features of the previous releases; for details see the corresponding release notes.</p>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/36">0.10</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/pull/26334">Default colorscheme</a></li>
   <li>treesitter: builtin parsers for bash, markdown, python</li>
   <li><code>vim.iter</code></li>
+  <li><code>vim.lpeg</code>, <code>vim.re</code>, <code>vim.glob</code>, <code>vim.base64</code></li>
 </ul>
-
-<h2>Completed</h2>
-
-<p>Here are the headline features of the previous releases; for details see the corresponding release notes.</p>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/28?closed=1">0.9</a></h3>
 <ul>
