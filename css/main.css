@@ -11,9 +11,9 @@
   --fg-color: #29332f;
   --inverse-fg-color: #a9d5c4; /* Dark-mode fg color. */
   --bg-color: #e7eee8;
+  --accent-bg-color: #d3e4db;
   --link-color: #195174;
   --accent-color: #000;
-  --accent-bg-color: #d3e4db;
   --border-color: #658fac;
 }
 
@@ -23,12 +23,9 @@
     --inverse-fg-color: #29332f; /* Light-mode fg color. */
     --bg-color: #0f191f;
     --accent-bg-color: #0b151b;
-    --border-color: #1174b1;
-    --link-color: #78d55b;
-    --accent-color: #61ff00;
-
     --link-color: #5fb950;
     --accent-color: #61ff00;
+    --border-color: #1174b1;
   }
 }
 
@@ -66,9 +63,8 @@ body {
 
 a {
   color: var(--link-color);
-  transition: all ease-in-out 140ms;
-  /* text-decoration: underline var(--link-color); */
   text-decoration: underline var(--border-color);
+  transition: all ease-in-out 140ms;
 }
 
 /* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
@@ -94,9 +90,9 @@ h3,
 h4,
 h5 {
   font-family: var(--sans-serif-fonts);
+  font-weight: bold;
   line-height: 1.6;
   margin: 0.66em 0;
-  font-weight: bold;
 }
 
 h1 {
@@ -229,52 +225,50 @@ samp {
  * Logo and navigation at the top of the page
  */
 
-.nav {
-  background-color: var(--accent-bg-color);
-  border-color: var(--link-color);
+.nav-link {
+  color: var(--link-color);
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--accent-color);
 }
 
-.nav > li > a:focus,
-.nav > li > a:hover {
-  background-color: var(--bg-color);
+.navbar-toggler {
+  border-width: 0;
+  color: var(--fg-color);
 }
 
-.nav .open > a:focus,
-.nav .open > a:hover {
-  background-color: var(--accent-bg-color);
+/**
+ * Logo
+ */
+.navbar-brand {
+  color: var(--link-color);
 }
-
-#navbar-logo {
-  height: 2.5em;
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+  color: var(--accent-color);
 }
-
-/* .navbar-top-align { */
-/*   margin-top: 1em; */
-/* } */
-
-/* .navbar-brand { */
-/* float: none; */
-/* height: auto; */
-/* padding: 0; */
-/* font-size: inherit; */
-/* line-height: inherit; */
-/* } */
 
 /**
  * Menu dropdown
  */
 
+#neovimDropdown.show {
+  color: var(--accent-color);
+}
+
 .dropdown-menu {
   background-color: var(--accent-bg-color);
 }
 
-.dropdown-menu > li > a {
+.dropdown-item {
   color: var(--link-color);
 }
-
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:active {
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item:active {
   color: var(--bg-color);
   background-color: var(--link-color);
 }
