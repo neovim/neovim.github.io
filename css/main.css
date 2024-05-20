@@ -3,9 +3,6 @@
 :root {
   --main-breakpoint: 60em;
 
-  /* Serif fonts for body text. Easier to read for larger chunks */
-  --serif-fonts: "Inter", var(--bs-font-serif);
-  /* Sans-serif for smoother fonts. Useful for titles and shorter chunks */
   --sans-serif-fonts: "Inter", var(--bs-font-sans-serif);
 
   /* Colors */
@@ -49,15 +46,12 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    --sans-serif-fonts: "Inter var", var(--sans-serif-fonts),
-      var(--bs-font-sans-serif);
-    --serif-fonts: "Inter var", var(--serif-fonts), var(--bs-font-serif);
+    --sans-serif-fonts: "Inter var", var(--bs-font-sans-serif);
   }
 }
 
 body {
-  /* font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; */
-  font-family: var(--serif-fonts);
+  font-family: var(--sans-serif-fonts);
   font-size: initial;
   line-height: 1.6;
   color: var(--fg-color);
