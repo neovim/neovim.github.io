@@ -6,50 +6,51 @@
       </a>
 
       <button
+        class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#neovim-navbar"
-        class="navbar-toggler"
+        data-bs-target="#navbarNav"
         aria-expanded="false"
         aria-label="Main menu"
       >
-        <span class="navbar-toggler-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
+
       <div
         class="collapse navbar-collapse justify-content-end"
-        id="neovim-navbar"
+        id="navbarNav"
       >
         <ul class="navbar-nav">
-          {% for nav in site.data.nav %} {% assign active = include.active %} {%
-          assign has_sections = nav.sections != null %} {% if has_sections %}
+          {% for nav in site.data.nav %}
+          {% assign active = include.active %}
+          {% assign has_sections = nav.sections != null %}
+          {% if has_sections %}
+
           <li class="nav-item dropdown">
             <a
-              href="#"
               class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              id="neovim-dropdown"
-              role="button"
+              id="neovimDropdown"
               >{{ nav.title }}</a
             >
-            <ul class="dropdown-menu" aria-labelledby="neovim-dropdown">
+            <ul class="dropdown-menu" aria-labelledby="neovimDropdown">
               {% for section in nav.sections %}
 
               <li>

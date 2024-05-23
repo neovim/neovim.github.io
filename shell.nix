@@ -1,23 +1,29 @@
 let
-  nixpkgsRev = "e9158eca70ae59e73fae23be5d13d3fa0cfc78b4";
+  nixpkgsRev = "80665d8fe1cd7a6e121ae969a2dcbcc469d0f2cf";
 
   nixpkgs = builtins.fetchTarball {
-      name = "nixos-unstable";
-      url = "https://github.com/nixos/nixpkgs/archive/${nixpkgsRev}.tar.gz";
-      sha256 = "0cnmvnvin9ixzl98fmlm3g17l6w95gifqfb3rfxs55c0wj2ddy53";
+    name = "nixos-unstable";
+    url = "https://github.com/nixos/nixpkgs/archive/${nixpkgsRev}.tar.gz";
+    sha256 = "090v2nfx19fd24gpsrprgby8f2373xj93sxx89k8ajd239f0xiyg";
   };
+
   pkgs = import nixpkgs { };
 
-  rubyEnv = pkgs.ruby.withPackages(p: with p; [ nokogiri ]);
+  rubyEnv = pkgs.ruby.withPackages (p: with p; [ nokogiri ]); # ruby 3.1.5
 in
 pkgs.mkShell {
-
   name = "neovim-website";
-  buildInputs = with pkgs; [ bundler rubyEnv libxml2 ];
+
+  buildInputs = with pkgs; [
+    bundler
+    libxml2
+    rubyEnv
+  ];
 
   shellHook = ''
-    echo "bundle install --path .bundle"
-    echo "bundle exec jekyll build --verbose"
-    echo "bundle exec jekyll serve --watch"
+    echo "mkdir .bundle"
+    echo "bundle config set path .bundle"
+    echo "bundle install"
+    echo "bundle exec jekyll serve --watch --livereload"
   '';
 }
