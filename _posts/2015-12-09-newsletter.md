@@ -257,7 +257,7 @@ test libraries:
 
 Very useful @kassio!
 
-[terminal-emulator]: https://neovim.io/doc/user/nvim_terminal_emulator.html#nvim-terminal-emulator
+[terminal-emulator]: https://neovim.io/doc/user/terminal.html#nvim-terminal-emulator
 [0.1-milestone]: https://github.com/neovim/neovim/milestones/0.1-first-public-release
 [history-of-salt]: https://en.wikipedia.org/wiki/History_of_salt
 [first-campaign]: https://www.bountysource.com/teams/neovim
