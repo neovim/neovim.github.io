@@ -29,3 +29,5 @@ exclude:
     - README.md
     - vendor/
     - sponsor-generator/
+
+include: ['.well-known']
