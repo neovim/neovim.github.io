@@ -40,21 +40,29 @@ Concrete high-level feature areas and changes.
 <h3><a href="https://github.com/neovim/neovim/milestone/43">0.12+</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/issues/20451">Prepare for 1.0</a></li>
+  <li>No more "Press Enter"</li>
+  <li>Plugin manager</li>
+  <li>packspec / <code>pkg.json</code></li>
   <li>Redesign <code>--remote</code></li>
   <li>File-change detection</li>
-  <li>multicursor</li>
+  <li>multicursor, super-macros</li>
   <li>Task abstraction, structured concurrency: <code>vim.async</code></li>
+  <li>Unified event interface, <code>nvim_on()</code></li>
 </ul>
 
 <h3><a href="https://github.com/neovim/neovim/milestone/41">0.11</a></h3>
 <ul>
+  <li>LSP "config" concept: <code>lsp/*</code> on 'runtimepath', <code>vim.lsp.config()</code>, <code>vim.lsp.enable()</code></li>
+  <li>LSP: multiclient support</li>
+  <li>TUI: URL highlight, theme event</li>
+  <li>UI detach, <code>:connect</code>: <a href="https://github.com/neovim/neovim/issues/5035">#5035</a></li>
+  <li>stdlib: image API</li>
   <li>Redesign (simplify) remote plugin concept, eliminate <code>:UpdateRemotePlugins</code></li>
   <ul>
     <li>Lua remote plugin host</li>
   </ul>
-  <li>UI detach, <code>:connect</code>: <a href="https://github.com/neovim/neovim/issues/5035">#5035</a></li>
   <li>Externalized UI: window layout events, messages</li>
-  <li><code>vim.lsp.server()</code></li>
+  <li>LSP: <code>vim.lsp.server()</code></li>
   <li>LSP: <a href="https://x.com/Neovim/status/1797629199454499223">auto-completion</a> (<a href="https://gist.github.com/MariaSolOs/2e44a86f569323c478e5a078d0cf98cc">on_attach config</a>)</li>
 </ul>
 
