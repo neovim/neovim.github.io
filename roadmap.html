@@ -26,22 +26,27 @@ The roadmap is an overview of the project direction. Detailed plans and prioriti
 
 Concrete high-level feature areas and changes.
 
-<h3><a href="https://github.com/neovim/neovim/milestone/43">0.12+</a>: "The year of Nvim OOTB"</h3>
+<h3><a href="https://github.com/neovim/neovim/milestone/43">Future (unknown release)</a></h3>
 <ul>
   <li><a href="https://github.com/neovim/neovim/issues/20451">Prepare for 1.0</a></li>
-  <li>✅ Plugin manager <a href="https://github.com/neovim/neovim/pull/34009">#34009</a></li>
+  <li>Unified event interface, <code>nvim_on()</code></li>
+  <li>Multicursor, super-macros</li>
+  <li>Multibuffer <a href="https://github.com/neovim/neovim/issues/30463">#34009</a></li>
+  <li>packspec / <code>pkg.json</code></li>
+  <li>Redesign <code>--remote</code></li>
+  <li>File-change detection</li>
+</ul>
+
+<h3><a href="https://github.com/neovim/neovim/milestone/43">0.12</a>: "The year of Nvim OOTB"</h3>
+<ul>
+  <li>✅ Plugin manager (<code>vim.pack</code>) <a href="https://github.com/neovim/neovim/pull/34009">#34009</a></li>
   <li>✅ No more "Press ENTER" <a href="https://github.com/neovim/neovim/pull/27855">#27855</a></li>
   <li>Task abstraction, structured concurrency: <code>vim.async</code></li>
   <li>UI <code>:connect</code>, <code>:restart</code><a href="https://github.com/neovim/neovim/issues/5035">#5035</a></li>
   <li>stdlib: image API</li>
-  <li>multicursor, super-macros</li>
   <li>Lua remote plugin host</li>
   <li>Redesign (simplify) remote plugin concept, eliminate <code>:UpdateRemotePlugins</code></li>
   <li>LSP: <code>vim.lsp.server()</code></li>
-  <li>packspec / <code>pkg.json</code></li>
-  <li>Redesign <code>--remote</code></li>
-  <li>File-change detection</li>
-  <li>Unified event interface, <code>nvim_on()</code></li>
   <li>Externalized UI: window layout events, messages</li>
 </ul>
 
