@@ -3,24 +3,22 @@ layout: default
 title: Page Not Found
 canonical_url: /404.html
 ---
-
 {% include nav.html %}
-
-<main class="hero">
+<main class="front-section">
   <div class="container">
     <div class="error-content">
       <div class="error-code">404</div>
-      <h1 class="error-title">Page Not Found</h1>
-      <p class="error-subtitle">The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
+      <h1>Page Not Found</h1>
+      <p class="light">The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
       
-      <div class="error-buttons">
-        <a href="/" class="btn btn-primary">Go Home</a>
-        <a href="/doc/" class="btn btn-secondary">Documentation</a>
+      <div class="flex error-buttons">
+        <a href="/" class="btn">Go Home</a>
+        <a href="/doc/" class="btn">Documentation</a>
       </div>
-
+      
       <div class="helpful-links">
         <h3>Popular Pages</h3>
-        <div class="links-grid">
+        <div class="col3">
           <a href="/" class="link-item">Home</a>
           <a href="/news/" class="link-item">News</a>
           <a href="/doc/" class="link-item">Documentation</a>
@@ -36,83 +34,65 @@ canonical_url: /404.html
 <style>
 .error-content {
   text-align: center;
-  padding: 4rem 0;
+  padding: 2rem 0;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .error-code {
   font-size: 8rem;
-  font-weight: 700;
-  color: var(--primary-color, #22c55e);
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+  font-weight: bold;
+  color: var(--accent-color);
+  font-family: var(--bs-font-monospace, monospace);
   line-height: 1;
   margin-bottom: 1rem;
 }
 
-.error-title {
+.error-content h1 {
   font-size: 2.5rem;
-  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.error-subtitle {
+.error-content p {
   font-size: 1.25rem;
-  opacity: 0.8;
   margin-bottom: 3rem;
-  line-height: 1.6;
 }
 
 .error-buttons {
-  display: flex;
-  gap: 1rem;
   justify-content: center;
   margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
 .helpful-links {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  background-color: var(--accent-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.3em;
   padding: 2rem;
   text-align: left;
 }
 
 .helpful-links h3 {
-  color: var(--primary-color, #22c55e);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+  color: var(--accent-color);
   text-align: center;
-}
-
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .link-item {
   display: block;
-  color: inherit;
-  text-decoration: none;
   padding: 0.75rem;
-  border-radius: 6px;
+  border-radius: 0.2em;
   border: 1px solid transparent;
-  transition: all 0.2s ease;
-  opacity: 0.8;
+  transition: all ease-in-out 140ms;
 }
 
-.link-item:hover {
-  color: var(--primary-color, #22c55e);
-  background: rgba(34, 197, 94, 0.05);
-  border-color: rgba(34, 197, 94, 0.2);
-  opacity: 1;
-  text-decoration: none;
+.link-item:hover,
+.link-item:focus {
+  background-color: var(--accent-bg-color);
+  border-color: var(--border-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 525px) {
   .error-content {
     padding: 2rem 1rem;
   }
@@ -121,11 +101,11 @@ canonical_url: /404.html
     font-size: 6rem;
   }
   
-  .error-title {
+  .error-content h1 {
     font-size: 2rem;
   }
   
-  .error-subtitle {
+  .error-content p {
     font-size: 1.1rem;
   }
   
@@ -137,10 +117,6 @@ canonical_url: /404.html
   .error-buttons .btn {
     width: 100%;
     max-width: 280px;
-  }
-  
-  .links-grid {
-    grid-template-columns: 1fr;
   }
   
   .helpful-links {
@@ -158,7 +134,7 @@ if (typeof gtag !== 'undefined') {
   });
 }
 
-// Auto-redirect  after 3s
+// Auto-redirect after 3s
 const currentPath = window.location.pathname.toLowerCase();
 const redirects = {
   '/docs': '/doc/',
