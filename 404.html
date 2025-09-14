@@ -6,121 +6,62 @@ canonical_url: /404.html
 {% include nav.html %}
 <main class="front-section">
   <div class="container">
-    <div class="error-content">
-      <div class="error-code">404</div>
+    <div class="masthead">
+      <div class="lead">404</div>
       <h1>Page Not Found</h1>
       <p class="light">The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
       
-      <div class="flex error-buttons">
+      <div class="flex">
         <a href="/" class="btn">Go Home</a>
         <a href="/doc/" class="btn">Documentation</a>
-      </div>
-      
-      <div class="helpful-links">
-        <h3>Popular Pages</h3>
-        <div class="col3">
-          <a href="/" class="link-item">Home</a>
-          <a href="/news/" class="link-item">News</a>
-          <a href="/doc/" class="link-item">Documentation</a>
-          <a href="/sponsors/" class="link-item">Sponsors</a>
-          <a href="/charter/" class="link-item">Charter</a>
-          <a href="https://github.com/neovim/neovim" class="link-item">GitHub</a>
-        </div>
       </div>
     </div>
   </div>
 </main>
 
 <style>
-.error-content {
-  text-align: center;
-  padding: 2rem 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.error-code {
+.masthead .lead {
   font-size: 8rem;
-  font-weight: bold;
   color: var(--accent-color);
-  font-family: var(--bs-font-monospace, monospace);
-  line-height: 1;
   margin-bottom: 1rem;
 }
 
-.error-content h1 {
+.masthead h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.error-content p {
+.masthead p {
   font-size: 1.25rem;
   margin-bottom: 3rem;
 }
 
-.error-buttons {
+.masthead .flex {
   justify-content: center;
-  margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
-.helpful-links {
-  background-color: var(--accent-bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 0.3em;
-  padding: 2rem;
-  text-align: left;
-}
-
-.helpful-links h3 {
-  color: var(--accent-color);
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.link-item {
-  display: block;
-  padding: 0.75rem;
-  border-radius: 0.2em;
-  border: 1px solid transparent;
-  transition: all ease-in-out 140ms;
-}
-
-.link-item:hover,
-.link-item:focus {
-  background-color: var(--accent-bg-color);
-  border-color: var(--border-color);
-}
-
 @media (max-width: 525px) {
-  .error-content {
-    padding: 2rem 1rem;
-  }
-  
-  .error-code {
+  .masthead .lead {
     font-size: 6rem;
   }
   
-  .error-content h1 {
+  .masthead h1 {
     font-size: 2rem;
   }
   
-  .error-content p {
+  .masthead p {
     font-size: 1.1rem;
   }
   
-  .error-buttons {
+  .masthead .flex {
     flex-direction: column;
     align-items: center;
   }
   
-  .error-buttons .btn {
+  .masthead .btn {
     width: 100%;
     max-width: 280px;
-  }
-  
-  .helpful-links {
-    padding: 1.5rem;
   }
 }
 </style>
