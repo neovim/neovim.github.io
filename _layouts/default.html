@@ -23,7 +23,11 @@
 
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/neovim-hi.css" rel="stylesheet">
+    {% unless page.url == "/404.html" %}
     <link rel="canonical" href="{{ site.url }}{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ page.url }}{% endif %}" />
+    {% else %}
+    <meta name="robots" content="noindex">
+    {% endunless %}
   </head>
 
   <body>
