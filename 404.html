@@ -2,11 +2,12 @@
 layout: default
 title: Page Not Found
 canonical_url: /404.html
+permalink: /404.html
 ---
 {% include nav.html %}
-<main class="front-section">
+<div style="padding: 3rem 0; min-height: 60vh; display: flex; align-items: center;">
   <div class="container">
-    <div class="masthead" style="max-width: 600px; margin: 0 auto; background-color: transparent;">
+    <div class="masthead" style="max-width: 600px; margin: 0 auto; background-color: transparent; text-align: center;">
       <div class="lead">404</div>
       <h1>Page Not Found</h1>
       <p class="light">The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
@@ -16,15 +17,14 @@ canonical_url: /404.html
         <a href="/doc/" class="btn">Documentation</a>
       </div>
     </div>
-    </div>
   </div>
-</main>
+</div>
 
 <style>
 .masthead .lead {
   font-size: 8rem;
   font-weight: 700;
-  color:#22C55E;
+  color: #22C55E;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -41,8 +41,10 @@ canonical_url: /404.html
 }
 
 .masthead .flex {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media (max-width: 525px) {
@@ -56,6 +58,7 @@ canonical_url: /404.html
   
   .masthead p {
     font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
   
   .masthead .flex {
@@ -66,7 +69,11 @@ canonical_url: /404.html
   .masthead .btn {
     width: 100%;
     max-width: 280px;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important;
   }
 }
 </style>
-
