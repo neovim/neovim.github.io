@@ -1,0 +1,72 @@
+---
+layout: default
+title: Page Not Found
+canonical_url: /404.html
+---
+{% include nav.html %}
+<main class="front-section">
+  <div class="container">
+    <div class="masthead" style="max-width: 600px; margin: 0 auto; background-color: transparent;">
+      <div class="lead">404</div>
+      <h1>Page Not Found</h1>
+      <p class="light">The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
+      
+      <div class="flex">
+        <a href="/" class="btn">Go Home</a>
+        <a href="/doc/" class="btn">Documentation</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</main>
+
+<style>
+.masthead .lead {
+  font-size: 8rem;
+  font-weight: 700;
+  color:#22C55E;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.masthead h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.masthead p {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.masthead .flex {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 525px) {
+  .masthead .lead {
+    font-size: 6rem;
+  }
+  
+  .masthead h1 {
+    font-size: 2rem;
+  }
+  
+  .masthead p {
+    font-size: 1.1rem;
+  }
+  
+  .masthead .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .masthead .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+</style>
+
