@@ -413,61 +413,6 @@ a.primary {
 }
 
 /*
- * Sponsors table
- *
- */
-.sponsors-table {
-  width: 100%;
-  margin-top: 20px;
-  line-height: 1;
-}
-
-.sponsors-table td {
-  vertical-align: middle;
-}
-
-.sponsors-table h3 {
-  display: inline;
-
-  margin: 0;
-  padding-bottom: 20px;
-  position: relative;
-  top: -0.8rem;
-}
-
-.sponsors-table .sponsor-image {
-  text-align: right;
-  padding-right: 12px;
-  padding-bottom: 20px;
-  width: 128px;
-}
-
-.sponsors-table .sponsor-amount {
-  padding-left: 12px;
-}
-
-.sponsors-table .sponsor-name {
-  background-image: linear-gradient(
-    90deg,
-    var(--bg-color) 25%,
-    var(--bg-color) 75%,
-    var(--border-color) 75%
-  );
-  background-size: 6px 2px;
-  background-position: 0 40%;
-  background-repeat: repeat-x;
-}
-
-.sponsors-table .sponsor-name h3 {
-  background-color: var(--accent-bg-color);
-  padding-right: 10px;
-}
-
-.sponsor-amount {
-  white-space: nowrap;
-}
-
-/*
  * Footer
  *
  * Links, legalese, etc.
