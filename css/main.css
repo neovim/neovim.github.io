@@ -409,12 +409,7 @@ a.primary {
 }
 
 .second-level-sponsors img {
-  margin-left: 1em;
-}
-@media (min-width: var(--main-breakpoint)) {
-  .second-level-sponsor img {
-    width: auto;
-  }
+  width: auto;
 }
 
 /*
