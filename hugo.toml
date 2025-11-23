@@ -1,0 +1,72 @@
+baseURL = 'https://neovim.io/'
+languageCode = 'en-us'
+title = 'Neovim'
+
+[frontmatter]
+  date = [":filename", ":default"]
+
+[permalinks]
+  posts = "/news/:year/:month/"
+
+[params]
+  description = "vim out of the box"
+
+  [params.news]
+    name = "Neovim Newsletter"
+    authors = "Neovim Community"
+    url = "/news"
+    feed = "/news/index.xml"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 10
+  identifier = "about"
+
+[[menus.main]]
+  name = "Vision"
+  url = "/charter/"
+  parent = "about"
+  weight = 1
+
+[[menus.main]]
+  name = "Roadmap"
+  url = "/roadmap/"
+  parent = "about"
+  weight = 2
+
+[[menus.main]]
+  name = "Screenshots"
+  url = "/screenshots/"
+  parent = "about"
+  weight = 3
+
+[[menus.main]]
+  name = "News"
+  url = "/news/"
+  weight = 20
+
+[[menus.main]]
+  name = "Development"
+  url = "https://github.com/neovim/neovim"
+  weight = 30
+
+[[menus.main]]
+  name = "Documentation"
+  url = "/doc/"
+  weight = 40
+
+[[menus.main]]
+  name = "Sponsors"
+  url = "/sponsors/"
+  weight = 50
+
+[[menus.main]]
+  name = "Store"
+  url = "https://store.neovim.io/"
+  weight = 60

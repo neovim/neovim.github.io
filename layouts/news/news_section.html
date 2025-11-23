@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="front-section">
+    <div class="newsletter container golden-grid">
+        <div class="col-wide">
+            {{ $latest := index (where .Site.RegularPages "Section" "posts") 0 }}
+            <h1>{{ $latest.Title }}</h1>
+
+            <div style="margin-top: 0.5em; margin-bottom: 0.5em;">
+                <a class="release-date" href="{{ $latest.RelPermalink }}">{{ $latest.Date.Format "January 2006" }}</a>
+            </div>
+
+            {{ $latest.Content }}
+        </div>
+
+        {{ partial "news_sidebar.html" . }}
+    </div>
+</section>
+{{ end }}

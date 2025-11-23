@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="front-section">
+    <div class="container golden-grid">
+        <div class="newsletter col-wide">
+
+            <h1>{{ .Title }}</h1>
+
+            {{ range sort (where .Site.RegularPages "Section" "posts") "Date" "asc" }}
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ end }}
+
+        </div>
+
+        {{ partial "news_sidebar.html" . }}
+    </div>
+</section>
+{{ end }}

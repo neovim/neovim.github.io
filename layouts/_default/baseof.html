@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta property="og:description" content="Hyperextensible Vim-based text editor">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-social-preview.png">
+    <meta property="og:image:alt" content="Robot Marvim pointing at Neovim logo">
+    <meta property="og:site_name" content="Neovim">
+    <meta property="og:title" content="Neovim">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+
+    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="preconnect" href="https://X185E15FPG-dsn.algolia.net" crossorigin />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/neovim-hi.css" rel="stylesheet">
+    {{ if ne .RelPermalink "/404.html" }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ else }}
+    <meta name="robots" content="noindex">
+    {{ end }}
+</head>
+
+<body>
+    {{ partial "nav.html" . }}
+    {{ block "main" . }}{{ end }}
+
+    {{ partial "footer.html" . }}
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <!-- algolia docsearch https://docsearch.algolia.com/docs/docsearch-v3/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="module">
+      docsearch({
+        container: '#docsearch',
+        appId: 'X185E15FPG',
+        apiKey: 'b5e6b2f9c636b2b471303205e59832ed',
+        indexName: 'nvim',
+      });
+    </script>
+
+</body>
+
+</html>

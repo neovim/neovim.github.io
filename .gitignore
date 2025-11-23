@@ -1,7 +1,2 @@
-# .gitignore for neovim.github.io
-
-## bundler
-/.bundle/*
-
-## jekyll
-/_site/*
+public/
+.hugo_build.lock
