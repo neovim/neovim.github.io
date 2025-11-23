@@ -1,0 +1,263 @@
+{{ define "main" }}
+<section class="masthead">
+    <h1 class="lead">hyperextensible Vim-based text editor</h1>
+    <p>
+        <a href="https://github.com/neovim/neovim/blob/master/INSTALL.md" class="btn">Install Now</a>
+        <a href="https://dotfyle.com/plugins" class="btn">Get Plugins</a>
+    </p>
+</section>
+
+<section class="front-section">
+    <div class="container golden-grid">
+        <div class="col-wide">
+            <h2>Features</h2>
+
+            <h3>Extensible</h3>
+            <ul>
+                <li>
+                    API is first-class:
+                    <a href="/doc/user/api.html#api-mapping">discoverable</a>,
+                    <a href="/doc/user/api.html#api-contract">versioned</a>,
+                    <a href="/doc/user/api.html#api-global">documented</a>.
+                </li>
+                <li>
+                    <a href="http://msgpack.org/">MessagePack</a> structured communication
+                    enables extensions in any language.
+                </li>
+                <li>
+                    Remote plugins run as co-processes, safely and asynchronously.
+                </li>
+                <li>
+                    GUIs, IDEs, web browsers can <code>--embed</code> Neovim as an editor or script host.
+                </li>
+                <li>
+                    <a href="/doc/user/lua.html">Lua plugins</a> are easy to create just like Vimscript plugins.
+                    Your config can live in <code>init.lua</code>!
+                </li>
+                <li>
+                    AST-producing <a href="https://tree-sitter.github.io/">parsing engine</a>
+                    enables faster, more accurate syntax highlighting, code navigation,
+                    refactoring, text objects, and motions.
+                </li>
+            </ul>
+
+            <h3>Usable</h3>
+            <ul>
+                <li>Strong <a href="/doc/user/vim_diff.html#nvim-defaults">defaults</a> including a unique, minimalist
+                    colorscheme.</li>
+                <li>
+                    Builtin <a href="/doc/user/lsp.html">LSP client</a> for
+                    semantic code inspection and refactoring (go-to definition, "find references", format, …).
+                </li>
+                <li>
+                    Client-server architecture allows you to <b>detach the UI</b> and keep the editor session running
+                    (like tmux). Attach multiple UIs to any Nvim session.
+                </li>
+                <li>No "Press ENTER" messages.</li>
+                <li>Works the same everywhere: one build-type, one command.</li>
+                <li>Modern terminal features such as cursor styling, focus events, bracketed paste.</li>
+                <li>Builtin <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">:terminal</a> set the standard for
+                    "TTY as a basic component".</li>
+            </ul>
+
+            <h3>Drop-in Vim</h3>
+            <ul>
+                <li>
+                    Fully compatible with Vim's editing model and Vimscript v1.
+                </li>
+                <li>
+                    Start with
+                    <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>
+                    if you already use Vim. If not, try <code>:Tutor</code>.
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-narrow">
+            <h2 id="sponsors-header"><a href="/sponsors">Sponsors</a></h2>
+            <div id="sponsors" class="sponsors-main">
+                <div class="first-level-sponsor">
+                    <a href="https://coderabbit.ai/?utm_source=neovim.io">
+                        <img width="340" class="img-fluid" src="images/sponsors/coderabbit-logo.png"
+                            alt="CodeRabbit cuts code review time and bugs in half. Works on PRs, IDE, and CLI.">
+                        <br />
+                        CodeRabbit cuts code review time and bugs in half. Works on PRs, IDE, and CLI.
+                    </a>
+                </div>
+                <div class="first-level-sponsor">
+                    <a href="https://graphite.dev/?utm_source=github&utm_medium=repo&utm_campaign=neovim">
+                        <img width="340" class="img-fluid" src="images/sponsors/graphite.gif"
+                            alt="Graphite is the AI developer productivity platform helping teams on GitHub ship higher quality software, faster">
+                        <br />
+                        Graphite is the AI developer productivity platform helping teams on GitHub ship higher quality
+                        software, faster
+                    </a>
+                </div>
+                <div class="first-level-sponsor">
+                    <a href="http://go.warp.dev/neovim"><img width="340" class="img-fluid"
+                            src="https://raw.githubusercontent.com/warpdotdev/brand-assets/refs/heads/main/Github/Sponsor/Warp-Github-LG-01.png"
+                            title="Visit warp.dev to learn more." alt="Visit warp.dev to learn more." />
+                        <br />
+                        Warp, built for coding with multiple AI agents.
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-section">
+                <h2 id="news">News</h2>
+                {{/* <dl class="nvim-posts"> */}}
+                    <table>
+                        {{ range first 2 .Site.RegularPages }}
+                        <tr>
+                            <td><a href="{{ .RelPermalink }}">{{ .Title }}</a>&nbsp;&nbsp; </td>
+                            <td style="white-space: nowrap; text-align: right">{{ .Date.Format "2006.01" }}</td>
+                        </tr>
+                        {{/* <dd></dd> */}}
+                        {{ end }}
+                    </table>
+                    {{/*
+                </dl> */}}
+                <p><a href="/news/archive">More…</a></p>
+
+                <h2>Impressions</h2>
+                <p>
+                    "Neovim is exactly what it claims to be. It fixes every issue I have with Vim."
+                    <a href="http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/">—Geoff Greer</a>
+                </p>
+                <p>
+                    "Full-screen Neovim looks cool as hell!"
+                    <a href="https://twitter.com/dhh/status/1764465909316583659">—DHH</a>
+                </p>
+                <p>
+                    "A nice looking website, that’s one thing Neovim did right."
+                    <a href="https://www.binpress.com/vim-creator-bram-moolenaar-interview/">—Bram Moolenaar</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="front-section shaded">
+    <div class="container golden-grid">
+        <div>
+            <h2>Intro</h2>
+            <div class="intro-video-container">
+                <iframe class="intro-video" src="https://www.youtube-nocookie.com/embed/c4OyfL5o7DU"
+                    title="Neovim in 100 seconds" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div>
+            <h2 id="chat">Chat</h2>
+            <ul>
+                <li><a href="https://twitter.com/Neovim" class="twitter-follow-button">Follow &#64;Neovim</a></li>
+                <li>Discuss the project in <a href="https://github.com/neovim/neovim/discussions">GitHub
+                        Discussions</a>, or
+                    chat in <a href="https://matrix.to/#/#neovim:matrix.org">#neovim:matrix.org</a>
+                    or #neovim on <code>irc.libera.chat</code>.
+                </li>
+                <li>Contribute code, report bugs and request features at <a
+                        href="https://github.com/neovim/neovim">GitHub</a>.</li>
+                <li>Ask usage and configuration questions at <a
+                        href="https://github.com/neovim/neovim/discussions">GitHub Discussions</a>
+                    or <a href="https://vi.stackexchange.com">vi.stackexchange.com</a>.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="front-section">
+    <div class="container golden-grid">
+        <div>
+            <h2 id="faqs">FAQ</h2>
+            <dl class="faqs">
+                <dt>What is the project status?</dt>
+                <dd>
+                    The current <a href="https://github.com/neovim/neovim/releases/latest">stable release</a>
+                    version is <code>0.11</code> (<a href="https://github.com/neovim/neovim/tags.atom">RSS</a>).
+                    See the <a href="roadmap/">roadmap</a> for progress and plans.
+                </dd>
+
+                <dt>Is Neovim trying to turn Vim into an IDE?</dt>
+                <dd>With 30% less source-code than Vim, the <a href="charter/">vision</a>
+                    of Neovim is to enable new applications without compromising Vim's
+                    traditional roles. </dd>
+
+                <dt>Will Neovim deprecate Vimscript?</dt>
+                <dd>
+                    No. Lua is built-in, but Vimscript is supported with the
+                    <a href="/doc/user/api.html#nvim_parse_expression()">world's most advanced Vimscript engine</a>.
+                </dd>
+
+                <dt>Which plugins does Neovim support?</dt>
+                <dd>Vim 8.x plugins and <a href="https://github.com/neovim/neovim/wiki/Related-projects">much more</a>.
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <h2>GUIs</h2>
+            Neovim UIs are "inverted plugins". Here are some popular ones:
+            <ul>
+                <li><a href="https://github.com/glacambre/firenvim">Firenvim</a> (Nvim in your web browser!)</li>
+                <li><a href="https://github.com/vscode-neovim/vscode-neovim">vscode-neovim</a> (Nvim in VSCode!)</li>
+                <li><a href="https://github.com/sassanh/qnvim">qnvim</a> (Nvim in Qt Creator!)</li>
+                <li><a href="https://neovide.dev/">Neovide</a></li>
+                <li><a href="https://github.com/akiyosi/goneovim">Goneovim</a></li>
+                <li><a href="https://github.com/vhakulinen/gnvim">GNvim (GTK4)</a></li>
+                <li><a href="https://github.com/yatli/fvim">FVim</a></li>
+                <li><a href="https://github.com/RMichelsen/Nvy">Nvy</a></li>
+                <li><a href="https://github.com/sakhnik/nvim-ui">nvim-ui (GTK4)</a></li>
+                <li><a href="https://github.com/equalsraf/neovim-qt">Neovim Qt (Qt5)</a></li>
+                <li><a href="https://github.com/qvacua/vimr">VimR (macOS)</a></li>
+                <li><a href="https://github.com/neovim/neovim/wiki/Related-projects#gui">More...</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="front-section shaded">
+    <div class="container">
+        <h2 id="sponsor">The work continues...</h2>
+        <div class="container col3">
+            <div>
+                <div>Sponsor (100% to developers)</div>
+                <ul>
+                    <li><a href="https://github.com/sponsors/neovim">GitHub Sponsors</a></li>
+                    <li><a href="https://opencollective.com/neovim">Open Collective</a> (<a
+                            href="https://opencollective.com/opensource#category-ABOUT">EIN</a>)</li>
+                </ul>
+            </div>
+
+            <div>
+                <label for="donate-input">Bitcoin</label>
+                <div class="donate">
+                    <div class="icon">
+                        <img src="/images/icons/bitcoin.png" alt="Bitcoin logo" />
+                    </div>
+                    <input id="donate-input" class="donate" type="text" value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ"
+                        readonly="readonly">
+                </div>
+
+                <p class="light small">
+                    View at
+                    <a
+                        href="https://www.blockchain.com/btc/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ">Blockchain.com</a>.
+                </p>
+            </div>
+
+            <div>
+                <div>Marketing</div>
+                <ul>
+                    <li><a href="/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></li>
+                    <li>Neovim logo by <a href="http://twitter.com/jasonlong">Jason Long</a>, <a
+                            href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

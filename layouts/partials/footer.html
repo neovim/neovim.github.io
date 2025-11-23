@@ -1,0 +1,18 @@
+<footer>
+  <div class="container flex">
+    <div>
+      {{ range $index, $element := .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ if ne (add $index 1) (len $.Site.Menus.main) }}
+      &middot;
+      {{ end }}
+      {{ end }}
+      &middot;
+      <a rel="me" href="https://hachyderm.io/@neovim">Mastodon</a>
+    </div>
+
+    <div>
+      This site's source is <a href="https://github.com/neovim/neovim.github.io/">hosted on GitHub</a>.
+    </div>
+  </div>
+</footer>

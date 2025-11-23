@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ if eq .Section "posts" }}
+<div class="newsletter container golden-grid">
+    <div class="col-wide">
+        <div class="post-header">
+            <h1>{{ .Title }}</h1>
+            <div style="margin-top: 0.5em; margin-bottom: 0.5em;">
+                <em class="release-date">{{ .Date.Format "January 2006" }}</em>
+            </div>
+        </div>
+
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+    </div>
+
+    {{ partial "news_sidebar.html" . }}
+</div>
+{{ else }}
+<!-- <div class="post-header"> -->
+<!--     <h1>{{ .Title }}</h1> -->
+<!--     <h2> -->
+<!--         <time datetime="{{ .Date.Format " 2006-01-02" }}"> -->
+<!--             {{ .Date.Format "Monday - Jan 02, 2006" }} -->
+<!--         </time> -->
+<!--         | {{ .Params.author }} -->
+<!--     </h2> -->
+<!-- </div> -->
+
+<div class="post-content">
+
+    {{ .Content }}
+
+</div>
+{{ end }}
+{{ end }}
