@@ -4,7 +4,5 @@ active: About
 type: page
 ---
 
-# About
-
 - [Charter](/charter/)
 - [Roadmap](/roadmap/)
