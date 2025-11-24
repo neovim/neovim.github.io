@@ -45,13 +45,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      # TODO: is this needed?
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      # TODO: is this needed?
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
