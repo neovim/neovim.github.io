@@ -3,19 +3,20 @@
  * For use with "highlight.js" (used by the :help docs generated HTML).
  * See also: static/css/neovim-hi.css
  * License: Apache-2.0
- */
+*/
 
 :root {
+  /* Light-mode palette - default */
   --hljs-black: #2c2e33;
   --hljs-red: #5e0009;
-  --hljs-green: #015825;
+  --hljs-green: #0daa80;
   --hljs-yellow: #6e5600;
   --hljs-blue: #005078;
   --hljs-cyan: #007676;
   --hljs-white: #4f5258;
   --hljs-b-black: #4f5258;
   --hljs-b-red: #5e0009;
-  --hljs-b-green: #015825;
+  --hljs-b-green: #0daa80;
   --hljs-b-yellow: #6e5600;
   --hljs-b-blue: #005078;
   --hljs-b-cyan: #007676;
@@ -24,6 +25,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Dark-mode palette */
     --hljs-black: #9b9ea4;
     --hljs-red: #ffbcb5;
     --hljs-green: #aaedb7;
@@ -39,61 +41,50 @@
     --hljs-b-cyan: #83efef;
     --hljs-b-white: #ebeef5
   }
+}
 
-  .hljs-meta, .hljs-comment {
-    color: #9b9ea4
-  }
+.hljs-meta, .hljs-comment {
+  color: #4f5258
+}
 
-  .hljs-tag, .hljs-doctag, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-template-tag, .hljs-selector-pseudo, .hljs-selector-attr, .hljs-variable.language_, .hljs-deletion {
-    color: var(--hljs-b-red)
-  }
+.hljs-tag, .hljs-doctag, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-template-tag, .hljs-selector-pseudo, .hljs-selector-attr, .hljs-variable.language_, .hljs-deletion {
+  color: var(--hljs-b-red)
+}
 
-  .hljs-variable, .hljs-template-variable, .hljs-number, .hljs-literal, .hljs-type, .hljs-params, .hljs-link {
-    color: #9fd8ff;
-    color: var(--hljs-b-blue)
-  }
+.hljs-variable, .hljs-template-variable, .hljs-number, .hljs-literal, .hljs-type, .hljs-params, .hljs-link {
+  color: var(--hljs-b-cyan)
+}
 
-  .hljs-built_in, .hljs-attribute {
-    color: #f4d88c;
-    color: var(--hljs-b-yellow);
-    color: #aaedb7;
-    color: var(--hljs-b-green)
-  }
+.hljs-built_in, .hljs-attribute {
+  color: var(--hljs-b-green)
+}
 
-  .hljs-selector-tag {
-    color: #83efef;
-    color: var(--hljs-b-cyan)
-  }
+.hljs-selector-tag {
+  color: var(--hljs-b-cyan)
+}
 
-  .hljs-keyword, .hljs-title.function_, .hljs-title, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-subst, .hljs-property {
-    color: #9fd8ff;
-    color: var(--hljs-b-blue)
-  }
+.hljs-keyword, .hljs-title.function_, .hljs-title, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-subst, .hljs-property {
+  color: var(--hljs-b-blue)
+}
 
-  .hljs-quote, .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition {
-    color: #aaedb7;
-    color: var(--hljs-b-green)
-  }
+.hljs-quote, .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition {
+  color: var(--hljs-b-green)
+}
 
-  .hljs-code, .hljs-function, .hljs-formula, .hljs-section {
-    color: #9fd8ff;
-    color: var(--hljs-b-blue)
-  }
+.hljs-code, .hljs-function, .hljs-formula, .hljs-section {
+  color: var(--hljs-b-blue)
+}
 
-  .hljs-name, .hljs-keyword, .hljs-operator, .hljs-char.escape_, .hljs-attr {
-    color: #83efef;
-    color: var(--hljs-b-cyan)
-  }
+.hljs-name, .hljs-keyword, .hljs-operator, .hljs-char.escape_, .hljs-attr {
+  color: var(--hljs-b-cyan)
+}
 
-  .hljs-punctuation {
-    color: #ebeef5;
-    color: var(--hljs-b-white)
-  }
+.hljs-punctuation {
+  color: var(--hljs-black)
+}
 
-  .hljs {
-    color: #ebeef5;
-    color: var(--hljs-b-white)
-  }
+.hljs {
+  color: var(--hljs-black)
 }
 
 .hljs-emphasis {
