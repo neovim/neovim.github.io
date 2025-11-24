@@ -1,10 +1,13 @@
-name: Deploy Hugo site to GitHub Pages
+name: build-and-deploy
 
 on:
   # Runs on pushes targeting the default branch
   push:
     branches:
       - master
+
+  # Runs on pull requests
+  pull_request:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -64,6 +67,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
