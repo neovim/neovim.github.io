@@ -1,0 +1,21 @@
+# Builds but does not deploy, for pull request validation.
+
+name: build
+
+on:
+  # Runs on pull requests
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Build site
+        uses: ./.github/actions/build-site
+        env:
+          BASE_URL: "https://example.com/"
