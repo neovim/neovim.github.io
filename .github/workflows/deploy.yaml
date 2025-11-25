@@ -28,8 +28,8 @@ jobs:
   # Deployment job
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    # permissions:
+    #   contents: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,9 +43,10 @@ jobs:
         uses: ./.github/actions/build-site
         env:
           BASE_URL: "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
       - name: Deploy
         id: deployment
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          publish_dir: ./public
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/deploy-pages@v4
