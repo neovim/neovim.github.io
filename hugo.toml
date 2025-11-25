@@ -8,6 +8,13 @@ title = 'Neovim'
 [permalinks]
   posts = "/news/:year/:month/"
 
+[outputs]
+  section = ["html", "rss"]
+
+[outputFormats.RSS]
+  baseName = "news"
+  path = "/"
+
 [params]
   description = "vim out of the box"
 
@@ -15,7 +22,6 @@ title = 'Neovim'
     name = "Neovim Newsletter"
     authors = "Neovim Community"
     url = "/news"
-    feed = "/news/index.xml"
 
 [markup]
   # [markup.goldmark]
