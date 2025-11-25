@@ -1,0 +1,175 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="vim out of the box"><meta property="og:description" content="Hyperextensible Vim-based text editor"><meta property="og:image" content="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-social-preview.png"><meta property="og:image:alt" content="Robot Marvim pointing at Neovim logo"><meta property="og:site_name" content="Neovim"><meta property="og:title" content="Neovim"><meta property="og:type" content="website"><meta property="og:url" content="/news/2022/04/"><title>Neovim News #12 - What's New In Neovim 0.7 - Neovim</title><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@3><link rel=preconnect href=https://X185E15FPG-dsn.algolia.net crossorigin><link href=/css/bootstrap.min.css rel=stylesheet><link href=/css/main.css rel=stylesheet><link href=/css/neovim-hi.css rel=stylesheet><link rel=canonical href=/news/2022/04/></head><body><header class=container><nav class="navbar navbar-expand-lg"><div class=container-fluid><a href=/ class=navbar-brand aria-label=logo><svg role="img" width="173" height="50" viewBox="0 0 742 214" aria-label="Neovim"><title>Neovim</title><defs><linearGradient x1="50%" y1="0" x2="50%" y2="100%" id="a"><stop stop-color="#16B0ED" stop-opacity=".8" offset="0"/><stop stop-color="#0F59B2" stop-opacity=".837" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0" x2="50%" y2="100%" id="b"><stop stop-color="#7DB643" offset="0"/><stop stop-color="#367533" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0" x2="50%" y2="100%" id="c"><stop stop-color="#88C649" stop-opacity=".8" offset="0"/><stop stop-color="#439240" stop-opacity=".84" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M.027 45.459 45.224-.173v212.171L.027 166.894V45.459z" fill="url(#a)" transform="translate(1 1)"/><path d="M129.337 45.89 175.152-.149l-.928 212.146-45.197-45.104.31-121.005z" fill="url(#b)" transform="matrix(-1 0 0 1 305 1)"/><path d="M45.194-.137 162.7 179.173l-32.882 32.881L12.25 33.141 45.194-.137z" fill="url(#c)" transform="translate(1 1)"/><path d="M46.234 84.032l-.063 7.063-36.28-53.563 3.36-3.422 32.983 49.922z" fill-opacity=".13" fill="#000"/><g fill="#444"><path d="M227 154V64.44h4.655c1.55.0 2.445.75 2.685 2.25l.806 13.502c4.058-5.16 8.786-9.316 14.188-12.466 5.4-3.15 11.413-4.726 18.037-4.726 4.893.0 9.205.781 12.935 2.34 3.729 1.561 6.817 3.811 9.264 6.751 2.448 2.942 4.297 6.48 5.55 10.621 1.253 4.14 1.88 8.821 1.88 14.042V154h-8.504V96.754c0-8.402-1.91-14.987-5.729-19.757-3.82-4.771-9.667-7.156-17.544-7.156-5.851.0-11.28 1.516-16.292 4.545-5.013 3.032-9.489 7.187-13.427 12.467V154H227zM350.624 63c5.066.0 9.755.868 14.069 2.605 4.312 1.738 8.052 4.268 11.219 7.592s5.638 7.412 7.419 12.264C385.11 90.313 386 95.883 386 102.17c0 1.318-.195 2.216-.588 2.696-.393.48-1.01.719-1.851.719h-64.966v1.7c0 6.708.784 12.609 2.353 17.7 1.567 5.09 3.8 9.357 6.695 12.802 2.895 3.445 6.393 6.034 10.495 7.771 4.1 1.738 8.686 2.606 13.752 2.606 4.524.0 8.446-.494 11.762-1.483 3.317-.988 6.108-2.097 8.37-3.324 2.261-1.227 4.056-2.336 5.383-3.324 1.326-.988 2.292-1.482 2.895-1.482.784.0 1.388.3 1.81.898l2.352 2.875c-1.448 1.797-3.362 3.475-5.745 5.031-2.383 1.558-5.038 2.891-7.962 3.998-2.926 1.109-6.062 1.991-9.41 2.65a52.21 52.21.0 01-10.088.989c-6.152.0-11.762-1.064-16.828-3.19-5.067-2.125-9.415-5.225-13.043-9.298-3.63-4.074-6.435-9.06-8.415-14.96C310.99 121.655 310 114.9 310 107.294c0-6.408.92-12.323 2.76-17.744s4.493-10.093 7.961-14.016c3.467-3.922 7.72-6.991 12.758-9.209C338.513 64.11 344.229 63 350.624 63zm.573 6c-4.696.0-8.904.702-12.623 2.105-3.721 1.404-6.936 3.421-9.65 6.053-2.713 2.631-4.908 5.79-6.586 9.474S319.55 94.439 319 99h60c0-4.679-.672-8.874-2.013-12.588-1.343-3.712-3.232-6.856-5.67-9.43-2.44-2.571-5.367-4.545-8.782-5.92-3.413-1.374-7.192-2.062-11.338-2.062zm84.349-6c6.526.0 12.368 1.093 17.524 3.28 5.154 2.186 9.5 5.286 13.04 9.298 3.538 4.013 6.238 8.85 8.099 14.51 1.861 5.66 2.791 11.994 2.791 19.002s-.932 13.327-2.791 18.957c-1.861 5.631-4.561 10.452-8.099 14.465-3.54 4.012-7.886 7.097-13.04 9.254-5.156 2.156-10.998 3.234-17.524 3.234-6.529.0-12.369-1.078-17.525-3.234-5.155-2.157-9.517-5.242-13.085-9.254-3.57-4.013-6.285-8.836-8.145-14.465-1.861-5.63-2.791-11.95-2.791-18.957.0-7.008.93-13.342 2.791-19.002s4.576-10.496 8.145-14.51c3.568-4.012 7.93-7.112 13.085-9.299C423.177 64.094 429.017 63 435.546 63zm-.501 86c5.341.0 10.006-.918 13.997-2.757 3.99-1.838 7.32-4.474 9.992-7.909 2.67-3.435 4.664-7.576 5.986-12.428 1.317-4.85 1.98-10.288 1.98-16.316.0-5.965-.66-11.389-1.98-16.27-1.322-4.88-3.316-9.053-5.986-12.519-2.67-3.463-6-6.13-9.992-7.999-3.991-1.867-8.657-2.802-13.997-2.802s-10.008.935-13.997 2.802c-3.991 1.87-7.322 4.536-9.992 8-2.671 3.465-4.68 7.637-6.03 12.518-1.35 4.881-2.026 10.305-2.026 16.27.0 6.026.675 11.465 2.025 16.316 1.35 4.852 3.36 8.993 6.031 12.428 2.67 3.435 6 6.07 9.992 7.91 3.99 1.838 8.656 2.756 13.997 2.756z" fill="currentColor"/><path d="M530.57 152h-20.05L474 60h18.35c1.61.0 2.967.39 4.072 1.166 1.103.778 1.865 1.763 2.283 2.959l17.722 49.138a92.762 92.762.0 012.551 8.429c.686 2.751 1.298 5.5 1.835 8.25.537-2.75 1.148-5.499 1.835-8.25a77.713 77.713.0 012.64-8.429l18.171-49.138c.417-1.196 1.164-2.181 2.238-2.96 1.074-.776 2.356-1.165 3.849-1.165H567l-36.43 92zM572 61h23v92h-23zm38 92V60.443h13.624c2.887.0 4.78 1.354 5.682 4.06l1.443 6.856a52.7 52.7.0 015.097-4.962 32.732 32.732.0 015.683-3.879 30.731 30.731.0 016.496-2.57c2.314-.632 4.855-.948 7.624-.948 5.832.0 10.63 1.579 14.39 4.736 3.758 3.157 6.57 7.352 8.434 12.585 1.444-3.068 3.248-5.698 5.413-7.894 2.165-2.194 4.541-3.984 7.127-5.367a32.848 32.848.0 018.254-3.068 39.597 39.597.0 018.796-.992c5.111.0 9.653.783 13.622 2.345 3.97 1.565 7.307 3.849 10.014 6.857 2.706 3.007 4.766 6.675 6.18 11.005C739.29 83.537 740 88.5 740 94.092V153h-22.284V94.092c0-5.894-1.294-10.329-3.878-13.306-2.587-2.977-6.376-4.465-11.368-4.465-2.286.0-4.404.391-6.358 1.172a15.189 15.189.0 00-5.144 3.383c-1.473 1.474-2.631 3.324-3.474 5.548-.842 2.225-1.263 4.781-1.263 7.668V153h-22.37V94.092c0-6.194-1.249-10.704-3.744-13.532-2.497-2.825-6.18-4.24-11.051-4.24-3.19.0-6.18.798-8.976 2.391-2.799 1.593-5.399 3.775-7.804 6.54V153H610zM572 30h23v19h-23z" fill="currentColor" fill-opacity=".8"/></g></g></svg>
+</a><button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-expanded=false aria-label="Main menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="collapse navbar-collapse justify-content-end" id=navbarNav><ul class=navbar-nav><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# role=button data-bs-toggle=dropdown aria-expanded=false id=neovimDropdown>About</a><ul class=dropdown-menu aria-labelledby=neovimDropdown><li><a class=dropdown-item href=/charter/>Vision</a></li><li><a class=dropdown-item href=/roadmap/>Roadmap</a></li><li><a class=dropdown-item href=/screenshots/>Screenshots</a></li></ul></li><li class=nav-item><a href=/news/ class=nav-link>News</a></li><li class=nav-item><a href=https://github.com/neovim/neovim class=nav-link>Development</a></li><li class=nav-item><a href=/doc/ class=nav-link>Documentation</a></li><li class=nav-item><a href=/sponsors/ class=nav-link>Sponsors</a></li><li class=nav-item><a href=https://store.neovim.io/ class=nav-link>Store</a></li></ul></div><div id=docsearch></div></div></nav></header><div class="newsletter container golden-grid"><div class=col-wide><div class=post-header><h1>Neovim News #12 - What's New In Neovim 0.7</h1><div style=margin-top:.5em;margin-bottom:.5em><em class=release-date>April 2022</em></div></div><div class=post-content><blockquote><p>Original article: <a href=https://gpanders.com/blog/whats-new-in-neovim-0-7>https://gpanders.com/blog/whats-new-in-neovim-0-7</a></p></blockquote><p>Neovim 0.7 was just released, bringing with it lots of new features (and of
+course plenty of bug fixes). You can find the full release notes
+<a href=https://github.com/neovim/neovim/releases/tag/v0.7.0>here</a>, but in this post I&rsquo;ll cover just a few of the new
+additions.</p><h2 id=table-of-contents>Table of Contents</h2><ul><li><a href=#lua-everywhere>Lua everywhere!</a></li><li><a href=#distinguishing-modifier-keys>Distinguishing modifier keys</a></li><li><a href=#global-statusline>Global statusline</a></li><li><a href=#filetypelua>filetype.lua</a></li><li><a href=#client-server-communication>Client-server communication</a></li><li><a href=#looking-ahead-to-08>Looking ahead to 0.8</a></li></ul><h2 id=lua-everywhere>Lua everywhere!</h2><p>Neovim 0.5 saw the introduction of Lua as a first-class citizen in the Neovim
+ecosystem: Lua could now be used in the user&rsquo;s init file, plugins,
+colorschemes, ftplugins, etc. Basically, anywhere that you could use a <code>.vim</code>
+file, you could now use <code>.lua</code> instead.</p><p>However, there were still some shortcomings in the Lua API at that time.
+Notably absent was the ability to create autocommands in Lua, as well as bind
+key mappings directly to Lua functions. In order to do either of these things,
+users needed to resort to workarounds involving a round trip through Vimscript
+conversion, which is a bit clunky:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Using a Lua function in a key mapping prior to 0.7</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>say_hello</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Hello world!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>_G.my_say_hello</span> <span class=o>=</span> <span class=n>say_hello</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>vim.api</span><span class=p>.</span><span class=n>nvim_set_keymap</span><span class=p>(</span><span class=s2>&#34;n&#34;</span><span class=p>,</span> <span class=s2>&#34;&lt;leader&gt;H&#34;</span><span class=p>,</span> <span class=s2>&#34;&lt;Cmd&gt;call v:lua.my_say_hello()&lt;CR&gt;&#34;</span><span class=p>,</span> <span class=p>{</span><span class=n>noremap</span> <span class=o>=</span> <span class=kc>true</span><span class=p>})</span>
+</span></span></code></pre></div><p>The situation was similar for autocommands and custom user commands.</p><p>In Neovim 0.7, it is now possible to use all of the usual configuration
+primitives (key mappings, autocommands, user commands, etc.) directly in Lua,
+with no Vimscript conversion necessary. This also makes it possible to bind
+key mappings and autocommands directly to <em>local</em> Lua functions:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Using a Lua function in a key mapping in 0.7</span>
+</span></span><span class=line><span class=cl><span class=n>vim.api</span><span class=p>.</span><span class=n>nvim_set_keymap</span><span class=p>(</span><span class=s2>&#34;n&#34;</span><span class=p>,</span> <span class=s2>&#34;&lt;leader&gt;H&#34;</span><span class=p>,</span> <span class=s2>&#34;&#34;</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>noremap</span> <span class=o>=</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>callback</span> <span class=o>=</span> <span class=kr>function</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Hello world!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Creating an autocommand in 0.7</span>
+</span></span><span class=line><span class=cl><span class=n>vim.api</span><span class=p>.</span><span class=n>nvim_create_autocmd</span><span class=p>(</span><span class=s2>&#34;BufEnter&#34;</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>pattern</span> <span class=o>=</span> <span class=s2>&#34;*&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>callback</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>args</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Entered buffer &#34;</span> <span class=o>..</span> <span class=n>args.buf</span> <span class=o>..</span> <span class=s2>&#34;!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>desc</span> <span class=o>=</span> <span class=s2>&#34;Tell me when I enter a buffer&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Creating a custom user command in 0.7</span>
+</span></span><span class=line><span class=cl><span class=n>vim.api</span><span class=p>.</span><span class=n>nvim_create_user_command</span><span class=p>(</span><span class=s2>&#34;SayHello&#34;</span><span class=p>,</span> <span class=kr>function</span><span class=p>(</span><span class=n>args</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Hello &#34;</span> <span class=o>..</span> <span class=n>args.args</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>nargs</span> <span class=o>=</span> <span class=s2>&#34;*&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>desc</span> <span class=o>=</span> <span class=s2>&#34;Say hi to someone&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p>You may notice that <code>nvim_set_keymap</code> must set the Lua callback as a key in
+the final table argument, while <code>nvim_create_user_command</code> can pass the
+callback function directly as a positional parameter. This is a consequence of
+Neovim&rsquo;s strict API contract, which mandates that after an API function makes
+it into a stable release, it&rsquo;s signature <em>must not</em> change in any way.
+However, because <code>nvim_create_user_command</code> is a new API function, we are able
+to add a bit of convenience by making its second argument accept either a
+string or a function.</p><p>Neovim 0.7 also includes a Lua-only convenience function <code>vim.keymap.set</code> for
+easily creating new key mappings:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>vim.keymap</span><span class=p>.</span><span class=n>set</span><span class=p>(</span><span class=s2>&#34;n&#34;</span><span class=p>,</span> <span class=s2>&#34;&lt;leader&gt;H&#34;</span><span class=p>,</span> <span class=kr>function</span><span class=p>()</span> <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Hello world!&#34;</span><span class=p>)</span> <span class=kr>end</span><span class=p>)</span>
+</span></span></code></pre></div><p><code>vim.keymap.set</code> differs from <code>nvim_set_keymap</code> in the following ways:</p><ul><li>It can accept either a string or a Lua function as its 3rd argument.</li><li>It sets <code>noremap</code> by default, as this is what users want 99% of the
+time.</li></ul><p>The help docs contain much more information: run <code>:h vim.keymap.set</code> in Neovim
+to learn more.</p><p>Finally, users can now use the API function <code>nvim_set_hl</code> to modify global
+highlight groups (the equivalent of using <code>:hi</code>), opening the door to pure-Lua
+colorschemes.</p><h2 id=distinguishing-modifier-keys>Distinguishing modifier keys</h2><p>Being a terminal based application, Neovim has long been subject to the
+constraints of terminal emulators, one of which being that many keys are
+encoded the same and thus indistinguishable to applications running in the
+terminal. For example, <code>&lt;Tab></code> and <code>&lt;C-I></code> use the same representation, as do
+<code>&lt;CR></code> and <code>&lt;C-M></code>. This has long meant that it is not possible to separately
+map <code>&lt;C-I></code> and <code>&lt;Tab></code>: mapping one necessarily maps both.</p><p>This has long been a point of annoyance and there are multiple solutions in
+the wild to address it. Neovim uses Paul Evans&rsquo; <a href=http://www.leonerd.org.uk/code/libtermkey/>libtermkey</a>, which in turn
+makes use of Evans&rsquo; own <a href=http://www.leonerd.org.uk/hacks/fixterms/>fixterms</a> proposal for encoding modifier keys in an
+unambiguous way. As long as the terminal emulator controlling Neovim sends
+keys encoded in this way, Neovim can correctly interpret them.</p><p>Neovim 0.7 now correctly <a href=https://github.com/neovim/neovim/pull/17825>distinguishes these modifier key combos</a> in
+its own input processing, so users can now map e.g. <code>&lt;Tab></code> and <code>&lt;C-I></code>
+separately. In addition, Neovim sends an <a href=https://github.com/neovim/neovim/pull/17844>escape sequence</a> on startup
+that signals to the controlling terminal emulator that it supports this style
+of key encoding. Some terminal emulators (such as iTerm2, foot, and tmux) use
+this sequence to programatically enable the different encoding.</p><p>A note of warning: this cuts both ways! You may find that existing mappings to
+<code>&lt;Tab></code> or <code>&lt;C-I></code> (or <code>&lt;CR></code>/<code>&lt;C-M></code>) no longer work. The fix is easy,
+however; simply modify your mapping to use the actual key you want to use.</p><p>In addition to disambiguating these modifier pairs, this also enables new
+key mappings that were not possible before, such as <code>&lt;C-;></code> and <code>&lt;C-1></code>.</p><p>Support for this depends largely on the terminal you are using, so this will
+not affect all users.</p><h2 id=global-statusline>Global statusline</h2><p>Neovim 0.7 introduces a new &ldquo;global&rdquo; statusline, which can be enabled by
+setting <code>laststatus=3</code>. Instead of having one statusline per window, the
+global statusline always runs the full available width of Neovim&rsquo;s containing
+window. This makes it useful to display information that does not change
+per-window, such as VCS information or the current working directory. Many
+statusline plugins are already making use of this new feature.</p><h2 id=filetypelua>filetype.lua</h2><p>In Neovim 0.7 there is a new (experimental) way to do filetype detection. A
+quick primer on filetype detection: when you first start Neovim it sources a
+file called <code>filetype.vim</code> in the <code>$VIMRUNTIME</code> directory. This file creates
+several hundred <code>BufRead,BufNewFile</code> autocommands whose sole purpose is to
+infer the filetype of the file based on information about the file, most
+commonly the file&rsquo;s name or extension, but sometimes also using the file&rsquo;s
+contents.</p><p>If you profile your startup time with <code>nvim --startuptime</code> you will notice
+that <code>filetype.vim</code> is one of the slowest files to load. This is because it is
+expensive to create so many autocommands. An alternative way to do filetype
+detection is to instead create one single autocommand that fires for <em>every</em>
+new buffer and then tries to match the filetype through a sequential series of
+steps. This is what the new <code>filetype.lua</code> does.</p><p>In addition to using a single autocommand, <code>filetype.lua</code> uses a table-based
+lookup structure, meaning that in many cases filetype detection happens in
+constant time. And if your Neovim is compiled with LuaJIT (which it most
+likely is), you also get the benefit of just-in-time compilation for this
+filetype matching.</p><p>This feature is currently <em>opt-in</em> as it does not yet completely match all of
+the filetypes covered by <code>filetype.vim</code>, although it is very close (I have
+been using it exclusively for many months without any issues). There are two
+ways to opt-in to this feature:</p><ol><li><p>Use <code>filetype.lua</code>, but fallback to <code>filetype.vim</code></p><p>Add <code>let g:do_filetype_lua = 1</code> to your <code>init.vim</code> file. This prevents any
+regressions in filetype matching and ensures that filetypes are always
+detected <em>at least</em> as well as they are with <code>filetype.vim</code>. However, you
+will pay the startup time cost of both <code>filetype.lua</code> and <code>filetype.vim</code>.</p></li><li><p>Use only <code>filetype.lua</code> and do not load <code>filetype.vim</code> at all</p><p>Add both <code>let g:do_filetype_lua = 1</code> and <code>let g:did_load_filetypes = 0</code> to
+your <code>init.vim</code>. This will exclusively use <code>filetype.lua</code> for filetype
+matching and provides all of the performance benefits outlined above, with
+the (small) risk of missed filetype detection.</p></li></ol><p>In addition to performance benefits, <code>filetype.lua</code> also makes it easy to
+add custom filetypes. Simply create a new file <code>~/.config/nvim/filetype.lua</code>
+and call <code>vim.filetype.add</code> to create new matching rules. For example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>vim.filetype</span><span class=p>.</span><span class=n>add</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>    <span class=n>extension</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>foo</span> <span class=o>=</span> <span class=s2>&#34;fooscript&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=n>filename</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=s2>&#34;Foofile&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;fooscript&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=n>pattern</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=s2>&#34;~/%.config/foo/.*&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;fooscript&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p><code>vim.filetype.add</code> takes a table with 3 (optional) keys corresponding to
+&ldquo;extension&rdquo;, &ldquo;filename&rdquo;, and &ldquo;pattern&rdquo; matching. The value of each table entry
+can either be a string (in which case it is interpreted as the filetype) or a
+function. For example, you may want to override Neovim&rsquo;s default behavior of
+always classifying <code>.h</code> files as C++ headers by using a heuristic that only
+sets the filetype to C++ if the header file includes another C++-style header
+(i.e. one without a trailing <code>.h</code>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>vim.filetype</span><span class=p>.</span><span class=n>add</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>    <span class=n>extension</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>h</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>path</span><span class=p>,</span> <span class=n>bufnr</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=kr>if</span> <span class=n>vim.fn</span><span class=p>.</span><span class=n>search</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\\</span><span class=s2>C^#include &lt;[^&gt;.]</span><span class=se>\\</span><span class=s2>+&gt;$&#34;</span><span class=p>,</span> <span class=s2>&#34;nw&#34;</span><span class=p>)</span> <span class=o>~=</span> <span class=mi>0</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>                <span class=kr>return</span> <span class=s2>&#34;cpp&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=kr>end</span>
+</span></span><span class=line><span class=cl>            <span class=kr>return</span> <span class=s2>&#34;c&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=kr>end</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p>We are bringing <code>filetype.lua</code> closer to full parity with <code>filetype.vim</code> every
+day. The goal is to make it the default in Neovim 0.8 (with the ability to
+opt-out to the traditional <code>filetype.vim</code>).</p><h2 id=client-server-communication>Client-server communication</h2><p>Neovim 0.7 brings some of the features of <a href=https://github.com/mhinz/neovim-remote>neovim-remote</a> into the core
+editor. You can now use <code>nvim --remote</code> to open a file in an already running
+instance of Neovim. An example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># In one shell session</span>
+</span></span><span class=line><span class=cl>nvim --listen /tmp/nvim.sock
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># In another shell session, opens foo.txt in the first Nvim instance</span>
+</span></span><span class=line><span class=cl>nvim --server /tmp/nvim.sock --remote foo.txt
+</span></span></code></pre></div><p>One use case for the new remote functionality is the ability to open files
+from the embedded terminal emulator in the primary Neovim instance, rather
+than creating an embedded Neovim instance running inside Neovim itself.</p><h2 id=looking-ahead-to-08>Looking ahead to 0.8</h2><p>Neovim is a loosely structured project of motivated individuals who do the
+work for fun; thus, any roadmap is always a bit of a guessing game. However,
+there are some things already brewing that you <em>might</em> see in Neovim 0.8:</p><ul><li>Improvements to Treesitter support</li><li>&ldquo;Projects&rdquo; support for LSP</li><li><a href=https://github.com/neovim/neovim/pull/9496>Anti-conceal</a></li><li><a href=https://github.com/neovim/neovim/pull/10071>Fully remote TUI</a></li><li>And more&mldr;</li></ul></div></div><div class=col-narrow><h3>News</h3><p>Find more updates in the <a href=/news/archive/>news archive</a>.
+There's also an <a href=/news/index.xml>RSS feed</a>.</p><h3>What is Neovim?</h3><p>Neovim is a Vim-based text editor engineered for
+<a href=https://github.com/neovim/neovim/wiki/Related-projects#api-clients>extensibility</a>
+and
+<a href=https://neovim.io/doc/user/vim_diff.html#nvim-features>usability</a>,
+to encourage new applications and
+<a href=https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md#getting-started>contributions</a>.<ul><li><a href=/charter/>Vision</a></li><li><a href=/roadmap/>Roadmap</a></li></ul></p><h3>Discuss</h3><p>Visit <a href=https://app.element.io/#/room/#neovim:matrix.org>#neovim:matrix.org</a>
+or #neovim on irc.libera.chat to chat with the team.</p><p style=vertical-align:middle><a href=https://twitter.com/Neovim class=twitter-follow-button data-show-count=false data-size=large>Follow @Neovim on X</a>
+<script>!function(e,t,n){var s,o=e.getElementsByTagName(t)[0],i=/^http:/.test(e.location)?"http":"https";e.getElementById(n)||(s=e.createElement(t),s.id=n,s.src=i+"://platform.twitter.com/widgets.js",o.parentNode.insertBefore(s,o))}(document,"script","twitter-wjs")</script><br><a rel=me href=https://hachyderm.io/@neovim>Mastodon</a><br><a href=https://bsky.app/profile/neovim.io>Bluesky</a></p></div></div><footer><div class="container flex"><div><a href=/about/>About</a>
+&#183;
+<a href=/news/>News</a>
+&#183;
+<a href=https://github.com/neovim/neovim>Development</a>
+&#183;
+<a href=/doc/>Documentation</a>
+&#183;
+<a href=/sponsors/>Sponsors</a>
+&#183;
+<a href=https://store.neovim.io/>Store</a></div><div>This site's source is <a href=https://github.com/neovim/neovim.github.io/>hosted on GitHub</a>.</div></div></footer><script src=/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/@docsearch/js@3></script><script type=module>
+      docsearch({
+        container: '#docsearch',
+        appId: 'X185E15FPG',
+        apiKey: 'b5e6b2f9c636b2b471303205e59832ed',
+        indexName: 'nvim',
+      });
+    </script></body></html>

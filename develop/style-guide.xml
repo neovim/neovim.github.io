@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?>
+<!DOCTYPE doc [
+<!ATTLIST xsl:stylesheet
+id ID #REQUIRED>
+]>
+<doc>
+ <!--Start XSL-->
+ <xsl:stylesheet id="stylesheet"
+  version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+
+  <xsl:template match="/doc">
+   <html>
+    <body>
+     <h2>Moved to ":help dev-style"</h2>
+     <p>Style guidelines now live at <code>:help dev-style</code></p>
+     <p><a href="https://neovim.io/doc/user/dev_style.html#dev-style">https://neovim.io/doc/user/dev_style.html#dev-style</a></p>
+    </body>
+   </html>
+  </xsl:template>
+ </xsl:stylesheet>
+</doc>

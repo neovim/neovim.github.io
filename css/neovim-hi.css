@@ -1,0 +1,71 @@
+/*
+ * Neovim color palette for highlighting markdown codeblocks.
+ * For use with Hugo.
+ * See also: static/highlight/styles/neovim.min.css
+ * License: Apache-2.0
+ */
+
+:root {
+  /* Neovim dark palette - regular/non-bright */
+  --hi-black: #2c2e33;
+  --hi-red: #5e0009;
+  --hi-green: #015825;
+  --hi-yellow: #6e5600;
+  --hi-blue: #005078;
+  --hi-cyan: #007676;
+  --hi-white: #4f5258;
+
+  /* Neovim dark palette - bright */
+  --hi-b-black: #4f5258;
+  --hi-b-red: #5e0009;
+  --hi-b-green: #015825;
+  --hi-b-yellow: #6e5600;
+  --hi-b-blue: #005078;
+  --hi-b-cyan: #007676;
+  --hi-b-white: #9b9ea4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neovim light palette - regular/non-bright */
+    --hi-black: #9b9ea4;
+    --hi-red: #ffbcb5;
+    --hi-green: #aaedb7;
+    --hi-yellow: #f4d88c;
+    --hi-blue: #9fd8ff;
+    --hi-cyan: #83efef;
+    --hi-white: #d7dae1;
+
+    /* Neovim light palette - bright */
+    --hi-b-black: #c4c6cd;
+    --hi-b-red: #ffbcb5;
+    --hi-b-green: #aaedb7;
+    --hi-b-yellow: #f4d88c;
+    --hi-b-blue: #9fd8ff;
+    --hi-b-cyan: #83efef;
+    --hi-b-white: #ebeef5;
+  }
+}
+
+/*! Neovim-based syntax highlighting */
+.highlight,.highlight pre,.highlight table { color: var(--hi-b-white) !important; }
+.highlight .err { color: var(--hi-b-red) !important; }
+.highlight .cs { color: var(--hi-cyan) !important; }
+.highlight .nf { color: var(--hi-b-blue) !important; }
+.highlight .c,.highlight .cm,.highlight .c1 { color: #9b9ea4 !important; }
+.highlight .g,.highlight .l,.highlight .x,.highlight .ge,.highlight .gs,.highlight .ld,.highlight .ni,
+.highlight .nl,.highlight .nx,.highlight .py,.highlight .n,.highlight .go,
+.highlight .h { color: var(--hi-b-cyan) !important; }
+.highlight .k { color: var(--hi-b-blue) !important; }
+.highlight .s1 { color: var(--hi-b-green) !important; }
+.highlight .nb,.highlight .bp { color: var(--hi-b-yellow) !important; }
+.highlight .nc,.highlight .nn { color: var(--hi-b-cyan) !important; }
+.highlight .o,.highlight .p,.highlight .na,.highlight .ne { color: var(--hi-b-blue) !important; }
+.highlight .gp,.highlight .w,.highlight .gh,.highlight .gu { color: var(--hi-white) !important; }
+.highlight .cp,.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,
+.highlight .sh,.highlight .si,.highlight .ss,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,
+.highlight .kr,.highlight .kt,.highlight .nt,.highlight .ow { color: var(--hi-b-green) !important; }
+.highlight .gr,.highlight .gt,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,
+.highlight .mo,.highlight .sr,.highlight .il { color: var(--hi-b-cyan) !important; }
+.highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi,.highlight .nd,
+.highlight .sx { color: var(--hi-b-yellow) !important; }

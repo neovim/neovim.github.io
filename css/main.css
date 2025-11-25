@@ -1,0 +1,608 @@
+:root {
+  --main-breakpoint: 60em;
+
+  --sans-serif-fonts: var(--bs-font-sans-serif);
+
+  /* Colors */
+  /* Hue is between neovim green and blue for text/background */
+  /* Saturation is low */
+  --fg-color: #29332f;
+  --inverse-fg-color: #a9d5c4; /* Dark-mode fg color. */
+  --bg-color: #e7eee8;
+  --accent-bg-color: #d3e4db;
+  --link-color: #195174;
+  --accent-color: #000;
+  --border-color: #658fac;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #a9d5c4;
+    --inverse-fg-color: #29332f; /* Light-mode fg color. */
+    --bg-color: #0f191f;
+    --accent-bg-color: #0b151b;
+    --link-color: #5fb950;
+    --accent-color: #61ff00;
+    --border-color: #1174b1;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --fg-color: #000;
+  }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #fff;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --sans-serif-fonts: var(--bs-font-sans-serif);
+  }
+}
+
+body {
+  font-family: var(--sans-serif-fonts);
+  font-size: initial;
+  line-height: 1.6;
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+}
+
+@media (min-width: 50em) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline var(--border-color);
+  transition: all ease-in-out 140ms;
+}
+
+/* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
+a:has(> img) {
+  display: block;
+}
+
+a:focus,
+a:hover {
+  color: var(--accent-color);
+  background-color: var(--accent-bg-color);
+  text-decoration-thickness: 0.2em;
+  text-decoration-color: var(--border-color);
+}
+
+.current a {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--sans-serif-fonts);
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 0.66em 0;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+blockquote {
+  border-left: 0.3em solid var(--border-color);
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+blockquote small {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+
+blockquote small:before {
+  content: "\2014 \00A0";
+}
+
+pre {
+  overflow: auto;
+  padding: 0.8em;
+  color: var(--fg-color);
+  border-radius: 0.2em;
+  border: solid 1pt var(--border-color);
+  box-shadow: 0 0 2px var(--accent-bg-color);
+  background-color: var(--accent-bg-color);
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+/* Keyboard input should be distinctive from <pre> and <code>. */
+kbd {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+  color: var(--accent-color);
+  background-color: #ebebeb; /* var(--accent-bg-color); */
+  border: 1pt solid var(--border-color); /* #555 */
+  border-radius: 3px; /* rounded corners */
+  padding: 2px 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  kbd {
+    box-shadow: 2px 2px 4px var(--border-color), inset 0px 0px 0px 2px rgba(255,255,255,0.2);
+    color: var(--fg-color);
+    background-color: var(--accent-bg-color);
+    border: 1pt solid var(--fg-color); /* #555 */
+  }
+}
+
+code,
+pre,
+samp {
+  background-color: var(--accent-bg-color);
+  color: var(--fg-color);
+  /* Use bootstrap font defaults. */
+  /* font-family: var(--bs-font-monospace); */
+  font-size: 0.9em;
+}
+
+/*
+ * Content container
+ *
+ * Centered container for all content
+ */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container:before {
+  display: inherit;
+  content: none;
+}
+
+@media (min-width: 30em) {
+  .container {
+    /* margin: 0 auto; */
+    grid-template-columns: initial;
+  }
+}
+.flex {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+.col3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+@media (max-width: 525px) {
+  .col3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.golden-grid {
+  display: grid;
+  grid-template-columns: 61% auto;
+  grid-gap: 1em;
+}
+
+@media (max-width: 525px) {
+  .golden-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*
+ * Navbar
+ *
+ * Logo and navigation at the top of the page
+ */
+
+.nav-link {
+  color: var(--link-color);
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--accent-color);
+}
+
+.navbar-toggler {
+  border-width: 0;
+  color: var(--fg-color);
+}
+
+/**
+ * Logo
+ */
+.navbar-brand {
+  color: var(--link-color);
+}
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+  color: var(--accent-color);
+}
+
+/**
+ * Menu dropdown
+ */
+
+#neovimDropdown.show {
+  color: var(--accent-color);
+}
+
+.dropdown-menu {
+  background-color: var(--accent-bg-color);
+}
+
+.dropdown-item {
+  color: var(--link-color);
+}
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item:active {
+  color: var(--bg-color);
+  background-color: var(--link-color);
+}
+
+/*
+ * Masthead
+ *
+ * Big intro billboard
+ */
+
+.masthead {
+  background-color: var(--accent-bg-color);
+  text-align: center;
+  padding: 1em 0.25em;
+  display: grid;
+}
+
+.masthead .lead {
+  font-weight: 700;
+  font-size: 2em;
+  font-family: var(--sans-serif-fonts);
+  margin: 0;
+  padding-bottom: 0.25em;
+}
+
+/*
+ * Front page
+ *
+ * Big section blocks for the front page
+ */
+
+.front-section {
+  padding: 4vh 0;
+}
+
+.front-section.shaded {
+  background-color: var(--accent-bg-color);
+}
+
+/*
+ * FAQs
+ *
+ * Formatted as a definition list
+ */
+
+.faqs dt {
+  font-weight: 700;
+}
+
+/* Responsive iframe container. */
+.intro-video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+  /* width: 560px; */
+  /* height: 315px; */
+  /* align-items: center; */
+}
+
+/* Responsive iframe div, fills its container. */
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.faqs dd {
+  color: var(--fg-color);
+  margin-left: 0;
+  margin-bottom: 1.3em;
+}
+
+.faqs dd pre {
+  font-size: 0.9em;
+}
+
+/*
+ * Buttons
+ *
+ * Fun to click
+ */
+
+.btn {
+  background-color: #37b026;
+  background: linear-gradient(#00b952 0 95%, #378ccc 95% 100%);
+  color: white;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  margin: 0 0.25em;
+  font-family: var(--sans-serif-fonts);
+  font-weight: bold;
+  font-size: 1.2em;
+
+  vertical-align: initial;
+  text-align: initial;
+  transition: all 96ms ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+  color: white;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 2px var(--accent-color), 0 0 10px gold;
+  outline: 4px solid white;
+}
+
+a.primary {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
+/*
+ * Sponsors
+ *
+ * Callout-style box
+ */
+.sponsors-main {
+  padding: 0.3em 1.3em;
+  border-radius: 0.3em;
+  margin-top: 0.6em;
+  font-size: 0.9em;
+}
+
+.first-level-sponsor {
+  margin-bottom: 20px;
+}
+
+.second-level-sponsors {
+  width: 100%;
+}
+
+.second-level-sponsors img {
+  width: auto;
+}
+
+/*
+ * Footer
+ *
+ * Links, legalese, etc.
+ */
+
+footer {
+  border-top: solid 1px var(--border-color);
+  padding: 1em 0;
+}
+
+@media (min-width: var(--main-breakpoint)) {
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+/*
+ * Misc
+ *
+ * Odds 'n ends
+ */
+
+.light {
+  opacity: 0.9;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+/*
+ * Newsletter CSS
+ */
+
+.newsletter img {
+  width: 100%;
+}
+
+/*
+ * Donation
+ */
+
+.donate {
+  display: grid;
+  grid-template-columns: 32px auto;
+  align-items: center;
+  border-radius: 8px;
+  gap: 0.3em;
+  background-color: var(--border-color);
+}
+
+.donate .icon {
+  width: calc(32px + 1em);
+  justify-self: center;
+}
+
+.donate input {
+  font-family: var(--bs-font-monospace);
+
+  line-height: 2;
+  width: 100%;
+  color: var(--accent-color);
+  background-color: var(--border-color);
+  white-space: nowrap;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  border: none;
+}
+
+/*
+ * Poll info
+ */
+iframe.poll {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+/*
+ * News section
+ */
+
+ .news-section table {
+    margin-top: 1rem;
+ }
+
+/*
+ * DocSearch overrides
+ */
+
+:root {
+  --docsearch-primary-color: var(--accent-color);
+  --docsearch-text-color: var(--fg-color);
+  --docsearch-highlight-color: var(--link-color);
+  --docsearch-container-background: rgba(231, 238, 232, 0.2);
+
+  /* modal */
+  --docsearch-modal-background: var(--bg-color);
+  --docsearch-modal-shadow: none;
+
+  /* searchbox */
+  --docsearch-searchbox-background: var(--accent-bg-color);
+  --docsearch-searchbox-focus-background: var(--accent-bg-color);
+
+  /* hit */
+  --docsearch-hit-color: var(--docsearch-text-color);
+  --docsearch-hit-active-color: #fff;
+  --docsearch-hit-background: var(--accent-bg-color);
+  --docsearch-hit-shadow: none;
+
+  /* key */
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
+
+  /* footer */
+  --docsearch-footer-background: var(--bg-color);
+  --docsearch-footer-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --docsearch-primary-color: var(--accent-color);
+    --docsearch-text-color: var(--fg-color);
+    --docsearch-highlight-color: var(--link-color);
+    --docsearch-container-background: rgba(231, 238, 232, 0.2);
+
+    /* modal */
+    --docsearch-modal-background: var(--bg-color);
+    --docsearch-modal-shadow: none;
+
+    /* searchbox */
+    --docsearch-searchbox-background: var(--accent-bg-color);
+    --docsearch-searchbox-focus-background: var(--accent-bg-color);
+
+    /* hit */
+    --docsearch-hit-color: var(--docsearch-text-color);
+    --docsearch-hit-active-color: #fff;
+    --docsearch-hit-background: var(--accent-bg-color);
+    --docsearch-hit-shadow: none;
+
+    /* key */
+    --docsearch-key-gradient: transparent;
+    --docsearch-key-shadow: none;
+
+    /* footer */
+    --docsearch-footer-background: var(--bg-color);
+    --docsearch-footer-shadow: none;
+  }
+}
+
+.DocSearch mark {
+  padding: 0;
+}
+
+.DocSearch footer {
+  border-top: 1px solid var(--link-color)
+}
+
+.DocSearch-Button-Key {
+  top: 0;
+  padding: 0;
+  margin-right: 0;
+  width: auto;
+}
+
+.DocSearch-Button-Keys {
+  border-radius: 4px;
+  padding: 0 6px;
+  min-width: auto;
+  border: 1px solid var(--hi-b-black);
+}
+
+.DocSearch-Button {
+  border:  1px solid var(--docsearch-primary-color)
+}
+
+@media (prefers-color-scheme: dark) {
+  .DocSearch footer {
+      border-top: 1px solid var(--link-color)
+  }
+
+  .DocSearch-Button-Keys {
+    border-radius: 4px;
+    padding: 0 6px;
+    min-width: auto;
+    border: 1px solid var(--hi-b-black);
+  }
+
+  .DocSearch-Button {
+    border:  1px solid var(--docsearch-primary-color)
+  }
+}

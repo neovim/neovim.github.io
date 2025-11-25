@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Neovim</title><link>/posts/</link><description>Recent content in Posts on Neovim</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Neovim 0.11</title><link>/news/2025/03/</link><pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate><guid>/news/2025/03/</guid><description>&lt;p&gt;Nvim 0.11 was released.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter is here: &lt;a href="https://gpanders.com/blog/whats-new-in-neovim-0-11"&gt;https://gpanders.com/blog/whats-new-in-neovim-0-11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Features are described here: &lt;a href="https://neovim.io/doc/user/news-0.11.html"&gt;https://neovim.io/doc/user/news-0.11.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Google Summer of Code 2025</title><link>/news/2025/02/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>/news/2025/02/</guid><description>&lt;p&gt;Neovim is participating in &lt;a href="https://summerofcode.withgoogle.com/programs/2025/organizations/neovim"&gt;Google Summer of Code 2025&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re a student and want to work on Neovim for GSoC, &lt;a href="https://github.com/neovim/neovim/wiki/Google-Summer-of-Code"&gt;start here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The next steps are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you have a project idea or want to take one of the items listed there,
+create a new issue (which you can update over the next days/weeks) with
+a scope/proposal. Aim for &amp;ldquo;clarity without verbosity&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Start getting familiar with the codebase by working on one or more
+&lt;a href="https://github.com/neovim/neovim/issues?q=is%3Aopen+is%3Aissue+label%3Acomplexity%3Alow"&gt;complexity:low&lt;/a&gt; issues (or any other issue that feels tractable).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thank you for your interest in Neovim!&lt;/p&gt;</description></item><item><title>Neovim 0.10</title><link>/news/2024/05/</link><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid>/news/2024/05/</guid><description>&lt;p&gt;Nvim 0.10 was released.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter is here: &lt;a href="https://gpanders.com/blog/whats-new-in-neovim-0.10/"&gt;https://gpanders.com/blog/whats-new-in-neovim-0.10/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LWN: &lt;a href="https://lwn.net/Articles/973917/"&gt;https://lwn.net/Articles/973917/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Features are described here: &lt;a href="https://neovim.io/doc/user/news-0.10.html"&gt;https://neovim.io/doc/user/news-0.10.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Vim Boss</title><link>/news/2023/08/</link><pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate><guid>/news/2023/08/</guid><description>&lt;p&gt;Bram is one of my heroes. That&amp;rsquo;s literal and recursive: when I say it,
+internally I check before making a frivolous claim, which is a feature of this
+particular role-model; &amp;ldquo;What would Bram do?&amp;rdquo; is a fixture in me which informs my
+choices.&lt;/p&gt;
+&lt;p&gt;Those who studied &lt;code&gt;vim_dev&lt;/code&gt; and the Vim source and docs, accumulated treasure
+from a stream of copious messages and spare impressions. But also from what he
+omitted: he never appealed to sensationalism or personal judgements.&lt;/p&gt;</description></item><item><title>What Neovim shipped in 2022</title><link>/news/2022/12/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>/news/2022/12/</guid><description>&lt;p&gt;Neovim is the &lt;a href="https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-new-collab-tools-love-dread"&gt;world&amp;rsquo;s most-loved editor&lt;/a&gt;. That&amp;rsquo;s just science:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2023/3_1537128649228537859.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Here are some highlights from Neovim 2022 (Nvim 0.8) development.&lt;/p&gt;
+&lt;h2 id="ui"&gt;UI&lt;/h2&gt;
+&lt;p&gt;Eye candy first!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;winhighlight&amp;rsquo; was throughly &lt;a href="https://github.com/neovim/neovim/pull/13457"&gt;reimplemented&lt;/a&gt; as window-local highlight namespaces. This is backwards-compatible while enabling many new usecases, like window-local syntax highlighting.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/neovim/neovim/issues/9342"&gt;global &amp;lsquo;statusline&amp;rsquo;&lt;/a&gt; designates one statusline for all windows. Try it:
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set laststatus=3
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'winbar'&lt;/code&gt; is like an extra statusline at the top of each window. It complements &lt;code&gt;laststatus=3&lt;/code&gt;:
+&lt;pre tabindex="0"&gt;&lt;code&gt;set winbar=%f
+set laststatus=3
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'winbar'&lt;/code&gt; and &lt;code&gt;'statusline'&lt;/code&gt; gained &lt;a href="https://github.com/neovim/neovim/pull/18650"&gt;support for mouse-click regions&lt;/a&gt; (as &amp;rsquo;tabline&amp;rsquo; has had since 2016):
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="/images/2023/3_1527849187110440961.jpg" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Experimental&lt;/em&gt; &lt;a href="https://github.com/neovim/neovim/pull/16251"&gt;zero-height command-line&lt;/a&gt;:
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set cmdheight=0
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;a href="https://github.com/neovim/neovim/pull/12355"&gt;&amp;lsquo;mousescroll&amp;rsquo; option&lt;/a&gt; controls vertical/horizontal mouse scroll behavior.
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set mousescroll=ver:5,hor:2
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;The new &lt;a href="https://github.com/neovim/neovim/pull/20621"&gt;&amp;lsquo;statuscolumn&amp;rsquo;&lt;/a&gt; option gives full control of the &amp;ldquo;gutter&amp;rdquo;, with the same familiar format of &amp;lsquo;statusline&amp;rsquo;. It even supports click events, just like &amp;lsquo;statusline&amp;rsquo;, &amp;rsquo;tabline&amp;rsquo;, and &amp;lsquo;winbar&amp;rsquo;.
+&lt;ul&gt;
+&lt;li&gt;Feature author @luukvbaal also provides a &lt;a href="https://github.com/luukvbaal/statuscol.nvim"&gt;plugin&lt;/a&gt; with various pre-packaged &amp;lsquo;statuscolumn&amp;rsquo; configs.&lt;/li&gt;
+&lt;li&gt;Try it!
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set rnu nu 
+:let &amp;amp;stc=&amp;#39;%#NonText#%{&amp;amp;nu?v:lnum:&amp;#34;&amp;#34;}%=%{&amp;amp;rnu&amp;amp;&amp;amp;(v:lnum%2)?&amp;#34;\ &amp;#34;.v:relnum:&amp;#34;&amp;#34;}%#LineNr#%{&amp;amp;rnu&amp;amp;&amp;amp;!(v:lnum%2)?&amp;#34;\ &amp;#34;.v:relnum:&amp;#34;&amp;#34;}&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Marks can &lt;a href="https://github.com/neovim/neovim/pull/15831"&gt;save and restore viewport info&lt;/a&gt;.
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set jumpoptions=view
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;When you jump around, or switch buffers with &lt;!-- raw HTML omitted --&gt;ctrl-^&lt;!-- raw HTML omitted --&gt;, the viewport is restored instead of resetting/recentering vertically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://neovim.io/doc/user/lua.html#vim.ui_attach%28%29"&gt;vim.ui_attach&lt;/a&gt; (experimental) enables in-process Lua plugins to hook into the same events exposed to all Nvim UIs. &lt;a href="https://twitter.com/Neovim/status/1578146342991527938/photo/1"&gt;pic.twitter.com/w9U87jGfIL&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/folke/noice.nvim"&gt;noice.nvim&lt;/a&gt; was an early adopter (a matter of days!).&lt;/li&gt;
+&lt;li&gt;&lt;img src="/images/2023/noice-ui_attach.webp" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lsp"&gt;LSP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.vikasraj.dev/blog/lsp-neovim-retrospective"&gt;Summary&lt;/a&gt; of the history and status of Nvim builtin LSP support.&lt;/li&gt;
+&lt;li&gt;Nvim LSP client now &lt;a href="https://github.com/neovim/neovim/pull/19916"&gt;supports&lt;/a&gt; connecting to language servers by TCP.
+&lt;pre tabindex="0"&gt;&lt;code&gt;vim.lsp.start({ name = &amp;#39;godot&amp;#39;, cmd = vim.lsp.rpc.connect(&amp;#39;127.0.0.1&amp;#39;, 6008) })
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;New &lt;a href="https://github.com/neovim/neovim/pull/18507"&gt;core events for LSP&lt;/a&gt;: &lt;code&gt;LspAttach&lt;/code&gt;, &lt;code&gt;LspDetach&lt;/code&gt;. Example:
+&lt;pre tabindex="0"&gt;&lt;code&gt;vim.api.nvim_create_autocmd(&amp;#39;LspAttach&amp;#39;, {
+ group = yourGroupID,
+ callback = function(args)
+ local client = vim.lsp.get_client_by_id(args.data.client_id)
+ your_callbac_func(client, args.buf)
+ end
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vim.lsp.get_active_clients()&lt;/code&gt; learned to filter (this will be a standard pattern in the Lua stdlib):
+&lt;pre tabindex="0"&gt;&lt;code&gt;get_active_clients({id=42})
+get_active_clients({bufnr=99})
+get_active_clients({name=&amp;#39;tsserver&amp;#39;})
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="editor"&gt;Editor&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nvim now &lt;a href="https://github.com/neovim/neovim/pull/15391"&gt;includes&lt;/a&gt; treesitter parsers for C, Lua, and Vimscript. This is a step towards &amp;ldquo;treesitter by default&amp;rdquo; for common languages, instead of regex-based vim syntax definitions.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/neovim/neovim/pull/19419"&gt;tree-sitter spellcheck&lt;/a&gt; constrained to extmark region.&lt;/li&gt;
+&lt;li&gt;The diff-mode &lt;a href="https://github.com/neovim/neovim/pull/14537"&gt;&amp;ldquo;linematch&amp;rdquo; feature&lt;/a&gt; improves rendering of same-line diff changes:
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set diffopt+=linematch:60
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;img src="/images/2023/3_1589419182713602048.jpg" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Nvim supports &lt;a href="https://editorconfig.org"&gt;editorconfig&lt;/a&gt;, and &lt;a href="https://github.com/neovim/neovim/pull/21633"&gt;enables it&lt;/a&gt; by default. Nvim detects &amp;ldquo;.editorconfig&amp;rdquo; files in your project and applies the settings.
+&lt;ul&gt;
+&lt;li&gt;To opt-out of this feature, add this to your config:
+&lt;pre tabindex="0"&gt;&lt;code&gt;vim.g.editorconfig_enable = false
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Plugins can provide a &lt;a href="https://neovim.io/doc/user/map.html#%3Acommand-preview"&gt;live preview&lt;/a&gt; of user-defined commands.
+&lt;ul&gt;
+&lt;li&gt;This extends the builtin &lt;code&gt;'inccommand'&lt;/code&gt; feature (since 2017), which show the effects of &lt;code&gt;:substitute&lt;/code&gt; (&lt;code&gt;:s/foo/bar&lt;/code&gt;) as you type.&lt;/li&gt;
+&lt;li&gt;Example: The &lt;a href="https://github.com/smjonas/live-command.nvim"&gt;live-command.nvim&lt;/a&gt; plugin adds preview for &lt;code&gt;:normal&lt;/code&gt; and macros:
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You &lt;a href="https://github.com/neovim/neovim/pull/18194"&gt;can now&lt;/a&gt; implement &lt;a href="https://neovim.io/doc/user/options.html#'inccommand'"&gt;&amp;lsquo;inccommand&amp;rsquo;&lt;/a&gt; preview for any user-defined command. This builds a foundation for live preview of &lt;code&gt;:normal&lt;/code&gt;, &lt;a href="https://github.com/neovim/neovim/pull/18815"&gt;:global&lt;/a&gt;, etc.
+&lt;pre tabindex="0"&gt;&lt;code&gt;vim.api.nvim_create_user_command(
+ &amp;#39;MyCmd&amp;#39;,
+ my_cmd,
+ { …, preview = my_cmd_preview })
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;:write&lt;/code&gt; command &lt;a href="https://github.com/neovim/neovim/issues/19884"&gt;gained&lt;/a&gt; the &lt;code&gt;++p&lt;/code&gt; flag, so this creates parent/dir/ if it doesn&amp;rsquo;t exist:
+&lt;pre tabindex="0"&gt;&lt;code&gt;:edit parent/dir/file.txt
+:write ++p
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Nvim &lt;a href="https://github.com/neovim/neovim/pull/15583"&gt;now stores&lt;/a&gt; &amp;ldquo;session data&amp;rdquo; (shada, persistent undo, &amp;hellip;) in &lt;code&gt;$XDG_STATE_HOME&lt;/code&gt; (&lt;del&gt;/.local/state) instead of &lt;code&gt;$XDG_CACHE_HOME&lt;/code&gt; (&lt;/del&gt;/.cache). This change only affects macOS/unix, the Windows locations are unchanged.&lt;/li&gt;
+&lt;li&gt;Plugins can also use &lt;code&gt;stdpath('log')&lt;/code&gt; to get the recommended location for log files.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;gO&lt;!-- raw HTML omitted --&gt; in the manpage viewer (&lt;code&gt;:help :Man&lt;/code&gt;) shows an outline (table of contents) in the location list. Now the outline also &lt;a href="https://github.com/neovim/neovim/pull/17558"&gt;lists the flags&lt;/a&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="/images/2023/3_1526166272706215938.jpg" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="performance"&gt;Performance&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/neovim/neovim/issues/18604"&gt;Filetype detection&lt;/a&gt; uses Lua (instead of Vimscript) + &amp;ldquo;on-demand&amp;rdquo; strategy =&amp;gt; 7x speedup vs the old filetype.vim, saves 5+ ms on startup:
+&lt;pre tabindex="0"&gt;&lt;code&gt;before:
+ 9.0ms: sourcing …/runtime/filetype.vim
+after:
+ 1.3ms: sourcing …/runtime/filetype.lua
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nvim --startuptime&lt;/code&gt; &lt;a href="https://github.com/neovim/neovim/pull/19267"&gt;now reports&lt;/a&gt; Lua &lt;code&gt;require()&lt;/code&gt; times.
+&lt;pre tabindex="0"&gt;&lt;code&gt;000.010 000.010: --- NVIM STARTING ---
+000.198 000.188: event init
+...
+026.333 001.109 001.101: require(&amp;#39;vim.lsp.protocol&amp;#39;)
+028.144 000.423 000.423: require(&amp;#39;vim.lsp._snippet&amp;#39;)
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;A brief summary of Nvim &amp;lsquo;packpath&amp;rsquo; improvements:
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="/images/2023/3_1531381005990473730.jpg" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kevinhwang91/nvim-ufo"&gt;Fast, slick folds&lt;/a&gt; provided by a plugin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="defaults"&gt;Defaults&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;mouse&amp;rsquo; option is &lt;a href="https://github.com/neovim/neovim/pull/19290"&gt;set by default&lt;/a&gt; (again). Was disabled since 2017 &amp;ldquo;until a better approach&amp;rdquo;. Now we have it:
+&lt;pre tabindex="0"&gt;&lt;code&gt;mouse=nvi
+Type &amp;#34;:&amp;#34; (cmdline-mode) to temporarily disable mouse. Right-click shows a popup menu.
+Try it!
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="api"&gt;API&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/neovim/neovim/pull/18231"&gt;nvim_parse_cmd()&lt;/a&gt; provides the foundation for &lt;code&gt;nvim_cmd([list])&lt;/code&gt; and &amp;ldquo;user cmd-preview&amp;rdquo;! And super useful for defining custom cmdline (&lt;code&gt;:&lt;/code&gt;) behavior.
+&lt;pre tabindex="0"&gt;&lt;code&gt;:echo nvim_parse_cmd(&amp;#39;.,$g/foo/bar&amp;#39;, {})
+{
+ &amp;#39;cmd&amp;#39;: &amp;#39;global&amp;#39;,
+ &amp;#39;args&amp;#39;: [&amp;#39;/foo/bar&amp;#39;],
+ &amp;#39;mods&amp;#39;: {…},
+ &amp;#39;magic&amp;#39;: {&amp;#39;file&amp;#39;: v:false, &amp;#39;bar&amp;#39;: v:false}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;nvim_cmd()&lt;/code&gt; to call any Vim legacy command in a structured way, like &lt;code&gt;system([...])&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t need &lt;code&gt;fnameescape()&lt;/code&gt;: special chars are controlled by the &lt;code&gt;magic&lt;/code&gt; param.
+&lt;pre tabindex="0"&gt;&lt;code&gt;nvim_cmd({cmd=&amp;#39;vimgrep&amp;#39;, args={&amp;#39;/%s/j&amp;#39;, &amp;#39;**&amp;#39;}}, {})
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/noib3/nvim-oxi"&gt;nvim-oxi&lt;/a&gt;: &amp;ldquo;first-class Rust bindings (FFI to Nvim C) to the rich API exposed by Neovim.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lua"&gt;Lua&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out the &lt;a href="https://neovim.io/doc/user/lua.html#vim.fs"&gt;vim.fs&lt;/a&gt; module for filesystem operations.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vim.fs.find()&lt;/code&gt; is now the canonical way to find &amp;ldquo;root files&amp;rdquo;, common for LSP configuration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vim.cmd&lt;/code&gt; is the Lua &lt;code&gt;nvim_cmd&lt;/code&gt; wrapper. It supports calling Ex commands as functions instead of strings:
+&lt;pre tabindex="0"&gt;&lt;code&gt;vim.cmd.colorscheme(&amp;#39;nightfox&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Lua plugins &lt;a href="https://zignar.net/2022/11/06/structuring-neovim-lua-plugins/"&gt;continue to mature&lt;/a&gt;:
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Lua plugins are basically the same as a vim plugin, except the file extension is &lt;code&gt;.lua&lt;/code&gt; instead of &lt;code&gt;.vim&lt;/code&gt; and the file contains Lua code instead of Vimscript.&amp;rdquo;&lt;/p&gt;</description></item><item><title>Neovim News #12 - What's New In Neovim 0.7</title><link>/news/2022/04/</link><pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate><guid>/news/2022/04/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Original article: &lt;a href="https://gpanders.com/blog/whats-new-in-neovim-0-7"&gt;https://gpanders.com/blog/whats-new-in-neovim-0-7&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Neovim 0.7 was just released, bringing with it lots of new features (and of
+course plenty of bug fixes). You can find the full release notes
+&lt;a href="https://github.com/neovim/neovim/releases/tag/v0.7.0"&gt;here&lt;/a&gt;, but in this post I&amp;rsquo;ll cover just a few of the new
+additions.&lt;/p&gt;
+&lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#lua-everywhere"&gt;Lua everywhere!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#distinguishing-modifier-keys"&gt;Distinguishing modifier keys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#global-statusline"&gt;Global statusline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#filetypelua"&gt;filetype.lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#client-server-communication"&gt;Client-server communication&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#looking-ahead-to-08"&gt;Looking ahead to 0.8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lua-everywhere"&gt;Lua everywhere!&lt;/h2&gt;
+&lt;p&gt;Neovim 0.5 saw the introduction of Lua as a first-class citizen in the Neovim
+ecosystem: Lua could now be used in the user&amp;rsquo;s init file, plugins,
+colorschemes, ftplugins, etc. Basically, anywhere that you could use a &lt;code&gt;.vim&lt;/code&gt;
+file, you could now use &lt;code&gt;.lua&lt;/code&gt; instead.&lt;/p&gt;</description></item><item><title>Neovim News #11 - The Christmas Issue</title><link>/news/2021/07/</link><pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate><guid>/news/2021/07/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; 0.5 was the friends we made along the way&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The long-awaited release of Neovim v0.5.0 finally happened on July 2, 2021. It took longer than everybody had hoped for, but it was worth the wait: With over 4000 commits, it is so big that it broke some of the release tooling. So these notes will not be able to touch on each of the many changes that were made over the course of development and only focus on the most user-visible improvements, of which the biggest are&lt;/p&gt;</description></item><item><title>Newsletter #10 - Neovim v0.4.4</title><link>/news/2020/10/</link><pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate><guid>/news/2020/10/</guid><description>&lt;h2 id="what-is-neovim"&gt;What is Neovim?&lt;/h2&gt;
+&lt;p&gt;Neovim is a fork of the venerable text-editor vim, focused on extensibility and
+usability. It is not a rewrite but a continuation and extension of Vim. Many
+clones and derivatives exist, some very clever—but none are Vim. Neovim is built
+for users who want the good parts of Vim, and more. See a list of differences
+via &lt;a href="https://neovim.io/doc/user/vim_diff.html"&gt;:help vim-differences&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="participating"&gt;Participating&lt;/h3&gt;
+&lt;p&gt;If you are interested in contributing to Neovim, visit &lt;a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md"&gt;the github
+page&lt;/a&gt; for details.
+We have a great test suite and automated CI, so you can just jump in and have a
+go. Don&amp;rsquo;t be afraid to open a PR to get comments or just take advantage of the
+infrastructure!&lt;/p&gt;</description></item><item><title>Newsletter #9 - Three's company</title><link>/news/2020/04/</link><pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate><guid>/news/2020/04/</guid><description>&lt;h2 id="what-is-neovim"&gt;What is Neovim?&lt;/h2&gt;
+&lt;p&gt;Neovim is a fork of the venerable text-editor vim, focused on extensibility and
+usability. It is not a rewrite but a continuation and extension of Vim. Many
+clones and derivatives exist, some very clever—but none are Vim. Neovim is built
+for users who want the good parts of Vim, and more. See a list of differences
+via &lt;a href="https://neovim.io/doc/user/vim_diff.html"&gt;:help vim-differences&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="participating"&gt;Participating&lt;/h3&gt;
+&lt;p&gt;If you are interested in contributing to Neovim, visit &lt;a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md"&gt;the github
+page&lt;/a&gt; for details.
+We have a great test suite and automated CI, so you can just jump in and have a
+go. Don&amp;rsquo;t be afraid to open a PR to get comments or just take advantage of the
+infrastructure!&lt;/p&gt;</description></item><item><title>Google Summer of Code 2019</title><link>/news/2019/03/</link><pubDate>Sun, 17 Mar 2019 00:00:00 +0000</pubDate><guid>/news/2019/03/</guid><description>&lt;p&gt;Neovim was again accepted into the Google Summer of Code program.
+View &lt;a href="https://summerofcode.withgoogle.com/organizations/6095582066638848/"&gt;our page on the GSoC website&lt;/a&gt;
+for details. Our &lt;a href="https://github.com/neovim/neovim/wiki/GSoC-2019-Ideas"&gt;ideas list&lt;/a&gt;
+runneth over! You&amp;rsquo;re also welcome to propose other ideas in
+&lt;a href="https://gitter.im/neovim/neovim"&gt;chat&lt;/a&gt; or on the
+&lt;a href="https://github.com/neovim/neovim/issues"&gt;ticket tracker&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="results-from-last-year"&gt;Results from last year&lt;/h2&gt;
+&lt;p&gt;In our first GSoC ever, we mentored two students who both completed their
+projects.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/neovim/neovim/issues/8337"&gt;Brock Mammen&lt;/a&gt; implemented a
+&lt;a href="https://github.com/neovim/nvim.net"&gt;C# client for Nvim&lt;/a&gt;, and even went further
+with a &lt;a href="https://github.com/neovim/VSNvim"&gt;Nvim extension&lt;/a&gt; for Visual Studio!
+He also made significant improvements to the build system, particularly for
+Windows/MSVC.&lt;/p&gt;</description></item><item><title>Newsletter #8 - Open up the Windows</title><link>/news/2017/12/</link><pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate><guid>/news/2017/12/</guid><description>&lt;h2 id="what-is-neovim"&gt;What is Neovim?&lt;/h2&gt;
+&lt;p&gt;Neovim is a fork of the venerable text-editor vim, focused on extensibility and
+usability. It is not a rewrite but a continuation and extension of Vim. Many
+clones and derivatives exist, some very clever—but none are Vim. Neovim is built
+for users who want the good parts of Vim, and more. See a list of differences
+at &lt;a href="https://neovim.io/doc/user/vim_diff.html"&gt;:help vim-differences&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="participating"&gt;Participating&lt;/h3&gt;
+&lt;p&gt;If you are interested in contributing to Neovim, read
+&lt;a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md"&gt;CONTRIBUTING.md&lt;/a&gt; to get started.
+We have a great test suite and automated CI, so you can just jump in and have a
+go. Don&amp;rsquo;t be afraid to open a PR to get comments or just take advantage of the
+infrastructure!&lt;/p&gt;</description></item><item><title>Newsletter #7 - Summer of Road</title><link>/news/2016/11/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>/news/2016/11/</guid><description>&lt;p&gt;It&amp;rsquo;s time for the Neovim newsletter! Skip to the &lt;a href="#fun-without-smile"&gt;Fun&lt;/a&gt; and
+&lt;a href="#features"&gt;Features&lt;/a&gt; sections if you only care about new features. There are
+also changes in &lt;a href="#project-management"&gt;project management&lt;/a&gt; that you should know
+about.&lt;/p&gt;
+&lt;h2 id="what-is-neovim"&gt;What is Neovim?&lt;/h2&gt;
+&lt;p&gt;Each minute, a new text editor is born (source: Hacker News). There are
+endless text editors that address the &amp;ldquo;common case&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Instead of another &lt;em&gt;Vim-like&lt;/em&gt; text editor, Neovim users want a better Vim.
+Thousands of small decisions live in the Vim core, accumulated over decades;
+most of those decisions are still relevant, solving subtle problems that new
+projects have yet to encounter, digest and decide.&lt;/p&gt;</description></item><item><title>Newsletter #6 - Ship it!</title><link>/news/2015/12/</link><pubDate>Wed, 09 Dec 2015 00:00:00 +0000</pubDate><guid>/news/2015/12/</guid><description>&lt;p&gt;Welcome to the sixth newsletter for Neovim, a project that aims to improve Vim
+by adding &lt;a href="https://neovim.io/doc/user/terminal.html#nvim-terminal-emulator"&gt;new features&lt;/a&gt; and wrap it all in a nice, modern
+face.&lt;/p&gt;
+&lt;h3 id="introduction"&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;Hi, this is @tarruda and I will be addressing the Neovim community directly in
+this newsletter. Other than that, I will try to keep it structured as @jdavis
+did previously. Let&amp;rsquo;s get started!&lt;/p&gt;
+&lt;h2 id="general-news"&gt;General News&lt;/h2&gt;
+&lt;h3 id="01-release"&gt;0.1 release&lt;/h3&gt;
+&lt;p&gt;Neovim now has its first public release!&lt;/p&gt;</description></item><item><title>Newsletter #5 - Out of the Box</title><link>/news/2015/04/</link><pubDate>Fri, 03 Apr 2015 00:00:00 +0000</pubDate><guid>/news/2015/04/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Outstanding communication and handling of bugs from Neovim. Exemplary FOSS
+project in my experience so far.
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;@telemachus&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Welcome to the fifth newsletter for Neovim, the project that looks to become Vim
+&lt;a href="http://en.wikipedia.org/wiki/Out_of_the_box_feature"&gt;out of the box&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="general-news"&gt;General News&lt;/h2&gt;
+&lt;h3 id="gitterim-for-neovim"&gt;Gitter.im for Neovim&lt;/h3&gt;
+&lt;p&gt;Now in addition to the &lt;a href="https://groups.google.com/forum/#!forum/neovim"&gt;mailing list&lt;/a&gt; and IRC channel, you can hop
+into the &lt;a href="https://gitter.im/neovim/neovim"&gt;Neovim chat room&lt;/a&gt; provided through
+&lt;a href="https://gitter.im/"&gt;Gitter.im&lt;/a&gt;. It has a convenient web interface but also allows you
+to connect using your &lt;a href="https://irc.gitter.im/"&gt;favorite IRC client&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Newsletter #4 - Thanksvimming Day</title><link>/news/2014/11/</link><pubDate>Fri, 07 Nov 2014 00:00:00 +0000</pubDate><guid>/news/2014/11/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;The way to &amp;ldquo;win&amp;rdquo; at open source is to be consistent and steady.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Welcome to the fourth newsletter for Neovim, the project that aims to overhaul
+the Vim code base. It also hopes to provide &lt;a href="http://en.wikipedia.org/wiki/Out_of_the_box_feature"&gt;out of the box features&lt;/a&gt; yet a
+more powerful interface for extending the editor.&lt;/p&gt;
+&lt;h2 id="general-news"&gt;General News&lt;/h2&gt;
+&lt;h3 id="show-off-your-love"&gt;Show off your Love&lt;/h3&gt;
+&lt;p&gt;You can now add a Neovim sticker to your laptop by heading over to the &lt;a href="http://www.unixstickers.com/tag/neovim"&gt;Neovim
+section&lt;/a&gt; of &lt;a href="http://www.unixstickers.com/"&gt;Unixstickers&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Newsletter #3 - Better Late than Never</title><link>/news/2014/09/</link><pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate><guid>/news/2014/09/</guid><description>&lt;p&gt;Welcome to the third (and delayed) newsletter for Neovim, the project that aims
+to overhaul the Vim codebase.&lt;/p&gt;
+&lt;p&gt;The next newsletter will be coming out near the beginning of November. It has
+changed to be &lt;a href="https://twitter.com/Neovim/status/504448350221901824"&gt;every other month&lt;/a&gt; as to not overload any
+sensitive Neovim lovers with too much staggering awe.&lt;/p&gt;
+&lt;h2 id="general-news"&gt;General News&lt;/h2&gt;
+&lt;h3 id="over-1000-issues"&gt;Over 1,000 Issues&lt;/h3&gt;
+&lt;p&gt;The Issue tracker on GitHub now has over 1,000 issues/pull requests. The lucky
+&lt;a href="https://github.com/neovim/neovim/pull/1000"&gt;1000th pull request&lt;/a&gt; was opened shortly before August.&lt;/p&gt;</description></item><item><title>Newsletter #2 - Perchance to Dream</title><link>/news/2014/07/</link><pubDate>Fri, 04 Jul 2014 00:00:00 +0000</pubDate><guid>/news/2014/07/</guid><description>&lt;p&gt;Welcome to the second monthly newsletter for Neovim, the project that dreams to
+be the next text editor that we&amp;rsquo;ll all love.&lt;/p&gt;
+&lt;h2 id="general-news"&gt;General News&lt;/h2&gt;
+&lt;h3 id="colorscheme-contest"&gt;Colorscheme Contest&lt;/h3&gt;
+&lt;p&gt;In the discussion about &lt;a href="https://github.com/neovim/neovim/issues/276"&gt;default Neovim settings&lt;/a&gt;, the idea of
+having a default colorscheme was brought up. A &lt;a href="https://github.com/neovim/neovim/issues/793"&gt;later issue&lt;/a&gt;
+was started to determine what colorscheme would be used.&lt;/p&gt;
+&lt;p&gt;It was decided that a new colorscheme would be great for Neovim. To do this, the
+Neovim collaborators will create a contest that will allow submissions of
+colorschemes. After some time, the submissions will close and then a new Poll
+will be started to let the community pick the winner.&lt;/p&gt;</description></item><item><title>Newsletter #1 - A New Hope</title><link>/news/2014/06/</link><pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate><guid>/news/2014/06/</guid><description>&lt;p&gt;Welcome to the first newsletter for Neovim, a project that hopes to give a new
+beginning to a text editor that we all love.&lt;/p&gt;
+&lt;p&gt;We asked and the &lt;a href="https://twitter.com/Neovim/status/471385995808481280"&gt;support was overwhelming&lt;/a&gt;; the community
+wanted a newsletter.&lt;/p&gt;
+&lt;p&gt;The plan is to release a newsletter each month to detail the progress and
+anything else newsworthy for the project.&lt;/p&gt;
+&lt;p&gt;Future newsletters will be released on the first Friday of every month. That
+makes the next one scheduled for July 4th.&lt;/p&gt;</description></item></channel></rss>
