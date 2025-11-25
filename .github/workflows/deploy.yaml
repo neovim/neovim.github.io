@@ -1,0 +1,51 @@
+# Builds and deploys the site to GitHub Pages.
+# Does NOT run on pull requests.
+
+name: build-and-deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - master
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Deployment job
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Build site
+        uses: ./.github/actions/build-site
+        env:
+          BASE_URL: "${{ steps.pages.outputs.base_url }}/"
+      - name: Deploy
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
