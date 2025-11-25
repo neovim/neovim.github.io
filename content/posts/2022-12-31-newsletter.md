@@ -56,11 +56,11 @@ Eye candy first!
 
 - [Summary](https://www.vikasraj.dev/blog/lsp-neovim-retrospective) of the history and status of Nvim builtin LSP support.
 - Nvim LSP client now [supports](https://github.com/neovim/neovim/pull/19916) connecting to language servers by TCP.
-  ```
+  ```lua
   vim.lsp.start({ name = 'godot', cmd = vim.lsp.rpc.connect('127.0.0.1', 6008) })
   ```
 - New [core events for LSP](https://github.com/neovim/neovim/pull/18507): `LspAttach`, `LspDetach`. Example:
-  ```
+  ```lua
   vim.api.nvim_create_autocmd('LspAttach', {
     group = yourGroupID,
     callback = function(args)
@@ -70,7 +70,7 @@ Eye candy first!
   }
   ```
 - `vim.lsp.get_active_clients()` learned to filter (this will be a standard pattern in the Lua stdlib):
-  ```
+  ```lua
   get_active_clients({id=42})
   get_active_clients({bufnr=99})
   get_active_clients({name='tsserver'})
@@ -87,7 +87,7 @@ Eye candy first!
     - ![](/images/2023/3_1589419182713602048.jpg)
 - Nvim supports [editorconfig](https://editorconfig.org), and [enables it](https://github.com/neovim/neovim/pull/21633) by default. Nvim detects ".editorconfig" files in your project and applies the settings.
     - To opt-out of this feature, add this to your config:
-      ```
+      ```lua
       vim.g.editorconfig_enable = false
       ```
 - Plugins can provide a [live preview](https://neovim.io/doc/user/map.html#%3Acommand-preview) of user-defined commands. 
@@ -95,7 +95,7 @@ Eye candy first!
     - Example: The [live-command.nvim](https://github.com/smjonas/live-command.nvim) plugin adds preview for `:normal` and macros:
         - <video height="360" controls><source src="/images/2023/normal-cmd-preview_a84638.mp4" type="video/mp4"></video>
 - You [can now](https://github.com/neovim/neovim/pull/18194) implement ['inccommand'](https://neovim.io/doc/user/options.html#'inccommand') preview for any user-defined command. This builds a foundation for live preview of `:normal`, [:global](https://github.com/neovim/neovim/pull/18815), etc.
-  ```
+  ```lua
   vim.api.nvim_create_user_command(
     'MyCmd',
     my_cmd,
@@ -145,7 +145,7 @@ Eye candy first!
 ## API
 
 - [nvim_parse_cmd()](https://github.com/neovim/neovim/pull/18231) provides the foundation for `nvim_cmd([list])` and "user cmd-preview"! And super useful for defining custom cmdline (`:`) behavior.
-  ```
+  ```lua
   :echo nvim_parse_cmd('.,$g/foo/bar', {})
   {
    'cmd': 'global',
@@ -156,7 +156,7 @@ Eye candy first!
   ```
 - Use `nvim_cmd()` to call any Vim legacy command in a structured way, like `system([...])`.
     - Don't need `fnameescape()`: special chars are controlled by the `magic` param.
-      ```
+      ```lua
       nvim_cmd({cmd='vimgrep', args={'/%s/j', '**'}}, {})
       ```
 - [nvim-oxi](https://github.com/noib3/nvim-oxi): "first-class Rust bindings (FFI to Nvim C) to the rich API exposed by Neovim."
@@ -166,7 +166,7 @@ Eye candy first!
 - Check out the [vim.fs](https://neovim.io/doc/user/lua.html#vim.fs) module for filesystem operations.
     - `vim.fs.find()` is now the canonical way to find "root files", common for LSP configuration.
 - `vim.cmd` is the Lua `nvim_cmd` wrapper. It supports calling Ex commands as functions instead of strings:
-  ```
+  ```lua
   vim.cmd.colorscheme('nightfox')
   ```
 - Lua plugins [continue to mature](https://zignar.net/2022/11/06/structuring-neovim-lua-plugins/):
