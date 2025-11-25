@@ -24,9 +24,9 @@ title = 'Neovim'
     url = "/news"
 
 [markup]
-  # [markup.goldmark]
-  #   [markup.goldmark.renderer]
-  #     unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
   # XXX: somehow this accidentally enables use of the Neovim palette (css/neovim-hi.css),
   # presumably those css classes match whatever Hugo is using to provide syntax highlighting.
