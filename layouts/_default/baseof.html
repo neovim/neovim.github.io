@@ -32,6 +32,7 @@
     {{ else }}
     <meta name="robots" content="noindex">
     {{ end }}
+    <link href="{{ .Site.BaseURL }}.{{ .Site.Params.news.feed }}" rel="alternate" title="{{ .Site.Params.news.name }}" type="application/rss+xml">
 </head>
 
 <body>
