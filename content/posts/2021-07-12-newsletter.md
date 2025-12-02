@@ -7,10 +7,14 @@ permalink: /news/2021/07
 > The _real_ 0.5 was the friends we made along the way
 
 
-The long-awaited release of Neovim v0.5.0 finally happened on July 2, 2021. It took longer than everybody had hoped for, but it was worth the wait: With over 4000 commits, it is so big that it broke some of the release tooling. So these notes will not be able to touch on each of the many changes that were made over the course of development and only focus on the most user-visible improvements, of which the biggest are
+The long-awaited release of Neovim v0.5.0 finally happened on July 2, 2021. It was worth the wait: With over 4000 commits, it is so big that it broke some of the release tooling.
+
+These notes focus on the most user-visible improvements, of which the biggest are:
 1. Lua as a first-class scripting and configuration language,
 2. Language server protocol (LSP),
 3. Treesitter (early access).
+
+The [LWN article](https://lwn.net/Articles/864712/) also is a good overview.
 
 ## Lua everywhere!
 
