@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="vim out of the box">
+    <meta property="og:description" content="Hyperextensible Vim-based text editor">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-social-preview.png">
+    <meta property="og:image:alt" content="Robot Marvim pointing at Neovim logo">
+    <meta property="og:site_name" content="Neovim">
+    <meta property="og:title" content="Neovim">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:1313/doc2/build/">
+
+    <title>Build - Neovim</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="preconnect" href="https://X185E15FPG-dsn.algolia.net" crossorigin />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/main.css" rel="stylesheet">
+    
+    
+    <link href="/css/neovim-hi.css" rel="stylesheet">
+    
+    <link rel="canonical" href="http://localhost:1313/doc2/build/" />
+    
+    <link href="http://localhost:1313/./news.xml" rel="alternate" title="Neovim Newsletter" type="application/rss+xml">
+</head>
+
+<body>
+    <header class="container">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand" aria-label="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" width="173" height="50" viewBox="0 0 742 214" aria-label="Neovim">
+  <title>Neovim</title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#16B0ED" stop-opacity=".8" offset="0%" />
+      <stop stop-color="#0F59B2" stop-opacity=".837" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+      <stop stop-color="#7DB643" offset="0%" />
+      <stop stop-color="#367533" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+      <stop stop-color="#88C649" stop-opacity=".8" offset="0%" />
+      <stop stop-color="#439240" stop-opacity=".84" offset="100%" />
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path
+      d="M.027 45.459L45.224-.173v212.171L.027 166.894V45.459z"
+      fill="url(#a)"
+      transform="translate(1 1)"
+    />
+    <path
+      d="M129.337 45.89L175.152-.149l-.928 212.146-45.197-45.104.31-121.005z"
+      fill="url(#b)"
+      transform="matrix(-1 0 0 1 305 1)"
+    />
+    <path
+      d="M45.194-.137L162.7 179.173l-32.882 32.881L12.25 33.141 45.194-.137z"
+      fill="url(#c)"
+      transform="translate(1 1)"
+    />
+    <path
+      d="M46.234 84.032l-.063 7.063-36.28-53.563 3.36-3.422 32.983 49.922z"
+      fill-opacity=".13"
+      fill="#000"
+    />
+    <g fill="#444">
+      <path
+        d="M227 154V64.44h4.655c1.55 0 2.445.75 2.685 2.25l.806 13.502c4.058-5.16 8.786-9.316 14.188-12.466 5.4-3.15 11.413-4.726 18.037-4.726 4.893 0 9.205.781 12.935 2.34 3.729 1.561 6.817 3.811 9.264 6.751 2.448 2.942 4.297 6.48 5.55 10.621 1.253 4.14 1.88 8.821 1.88 14.042V154h-8.504V96.754c0-8.402-1.91-14.987-5.729-19.757-3.82-4.771-9.667-7.156-17.544-7.156-5.851 0-11.28 1.516-16.292 4.545-5.013 3.032-9.489 7.187-13.427 12.467V154H227zM350.624 63c5.066 0 9.755.868 14.069 2.605 4.312 1.738 8.052 4.268 11.219 7.592s5.638 7.412 7.419 12.264C385.11 90.313 386 95.883 386 102.17c0 1.318-.195 2.216-.588 2.696-.393.48-1.01.719-1.851.719h-64.966v1.70c0 6.708.784 12.609 2.353 17.7 1.567 5.09 3.8 9.357 6.695 12.802 2.895 3.445 6.393 6.034 10.495 7.771 4.1 1.738 8.686 2.606 13.752 2.606 4.524 0 8.446-.494 11.762-1.483 3.317-.988 6.108-2.097 8.37-3.324 2.261-1.227 4.056-2.336 5.383-3.324 1.326-.988 2.292-1.482 2.895-1.482.784 0 1.388.3 1.81.898l2.352 2.875c-1.448 1.797-3.362 3.475-5.745 5.031-2.383 1.558-5.038 2.891-7.962 3.998-2.926 1.109-6.062 1.991-9.41 2.65a52.21 52.21 0 01-10.088.989c-6.152 0-11.762-1.064-16.828-3.19-5.067-2.125-9.415-5.225-13.043-9.298-3.63-4.074-6.435-9.06-8.415-14.96C310.99 121.655 310 114.9 310 107.294c0-6.408.92-12.323 2.76-17.744 1.84-5.421 4.493-10.093 7.961-14.016 3.467-3.922 7.72-6.991 12.758-9.209C338.513 64.11 344.229 63 350.624 63zm.573 6c-4.696 0-8.904.702-12.623 2.105-3.721 1.404-6.936 3.421-9.65 6.053-2.713 2.631-4.908 5.79-6.586 9.474S319.55 94.439 319 99h60c0-4.679-.672-8.874-2.013-12.588-1.343-3.712-3.232-6.856-5.67-9.43-2.44-2.571-5.367-4.545-8.782-5.92-3.413-1.374-7.192-2.062-11.338-2.062zM435.546 63c6.526 0 12.368 1.093 17.524 3.28 5.154 2.186 9.5 5.286 13.04 9.298 3.538 4.013 6.238 8.85 8.099 14.51 1.861 5.66 2.791 11.994 2.791 19.002 0 7.008-.932 13.327-2.791 18.957-1.861 5.631-4.561 10.452-8.099 14.465-3.54 4.012-7.886 7.097-13.04 9.254-5.156 2.156-10.998 3.234-17.524 3.234-6.529 0-12.369-1.078-17.525-3.234-5.155-2.157-9.517-5.242-13.085-9.254-3.57-4.013-6.285-8.836-8.145-14.465-1.861-5.63-2.791-11.95-2.791-18.957 0-7.008.93-13.342 2.791-19.002 1.861-5.66 4.576-10.496 8.145-14.51 3.568-4.012 7.93-7.112 13.085-9.299C423.177 64.094 429.017 63 435.546 63zm-.501 86c5.341 0 10.006-.918 13.997-2.757 3.99-1.838 7.32-4.474 9.992-7.909 2.67-3.435 4.664-7.576 5.986-12.428 1.317-4.85 1.98-10.288 1.98-16.316 0-5.965-.66-11.389-1.98-16.27-1.322-4.88-3.316-9.053-5.986-12.519-2.67-3.463-6-6.13-9.992-7.999-3.991-1.867-8.657-2.802-13.997-2.802s-10.008.935-13.997 2.802c-3.991 1.87-7.322 4.536-9.992 8-2.671 3.465-4.68 7.637-6.03 12.518-1.35 4.881-2.026 10.305-2.026 16.27 0 6.026.675 11.465 2.025 16.316 1.35 4.852 3.36 8.993 6.031 12.428 2.67 3.435 6 6.07 9.992 7.91 3.99 1.838 8.656 2.756 13.997 2.756z"
+        fill="currentColor"
+      />
+      <path
+        d="M530.57 152h-20.05L474 60h18.35c1.61 0 2.967.39 4.072 1.166 1.103.778 1.865 1.763 2.283 2.959l17.722 49.138a92.762 92.762 0 012.551 8.429c.686 2.751 1.298 5.5 1.835 8.25.537-2.75 1.148-5.499 1.835-8.25a77.713 77.713 0 012.64-8.429l18.171-49.138c.417-1.196 1.164-2.181 2.238-2.96 1.074-.776 2.356-1.165 3.849-1.165H567l-36.43 92zM572 61h23v92h-23zM610 153V60.443h13.624c2.887 0 4.78 1.354 5.682 4.06l1.443 6.856a52.7 52.7 0 015.097-4.962 32.732 32.732 0 015.683-3.879 30.731 30.731 0 016.496-2.57c2.314-.632 4.855-.948 7.624-.948 5.832 0 10.63 1.579 14.39 4.736 3.758 3.157 6.57 7.352 8.434 12.585 1.444-3.068 3.248-5.698 5.413-7.894 2.165-2.194 4.541-3.984 7.127-5.367a32.848 32.848 0 018.254-3.068 39.597 39.597 0 018.796-.992c5.111 0 9.653.783 13.622 2.345 3.97 1.565 7.307 3.849 10.014 6.857 2.706 3.007 4.766 6.675 6.18 11.005C739.29 83.537 740 88.5 740 94.092V153h-22.284V94.092c0-5.894-1.294-10.329-3.878-13.306-2.587-2.977-6.376-4.465-11.368-4.465-2.286 0-4.404.391-6.358 1.172a15.189 15.189 0 00-5.144 3.383c-1.473 1.474-2.631 3.324-3.474 5.548-.842 2.225-1.263 4.781-1.263 7.668V153h-22.37V94.092c0-6.194-1.249-10.704-3.744-13.532-2.497-2.825-6.18-4.24-11.051-4.24-3.19 0-6.18.798-8.976 2.391-2.799 1.593-5.399 3.775-7.804 6.54V153H610zM572 30h23v19h-23z"
+        fill="currentColor"
+        fill-opacity=".8"
+      />
+    </g>
+  </g>
+</svg>
+
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-expanded="false" aria-label="Main menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+          
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              id="neovimDropdown">About</a>
+            <ul class="dropdown-menu" aria-labelledby="neovimDropdown">
+              
+
+              <li>
+                <a class="dropdown-item" href="/charter/">
+                  Vision
+                </a>
+              </li>
+
+              
+
+              <li>
+                <a class="dropdown-item" href="/roadmap/">
+                  Roadmap
+                </a>
+              </li>
+
+              
+
+              <li>
+                <a class="dropdown-item" href="/screenshots/">
+                  Screenshots
+                </a>
+              </li>
+
+              
+            </ul>
+          </li>
+           
+          
+          <li class="nav-item">
+            <a href="/news/" class="nav-link">News</a>
+          </li>
+
+           
+          
+          <li class="nav-item">
+            <a href="https://github.com/neovim/neovim" class="nav-link">Development</a>
+          </li>
+
+           
+          
+          <li class="nav-item">
+            <a href="/doc/" class="nav-link">Documentation</a>
+          </li>
+
+           
+          
+          <li class="nav-item">
+            <a href="/sponsors/" class="nav-link">Sponsors</a>
+          </li>
+
+           
+          
+          <li class="nav-item">
+            <a href="https://store.neovim.io/" class="nav-link">Store</a>
+          </li>
+
+           
+        </ul>
+      </div>
+
+      
+      <div id="docsearch"></div>
+
+    </div>
+  </nav>
+</header>
+    
+<section class="front-section">
+    <div class="container golden-grid">
+        <div class="col-wide">
+            <h1>Build</h1>
+            <ul>
+<li><strong>IMPORTANT</strong>: Before upgrading to a new version, <strong>always check for <a href="https://neovim.io/doc/user/news.html#news-breaking">breaking changes</a>.</strong></li>
+</ul>
+<h2 id="quick-start">Quick start</h2>
+<ol>
+<li>Install <a href="#build-prerequisites">build prerequisites</a> on your system</li>
+<li><code>git clone https://github.com/neovim/neovim</code></li>
+<li><code>cd neovim</code>
+<ul>
+<li>If you want the <strong>stable release</strong>, also run <code>git checkout stable</code>.</li>
+</ul>
+</li>
+<li><code>make CMAKE_BUILD_TYPE=RelWithDebInfo</code>
+<ul>
+<li>If you want to install to a custom location, set <code>CMAKE_INSTALL_PREFIX</code>. See also <a href="./../install#install-from-source">../install</a>.</li>
+<li>On BSD, use <code>gmake</code> instead of <code>make</code>.</li>
+<li>To build on Windows, see the <a href="#building-on-windows">Building on Windows</a> section. <em>MSVC (Visual Studio) is recommended.</em></li>
+</ul>
+</li>
+<li><code>sudo make install</code>
+<ul>
+<li>Default install location is <code>/usr/local</code></li>
+<li>On Debian/Ubuntu, instead of <code>sudo make install</code>, you can try <code>cd build &amp;&amp; cpack -G DEB &amp;&amp; sudo dpkg -i nvim-linux-&lt;arch&gt;.deb</code> (with <code>&lt;arch&gt;</code> either <code>x86_64</code> or <code>arm64</code>) to build DEB-package and install it. This helps ensure clean removal of installed files. Note: This is an unsupported, &ldquo;best-effort&rdquo; feature of the Nvim build.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>From the repository&rsquo;s root directory, running <code>make</code> will download and build all the needed dependencies and put the <code>nvim</code> executable in <code>build/bin</code>.</li>
+<li>Third-party dependencies (libuv, LuaJIT, etc.) are downloaded automatically to <code>.deps/</code>. See the <a href="https://neovim.io/doc/user/faq.html#faq-build">FAQ</a> if you have issues.</li>
+<li>After building, you can run the <code>nvim</code> executable without installing it by running <code>VIMRUNTIME=runtime ./build/bin/nvim</code>.</li>
+<li>If you plan to develop Neovim, install <a href="https://ninja-build.org/">Ninja</a> for faster builds. It will automatically be used.</li>
+<li>Install <a href="https://ccache.dev/">ccache</a> for faster rebuilds of Neovim. It&rsquo;s used by default. To disable it, use <code>CCACHE_DISABLE=true make</code>.</li>
+</ul>
+<h2 id="running-tests">Running tests</h2>
+<p>See <a href="https://github.com/neovim/neovim/blob/master/test/README.md">test/README.md</a>.</p>
+<h2 id="building">Building</h2>
+<p>First make sure you installed the <a href="#build-prerequisites">build prerequisites</a>. Now that you have the dependencies, you can try other build targets explained below.</p>
+<p>The <em>build type</em> determines the level of used compiler optimizations and debug information:</p>
+<ul>
+<li><code>Release</code>: Full compiler optimizations and no debug information. Expect the best performance from this build type. Often used by package maintainers.</li>
+<li><code>Debug</code>: Full debug information; few optimizations. Use this for development to get meaningful output from debuggers like GDB or LLDB. This is the default if <code>CMAKE_BUILD_TYPE</code> is not specified.</li>
+<li><code>RelWithDebInfo</code> (&ldquo;Release With Debug Info&rdquo;): Enables many optimizations and adds enough debug info so that when Neovim ever crashes, you can still get a backtrace.</li>
+</ul>
+<p>So, for a release build, just use:</p>
+<pre tabindex="0"><code>make CMAKE_BUILD_TYPE=Release
+</code></pre><p>(Do not add a <code>-j</code> flag if <code>ninja</code> is installed! The build will be in parallel automatically.)</p>
+<p>Afterwards, the <code>nvim</code> executable can be found in <code>build/bin</code>. To verify the build type after compilation, run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">./build/bin/nvim --version <span class="p">|</span> grep ^Build
+</span></span></code></pre></div><p>To install the executable to a certain location, use:</p>
+<pre tabindex="0"><code>make CMAKE_INSTALL_PREFIX=$HOME/local/nvim install
+</code></pre><p>CMake, our main build system, caches a lot of things in <code>build/CMakeCache.txt</code>. If you ever want to change <code>CMAKE_BUILD_TYPE</code> or <code>CMAKE_INSTALL_PREFIX</code>, run <code>rm -rf build</code> first. This is also required when rebuilding after a Git commit adds or removes files (including from <code>runtime</code>) — when in doubt, run <code>make distclean</code> (which is basically a shortcut for <code>rm -rf build .deps</code>).</p>
+<p>By default (<code>USE_BUNDLED=1</code>), Neovim downloads and statically links its needed dependencies. In order to be able to use a debugger on these libraries, you might want to compile them with debug information as well:</p>
+<!-- THIS CAUSES SCREEN INTERFERENCE
+```
+make distclean
+VERBOSE=1 DEBUG=1 make deps
+```
+-->
+<pre tabindex="0"><code>make distclean
+make deps
+</code></pre><h2 id="building-on-windows">Building on Windows</h2>
+<h3 id="windows--msvc">Windows / MSVC</h3>
+<p><strong>MSVC (Visual Studio) is the recommended way to build on Windows.</strong> These steps were confirmed as of 2023.</p>
+<ol>
+<li>Install <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community">Visual Studio</a> (2017 or later) with the <em>Desktop development with C++</em> workload.
+<ul>
+<li>On 32-bit Windows, you will need <a href="https://developercommunity.visualstudio.com/content/problem/212989/ninja-binary-format.html">this workaround</a>.</li>
+</ul>
+</li>
+<li>Open the Neovim project folder.
+<ul>
+<li>Visual Studio should detect the cmake files and automatically start building&hellip;</li>
+</ul>
+</li>
+<li>Choose the <code>nvim.exe (bin\nvim.exe)</code> target and hit F5.
+<ul>
+<li>If the build fails, it may be because Visual Studio started the build with <code>x64-{Debug,Release}</code> before you switched the configuration to <code>x86-Release</code>.
+<ul>
+<li>Right-click <em>CMakeLists.txt → Delete Cache</em>.</li>
+<li>Right-click <em>CMakeLists.txt → Generate Cache</em>.</li>
+</ul>
+</li>
+<li>If you see an &ldquo;access violation&rdquo; from <code>ntdll</code>, you can ignore it and continue.</li>
+</ul>
+</li>
+<li>If you see an error like <code>uv.dll not found</code>, try the <code>nvim.exe (Install)</code> target. Then switch back to <code>nvim.exe (bin\nvim.exe)</code>.</li>
+</ol>
+<h3 id="windows--msvc-powershell">Windows / MSVC PowerShell</h3>
+<p>To build from the command line (i.e. invoke the <code>cmake</code> commands yourself),</p>
+<ol>
+<li>Ensure you have the Visual Studio environment variables, using any of the following:
+<ul>
+<li>Using the <a href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022">Visual Studio Developer Command Prompt or Visual Studio Developer PowerShell</a></li>
+<li>Invoking <code>Import-VisualStudioVars</code> in PowerShell from <a href="https://github.com/Pscx/Pscx">this PowerShell module</a></li>
+<li>Invoking <code>VsDevCmd.bat</code> in Command Prompt
+<pre tabindex="0"><code>VsDevCmd.bat -arch=x64
+</code></pre></li>
+</ul>
+This is to make sure that <code>luarocks</code> finds the Visual Studio installation, and doesn&rsquo;t fall back to MinGW with errors like:
+<pre tabindex="0"><code>&#39;mingw32-gcc&#39; is not recognized as an internal or external command
+</code></pre></li>
+<li>From the &ldquo;Developer PowerShell&rdquo; or &ldquo;Developer Command Prompt&rdquo;:
+<pre tabindex="0"><code>cmake -S cmake.deps -B .deps -G Ninja -D CMAKE_BUILD_TYPE=Release
+cmake --build .deps --config Release
+cmake -B build -G Ninja -D CMAKE_BUILD_TYPE=Release
+cmake --build build --config Release
+</code></pre><ul>
+<li>Omit <code>--config Release</code> if you want a debug build.</li>
+<li>Omit <code>-G Ninja</code> to use the &ldquo;Visual Studio&rdquo; generator.</li>
+</ul>
+</li>
+</ol>
+<h3 id="windows--clion">Windows / CLion</h3>
+<ol>
+<li>Install <a href="https://www.jetbrains.com/clion/">CLion</a>.</li>
+<li>Open the Neovim project in CLion.</li>
+<li>Select <em>Build → Build All in &lsquo;Release&rsquo;</em>.</li>
+</ol>
+<h3 id="windows--cygwin">Windows / Cygwin</h3>
+<p>Since <a href="https://github.com/neovim/neovim/pull/36417">https://github.com/neovim/neovim/pull/36417</a> , building on Cygwin may be as easy as:</p>
+<pre><code>make &amp;&amp; make install
+</code></pre>
+<p>If that fails, an alternative is:</p>
+<ol>
+<li>Install all dependencies the normal way.
+<ul>
+<li>The <code>cygport</code> repo contains Cygport files (e.g. <code>APKBUILD</code>, <code>PKGBUILD</code>) for all the dependencies not available in the Cygwin distribution, and describes any special commands or arguments needed to build. The Cygport definitions also try to describe the required dependencies for each one. Unless custom commands are provided, Cygport just calls <code>autogen</code>/<code>cmake</code>, <code>make</code>, <code>make install</code>, etc. in a clean and consistent way.</li>
+<li><a href="https://github.com/cascent/neovim-cygwin">https://github.com/cascent/neovim-cygwin</a> was built on Cygwin 2.9.0. Newer <code>libuv</code> should require slightly less patching. Some SSP stuff changed in Cygwin 2.10.0, so that might change things too when building Neovim.</li>
+</ul>
+</li>
+<li>Build without &ldquo;bundled&rdquo; dependencies (except treesitter parsers).
+<pre tabindex="0"><code>cmake -S cmake.deps -B .deps -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_BUNDLED=OFF -DUSE_BUNDLED_TS=ON
+cmake --build .deps
+cmake -B build -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo
+cmake --build build
+</code></pre></li>
+</ol>
+<h3 id="windows--msys2--mingw">Windows / MSYS2 / MinGW</h3>
+<ol>
+<li>
+<p>From the MSYS2 shell, install these packages:</p>
+<pre tabindex="0"><code>pacman -S \
+    mingw-w64-ucrt-x86_64-gcc \
+    mingw-w64-x86_64-{cmake,make,ninja,diffutils}
+</code></pre></li>
+<li>
+<p>From the Windows Command Prompt (<code>cmd.exe</code>), set up the <code>PATH</code> and build.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span>c:\msys64\ucrt64\bin;c:\msys64\usr\bin;<span class="nv">%PATH%</span>
+</span></span></code></pre></div></li>
+<li>
+<p>You have two options:</p>
+<ul>
+<li>Build using <code>cmake</code> and <code>Ninja</code> generator:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmake -S cmake.deps -B .deps -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build .deps
+</span></span><span class="line"><span class="cl">cmake -B build -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build build
+</span></span></code></pre></div>If you cannot install neovim with <code>ninja install</code> due to permission restriction, you can install neovim in a directory you have write access to.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmake -S cmake.deps -B .deps -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build .deps
+</span></span><span class="line"><span class="cl">cmake -B build -G Ninja -D CMAKE_INSTALL_PREFIX=C:\nvim -D CMAKE_BUILD_TYPE=RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build build
+</span></span></code></pre></div></li>
+<li>Or, alternatively, you can use <code>mingw32-make</code>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">mingw32-make deps
+</span></span><span class="line"><span class="cl">mingw32-make CMAKE_BUILD_TYPE=RelWithDebInfo
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: Or you can do the previous command specifying a custom prefix</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: (Default is C:\Program Files (x86)\nvim)</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: mingw32-make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=C:\nvim</span>
+</span></span><span class="line"><span class="cl">mingw32-make install
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="windows-wsl">Windows WSL</h3>
+<p>Build Ubuntu/Debian linux binary on <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows Subsystem for Linux).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install build prerequisites</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install ninja-build gettext cmake build-essential
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Build the linux binary in WSL</span>
+</span></span><span class="line"><span class="cl">make <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install the linux binary in WSL (with `&lt;arch&gt;` either `x86_64` or `arm64`)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build <span class="o">&amp;&amp;</span> cpack -G DEB <span class="o">&amp;&amp;</span> sudo dpkg -i nvim-linux-&lt;arch&gt;.deb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify the installation</span>
+</span></span><span class="line"><span class="cl">nvim --version <span class="o">&amp;&amp;</span> which nvim <span class="c1"># should be debug build in /usr/bin/nvim</span>
+</span></span></code></pre></div><p><strong>Note</strong>: If you encounter linker errors or segfaults during the build, Windows libraries in your PATH may be interfering. Use a clean PATH to avoid conflicts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&#34;</span> make <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span></code></pre></div><h2 id="localization">Localization</h2>
+<h3 id="localization-build">Localization build</h3>
+<p>Translations are turned off by default. Enable by building Nvim with the CMake flag <code>ENABLE_TRANSLATIONS=ON</code>.
+Doing this will create <code>.mo</code> files in <code>build/src/nvim/po</code>. Example:</p>
+<pre tabindex="0"><code>make CMAKE_EXTRA_FLAGS=&#34;-DENABLE_TRANSLATIONS=ON&#34;
+</code></pre><ul>
+<li>If you see <code>msgfmt: command not found</code>, you need to install <a href="http://en.wikipedia.org/wiki/Gettext"><code>gettext</code></a>. On most systems, the package is just called <code>gettext</code>.</li>
+</ul>
+<h3 id="localization-check">Localization check</h3>
+<p>To check the translations for <code>$LANG</code>, run <code>make -C build check-po-$LANG</code>. Examples:</p>
+<pre tabindex="0"><code>cmake --build build --target check-po-de
+cmake --build build --target check-po-pt_BR
+</code></pre><ul>
+<li><code>check-po-$LANG</code> generates a detailed report in <code>./build/src/nvim/po/check-${LANG}.log</code>. (The report is generated by <code>nvim</code>, not by <code>msgfmt</code>.)</li>
+</ul>
+<h3 id="localization-update">Localization update</h3>
+<p>To update the <code>src/nvim/po/$LANG.po</code> file with the latest strings, run the following:</p>
+<pre tabindex="0"><code>cmake --build build --target update-po-$LANG
+</code></pre><ul>
+<li><strong>Note</strong>: Run <code>src/nvim/po/cleanup.vim</code> after updating.</li>
+</ul>
+<h2 id="compiler-options">Compiler options</h2>
+<p>To see the chain of includes, use the <code>-H</code> option (<a href="https://github.com/neovim/neovim/issues/918">#918</a>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;#include &#34;./src/nvim/buffer.h&#34;&#39;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>&gt; clang -I.deps/usr/include -Isrc -std<span class="o">=</span>c99 -P -E -H - 2&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>&gt; grep -v /usr/
+</span></span></code></pre></div><ul>
+<li><code>grep -v /usr/</code> is used to filter out system header files.</li>
+<li><code>-save-temps</code> can be added as well to see expanded macros or commented assembly.</li>
+</ul>
+<h2 id="custom-makefile">Custom Makefile</h2>
+<p>You can customize the build process locally by creating a <code>local.mk</code>, which is referenced at the top of the main <code>Makefile</code>. It&rsquo;s listed in <code>.gitignore</code>, so it can be used across branches. <strong>A new target in <code>local.mk</code> overrides the default make-target.</strong></p>
+<p>Here&rsquo;s a sample <code>local.mk</code> which adds a target to force a rebuild but <em>does not</em> override the default-target:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-make" data-lang="make"><span class="line"><span class="cl"><span class="nf">all</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">rebuild</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	rm -rf build
+</span></span><span class="line"><span class="cl">	make
+</span></span></code></pre></div><h2 id="third-party-dependencies">Third-party dependencies</h2>
+<p>Reference the <a href="https://packages.debian.org/sid/source/neovim">Debian package</a> (or alternatively, the <a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/n/neovim.rb">Homebrew formula</a>) for the precise list of dependencies/versions.</p>
+<p>To build the bundled dependencies using CMake:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cmake -S cmake.deps -B .deps -G Ninja -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build .deps
+</span></span></code></pre></div><p>By default the libraries and headers are placed in <code>.deps/usr</code>. Now you can build Neovim:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cmake -B build -G Ninja -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build build
+</span></span></code></pre></div><h3 id="build-without-bundled-dependencies">Build without &ldquo;bundled&rdquo; dependencies</h3>
+<ol>
+<li>Manually install the dependencies:
+<ul>
+<li>libuv libluv libutf8proc luajit lua-lpeg tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-markdown tree-sitter-query tree-sitter-vim tree-sitter-vimdoc unibilium</li>
+</ul>
+</li>
+<li>Run CMake:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cmake -B build -G Ninja -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build build
+</span></span></code></pre></div>If all the dependencies are not available in the package, you can use only some of the bundled dependencies as follows (example of using <code>ninja</code>):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cmake -S cmake.deps -B .deps -G Ninja -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo -DUSE_BUNDLED<span class="o">=</span>OFF -DUSE_BUNDLED_TS<span class="o">=</span>ON
+</span></span><span class="line"><span class="cl">cmake --build .deps
+</span></span><span class="line"><span class="cl">cmake -B build -G Ninja -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RelWithDebInfo
+</span></span><span class="line"><span class="cl">cmake --build build
+</span></span></code></pre></div></li>
+<li>Run <code>make</code>, <code>ninja</code>, or whatever build tool you told CMake to generate.
+<ul>
+<li>Using <code>ninja</code> is strongly recommended.</li>
+</ul>
+</li>
+<li>If treesitter parsers are not bundled, they need to be available in a <code>parser/</code> runtime directory (e.g. <code>/usr/share/nvim/runtime/parser/</code>).</li>
+</ol>
+<h3 id="build-offline">Build offline</h3>
+<p>On systems with old or missing libraries, <em>without</em> network access, you may want
+to build <em>with</em> bundled dependencies. This is supported as follows.</p>
+<ol>
+<li>On a network-enabled machine, do either of the following, to get the
+dependency sources in <code>.deps</code> in a form that the build will work with:
+<ul>
+<li>Fetch <a href="https://github.com/neovim/deps/tree/master/src">https://github.com/neovim/deps/tree/master/src</a> into <code>.deps/build/src/</code>.
+(<a href="https://github.com/neovim/deps/tree/master/src">https://github.com/neovim/deps/tree/master/src</a> is an auto-updated, &ldquo;cleaned up&rdquo;, snapshot of <code>.deps/build/src/</code>).</li>
+<li>Run <code>make deps</code> to generate <code>.deps/</code>, then clean it up using <a href="https://github.com/neovim/neovim/blob/1c12073db6c64eb365748f153f96be9b0fe61070/.github/workflows/build.yml#L67-L74">these commands</a>.</li>
+</ul>
+</li>
+<li>Copy the prepared <code>.deps</code> to the isolated machine (without network access).</li>
+<li>Build with <code>USE_EXISTING_SRC_DIR</code> enabled, on the isolated machine:
+<pre tabindex="0"><code>make deps DEPS_CMAKE_FLAGS=-DUSE_EXISTING_SRC_DIR=ON
+make
+</code></pre></li>
+</ol>
+<h3 id="build-without-unibilium">Build without unibilium</h3>
+<p>Unibilium is the only dependency which is licensed under LGPLv3 (there are no
+GPLv3-only dependencies). This library is used for loading the terminfo database at
+runtime, and can be disabled if the internal definitions for common terminals
+are good enough. To avoid this dependency, build with support for loading
+custom terminfo at runtime, use</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make <span class="nv">CMAKE_EXTRA_FLAGS</span><span class="o">=</span><span class="s2">&#34;-DENABLE_UNIBILIUM=0&#34;</span> <span class="nv">DEPS_CMAKE_FLAGS</span><span class="o">=</span><span class="s2">&#34;-DUSE_BUNDLED_UNIBILIUM=0&#34;</span>
+</span></span></code></pre></div><p>To confirm at runtime that unibilium was not included, check <code>has('terminfo') == 1</code>.</p>
+<h3 id="build-with-specific-bundled-dependencies">Build with specific &ldquo;bundled&rdquo; dependencies</h3>
+<p>Example of building with specific bundled and non-bundled dependencies:</p>
+<pre tabindex="0"><code>make DEPS_CMAKE_FLAGS=&#34;-DUSE_BUNDLED=OFF -DUSE_BUNDLED_LUV=ON -DUSE_BUNDLED_TS=ON -DUSE_BUNDLED_LIBUV=ON&#34;
+</code></pre><h3 id="build-static-binary-linux">Build static binary (Linux)</h3>
+<ol>
+<li>Use a linux distribution which uses musl C. We will use Alpine Linux but any distro with musl should work. (glibc does not support static linking)</li>
+<li>Run make passing the <code>STATIC_BUILD</code> variable: <code>make CMAKE_EXTRA_FLAGS=&quot;-DSTATIC_BUILD=1&quot;</code></li>
+</ol>
+<p>In case you are not using Alpine Linux you can use a container to do the build the binary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">podman run <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --rm <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -it <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -v <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">:/workdir&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -w /workdir <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  alpine:latest <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  sh -c <span class="s1">&#39;apk add build-base cmake coreutils curl gettext-tiny-dev git &amp;&amp; make CMAKE_EXTRA_FLAGS=&#34;-DSTATIC_BUILD=1&#34;&#39;</span>
+</span></span></code></pre></div><p>The resulting binary in <code>build/bin/nvim</code> will have all the dependencies statically linked:</p>
+<pre tabindex="0"><code>build/bin/nvim: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked, BuildID[sha1]=b93fa8e678d508ac0a76a2e3da20b119105f1b2d, with debug_info, not stripped
+</code></pre><h2 id="build-prerequisites">Build prerequisites</h2>
+<p>General requirements (see <a href="https://github.com/neovim/neovim/issues/1469#issuecomment-63058312">#1469</a>):</p>
+<ul>
+<li>Clang or GCC version 4.9+</li>
+<li>CMake version 3.16+, built with TLS/SSL support
+<ul>
+<li>Optional: Get the latest CMake from <a href="https://cmake.org/download/">https://cmake.org/download/</a>
+<ul>
+<li>Provides a shell script which works on most Linux systems. After running it, ensure the resulting <code>cmake</code> binary is in your $PATH so the the Nvim build will find it.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Platform-specific requirements are listed below.</p>
+<h3 id="ubuntu--debian">Ubuntu / Debian</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install ninja-build gettext cmake curl build-essential git
+</span></span></code></pre></div><h3 id="rhel--fedora">RHEL / Fedora</h3>
+<pre tabindex="0"><code>sudo dnf -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra git
+</code></pre><h3 id="opensuse">openSUSE</h3>
+<pre tabindex="0"><code>sudo zypper install ninja cmake gcc-c++ gettext-tools curl git
+</code></pre><h3 id="arch-linux">Arch Linux</h3>
+<pre tabindex="0"><code>sudo pacman -S base-devel cmake ninja curl git
+</code></pre><h3 id="alpine-linux">Alpine Linux</h3>
+<pre tabindex="0"><code>apk add build-base cmake coreutils curl gettext-tiny-dev git
+</code></pre><h3 id="void-linux">Void Linux</h3>
+<pre tabindex="0"><code>xbps-install base-devel cmake curl git
+</code></pre><h3 id="nixos--nix">NixOS / Nix</h3>
+<p>Starting from NixOS 18.03, the Neovim binary resides in the <code>neovim-unwrapped</code> Nix package (the <code>neovim</code> package being just a wrapper to setup runtime options like Ruby/Python support):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> path/to/neovim/src
+</span></span></code></pre></div><p>Drop into <code>nix-shell</code> to pull in the Neovim dependencies:</p>
+<pre tabindex="0"><code>nix-shell &#39;&lt;nixpkgs&gt;&#39; -A neovim-unwrapped
+</code></pre><p>Configure and build:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">rm -rf build <span class="o">&amp;&amp;</span> cmakeConfigurePhase
+</span></span><span class="line"><span class="cl">buildPhase
+</span></span></code></pre></div><p>Tests are not available by default, because of some unfixed failures. You can enable them via adding this package in your overlay:</p>
+<pre tabindex="0"><code>  neovim-dev = (super.pkgs.neovim-unwrapped.override  {
+    doCheck=true;
+  }).overrideAttrs(oa:{
+    cmakeBuildType=&#34;debug&#34;;
+
+    nativeBuildInputs = oa.nativeBuildInputs ++ [ self.pkgs.valgrind ];
+    shellHook = &#39;&#39;
+      export NVIM_PYTHON_LOG_LEVEL=DEBUG
+      export NVIM_LOG_FILE=/tmp/log
+      export VALGRIND_LOG=&#34;$PWD/valgrind.log&#34;
+    &#39;&#39;;
+  });
+</code></pre><p>and replacing <code>neovim-unwrapped</code> with <code>neovim-dev</code>:</p>
+<pre tabindex="0"><code>nix-shell &#39;&lt;nixpkgs&gt;&#39; -A neovim-dev
+</code></pre><p>A flake for Neovim is hosted at <a href="https://github.com/nix-community/neovim-nightly-overlay/">nix-community/neovim-nightly-overlay</a>, with 3 packages:</p>
+<ul>
+<li><code>neovim</code> to run the nightly</li>
+<li><code>neovim-debug</code> to run the package with debug symbols</li>
+<li><code>neovim-developer</code> to get all the tools to develop on <code>neovim</code></li>
+</ul>
+<p>Thus you can run Neovim nightly with <code>nix run github:nix-community/neovim-nightly-overlay</code>.
+Similarly to develop on Neovim: <code>nix run github:nix-community/neovim-nightly-overlay#neovim-developer</code>.</p>
+<p>To use a specific version of Neovim, you can pass <code>--override-input neovim-src .</code> to use your current directory,
+or a specific SHA1 like <code>--override-input neovim-src github:neovim/neovim/89dc8f8f4e754e70cbe1624f030fb61bded41bc2</code>.</p>
+<h3 id="haiku">Haiku</h3>
+<p>Some deps can be pulled from haiku repos, the rest need &ldquo;bundled&rdquo; deps:</p>
+<pre><code>cmake -DUSE_BUNDLED_LIBUV=OFF -DUSE_BUNDLED_UNIBILIUM=OFF -DUSE_BUNDLED_LUAJIT=OFF -B .deps ./cmake.deps
+make -C .deps
+</code></pre>
+<h3 id="freebsd">FreeBSD</h3>
+<pre tabindex="0"><code>sudo pkg install cmake gmake sha wget gettext curl git
+</code></pre><p>If you get an error regarding a <code>sha256sum</code> mismatch, where the actual SHA-256 hash is <code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code>, then this is your issue (that&rsquo;s the <code>sha256sum</code> of an empty file).</p>
+<h3 id="openbsd">OpenBSD</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">doas pkg_add gmake cmake curl gettext-tools git
+</span></span></code></pre></div><p>Build can sometimes fail when using the top level <code>Makefile</code>, apparently due to some third-party component (see <a href="https://github.com/neovim/neovim/issues/2445#issuecomment-108124236">#2445-comment</a>). The following instructions use CMake:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir .deps
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> .deps
+</span></span><span class="line"><span class="cl">cmake ../cmake.deps/
+</span></span><span class="line"><span class="cl">gmake
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake ..
+</span></span><span class="line"><span class="cl">gmake
+</span></span></code></pre></div><h3 id="macos">macOS</h3>
+<h4 id="macos--homebrew">macOS / Homebrew</h4>
+<ol>
+<li>Install Xcode Command Line Tools: <code>xcode-select --install</code></li>
+<li>Install <a href="http://brew.sh">Homebrew</a></li>
+<li>Install Neovim build dependencies:
+<pre tabindex="0"><code>brew install ninja cmake gettext curl git
+</code></pre></li>
+</ol>
+<ul>
+<li><strong>Note</strong>: If you see Wget certificate errors (for older macOS versions less than 10.10):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew install curl-ca-bundle
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">CA_CERTIFICATE</span><span class="o">=</span><span class="k">$(</span>brew --prefix curl-ca-bundle<span class="k">)</span>/share/ca-bundle.crt &gt;&gt; ~/.wgetrc
+</span></span></code></pre></div></li>
+<li><strong>Note</strong>: If you see <code>'stdio.h' file not found</code>, try the following:
+<pre tabindex="0"><code>open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+</code></pre></li>
+</ul>
+<h4 id="macos--macports">macOS / MacPorts</h4>
+<ol>
+<li>Install Xcode Command Line Tools: <code>xcode-select --install</code></li>
+<li>Install <a href="http://www.macports.org">MacPorts</a></li>
+<li>Install Neovim build dependencies:
+<pre tabindex="0"><code>sudo port install ninja cmake gettext git
+</code></pre></li>
+</ol>
+<ul>
+<li><strong>Note</strong>: If you see Wget certificate errors (for older macOS versions less than 10.10):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo port install curl-ca-bundle
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">CA_CERTIFICATE</span><span class="o">=</span>/opt/local/share/curl/curl-ca-bundle.crt &gt;&gt; ~/.wgetrc
+</span></span></code></pre></div></li>
+<li><strong>Note</strong>: If you see <code>'stdio.h' file not found</code>, try the following:
+<pre tabindex="0"><code>open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+</code></pre></li>
+</ul>
+<h4 id="building-for-older-macos-versions">Building for older macOS versions</h4>
+<p>From a newer macOS version, to build for older macOS versions, you will have to set the macOS deployment target:</p>
+<pre tabindex="0"><code>make CMAKE_BUILD_TYPE=Release MACOSX_DEPLOYMENT_TARGET=10.13 DEPS_CMAKE_FLAGS=&#34;-DCMAKE_CXX_COMPILER=$(xcrun -find c++)&#34;
+</code></pre><p>Note that the C++ compiler is explicitly set so that it can be found when the deployment target is set.</p>
+
+        </div>
+
+        <div>
+  <h3>What is Neovim?</h3>
+<p>
+  Neovim is a Vim-based text editor engineered for
+  <a href="https://github.com/neovim/neovim/wiki/Related-projects#api-clients">extensibility</a>
+  and
+  <a href="https://neovim.io/doc/user/vim_diff.html#nvim-features">usability</a>,
+  to encourage new applications and
+  <a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md#getting-started">contributions</a>.
+
+  <ul>
+    <li><a href="/charter/">Vision</a></li>
+    <li><a href="/roadmap/">Roadmap</a></li>
+  </ul>
+</p>
+
+<h3>Discuss</h3>
+<p>
+  Visit <a href="https://app.element.io/#/room/#neovim:matrix.org">#neovim:matrix.org</a>
+  or #neovim on irc.libera.chat to chat with the team.
+</p>
+<p style="vertical-align: middle;">
+<a href="https://twitter.com/Neovim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Neovim on X</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <br>
+  <a rel="me" href="https://hachyderm.io/@neovim">Mastodon</a>
+  <br>
+  <a href="https://bsky.app/profile/neovim.io">Bluesky</a>
+</p>
+
+</div>
+    </div>
+</section>
+
+
+    <footer>
+  <div class="container flex">
+    <div>
+      
+      <a href="/about/">About</a>
+      
+      &middot;
+      
+      
+      <a href="/news/">News</a>
+      
+      &middot;
+      
+      
+      <a href="https://github.com/neovim/neovim">Development</a>
+      
+      &middot;
+      
+      
+      <a href="/doc/">Documentation</a>
+      
+      &middot;
+      
+      
+      <a href="/sponsors/">Sponsors</a>
+      
+      &middot;
+      
+      
+      <a href="https://store.neovim.io/">Store</a>
+      
+      
+    </div>
+
+    <div>
+      This site's source is <a href="https://github.com/neovim/neovim.github.io/">hosted on GitHub</a>.
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="module">
+      docsearch({
+        container: '#docsearch',
+        appId: 'X185E15FPG',
+        apiKey: 'b5e6b2f9c636b2b471303205e59832ed',
+        indexName: 'nvim',
+      });
+    </script>
+
+</body>
+
+</html>
