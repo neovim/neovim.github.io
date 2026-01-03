@@ -67,7 +67,7 @@ a {
   transition: all ease-in-out 140ms;
 }
 
-/* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
+/* Ensure that the hover border is sized correctly for <a><imgâ€¦></a>. #295 */
 a:has(> img) {
   display: block;
 }
