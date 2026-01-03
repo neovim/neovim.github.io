@@ -224,7 +224,7 @@ samp {
   grid-gap: 1em;
 }
 
-.golden-grid>* {
+.golden-grid > * {
   min-width: 0;
   max-width: 100%;
 }
@@ -647,15 +647,15 @@ body {
   margin: 0;
 }
 
-body>nav {
+body > nav {
   flex-shrink: 0;
 }
 
-body>main {
+body > main {
   flex: 1 0 auto;
 }
 
-body>footer {
+body > footer {
   flex-shrink: 0;
   margin-top: auto;
 }
