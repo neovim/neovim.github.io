@@ -147,7 +147,7 @@ If you thought 3 C++ clients wasn't enough, you will be happy to hear that a 4th
 
 - [magnum-neovim-api](https://github.com/Squareys/magnum-neovim-api)
 
-If you happen to prefer a language with no API client listed, a good starting point are the [docs](https://neovim.io/doc/user/msgpack_rpc.html#RPC), and be sure to come talk about it on the [gitter channel](https://gitter.im/neovim).
+If you happen to prefer a language with no API client listed, a good starting point are the [docs](https://neovim.io/doc/user/api.html#RPC), and be sure to come talk about it on the [gitter channel](https://gitter.im/neovim).
 
 ### GUIs
 

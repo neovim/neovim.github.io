@@ -342,7 +342,7 @@ Until next time. `:wq`
 [info-contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [info-github]: https://github.com/neovim/neovim/
 [info-readme]: https://github.com/neovim/neovim/blob/master/README.md
-[info-rss]: /news/index.xml
+[info-rss]: /news.xml
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
 [info-box]: http://en.wikipedia.org/wiki/Out_of_the_box_feature
@@ -469,7 +469,7 @@ Until next time. `:wq`
 
 [options-always-pr]: https://github.com/neovim/neovim/pull/2002
 
-[windows-july]: /news/2014/july/
+[windows-july]: /news/2014/07/
 [windows-build]: https://ci.appveyor.com/project/equalsraf/neovim
 [windows-app]: http://www.appveyor.com/
 [windows-notes]: https://gist.github.com/equalsraf/4685f7aef022a36c26d5

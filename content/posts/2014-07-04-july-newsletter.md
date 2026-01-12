@@ -1,7 +1,7 @@
 ---
 title: "Newsletter #2 - Perchance to Dream"
 category: newsletter
-permalink: /news/2014/july/
+permalink: /news/2014/07/
 ---
 
 Welcome to the second monthly newsletter for Neovim, the project that dreams to
@@ -180,7 +180,7 @@ first Friday of August.
 
 Until next time. `:wq`
 
-[docs-dev]: http://neovim.io/doc/dev
+[docs-dev]: http://neovim.io/doc/user/dev.html
 [docs-doxygen]: https://github.com/neovim/neovim.github.io/issues/48
 [docs-quotes]: http://hitchhikers.wikia.com/wiki/Marvin#Quotes_by_Marvin
 [docs-user]: https://github.com/neovim/neovim.github.io/issues/55
@@ -189,7 +189,7 @@ Until next time. `:wq`
 [info-contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [info-github]: https://github.com/neovim/neovim/
 [info-readme]: https://github.com/neovim/neovim/blob/master/README.md
-[info-rss]: /news/index.xml
+[info-rss]: /news.xml
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
 [license-apache]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
