@@ -2,23 +2,24 @@ new Crawler({
   rateLimit: 8,
   maxDepth: 10,
   startUrls: [
-    "https://neovim.io/doc/user/",
+    "https://neovim.io/",
+    /*"https://neovim.io/doc/user/",
     "https://neovim.io/charter/",
     "https://neovim.io/roadmap/",
     "https://neovim.io/news/",
     "https://neovim.io/doc/",
     "https://neovim.io/doc/build/",
-    "https://neovim.io/doc/install/",
+    "https://neovim.io/doc/install/",*/
   ],
   renderJavaScript: false,
   sitemaps: [],
   ignoreCanonicalTo: false,
-  discoveryPatterns: ["https://neovim.io/doc/user/**"],
+  discoveryPatterns: ["https://neovim.io/**"],
   schedule: "at 3:22 PM on Tuesday",
   actions: [
     {
       indexName: "nvim",
-      pathsToMatch: ["https://neovim.io/doc/user/**"],
+      pathsToMatch: ["https://neovim.io/**"],
       recordExtractor: ({ helpers }) => {
         return helpers.docsearch({
           recordProps: {
