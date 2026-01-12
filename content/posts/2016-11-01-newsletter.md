@@ -380,7 +380,7 @@ which has seen
 
 There's a beehive of activity in the gitter and IRC channels (which are
 bridged by [matrix](https://github.com/matrix-org/matrix-appservice-gitter)
-thanks to @leonerd!). [Visit us](https://neovim.io/community/) to talk about the
+thanks to @leonerd!). [Visit us](https://neovim.io/#chat) to talk about the
 project.
 
 And don't forget there's a [roadmap](https://neovim.io/roadmap/) at neovim.io if
