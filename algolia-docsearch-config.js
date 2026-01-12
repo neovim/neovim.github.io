@@ -25,22 +25,16 @@ new Crawler({
           recordProps: {
             lvl0: {
               selectors: [
-                "header h1",
-                "article h1",
-                "main h1",
-                "h1",
-                "a h1",
-                "div a h1",
-                "div div a h1",
                 "head > title",
               ],
               defaultValue: "Documentation",
             },
-            lvl1: ["article h2", "main h2", "h2"],
-            lvl2: ["article h3", "main h3", "h3"],
-            lvl3: ["article h4", "main h4", "h4"],
-            lvl4: ["article h5", "main h5", "h5"],
-            lvl5: ["article h6", "main h6", "h6"],
+            lvl1: ["h1"],
+            lvl2: ["h2"],
+            lvl3: ["h3"],
+            lvl4: ["h4"],
+            lvl5: ["h5"],
+            lvl6: ["h6"],
             //content: ["div.old-help-para", "div.help-para"],
             content: [
               "h1",
@@ -85,7 +79,7 @@ new Crawler({
         "content",
       ],
       distinct: true,
-      attributeForDistinct: "url",
+      attributeForDistinct: "hierarchy.lvl0",
       customRanking: [
         "desc(weight.pageRank)",
         "desc(weight.level)",
