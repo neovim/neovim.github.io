@@ -20,8 +20,8 @@ new Crawler({
     {
       indexName: "nvim",
       pathsToMatch: ["https://neovim.io/**"],
-      recordExtractor: ({ helpers }) => {
-        return helpers.docsearch({
+      recordExtractor: ({ helpers, url }) => {
+        const records = helpers.docsearch({
           recordProps: {
             lvl0: {
               selectors: [
@@ -51,6 +51,14 @@ new Crawler({
           aggregateContent: true,
           recordVersion: "v3",
         });
+
+        // Rank /doc results higher than other pages.
+        const sectionRank = url.pathname.startsWith("/doc/") ? 1 : 0;
+
+        return records.map((record) => ({
+          ...record,
+          sectionRank,
+        }));
       },
     },
   ],
@@ -58,6 +66,8 @@ new Crawler({
     nvim: {
       attributesForFaceting: ["type", "lang"],
       attributesToRetrieve: [
+        "sectionRank",
+        "weight",
         "hierarchy",
         "content",
         "anchor",
@@ -80,7 +90,9 @@ new Crawler({
       ],
       distinct: true,
       attributeForDistinct: "hierarchy.lvl0",
+      // customRanking is applied at the end, only to break ties.
       customRanking: [
+        "desc(sectionRank)",
         "desc(weight.pageRank)",
         "desc(weight.level)",
         "asc(weight.position)",
