@@ -14,7 +14,7 @@ The roadmap is an overview of the project direction. Detailed plans and prioriti
 
 Concrete high-level feature areas and changes.
 
-### [Future (unknown release)](https://github.com/neovim/neovim/milestone/43)
+### Future (unknown release)
 
 - [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
 - Multicursor, super-macros
