@@ -21,7 +21,7 @@ We have a great test suite and automated CI, so you can just jump in and have a
 go. Don't be afraid to open a PR to get comments or just take advantage of the
 infrastructure!
 
-To get in touch with the team, join the [gitter channel](https://gitter.im/neovim)
+To get in touch with the team, join the [chat channel](https://neovim.io/#chat)
 (also accessible via [IRC](https://webchat.freenode.net/?channels=neovim)), or
 visit the [Neovim subreddit](https://www.reddit.com/r/neovim/), which many of
 the developers read. Taking part in conversations is a contribution, too!

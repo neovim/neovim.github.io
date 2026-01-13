@@ -8,7 +8,7 @@ Neovim was again accepted into the Google Summer of Code program.
 View [our page on the GSoC website](https://summerofcode.withgoogle.com/organizations/6095582066638848/)
 for details.  Our [ideas list](https://github.com/neovim/neovim/wiki/GSoC-2019-Ideas)
 runneth over! You're also welcome to propose other ideas in
-[chat](https://gitter.im/neovim/neovim) or on the
+[chat](https://neovim.io/#chat) or on the
 [ticket tracker](https://github.com/neovim/neovim/issues).
 
 Results from last year
