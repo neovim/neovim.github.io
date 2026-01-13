@@ -13,7 +13,6 @@
     <meta property="og:site_name" content="Neovim">
     <meta property="og:title" content="Neovim">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ .Permalink }}">
 
     <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 
@@ -27,10 +26,12 @@
     <!-- Hugo-generated palette for highlighting markdown code blocks. -->
     <!-- <link href="/css/syntax.css" rel="stylesheet"> -->
     <link href="/css/neovim-hi.css" rel="stylesheet">
-    {{ if ne .RelPermalink "/404.html" }}
-    <link rel="canonical" href="{{ .Permalink }}" />
-    {{ else }}
+    {{ if eq .RelPermalink "/404.html" }}
     <meta name="robots" content="noindex">
+    {{ else }}
+    {{ $rel := replaceRE "^/doc2/" "/doc/" .RelPermalink }}
+    <link rel="canonical" href="{{ $rel | absURL }}">
+    <meta property="og:url" content="{{ $rel | absURL }}">
     {{ end }}
     <link href="{{ .Site.BaseURL }}.{{ .Site.Params.news.feed }}" rel="alternate" title="{{ .Site.Params.news.name }}" type="application/rss+xml">
 </head>

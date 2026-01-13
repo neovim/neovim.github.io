@@ -186,7 +186,7 @@ API clients are at the heart of Neovim's architecture, and significantly improve
 any language you want! Since the last newsletter, we've seen the addition of another [C++](https://github.com/DaikiMaekawa/neovim.cpp) client, one for [Elixir](https://github.com/dm1try/nvim), and a [Racket](https://gitlab.com/HiPhish/neovim.rkt) client. The [node client](https://github.com/neovim/node-client) got an overhaul and a new maintainer. Thanks **@billyvg** for taking over! While not totally new, a special shoutout goes to the [ruby client](https://github.com/alexgenco/neovim-ruby) for being very well-maintained. Thanks, **@alexgenco**!
 
 
-If you happen to prefer a language not yet listed, a good starting point are the [docs](https://neovim.io/doc/user/api.html#RPC), and be sure to come talk about it on the [gitter channel](gitter.im/neovim).
+If you happen to prefer a language not yet listed, a good starting point are the [docs](https://neovim.io/doc/user/api.html#RPC), and be sure to [chat about it](https://neovim.io/#chat).
 
 ### GUIs
 

@@ -162,7 +162,7 @@ Previously, support requests and discussions were spread across Reddit, Gitter, 
 
 ### Matrix
 
-The official chatroom for Neovim is on [Gitter](https://gitter.im/neovim/neovim). After the acquisition of Gitter by Matrix (a federated chat protocol), this room can now also be accessed from [Matrix](https://app.element.io/#/room/#neovim:matrix.org); it is also bridged to the IRC network [Libera.chat](https://libera.chat). Due to the increasing number of users, there are now additional, more specific rooms for [development of and around neovim](https://app.element.io/#/room/#nvim-dev:matrix.org), [GUIs](https://app.element.io/#/room/#neovim-guis:matrix.org), and [off-topic chat](https://app.element.io/#/room/#neovim-chat:matrix.org).
+The official chatroom for Neovim was on Gitter. After the acquisition of Gitter by Matrix (a federated chat protocol), this room can now be accessed from [Matrix](https://app.element.io/#/room/#neovim:matrix.org); it is also bridged to the IRC network [Libera.chat](https://libera.chat). Due to the increasing number of users, there are now additional, more specific rooms for [development of and around neovim](https://app.element.io/#/room/#nvim-dev:matrix.org), [GUIs](https://app.element.io/#/room/#neovim-guis:matrix.org), and [off-topic chat](https://app.element.io/#/room/#neovim-chat:matrix.org).
 
 (The links above are to the rooms accessed through [Element](https://app.element.io), a web-based Matrix client; you can also access it through any of the many other [Matrix clients](https://matrix.org/clients/).)
 

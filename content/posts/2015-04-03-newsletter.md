@@ -16,9 +16,7 @@ Welcome to the fifth newsletter for Neovim, the project that looks to become Vim
 ### Gitter.im for Neovim
 
 Now in addition to the [mailing list][gitter-list] and IRC channel, you can hop
-into the [Neovim chat room][gitter-nvim] provided through
-[Gitter.im][gitter-link]. It has a convenient web interface but also allows you
-to connect using your [favorite IRC client][gitter-irc].
+into the [Neovim chat room][gitter-nvim].
 
 ### Black Duck 2014 Open Source Rookie
 
@@ -445,9 +443,9 @@ Until next time. `:wq`
 [gc-pr]: https://github.com/neovim/neovim/pull/1761
 
 [gitter-list]: https://groups.google.com/forum/#!forum/neovim
-[gitter-nvim]: https://gitter.im/neovim/neovim
-[gitter-link]: https://gitter.im/
-[gitter-irc]: https://irc.gitter.im/
+[gitter-nvim]: https://neovim.io/#chat
+[gitter-link]: https://neovim.io/#chat
+[gitter-irc]: https://neovim.io/#chat
 
 [expect-pr]: https://github.com/neovim/neovim/pull/2314
 [expect-wiki]: http://en.wikipedia.org/wiki/Expect
