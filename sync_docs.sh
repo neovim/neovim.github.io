@@ -29,12 +29,12 @@ EOF
 curl -Lo content/doc2/build.md https://raw.githubusercontent.com/neovim/neovim/refs/heads/master/BUILD.md
 add_frontmatter content/doc2/build.md "Build"
 # Replace INSTALL.md hyperlinks with "./install".
-sed -i '' 's/INSTALL\.md/\.\.\/install/g' content/doc2/build.md
+sed -i '' 's/INSTALL\.md/\.\.\/install\//g' content/doc2/build.md
 
 curl -Lo content/doc2/install.md https://raw.githubusercontent.com/neovim/neovim/refs/heads/master/INSTALL.md
 add_frontmatter content/doc2/install.md "Install"
 # Replace BUILD.md hyperlinks with "./build".
-sed -i '' 's/BUILD\.md/\.\.\/build/g' content/doc2/install.md
+sed -i '' 's/BUILD\.md/\.\.\/build\//g' content/doc2/install.md
 
 git add content/doc2/
 git commit -m 'update content/doc2/ files from neovim/neovim repo'
