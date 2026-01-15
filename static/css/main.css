@@ -175,6 +175,11 @@ samp {
 .container {
   width: 100%;
   max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  overflow-wrap: break-word;
 }
 
 .container:before {
@@ -216,6 +221,17 @@ samp {
   .golden-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.golden-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
 }
 /*
  * Navbar
