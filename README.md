@@ -36,6 +36,7 @@ Notes:
     - The javascript and UI container were setup in [this commit](https://github.com/neovim/neovim.github.io/commit/ce9aef12eb1c98135965e3a9c5c792bf9e506a76).
     - The docs pages don't use the layout so they also need to [manually include](https://github.com/neovim/neovim/pull/23839) the javascript and define a UI container.
     - Admin: https://www.algolia.com/apps/X185E15FPG/dashboard
+    - Config: [algolia-docsearch-config.js](./algolia-docsearch-config.js)
 - Codeblock highlighting
     - The highlighting for the generated help docs (`/doc/user/`) is done by:
         - `static/css/neovim-hi.css`

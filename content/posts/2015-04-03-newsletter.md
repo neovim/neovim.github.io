@@ -16,9 +16,7 @@ Welcome to the fifth newsletter for Neovim, the project that looks to become Vim
 ### Gitter.im for Neovim
 
 Now in addition to the [mailing list][gitter-list] and IRC channel, you can hop
-into the [Neovim chat room][gitter-nvim] provided through
-[Gitter.im][gitter-link]. It has a convenient web interface but also allows you
-to connect using your [favorite IRC client][gitter-irc].
+into the [Neovim chat room][gitter-nvim].
 
 ### Black Duck 2014 Open Source Rookie
 
@@ -342,7 +340,7 @@ Until next time. `:wq`
 [info-contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [info-github]: https://github.com/neovim/neovim/
 [info-readme]: https://github.com/neovim/neovim/blob/master/README.md
-[info-rss]: /news/index.xml
+[info-rss]: /news.xml
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
 [info-box]: http://en.wikipedia.org/wiki/Out_of_the_box_feature
@@ -445,9 +443,9 @@ Until next time. `:wq`
 [gc-pr]: https://github.com/neovim/neovim/pull/1761
 
 [gitter-list]: https://groups.google.com/forum/#!forum/neovim
-[gitter-nvim]: https://gitter.im/neovim/neovim
-[gitter-link]: https://gitter.im/
-[gitter-irc]: https://irc.gitter.im/
+[gitter-nvim]: https://neovim.io/#chat
+[gitter-link]: https://neovim.io/#chat
+[gitter-irc]: https://neovim.io/#chat
 
 [expect-pr]: https://github.com/neovim/neovim/pull/2314
 [expect-wiki]: http://en.wikipedia.org/wiki/Expect
@@ -469,7 +467,7 @@ Until next time. `:wq`
 
 [options-always-pr]: https://github.com/neovim/neovim/pull/2002
 
-[windows-july]: /news/2014/july/
+[windows-july]: /news/2014/07/
 [windows-build]: https://ci.appveyor.com/project/equalsraf/neovim
 [windows-app]: http://www.appveyor.com/
 [windows-notes]: https://gist.github.com/equalsraf/4685f7aef022a36c26d5

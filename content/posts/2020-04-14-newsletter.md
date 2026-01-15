@@ -21,7 +21,7 @@ We have a great test suite and automated CI, so you can just jump in and have a
 go. Don't be afraid to open a PR to get comments or just take advantage of the
 infrastructure!
 
-To get in touch with the team, join the [gitter channel](https://gitter.im/neovim) (also
+To get in touch with the team, join the [chat channel](https://neovim.io/#chat) (also
 accessible via [IRC](https://webchat.freenode.net/?channels=neovim)), or visit
 the [Neovim subreddit](https://www.reddit.com/r/neovim/), which many of the
 developers read. Taking part in conversations is a contribution, too!
@@ -147,7 +147,7 @@ If you thought 3 C++ clients wasn't enough, you will be happy to hear that a 4th
 
 - [magnum-neovim-api](https://github.com/Squareys/magnum-neovim-api)
 
-If you happen to prefer a language with no API client listed, a good starting point are the [docs](https://neovim.io/doc/user/msgpack_rpc.html#RPC), and be sure to come talk about it on the [gitter channel](https://gitter.im/neovim).
+If you happen to prefer a language with no API client listed, a good starting point are the [docs](https://neovim.io/doc/user/api.html#RPC), and be sure to come talk about it on the [chat channel](https://neovim.io/#chat).
 
 ### GUIs
 

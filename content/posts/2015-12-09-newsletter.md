@@ -294,5 +294,5 @@ Very useful @kassio!
 [installing-neovim-package]: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package
 [installing-neovim-source]: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
 [build-neovim]: https://github.com/neovim/neovim/wiki/Building-Neovim
-[nvim-from-vim]: https://neovim.io/doc/user/nvim_from_vim.html#nvim-from-vim
+[nvim-from-vim]: https://neovim.io/doc/user/nvim.html#nvim-from-vim
 [nvim-releases]: https://github.com/neovim/neovim/releases

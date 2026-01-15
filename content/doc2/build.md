@@ -13,7 +13,7 @@ type: page
 3. `cd neovim`
     - If you want the **stable release**, also run `git checkout stable`.
 4. `make CMAKE_BUILD_TYPE=RelWithDebInfo`
-    - If you want to install to a custom location, set `CMAKE_INSTALL_PREFIX`. See also [../install](./../install#install-from-source).
+    - If you want to install to a custom location, set `CMAKE_INSTALL_PREFIX`. See also [../install/](./../install/#install-from-source).
     - On BSD, use `gmake` instead of `make`.
     - To build on Windows, see the [Building on Windows](#building-on-windows) section. _MSVC (Visual Studio) is recommended._
 5. `sudo make install`

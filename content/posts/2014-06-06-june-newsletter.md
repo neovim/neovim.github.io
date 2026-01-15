@@ -1,7 +1,7 @@
 ---
 title: "Newsletter #1 - A New Hope"
 category: newsletter
-permalink: /news/2014/june/
+permalink: /news/2014/06/
 ---
 
 Welcome to the first newsletter for Neovim, a project that hopes to give a new
@@ -231,7 +231,7 @@ Until next time. `:wq`
 [translator]: https://github.com/neovim/neovim/pull/243
 [iwyu]: https://code.google.com/p/include-what-you-use/
 [iwyu-issue]: https://github.com/neovim/neovim/issues/549
-[info-rss]: /news/index.xml
+[info-rss]: /news.xml
 [twitter]: https://twitter.com/Neovim
 [logging]: https://github.com/neovim/neovim/pull/644
 [memory.c]: https://github.com/neovim/neovim/blob/cab8cf970c09ea465d30e11eb356e2e5d37dc544/src/nvim/memory.c

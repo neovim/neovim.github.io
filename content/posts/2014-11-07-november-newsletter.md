@@ -233,7 +233,7 @@ Until next time. `:wq`
 [info-contrib]: https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md
 [info-github]: https://github.com/neovim/neovim/
 [info-readme]: https://github.com/neovim/neovim/blob/master/README.md
-[info-rss]: /news/index.xml
+[info-rss]: /news.xml
 [info-twitter]: https://twitter.com/Neovim
 [info-wiki]: https://github.com/neovim/neovim/wiki
 
@@ -272,7 +272,7 @@ Until next time. `:wq`
 [iconv-pr]: https://github.com/neovim/neovim/pull/1370
 [iconv-site]: http://www.gnu.org/software/libiconv/
 
-[int-types-newsletter]: http://neovim.io/news/2014/june/
+[int-types-newsletter]: http://neovim.io/news/2014/06/
 [int-types-pr]: https://github.com/neovim/neovim/pull/1340
 [int-types-part-1]: https://github.com/neovim/neovim/pull/656
 [int-types-part-2]: https://github.com/neovim/neovim/pull/757
@@ -294,7 +294,7 @@ Until next time. `:wq`
 
 [plugin-pr]: https://github.com/neovim/neovim/pull/1454
 [plugin-remote-doc]: http://neovim.io/doc/user/remote_plugin.html#remote-plugin
-[plugin-provider-doc]: http://neovim.io/doc/user/nvim_provider.html#nvim-provider
+[plugin-provider-doc]: http://neovim.io/doc/user/provider.html#provider
 [plugin-comment]: https://github.com/neovim/neovim/issues/1501#issuecomment-63765917
 [plugin-1]: https://github.com/neovim/neovim/issues/1415
 [plugin-2]: https://github.com/neovim/neovim/issues/1459
