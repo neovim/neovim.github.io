@@ -217,6 +217,11 @@ samp {
     grid-template-columns: 1fr;
   }
 }
+
+.col-wide {
+  max-width: 90vw;
+}
+
 /*
  * Navbar
  *
