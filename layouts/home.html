@@ -10,68 +10,7 @@
 <section class="front-section">
     <div class="container golden-grid">
         <div class="col-wide">
-            <h2>Features</h2>
-
-            <h3>Extensible</h3>
-            <ul>
-                <li>
-                    API is first-class:
-                    <a href="/doc/user/api.html#api-mapping">discoverable</a>,
-                    <a href="/doc/user/api.html#api-contract">versioned</a>,
-                    <a href="/doc/user/api.html#api-global">documented</a>.
-                </li>
-                <li>
-                    <a href="http://msgpack.org/">MessagePack</a> structured communication
-                    enables extensions in any language.
-                </li>
-                <li>
-                    Remote plugins run as co-processes, safely and asynchronously.
-                </li>
-                <li>
-                    GUIs, IDEs, web browsers can <code>--embed</code> Neovim as an editor or script host.
-                </li>
-                <li>
-                    <a href="/doc/user/lua.html">Lua plugins</a> are easy to create just like Vimscript plugins.
-                    Your config can live in <code>init.lua</code>!
-                </li>
-                <li>
-                    AST-producing <a href="https://tree-sitter.github.io/">parsing engine</a>
-                    enables faster, more accurate syntax highlighting, code navigation,
-                    refactoring, text objects, and motions.
-                </li>
-            </ul>
-
-            <h3>Usable</h3>
-            <ul>
-                <li>Strong <a href="/doc/user/vim_diff.html#nvim-defaults">defaults</a> including a unique, minimalist
-                    colorscheme.</li>
-                <li>
-                    Builtin <a href="/doc/user/lsp.html">LSP client</a> for
-                    semantic code inspection and refactoring (go-to definition, "find references", format, …).
-                </li>
-                <li>
-                    Client-server architecture allows you to <a href="/doc/user/gui.html#%3Adetach">:detach</a>
-                    the UI and keep the editor session running (like tmux). Attach multiple UIs to any Nvim session.
-                </li>
-                <li>No "Press ENTER" messages (Nvim 0.12 feature).</li>
-                <li>Works the same everywhere: one build-type, one command.</li>
-                <li>Modern terminal features such as cursor styling, focus events, bracketed paste.</li>
-                <li>Builtin <a href="https://www.youtube.com/watch?v=xZbMVj9XSUo">:terminal</a> set the standard for
-                    "TTY as a basic component".</li>
-            </ul>
-
-            <h3>Drop-in Vim</h3>
-            <ul>
-                <li>
-                    Fully compatible with Vim's editing model and Vimscript v1.
-                </li>
-                <li>
-                    Start with
-                    <a href="/doc/user/nvim.html#nvim-from-vim"><code>:help nvim-from-vim</code></a>
-                    if you already use Vim. If not, try <code>:Tutor</code>.
-                </li>
-            </ul>
-
+        {{ .Content }}
         </div>
         <div class="col-narrow">
             <h2 id="sponsors-header"><a href="/sponsors/">Sponsors</a></h2>
@@ -127,18 +66,9 @@
                 <p><a href="/news/archive/">More…</a></p>
 
                 <h2>Impressions</h2>
-                <p>
-                    "Neovim is exactly what it claims to be. It fixes every issue I have with Vim."
-                    <a href="http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/">—Geoff Greer</a>
-                </p>
-                <p>
-                    "Full-screen Neovim looks cool as hell!"
-                    <a href="https://x.com/dhh/status/1764465909316583659">—DHH</a>
-                </p>
-                <p>
-                    "A nice looking website, that’s one thing Neovim did right."
-                    <a href="https://www.binpress.com/vim-creator-bram-moolenaar-interview/">—Bram Moolenaar</a>
-                </p>
+                {{ range .Params.impressions }}
+                <p>"{{ .quote | markdownify }}" <a href="{{ .link }}">—{{ .name }}</a></p>
+                {{ end }}
             </div>
         </div>
     </div>
@@ -184,27 +114,10 @@
         <div>
             <h2 id="faqs">FAQ</h2>
             <dl class="faqs">
-                <dt>What is the project status?</dt>
-                <dd>
-                    The current <a href="https://github.com/neovim/neovim/releases/latest">stable release</a>
-                    version is <code>0.11</code> (<a href="https://github.com/neovim/neovim/tags.atom">RSS</a>).
-                    See the <a href="roadmap/">roadmap</a> for progress and plans.
-                </dd>
-
-                <dt>Is Neovim trying to turn Vim into an IDE?</dt>
-                <dd>With 30% less source-code than Vim, the <a href="charter/">vision</a>
-                    of Neovim is to enable new applications without compromising Vim's
-                    traditional roles. </dd>
-
-                <dt>Will Neovim deprecate Vimscript?</dt>
-                <dd>
-                    No. Lua is built-in, but Vimscript is supported with the
-                    <a href="/doc/user/api.html#nvim_parse_expression()">world's most advanced Vimscript engine</a>.
-                </dd>
-
-                <dt>Which plugins does Neovim support?</dt>
-                <dd>Vim 8.x plugins and <a href="https://github.com/neovim/neovim/wiki/Related-projects">much more</a>.
-                </dd>
+                {{ range .Params.faq }}
+                <dt>{{ .question | markdownify }}</dt>
+                <dd>{{ .answer | markdownify }}</dd>
+                {{ end }}
             </dl>
         </div>
         <div>
