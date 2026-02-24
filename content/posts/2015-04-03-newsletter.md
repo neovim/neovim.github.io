@@ -198,7 +198,7 @@ instead of the previous way of using [autocommands][job-autocmd] for responding
 to events.
 
 In addition to that, there are more job control functions in VimL including
-[`jobwait()`][job-wait] and [`jobclose()`][job-close].
+[`jobwait()`][job-wait] and `jobclose()`.
 
 ### So Long `long_u`
 
@@ -377,8 +377,7 @@ Until next time. `:wq`
 [color-info]: https://gist.github.com/XVilka/8346728
 
 [job-pr]: https://github.com/neovim/neovim/pull/2247
-[job-wait]: https://neovim.io/doc/user/eval.html#jobwait()
-[job-close]: https://neovim.io/doc/user/eval.html#jobclose()
+[job-wait]: https://neovim.io/doc/user/vimfn/#jobstart()
 [job-autocmd]: https://neovim.io/doc/user/autocmd.html#autocmd-intro
 
 [events-pr]: https://github.com/neovim/neovim/pull/1717
@@ -408,7 +407,7 @@ Until next time. `:wq`
 [related-main-wiki]: https://github.com/neovim/neovim/wiki
 
 [patch-search]: https://github.com/neovim/neovim/pulls?utf8=%E2%9C%93&q=vim-patch+in%3Atitle+created%3A%222014-11-25+..+2015-04-02%22+
-[patch-report]: https://neovim.io/doc/reports/vimpatch/
+[patch-report]: https://github.com/neovim/neovim/blob/master/scripts/vim-patch.sh
 
 [gui-list]: https://github.com/neovim/neovim/wiki/Related-projects#gui-projects
 [gui-oak]: https://github.com/oakes/SolidOak
