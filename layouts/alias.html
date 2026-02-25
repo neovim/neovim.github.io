@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+
+<head>
+  <title>{{ .Permalink }}</title>
+  {{ with .OutputFormats.Canonical }}<link rel="{{ .Rel }}" href="{{ .Permalink }}">{{ end }}
+  <meta charset="utf-8">
+  <script defer>
+    const target = "{{ .Permalink }}"
+    const query = window.location.search
+    const hash = window.location.hash
+    window.location.replace(target + query + hash)
+  </script>
+  <!-- non-JS fallback, doesn't include the hash/anchor -->
+  <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+</head>
+
+</html>
