@@ -27,7 +27,7 @@ querystring parameter. The page gets tags from the "/doc/user/helptags.json" fil
           throw new Error('helptag not found: "' + tag + '"')
         }
 
-        window.location.href = tagmap[tag]
+        window.location.replace(`/doc/user/${tagmap[tag]}`)
       } catch (err) {
         console.error(err)
         if (errorDiv) {
