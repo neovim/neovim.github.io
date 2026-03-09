@@ -33,5 +33,5 @@ runs:
         HUGO_ENVIRONMENT: production
         HUGO_ENV: production
       run: |
-        hugo --gc --minify --baseURL "$BASE_URL"
+        hugo --gc --baseURL "$BASE_URL"
 
