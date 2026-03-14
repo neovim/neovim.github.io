@@ -6,6 +6,11 @@ layout: mainpage
 These screenshots demo what's possible. They may use unreleased features,
 third-party UIs, plugins, or config changes.
 
+## Features
+
+- ['statuscolumn'](https://x.com/Neovim/status/2032946089804902813)
+- ['tabline'](https://x.com/Neovim/status/2032952430736863356)
+
 ## TUI (Terminal UI)
 
 ### Custom [Start Screen](https://github.com/mhinz/vim-startify/) and [a fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
