@@ -1,5 +1,5 @@
 ---
-title: Home
+title: ""
 redirect_from:
   - /development-wiki/
 params:
