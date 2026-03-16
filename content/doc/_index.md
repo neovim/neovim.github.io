@@ -20,7 +20,7 @@ active: Documentation
 - Check the [FAQ](/doc/user/faq/#faq) and [breaking
   changes](/doc/user/news/#news-breaking) for common issues.
 
-{{% aside %}}
+{{% scratch "aside" %}}
 
 ## Developer
 
@@ -44,4 +44,4 @@ active: Documentation
 - [More clients
   (third-party)](https://github.com/neovim/neovim/wiki/Related-projects#api-clients)
 
-{{% /aside %}}
+{{% /scratch %}}
