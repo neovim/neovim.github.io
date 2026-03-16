@@ -2,36 +2,6 @@
 title: ""
 redirect_from:
   - /development-wiki/
-params:
-  impressions:
-    - quote: Neovim is exactly what it claims to be. It fixes every issue I have with Vim.
-      name: Geoff Greer
-      link: http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/
-    - quote: Full-screen Neovim looks cool as hell!
-      name: DHH
-      link: https://x.com/dhh/status/1764465909316583659
-    - quote: A nice looking website, that’s one thing Neovim did right.
-      name: Bram Moolenaar
-      link: https://www.binpress.com/vim-creator-bram-moolenaar-interview/
-  faq:
-    - question: What is the project status?
-      answer: |
-        The current [stable release](https://github.com/neovim/neovim/releases/latest)
-        version is `0.11` ([RSS](https://github.com/neovim/neovim/tags.atom)).
-        See the [roadmap](/roadmap/) for progress and plans.
-    - question: Is Neovim trying to turn Vim into an IDE?
-      answer: |
-        With 30% less source-code than Vim, the [vision](/charter/)
-        of Neovim is to enable new applications without compromising Vim's
-        traditional roles.
-    - question: Will Neovim deprecate Vimscript?
-      answer: |
-        No. Lua is built-in, but Vimscript is supported with the
-        [world's most advanced Vimscript engine](/doc/user/api/#nvim_parse_expression()).
-    - question: Which plugins does Neovim support?
-      answer: |
-        Vim 8.x plugins and
-        [much more](https://github.com/neovim/neovim/wiki/Related-projects).
 ---
 
 ## Features
@@ -73,3 +43,76 @@ params:
 - Fully compatible with Vim's editing model and Vimscript v1.
 - Start with [`:help nvim-from-vim`](/doc/user/nvim/#nvim-from-vim)
   if you already use Vim. If not, try `:Tutor`.
+
+
+{{% scratch "chat" %}}
+## Chat
+
+- [Follow \@Neovim on X](https://x.com/Neovim),
+  [Mastodon](https://hachyderm.io/@neovim),
+  [Bluesky](https://bsky.app/profile/neovim.io)
+- Discuss the project in [GitHub
+  Discussions](https://github.com/neovim/neovim/discussions), or chat in
+  [#neovim:matrix.org](https://matrix.to/#/#neovim:matrix.org) or
+  #neovim on `irc.libera.chat`.
+- Contribute code, report bugs and request features at
+  [GitHub](https://github.com/neovim/neovim).
+- Ask usage and configuration questions at [GitHub
+  Discussions](https://github.com/neovim/neovim/discussions) or
+  [vi.stackexchange.com](https://vi.stackexchange.com).
+{{% /scratch %}}
+
+{{% scratch "GUIs" %}}
+## GUIs
+
+Neovim UIs are "inverted plugins". Here are some popular ones:
+- [Firenvim](https://github.com/glacambre/firenvim) (Nvim in your web
+  browser!)
+- [vscode-neovim](https://github.com/vscode-neovim/vscode-neovim) (Nvim
+  in VSCode!)
+- [Neovide](https://neovide.dev/)
+- [Goneovim](https://github.com/akiyosi/goneovim)
+- [GNvim (GTK4)](https://github.com/vhakulinen/gnvim)
+- [FVim](https://github.com/yatli/fvim)
+- [Nvy](https://github.com/RMichelsen/Nvy)
+- [Neovim Qt (Qt5)](https://github.com/equalsraf/neovim-qt)
+- [VimR (macOS)](https://github.com/qvacua/vimr)
+- [More...](https://github.com/neovim/neovim/wiki/Related-projects#gui)
+{{% /scratch %}}
+
+
+{{% scratch "impressions" %}}
+## Impressions
+
+"Neovim is exactly what it claims to be. It fixes every issue I have
+with Vim."
+[---Geoff Greer](http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/)
+
+"Full-screen Neovim looks cool as hell!"
+[---DHH](https://x.com/dhh/status/1764465909316583659)
+
+"A nice looking website, that's one thing Neovim did right."
+[---Bram Moolenaar](https://www.binpress.com/vim-creator-bram-moolenaar-interview/)
+{{% /scratch %}}
+
+
+{{% scratch "faq" %}}
+## FAQ {#faqs}
+
+**What is the project status?**\
+The current [stable release](https://github.com/neovim/neovim/releases/latest)
+version is `0.11` ([RSS](https://github.com/neovim/neovim/tags.atom)). See the
+[roadmap](/roadmap/) for progress and plans.
+
+**Is Neovim trying to turn Vim into an IDE?**\
+With 30% less source-code than Vim, the [vision](/charter/) of Neovim is to
+enable new applications without compromising Vim's traditional roles.
+
+**Will Neovim deprecate Vimscript?**\
+No. Lua is built-in, but Vimscript is supported with the [world's most advanced
+Vimscript engine](/doc/user/api/#nvim_parse_expression()).
+
+**Which plugins does Neovim support?**\
+Vim 8.x plugins and [much
+more](https://github.com/neovim/neovim/wiki/Related-projects).
+{{% /scratch %}}

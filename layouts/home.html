@@ -65,10 +65,7 @@
                 </dl> */}}
                 <p><a href="/news/archive/">More…</a></p>
 
-                <h2>Impressions</h2>
-                {{ range .Params.impressions }}
-                <p>"{{ .quote | markdownify }}" <a href="{{ .link }}">—{{ .name }}</a></p>
-                {{ end }}
+                {{ .Page.Scratch.Get "impressions" }}
             </div>
         </div>
     </div>
@@ -87,23 +84,7 @@
         </div>
 
         <div>
-            <h2 id="chat">Chat</h2>
-            <ul>
-              <li><a href="https://x.com/Neovim" class="twitter-follow-button">Follow &#64;Neovim on X</a>,
-                <a rel="me" href="https://hachyderm.io/@neovim">Mastodon</a>,
-                <a href="https://bsky.app/profile/neovim.io">Bluesky</a>
-              </li>
-              <li>Discuss the project in <a href="https://github.com/neovim/neovim/discussions">GitHub Discussions</a>, or
-                chat in <a href="https://matrix.to/#/#neovim:matrix.org">#neovim:matrix.org</a>
-                or #neovim on <code>irc.libera.chat</code>.
-              </li>
-              <li>Contribute code, report bugs and request features at <a
-                      href="https://github.com/neovim/neovim">GitHub</a>.</li>
-              <li>Ask usage and configuration questions at <a
-                      href="https://github.com/neovim/neovim/discussions">GitHub Discussions</a>
-                  or <a href="https://vi.stackexchange.com">vi.stackexchange.com</a>.
-              </li>
-            </ul>
+          {{ .Page.Scratch.Get "chat" }}
         </div>
 
     </div>
@@ -112,29 +93,10 @@
 <section class="front-section">
     <div class="container golden-grid">
         <div>
-            <h2 id="faqs">FAQ</h2>
-            <dl class="faqs">
-                {{ range .Params.faq }}
-                <dt>{{ .question | markdownify }}</dt>
-                <dd>{{ .answer | markdownify }}</dd>
-                {{ end }}
-            </dl>
+          {{ .Page.Scratch.Get "faq" }}
         </div>
         <div>
-            <h2>GUIs</h2>
-            Neovim UIs are "inverted plugins". Here are some popular ones:
-            <ul>
-                <li><a href="https://github.com/glacambre/firenvim">Firenvim</a> (Nvim in your web browser!)</li>
-                <li><a href="https://github.com/vscode-neovim/vscode-neovim">vscode-neovim</a> (Nvim in VSCode!)</li>
-                <li><a href="https://neovide.dev/">Neovide</a></li>
-                <li><a href="https://github.com/akiyosi/goneovim">Goneovim</a></li>
-                <li><a href="https://github.com/vhakulinen/gnvim">GNvim (GTK4)</a></li>
-                <li><a href="https://github.com/yatli/fvim">FVim</a></li>
-                <li><a href="https://github.com/RMichelsen/Nvy">Nvy</a></li>
-                <li><a href="https://github.com/equalsraf/neovim-qt">Neovim Qt (Qt5)</a></li>
-                <li><a href="https://github.com/qvacua/vimr">VimR (macOS)</a></li>
-                <li><a href="https://github.com/neovim/neovim/wiki/Related-projects#gui">More...</a></li>
-            </ul>
+          {{ .Page.Scratch.Get "GUIs" }}
         </div>
     </div>
 </section>
