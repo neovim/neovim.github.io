@@ -65,6 +65,20 @@ a {
   transition: all ease-in-out 140ms;
 }
 
+a[href^="http"]:not([href*="neovim.io"]):not(.btn)::after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.2em;
+  vertical-align: super;
+  font-size: 0.75em;
+  mask-image: url('/external-url-icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-color: currentColor;
+}
+
 /* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
 a:has(> img) {
   display: block;
