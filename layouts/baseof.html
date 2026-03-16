@@ -3,20 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta property="og:description" content="Hyperextensible Vim-based text editor">
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-social-preview.png">
-    <meta property="og:image:alt" content="Robot Marvim pointing at Neovim logo">
-    <meta property="og:site_name" content="Neovim">
-    <meta property="og:title" content="Neovim">
-    <meta property="og:type" content="website">
+    <meta name="description" content="{{ site.Params.description }}">
+
+    {{ partial "opengraph.html" . }}
+    {{ partial "twitter_cards.html" . }}
+    {{ partial "schema.html" . }}
 
     <title>
       {{- if .Title }}{{ .Title }} - {{ end -}}
-      {{ .Site.Title }}
+      {{ .Site.Title -}}
       {{ if .InSection (site.GetPage "/doc/user") }}
       docs
       {{- end -}}
@@ -35,8 +31,7 @@
     {{ if eq .RelPermalink "/404.html" }}
     <meta name="robots" content="noindex">
     {{ else }}
-    <link rel="canonical" href="{{ .RelPermalink }}">
-    <meta property="og:url" content="{{ .RelPermalink }}">
+    <link href="{{ .Permalink }}" rel="canonical">
     {{ end }}
 
     {{ if .InSection (site.GetPage "/doc/user") }}
@@ -45,7 +40,7 @@
     <script src="/highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     {{ end }}
-    <link href="{{ .Site.BaseURL }}.{{ .Site.Params.news.feed }}" rel="alternate" title="{{ .Site.Params.news.name }}" type="application/rss+xml">
+    <link href="{{ absURL .Site.Params.news.feed }}" rel="alternate" title="{{ .Site.Params.news.name }}" type="application/rss+xml">
 </head>
 
 <body>
