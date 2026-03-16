@@ -65,7 +65,9 @@ a {
   transition: all ease-in-out 140ms;
 }
 
-a[href^="http"]:not([href*="neovim.io"]):not(.btn)::after {
+/* Add an "external link" icon next to anchors
+ * (but not when they're buttons or wrap images) */
+a[href^="http"]:not([href*="neovim.io"]):not(.btn):not(:has(img))::after {
   content: '';
   display: inline-block;
   width: 0.75em;
