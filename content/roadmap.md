@@ -15,30 +15,36 @@ Concrete high-level feature areas and changes.
 
 ### Future (unknown release)
 
-- [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
-- Multicursor, super-macros
-- Multibuffer [#30463](https://github.com/neovim/neovim/issues/30463)
-- packspec / `pkg.json`
-- File-change detection
-- Externalized UI: window layout events, messages
-
-### [0.13](https://github.com/neovim/neovim/milestone/48): "The year of Batteries Included" (visibility, stdlib features, UI elements)
-
-- UI "block-level elements" so plugins can reason about regions
-- UI "affordance" indicator so users know which elements they can interact with
-- Unified event interface, `nvim_on()`
-- stdlib: image API
 - Task abstraction, structured concurrency: `vim.async`
-- Redesign `--remote`
+- File-change detection
+- Multibuffer [#30463](https://github.com/neovim/neovim/issues/30463)
+- Lua remote plugin host
+- packspec / `pkg.json`
+- UI "block-level elements" so plugins can reason about regions
+- Externalized UI: window layout events, messages
 - LSP: `vim.lsp.server()`
 
-### [0.12](https://github.com/neovim/neovim/milestone/43): "The year of Nvim OOTB"
+### [0.13](https://github.com/neovim/neovim/milestone/48) "The year of Batteries Included" (visibility, stdlib)
 
-- ✅ Plugin manager (`vim.pack`) [#34009](https://github.com/neovim/neovim/pull/34009)
-- ✅ No more "Press ENTER" [#27855](https://github.com/neovim/neovim/pull/27855)
-- UI `:connect`, `:restart`[#5035](https://github.com/neovim/neovim/issues/5035)
-- Lua remote plugin host
+- [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
+- Multicursor, super-macros
 - Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
+- UI "affordance" indicator so users know which elements they can interact with
+- Unified event interface, `nvim_on()`
+- Image API: `vim.ui.img`
+- Redesign `--remote`
+
+### [0.12](https://github.com/neovim/neovim/milestone/43) "The year of Nvim OOTB"
+
+- Plugin manager (`vim.pack`) [#34009](https://github.com/neovim/neovim/pull/34009)
+- No more "Press ENTER" [#27855](https://github.com/neovim/neovim/pull/27855)
+- UI `:connect`, `:restart` [#5035](https://github.com/neovim/neovim/issues/5035)
+- [Progress messages](/doc/user/message/#progress-message) ([demo](https://x.com/justinmk/status/1974578591204864352))
+- LSP: 11+ new capabilities, `:lsp` command, default mappings, improved `enable()` and `stop()` behavior
+- API: `nvim_open_tabpage()`, enhanced `nvim_open_win()` + `nvim_win_set_config()`
+- Default statusline: diagnostics, progress-status
+- Prompt-buffer enhancements: multiline input/paste, undo/redo
+- Treesitter: incremental selection via `in` / `an` textobjects
 
 ## Completed
 
