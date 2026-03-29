@@ -101,7 +101,7 @@ with Vim."
 
 **What is the project status?**\
 The current [stable release](https://github.com/neovim/neovim/releases/latest)
-version is `0.11` ([RSS](https://github.com/neovim/neovim/tags.atom)). See the
+version is `0.12` ([RSS](https://github.com/neovim/neovim/tags.atom)). See the
 [roadmap](/roadmap/) for progress and plans.
 
 **Is Neovim trying to turn Vim into an IDE?**\

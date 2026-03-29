@@ -34,7 +34,11 @@ Concrete high-level feature areas and changes.
 - Image API: `vim.ui.img`
 - Redesign `--remote`
 
-### [0.12](https://github.com/neovim/neovim/milestone/43) "The year of Nvim OOTB"
+## Completed
+
+Here are the headline features of the previous releases; for details see the release notes.
+
+### [0.12](https://github.com/neovim/neovim/milestone/43?closed=1) "The year of Nvim OOTB"
 
 - Plugin manager (`vim.pack`) [#34009](https://github.com/neovim/neovim/pull/34009)
 - No more "Press ENTER" [#27855](https://github.com/neovim/neovim/pull/27855)
@@ -45,10 +49,6 @@ Concrete high-level feature areas and changes.
 - Default statusline: diagnostics, progress-status
 - Prompt-buffer enhancements: multiline input/paste, undo/redo
 - Treesitter: incremental selection via `in` / `an` textobjects
-
-## Completed
-
-Here are the headline features of the previous releases; for details see the release notes.
 
 ### [0.11](https://github.com/neovim/neovim/milestone/41?closed=1)
 
