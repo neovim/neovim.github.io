@@ -36,6 +36,13 @@ via `:InspectTree`
 <img src="/images/showcase/inspecttree.png" alt="Check you have the necessary treesitter grammars
 via checkhealth vim.treesitter" >
 
+### New interface 'ui2'
+
+Enable 'ui2' to avoid UI messages blocking your workflow or to enable a centered
+cmdline (here with [tiny-cmdline.nvim](https://github.com/rachartier/tiny-cmdline.nvim)):
+
+<img src="/images/showcase/ui2-centered-cmdline.png" alt="TUI with telescope (courtesy of @sunjon)" >
+
 ### Custom [Start Screen](https://github.com/mhinz/vim-startify/) and [a fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
 
 <img src="/images/showcase/telescope_helptags.png" alt="TUI with telescope (courtesy of @sunjon)" width="640">
