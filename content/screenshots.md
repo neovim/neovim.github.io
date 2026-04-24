@@ -59,6 +59,12 @@ Graphical interfaces are not packaged with Neovim. GUIs are not limited by termi
 
 <img src="/images/showcase/goneovim.png" alt="goneovim (courtesy of @akyosi)" width="640">
 
+### Animated cursor and smooth scrolling in [Neovide](https://neovide.dev)
+
+<img src="/images/showcase/neovide-animatedCursor.gif" alt="neovide animated cursor" width="300">
+&nbsp;
+<img src="/images/showcase/neovide-smoothScrolling.gif" alt="neovide smooth scrolling" width="300">
+
 ### Externalized command mode in [GNvim](https://github.com/vhakulinen/gnvim)
 
 <img src="/images/showcase/gnvim.png" alt="gnvim (courtesy of @vhakulinen)" width="640">
