@@ -28,6 +28,14 @@ With your LSP servers configured, get access to documentation by just pressing
 <img src="/images/showcase/lsp-help.png" alt="Show the language
     documentation by pressing 'K'" width="640">
 
+### Inspect the syntax tree 
+
+Thanks to treesitter, you can navigate the syntax tree (natively for lua and C)
+via `:InspectTree`
+
+<img src="/images/showcase/inspecttree.png" alt="Check you have the necessary treesitter grammars
+via checkhealth vim.treesitter" >
+
 ## TUI (Terminal UI)
 
 ### Custom [Start Screen](https://github.com/mhinz/vim-startify/) and [a fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
