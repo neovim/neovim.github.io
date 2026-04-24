@@ -36,15 +36,9 @@ via `:InspectTree`
 <img src="/images/showcase/inspecttree.png" alt="Check you have the necessary treesitter grammars
 via checkhealth vim.treesitter" >
 
-## TUI (Terminal UI)
-
 ### Custom [Start Screen](https://github.com/mhinz/vim-startify/) and [a fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
 
 <img src="/images/showcase/telescope_helptags.png" alt="TUI with telescope (courtesy of @sunjon)" width="640">
-
-### LSP Search with [Lspsaga](https://github.com/glepnir/lspsaga.nvim#async-lsp-finder)
-
-<img src="/images/showcase/floating-win.png" alt="courtesy of @glepnir" width="640">
 
 ## GUI
 
