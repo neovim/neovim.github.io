@@ -8,8 +8,25 @@ third-party UIs, plugins, or config changes.
 
 ## Features
 
-- ['statuscolumn'](https://x.com/Neovim/status/2032946089804902813)
-- ['tabline'](https://x.com/Neovim/status/2032952430736863356)
+### 'statuscolumn'
+
+Customize your vertical list of indicators (breakpoints, folds, diagnostics,
+line numbers, ...) using 'statuscolumn': 
+
+<img src="/images/showcase/statuscolumn0.12.png" alt="Statuscolumn" >
+
+### 'tabline'
+
+Customize how to list different views of your buffers with 'showtabline',
+'tabline':
+
+### Language documentation on a whim
+
+With your LSP servers configured, get access to documentation by just pressing
+'K'.
+
+<img src="/images/showcase/lsp-help.png" alt="Show the language
+    documentation by pressing 'K'" width="640">
 
 ## TUI (Terminal UI)
 
