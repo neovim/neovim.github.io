@@ -46,10 +46,6 @@ Graphical interfaces are not packaged with Neovim. GUIs are not limited by termi
 
 <img src="/images/showcase/nvim-qt.png" alt="neovim-qt (courtesy of @equalsraf)" width="640">
 
-### Nyancat in [Uivonim](https://github.com/smolck/uivonim)
-
-<img src="/images/showcase/uivonim_nyancat.png" alt="uivonim (courtesy of @smolck)" width="640">
-
 ### Minimap and externalized window in [Goneovim](https://github.com/akiyosi/goneovim)
 
 <img src="/images/showcase/goneovim.png" alt="goneovim (courtesy of @akyosi)" width="640">
