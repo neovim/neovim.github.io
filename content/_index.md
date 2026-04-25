@@ -14,13 +14,13 @@ redirect_from:
 - [MessagePack](http://msgpack.org/) structured communication enables
   extensions in any language.
 - Remote plugins run as co-processes, safely and asynchronously.
-- GUIs, IDEs, web browsers can `--embed` Neovim as an editor or script
+- [GUIs](#guis), IDEs, web browsers can `--embed` Neovim as an editor or script
   host.
-- [Lua plugins](/doc/user/lua/) are easy to create just like
-  Vimscript plugins. Your config can live in `init.lua`!
+- Create [Lua plugins](/doc/user/lua-plugin/#lua-plugin-new) easily.
+  Your config can live in `init.lua`!
 - AST-producing [parsing engine](https://tree-sitter.github.io/) enables
-  faster, more accurate syntax highlighting, code navigation,
-  refactoring, text objects, and motions.
+  fast, accurate syntax highlighting, code navigation, refactoring, text
+  objects, and motions.
 
 ### Usable
 
@@ -28,10 +28,9 @@ redirect_from:
   unique, minimalist colorscheme.
 - Builtin [LSP client](/doc/user/lsp/) for semantic code inspection
   and refactoring (go-to definition, "find references", format, ...).
-- Client-server architecture allows you to
-  [:detach](/doc/user/gui/#%3Adetach) the UI and keep the editor
-  session running (like tmux). Attach multiple UIs to any Nvim session.
-- No "Press ENTER" messages (Nvim 0.12 feature).
+- Client-server architecture enables [:connect, :detach, :restart](https://www.youtube.com/watch?v=bqWIibaUN_A&list=PLvTJMxH60GZ8EJszAxm-IxUv12xaCcUlG)
+  (like tmux, but works everywhere). Attach multiple UIs to any Nvim session.
+- No "Press ENTER" messages ("ui2" in Nvim 0.12 "ui2" feature).
 - Works the same everywhere: one build-type, one command.
 - Modern terminal features such as cursor styling, focus events,
   bracketed paste.
