@@ -30,7 +30,7 @@ redirect_from:
   and refactoring (go-to definition, "find references", format, ...).
 - Client-server architecture enables [:connect, :detach, :restart](https://www.youtube.com/watch?v=bqWIibaUN_A&list=PLvTJMxH60GZ8EJszAxm-IxUv12xaCcUlG)
   (like tmux, but works everywhere). Attach multiple UIs to any Nvim session.
-- No "Press ENTER" messages ("ui2" in Nvim 0.12 "ui2" feature).
+- No "Press ENTER" messages (Nvim 0.12 "ui2" feature).
 - Works the same everywhere: one build-type, one command.
 - Modern terminal features such as cursor styling, focus events,
   bracketed paste.
