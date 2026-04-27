@@ -43,6 +43,16 @@ cmdline (here with [tiny-cmdline.nvim](https://github.com/rachartier/tiny-cmdlin
 
 <img src="/images/showcase/ui2-centered-cmdline.png" alt="TUI with telescope (courtesy of @sunjon)" >
 
+### Progress 
+
+Neovim can emit 'progress' events the terminal can show, for instance as a blue progress bar at the top in
+ghostty:
+
+<video controls>
+  <source src="/images/showcase/packupdate-progress-ghostty.mp4" type="video/mp4">
+  Terminal can show 'progress'.
+</video>
+
 ### Custom [Start Screen](https://github.com/mhinz/vim-startify/) and [a fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)
 
 <img src="/images/showcase/telescope_helptags.png" alt="TUI with telescope (courtesy of @sunjon)" width="640">
