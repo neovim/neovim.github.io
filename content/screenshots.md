@@ -17,8 +17,11 @@ line numbers, ...) using 'statuscolumn':
 
 ### 'tabline'
 
-Customize how to list different views of your buffers with 'showtabline',
-'tabline':
+Customize how to list different views of your tabs with 'showtabline',
+'tabline', for instance to show the working directory and the running command:
+
+<img src="/images/showcase/tabline-custom.png" alt="Customizable tabline" >
+
 
 ### Language documentation on a whim
 
@@ -26,7 +29,7 @@ With your LSP servers configured, get access to documentation by just pressing
 'K'.
 
 <img src="/images/showcase/lsp-help.png" alt="Show the language
-    documentation by pressing 'K'" width="640">
+    documentation by pressing 'K'" >
 
 ### A customizable menu
 
