@@ -28,6 +28,12 @@ With your LSP servers configured, get access to documentation by just pressing
 <img src="/images/showcase/lsp-help.png" alt="Show the language
     documentation by pressing 'K'" width="640">
 
+### A customizable menu
+
+Add your menu entries under the popup namespace:
+
+<img src="/images/showcase/menu-custom.png" alt="Customize the contextual menu">
+
 ### Inspect the syntax tree 
 
 Thanks to treesitter, you can navigate the syntax tree (natively for lua and C)
