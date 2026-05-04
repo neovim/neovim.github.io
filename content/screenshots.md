@@ -45,6 +45,12 @@ via `:InspectTree`
 <img src="/images/showcase/inspecttree.png" alt="Check you have the necessary treesitter grammars
 via checkhealth vim.treesitter" >
 
+### Live color preview
+
+If your LSP server supports the feature, neovim can render colors out of the box:
+
+<img src="/images/showcase/textdocument-color.png" alt="Check your LSP server supports textDocument/color" >
+
 ### New interface 'ui2'
 
 Enable 'ui2' to avoid UI messages blocking your workflow or to enable a centered
