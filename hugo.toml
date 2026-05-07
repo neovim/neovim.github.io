@@ -1,5 +1,5 @@
 baseURL = 'https://neovim.io/'
-languageCode = 'en-US'
+locale = 'en-US'
 title = 'Neovim'
 
 # needed for og:description to be the website description (below in [params])
