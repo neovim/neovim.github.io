@@ -82,8 +82,8 @@ local function main()
   vim.cmd(('helptags ++t %s'):format(docdir))
   -- Generate html pages from the Vimdoc files
   local genhelp = dofile(joinpath(nvim_repo, 'src/gen/gen_help_html.lua'))
-  local res = genhelp.gen(docdir, usercontent, nil, commit_hash(srcdir))
-  --                                           ^ { 'lua.txt', 'starting.txt', }
+  local res = genhelp.gen(docdir, usercontent, 'html', nil, commit_hash(srcdir))
+  --                                                   ^ { 'lua.txt', 'starting.txt', }
 
   if res.err_count > 0 or #res.invalid_links > 0 then
     error(('Error generating pages: err_count: %d, #invalid_links: %d'):format(
