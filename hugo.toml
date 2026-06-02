@@ -8,6 +8,9 @@ summaryLength = 0
 [frontmatter]
   date = [":filename", ":default"]
 
+[security]
+  allowContent = ['.*']
+
 [permalinks]
   news = "/:section/:year/:month/"
 
