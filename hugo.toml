@@ -9,7 +9,7 @@ summaryLength = 0
   date = [":filename", ":default"]
 
 [security]
-  allowContent = ['.']
+  allowContent = ['.*']
 
 [permalinks]
   news = "/:section/:year/:month/"
