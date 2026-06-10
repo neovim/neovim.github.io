@@ -1,0 +1,146 @@
+{{ define "main" }}
+<section class="masthead">
+    <h1 class="lead">{{ site.Params.description }}</h1>
+    <p>
+        <a href="/doc/install/" class="btn">Install Now</a>
+        <a href="https://dotfyle.com/plugins" class="btn">Get Plugins</a>
+    </p>
+</section>
+
+<section class="front-section">
+    <div class="container golden-grid">
+        <div class="col-wide">
+        {{ .Content }}
+        </div>
+        <div class="col-narrow">
+            <h2 id="sponsors-header"><a href="/sponsors/">Sponsors</a></h2>
+            <div id="sponsors" class="sponsors-main">
+                <div class="first-level-sponsor">
+                    <a href="https://coderabbit.link/neovim">
+                        <picture>
+                            <source srcset="images/sponsors/coderabbit-logo-dark.svg" media="(prefers-color-scheme: dark)">
+                            <img width="340" class="img-fluid" src="images/sponsors/coderabbit-logo.svg"
+                                alt="CodeRabbit cuts code review time and bugs in half. Works on PRs, IDE, and CLI.">
+                        </picture>
+                        <br />
+                        CodeRabbit cuts code review time and bugs in half. Works on PRs, IDE, and CLI.
+                    </a>
+                </div>
+                <div class="first-level-sponsor">
+                    <a href="https://www.greptile.com/?utm_source=neovim&utm_medium=sponsorship&utm_campaign=neovim_sponsor_page">
+                        <img width="340" class="img-fluid" src="images/sponsors/greptile-logo1.png"
+                            alt="Greptile, The AI Code Reviewer">
+                        <br />
+                        Greptile, The AI Code Reviewer
+                    </a>
+                </div>
+                <div class="first-level-sponsor">
+                    <a href="https://talordata.com/?campaignid=euMtYq3J53jWJiYN&utm_source=neovim&utm_term=neovim">
+                        <img width="340" class="img-fluid" src="images/sponsors/talordata.png"
+                            alt="Multi-Engine SERP API. Free trial, no credit card.">
+                        <br />
+                        Multi-Engine SERP API. Free trial, no credit card.
+                    </a>
+                </div>
+                <div class="first-level-sponsor">
+                    <a href="https://serpapi.com/?utm_source=neovim">
+                        <img width="340" class="img-fluid" src="images/sponsors/serpapi.png"
+                            alt="SerpApi: Scrape search engine results with a simple API">
+                        <br />
+                        Scrape search engine results with a simple API
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-section">
+                <h2 id="news">News</h2>
+                {{/* <dl class="nvim-posts"> */}}
+                    <table>
+                        {{ range first 2 .Site.RegularPages }}
+                        <tr>
+                            <td><a href="{{ .RelPermalink }}">{{ .Title }}</a>&nbsp;&nbsp; </td>
+                            <td style="white-space: nowrap; text-align: right">{{ .Date.Format "2006.01" }}</td>
+                        </tr>
+                        {{/* <dd></dd> */}}
+                        {{ end }}
+                    </table>
+                    {{/*
+                </dl> */}}
+                <p><a href="/news/archive/">More…</a></p>
+
+                {{ .Page.Scratch.Get "impressions" }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="front-section shaded">
+    <div class="container golden-grid">
+        <div>
+            <h2>Intro</h2>
+            <div class="intro-video-container">
+                <iframe class="intro-video" src="https://www.youtube-nocookie.com/embed/c4OyfL5o7DU"
+                    title="Neovim in 100 seconds" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div>
+          {{ .Page.Scratch.Get "chat" }}
+        </div>
+
+    </div>
+</section>
+
+<section class="front-section">
+    <div class="container golden-grid">
+        <div>
+          {{ .Page.Scratch.Get "faq" }}
+        </div>
+        <div>
+          {{ .Page.Scratch.Get "GUIs" }}
+        </div>
+    </div>
+</section>
+
+<section class="front-section shaded">
+    <div class="container">
+        <h2 id="sponsor">The work continues...</h2>
+        <div class="container col3">
+            <div>
+                <div>Sponsor (100% to developers)</div>
+                <p>
+                  <a href="/sponsors/" class="btn">Become a Sponsor</a>
+                </p>
+            </div>
+
+            <div>
+                <label for="donate-input">Bitcoin</label>
+                <div class="donate">
+                    <div class="icon">
+                        <img src="/images/icons/bitcoin.png" alt="Bitcoin logo" />
+                    </div>
+                    <input id="donate-input" class="donate" type="text" value="1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ"
+                        readonly="readonly">
+                </div>
+
+                <p class="light small">
+                    View at
+                    <a
+                        href="https://www.blockchain.com/btc/address/1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ">Blockchain.com</a>.
+                </p>
+            </div>
+
+            <div>
+                <div>Marketing</div>
+                <ul>
+                    <li><a href="/logos/neovim-logos.zip">Neovim-logos.zip</a> <span class="light">(1.1 MB)</span></li>
+                    <li>Neovim logo by <a href="http://x.com/jasonlong">Jason Long</a>, <a
+                            href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

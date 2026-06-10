@@ -1,2 +1,6 @@
 public/
+resources/
 .hugo_build.lock
+content/doc/build.md
+content/doc/install.md
+content/doc/user/*

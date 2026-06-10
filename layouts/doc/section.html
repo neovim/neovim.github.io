@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="front-section">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="container golden-grid">
+    <div>
+      {{ .Content }}
+    </div>
+
+    <div>
+      {{ .Page.Scratch.Get "aside" }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,235 @@
+:root {
+  --code-color: #004b4b;
+  --tag-color: #095943;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --code-color: #00c243;
+    --tag-color: #00b7b7;
+  }
+}
+
+@media (min-width: 40em) {
+  .toc {
+    position: fixed;
+    left: 67%;
+  }
+
+  .golden-grid {
+    display: grid;
+    grid-template-columns: 65% auto;
+    grid-gap: 1em;
+  }
+}
+
+@media (max-width: 40em) {
+  .golden-grid {
+    /* Disable grid for narrow viewport (mobile phone). */
+    display: block;
+  }
+}
+
+.toc {
+  /* max-width: 12rem; */
+  height: 85%;
+  /* Scroll if there are too many items. https://github.com/neovim/neovim.github.io/issues/297 */
+  overflow: auto;
+  /* Scroll if there are too many items. https://github.com/neovim/neovim.github.io/issues/297 */
+}
+
+.toc>div {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: sans-serif;
+  border-bottom: 1px solid var(--tag-color);
+  /*rgba(0, 0, 0, .9);*/
+}
+
+h3,
+h4,
+h5 {
+  border-bottom-style: dashed;
+}
+
+.help-column_heading {
+  color: var(--code-color);
+}
+
+.help-body {
+  padding-bottom: 2em;
+}
+
+.help-line {
+  /* font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; */
+}
+
+.help-li {
+  display: list-item;
+  white-space: normal;
+  margin-left: 1.5rem;
+  /* padding-left: 1rem; */
+  /* margin-top: .1em; */
+  /* margin-bottom: .1em; */
+}
+
+.help-li-num {
+  display: list-item;
+  list-style: none;
+  /* Sibling UNordered help-li items will increment the builtin counter :( */
+  /* list-style-type: decimal; */
+  white-space: normal;
+  margin-left: 1.5rem;
+  /* padding-left: 1rem; */
+  margin-top: .1em;
+  margin-bottom: .1em;
+}
+
+.help-li-num::before {
+  margin-left: -1em;
+  counter-increment: my-li-counter;
+  content: counter(my-li-counter) ". ";
+}
+
+.help-para {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  counter-reset: my-li-counter;
+  /* Manually manage listitem numbering. */
+}
+
+.old-help-para {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* Tabs are used for alignment in old docs, so we must match Vim's 8-char expectation. */
+  tab-size: 8;
+  white-space: pre-wrap;
+  font-size: 16px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  word-wrap: break-word;
+  counter-reset: my-li-counter;
+  /* Manually manage listitem numbering. */
+}
+
+.old-help-para pre,
+.old-help-para pre:hover {
+  /* Text following <pre> is already visually separated by the linebreak. */
+  margin-bottom: 0;
+  /* Long lines that exceed the textwidth should not be wrapped (no "pre-wrap").
+      Since text may overflow horizontally, we make the contents to be scrollable
+      (only if necessary) to prevent overlapping with the navigation bar at the right. */
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* TODO: should this rule be deleted? help tags are rendered as <code> or <span>, not <a> */
+a.help-tag,
+a.help-tag:focus,
+a.help-tag:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.help-tag {
+  color: var(--tag-color);
+}
+
+/* Tag pseudo-header common in :help docs. */
+.help-tag-right {
+  color: var(--tag-color);
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
+  display: block;
+}
+
+.help-tag a,
+.help-tag-right a {
+  color: inherit;
+}
+
+.help-tag a:not(:hover),
+.help-tag-right a:not(:hover) {
+  text-decoration: none;
+}
+
+h1 .help-tag,
+h2 .help-tag,
+h3 .help-tag {
+  font-size: smaller;
+}
+
+.help-heading {
+  white-space: normal;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0 15px;
+}
+
+/* The (right-aligned) "tags" part of a section heading. */
+.help-heading-tags {
+  margin-right: 10px;
+}
+
+.help-toc-h1 {}
+
+.help-toc-h2 {
+  margin-left: 1em;
+}
+
+.parse-error {
+  background-color: red;
+}
+
+.unknown-token {
+  color: black;
+  background-color: yellow;
+}
+
+code {
+  color: var(--code-color);
+  font-size: 16px;
+}
+
+pre {
+  /* Tabs are used in codeblocks only for indentation, not alignment, so we can aggressively shrink them. */
+  tab-size: 2;
+  white-space: pre-wrap;
+  line-height: 1.3;
+  /* Important for ascii art. */
+  overflow: visible;
+  /* font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; */
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+pre:last-child {
+  margin-bottom: 0;
+}
+
+pre:hover {
+  overflow: visible;
+}
+
+.generator-stats {
+  color: gray;
+  font-size: smaller;
+}

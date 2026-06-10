@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container golden-grid help-body">
+  <div class="col-wide">
+    <a name="{{ .Params.firstTag1 }}" href="#{{ .Params.firstTag2 }}">
+      <h1 id="{{ .Params.firstTag2 }}">{{ .Title }}</h1>
+    </a>
+    <p>
+      <i>
+        Nvim <code>:help</code> pages, <a
+          href="https://github.com/neovim/neovim/blob/master/src/gen/gen_help_html.lua">generated</a>
+        from <a href="https://github.com/neovim/neovim/blob/master/runtime/doc/{{ .Params.basename }}">source</a>
+        using the <a href="https://github.com/neovim/tree-sitter-vimdoc">tree-sitter-vimdoc</a> parser.
+      </i>
+    </p>
+    <hr />
+    {{ .Content }}
+  </div>
+
+  <div class="col-narrow toc">
+    <div><a href="/doc/user/">Main</a></div>
+    <div><a href="/doc/user/vimindex/">Commands index</a></div>
+    <div><a href="/doc/user/quickref/">Quick reference</a></div>
+    <hr />
+    {{ $n := 0 }}
+    {{ range .Params.headings }}
+    {{ $n = add $n (add 1 (len .subheadings)) }}
+    {{ end }}
+    {{ range .Params.headings }}
+    <div class="help-toc-h1"><a href="#{{ .tag }}">{{ lower .name | title }}</a>
+      {{ if or (lt $n 30) (lt (len $.Params.headings) 10) }}
+      {{ range .subheadings }}
+      <div class="help-toc-h2"><a href="#{{ .tag }}">{{ lower .name | title }}</a></div>
+      {{- end }}
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

@@ -65,6 +65,22 @@ a {
   transition: all ease-in-out 140ms;
 }
 
+/* Add an "external link" icon next to anchors
+ * (but not when they're buttons or wrap images) */
+a[href^="http"]:not([href*="neovim.io"]):not(.btn):not(:has(img))::after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.2em;
+  vertical-align: super;
+  font-size: 0.75em;
+  mask-image: url('/external-url-icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-color: currentColor;
+}
+
 /* Ensure that the hover border is sized correctly for <a><img…></a>. #295 */
 a:has(> img) {
   display: block;
@@ -217,6 +233,17 @@ samp {
     grid-template-columns: 1fr;
   }
 }
+
+.col-wide {
+  max-width: 90vw;
+}
+
+
+.col-wide img,
+.col-wide video {
+  max-width: 100%;
+}
+
 /*
  * Navbar
  *
@@ -230,6 +257,12 @@ samp {
 .nav-link:focus,
 .nav-link:active {
   color: var(--accent-color);
+}
+
+/* Highlight the currently active menu item */
+.nav-link.active,
+.nav-item.dropdown:has(.dropdown-menu a.active) > .nav-link {
+  color: var(--accent-color) !important;
 }
 
 .navbar-toggler {

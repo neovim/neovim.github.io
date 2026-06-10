@@ -1,0 +1,20 @@
+{{ define "main" }}
+<!-- This is for the /news/index.html (content/news/_index.md) page -->
+<section class="front-section">
+    <div class="newsletter container golden-grid">
+        {{ with index .CurrentSection.RegularPages 0 }}
+        <div class="col-wide">
+            <h1>{{ .Title }}</h1>
+
+            <div style="margin-top: 0.5em; margin-bottom: 0.5em;">
+                <a class="release-date" href="{{ .RelPermalink }}">{{ .Date.Format "January 2006" }}</a>
+            </div>
+
+            {{ .Content }}
+        </div>
+        {{ end }}
+
+        {{ partial "news_sidebar.html" . }}
+    </div>
+</section>
+{{ end }}

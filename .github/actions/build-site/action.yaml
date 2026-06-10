@@ -1,17 +1,31 @@
 name: "Build Hugo Site"
-description: "Shared Hugo build logic"
+description: "Shared build logic"
 
 runs:
   using: "composite"
   steps:
+    - name: Checkout neovim/neovim
+      uses: actions/checkout@v6
+      with:
+        repository: neovim/neovim
+        path: 'neovim'
+    - name: Install Nvim
+      shell: bash
+      run: |
+        cd ./neovim
+        sudo make install
     - name: Install Hugo CLI
       shell: bash
       env:
-        HUGO_VERSION: "0.152.2"
+        HUGO_VERSION: "0.162.1"
       run: |
         wget -O ${{ runner.temp }}/hugo.deb \
           https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
         && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+    - name: Get Nvim docs
+      shell: bash
+      run: |
+        ./gendoc.lua ./neovim
     - name: Build with Hugo
       shell: bash
       env:
@@ -19,5 +33,5 @@ runs:
         HUGO_ENVIRONMENT: production
         HUGO_ENV: production
       run: |
-        hugo --gc --minify --baseURL "$BASE_URL"
+        hugo --gc
 

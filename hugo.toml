@@ -1,12 +1,18 @@
 baseURL = 'https://neovim.io/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Neovim'
+
+# needed for og:description to be the website description (below in [params])
+summaryLength = 0
 
 [frontmatter]
   date = [":filename", ":default"]
 
+[security]
+  allowContent = ['.*']
+
 [permalinks]
-  posts = "/news/:year/:month/"
+  news = "/:section/:year/:month/"
 
 [outputs]
   section = ["html", "rss"]
@@ -16,7 +22,10 @@ title = 'Neovim'
   path = "/"
 
 [params]
-  description = "vim out of the box"
+  description = "hyperextensible Vim-based text editor"
+
+  # Used for social previews
+  images = ['/logos/neovim-logo-social-preview.png']
 
   [params.news]
     name = "Neovim Newsletter"

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="newsletter container golden-grid">
+    <div class="col-wide">
+        <div class="post-header">
+            <h1>{{ .Title }}</h1>
+            <div style="margin-top: 0.5em; margin-bottom: 0.5em;">
+                <em class="release-date">{{ .Date.Format "January 2006" }}</em>
+            </div>
+        </div>
+
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+    </div>
+
+    {{ partial "news_sidebar.html" . }}
+</div>
+{{ end }}

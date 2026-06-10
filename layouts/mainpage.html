@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="front-section">
+    <div class="container golden-grid">
+        <div class="col-wide">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+
+        {{ partial "post_sidebar.html" . }}
+    </div>
+</section>
+{{ end }}
