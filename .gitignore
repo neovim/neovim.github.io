@@ -4,3 +4,4 @@ resources/
 content/doc/build.md
 content/doc/install.md
 content/doc/user/*
+.gstack/
