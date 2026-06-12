@@ -16,7 +16,6 @@ Concrete high-level feature areas and changes.
 ### Future (unknown release)
 
 - Task abstraction, structured concurrency: `vim.async`
-- File-change detection
 - Multibuffer [#30463](https://github.com/neovim/neovim/issues/30463)
 - Lua remote plugin host
 - packspec / `pkg.json`
@@ -27,11 +26,12 @@ Concrete high-level feature areas and changes.
 ### [0.13](https://github.com/neovim/neovim/milestone/48) "The year of Batteries Included" (visibility, stdlib)
 
 - [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
+- ✅ File-change detection (OS watcher-driven 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
+- ✅ Image API: `vim.ui.img`
 - Multicursor, super-macros
 - Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
 - UI "affordance" indicator so users know which elements they can interact with
 - Unified event interface, `nvim_on()`
-- Image API: `vim.ui.img`
 - Redesign `--remote`
 
 ## Completed
