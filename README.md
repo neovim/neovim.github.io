@@ -2,7 +2,7 @@
 
 This repository contains the source for the neovim.io website.
 
-*To report a bug Neovim,* go here: https://github.com/neovim/neovim
+*To report a Neovim bug,* go here: https://github.com/neovim/neovim
 
 ## Contributing
 
