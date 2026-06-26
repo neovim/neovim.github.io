@@ -28,11 +28,14 @@ Concrete high-level feature areas and changes.
 - [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
 - ✅ File-change detection (OS watcher-driven 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
 - ✅ Image API: `vim.ui.img`
+- ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
+- ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
+- remote-ssh
+- Redesign `--remote`
 - Multicursor, super-macros
 - Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
 - UI "affordance" indicator so users know which elements they can interact with
 - Unified event interface, `nvim_on()`
-- Redesign `--remote`
 
 ## Completed
 
