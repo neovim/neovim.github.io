@@ -30,6 +30,7 @@ Concrete high-level feature areas and changes.
 - ✅ Image API: `vim.ui.img`
 - ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
 - ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
+- Interactive `:!` (`:[range]terminal`, `:[range]write :term sudo tee %`, …) [#1496](https://github.com/neovim/neovim/issues/1496)
 - remote-ssh
 - Redesign `--remote`
 - Multicursor, super-macros
