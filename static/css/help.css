@@ -233,3 +233,18 @@ pre:hover {
   color: gray;
   font-size: smaller;
 }
+
+@media print {
+  /* The TOC is `position: fixed` (see above), so when printing it repeats over
+     the help text on every page and covers it. Hide the nav chrome on paper.
+     https://github.com/neovim/neovim.github.io/issues/341 */
+  .navbar,
+  .toc {
+    display: none;
+  }
+
+  /* With the TOC hidden, let the help text use the full page width. */
+  .golden-grid {
+    display: block;
+  }
+}
