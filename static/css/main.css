@@ -493,6 +493,13 @@ footer {
   }
 }
 
+@media (max-width: 525px) {
+  footer .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /*
  * Misc
  *
