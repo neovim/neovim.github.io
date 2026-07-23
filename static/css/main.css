@@ -1,6 +1,4 @@
 :root {
-  --main-breakpoint: 60em;
-
   --sans-serif-fonts: var(--bs-font-sans-serif);
 
   /* Colors */
@@ -487,7 +485,7 @@ footer {
   padding: 1em 0;
 }
 
-@media (min-width: var(--main-breakpoint)) {
+@media (min-width: 60em) {
   footer {
     font-size: 0.9em;
   }
