@@ -1,0 +1,73 @@
+# Neovim
+
+> Neovim is a hyperextensible, Vim-based text editor. It seeks to aggressively
+> refactor Vim in order to: simplify maintenance and encourage contributions,
+> split the work between multiple developers, enable advanced UIs without
+> modifications to the core, and maximize extensibility via a msgpack-based
+> RPC API used for a built-in Lua scripting engine and remote plugins in any
+> language.
+
+## Getting Started
+
+- [Homepage](https://neovim.io/): overview, editions, and quick links.
+- [Install](https://neovim.io/doc/install/): installation instructions for all platforms.
+- [About](https://neovim.io/about/): project background and goals.
+- [Charter](https://neovim.io/charter/): governance and project principles.
+- [Roadmap](https://neovim.io/roadmap/): planned work and priorities.
+
+## Core Reference
+
+- [Documentation Index](https://neovim.io/doc/): full generated Vim/Nvim help index.
+- [Quick Reference](https://neovim.io/doc/user/quickref/): condensed command and option reference.
+- [Options](https://neovim.io/doc/user/options/): all editor options.
+- [User Functions](https://neovim.io/doc/user/userfunc/): Vimscript function reference.
+- [Vim Differences](https://neovim.io/doc/user/vim_diff/): where Nvim intentionally differs from Vim.
+- [Introduction](https://neovim.io/doc/user/intro/): basic concepts and notation used across the docs.
+
+## Editing and Navigation
+
+- [Editing](https://neovim.io/doc/user/editing/): editing files, buffers, and windows.
+- [Motion](https://neovim.io/doc/user/motion/): cursor movement commands.
+- [Insert Mode](https://neovim.io/doc/user/insert/): insert and replace mode commands.
+- [Change](https://neovim.io/doc/user/change/): deleting and changing text.
+- [Visual Mode](https://neovim.io/doc/user/visual/): visual selection commands.
+- [Windows](https://neovim.io/doc/user/windows/): window layout and management.
+- [Tab Pages](https://neovim.io/doc/user/tabpage/): tab page management.
+- [Command-Line](https://neovim.io/doc/user/cmdline/): command-line mode and commands.
+- [Autocommands](https://neovim.io/doc/user/autocmd/): event-driven automation.
+- [Repeat](https://neovim.io/doc/user/repeat/): repeating and undo/redo commands.
+- [Undo](https://neovim.io/doc/user/undo/): undo tree.
+- [Folding](https://neovim.io/doc/user/fold/): code folding.
+- [Diff Mode](https://neovim.io/doc/user/diff/): file comparison.
+- [Terminal](https://neovim.io/doc/user/terminal/): built-in terminal emulator.
+
+## Scripting and Extensibility
+
+- [Lua Guide](https://neovim.io/doc/user/lua-guide/): practical introduction to configuring/scripting Nvim in Lua.
+- [Lua Reference](https://neovim.io/doc/user/lua/): full Lua API reference.
+- [API](https://neovim.io/doc/user/api/): msgpack-RPC API reference used by UIs and remote plugins.
+- [UI Events](https://neovim.io/doc/user/api-ui-events/): UI protocol events.
+- [Remote Plugins](https://neovim.io/doc/user/remote_plugin/): writing plugins in any language via RPC.
+- [Providers](https://neovim.io/doc/user/provider/): Python/Ruby/Node provider integrations.
+- [Packages](https://neovim.io/doc/user/pack/): native package/plugin loading.
+
+## Built-in Tooling
+
+- [LSP](https://neovim.io/doc/user/lsp/): built-in Language Server Protocol client.
+- [Diagnostic](https://neovim.io/doc/user/diagnostic/): diagnostics framework shared by LSP and linters.
+- [Treesitter](https://neovim.io/doc/user/treesitter/): built-in incremental parsing and syntax highlighting.
+- [Spell Checking](https://neovim.io/doc/user/spell/): spell-check support.
+- [Syntax Highlighting](https://neovim.io/doc/user/syntax/): legacy syntax highlighting.
+
+## Developer Docs
+
+- [Development](https://neovim.io/doc/user/dev/): guide for contributing to Nvim itself.
+- [Development Style](https://neovim.io/doc/user/dev_style/): code style guidelines.
+- [Development Architecture](https://neovim.io/doc/user/dev_arch/): high-level architecture notes.
+- [Development Tools](https://neovim.io/doc/user/dev_tools/): debugging and profiling tools.
+
+## Optional
+
+- [FAQ](https://neovim.io/doc/user/faq/): frequently asked questions.
+- [News](https://neovim.io/news/): release announcements and changelogs.
+- [Screenshots](https://neovim.io/screenshots/): example configurations and UIs.
