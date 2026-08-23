@@ -3,7 +3,7 @@ title: Roadmap
 layout: mainpage
 ---
 
-The roadmap is an overview of the project direction. Detailed plans and priorities are tracked in [milestones](https://github.com/neovim/neovim/milestones?direction=desc&sort=due_date&state=open) (these are tentative and may be changed or dropped at any time):
+Detailed plans and priorities are tracked in [milestones](https://github.com/neovim/neovim/milestones?direction=desc&sort=due_date&state=open) (tentative, may be changed or dropped at any time).
 
 - Version numbers (`0.1`, `0.2`, …) track production releases. The next upcoming version has a (estimated) target date.
 - [backlog](https://github.com/neovim/neovim/milestone/6) holds low-priority items.
@@ -11,32 +11,33 @@ The roadmap is an overview of the project direction. Detailed plans and prioriti
 
 ## Next
 
-Concrete high-level feature areas and changes.
+This roadmap is a high-level overview of the project direction.
 
 ### Future (unknown release)
 
-- Task abstraction, structured concurrency: `vim.async`
+- [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
+- Redesign `--remote`
+- Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
+- Unified event interface, `nvim_on()`
 - Multibuffer [#30463](https://github.com/neovim/neovim/issues/30463)
 - Lua remote plugin host
-- packspec / `pkg.json`
-- UI "block-level elements" so plugins can reason about regions
-- Externalized UI: window layout events, messages
 - LSP: `vim.lsp.server()`
+- UI protocol: window layout events, messages
+- UI "block-level elements" so plugins can reason about regions
+- UI "affordance" indicator so users know which elements they can interact with
 
 ### [0.13](https://github.com/neovim/neovim/milestone/48) "The year of Batteries Included" (visibility, stdlib)
 
-- [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
+- Multicursor
+- Task abstraction, structured concurrency: `vim.async`
+- ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur) event: subscribe to any "user action"
 - ✅ File-change detection (OS watcher-driven 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
 - ✅ Image API: `vim.ui.img`
 - ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
 - ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
 - Interactive `:!` (`:[range]terminal`, `:[range]write :term sudo tee %`, …) [#1496](https://github.com/neovim/neovim/issues/1496)
-- remote-ssh
-- Redesign `--remote`
-- Multicursor, super-macros
-- Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
-- UI "affordance" indicator so users know which elements they can interact with
-- Unified event interface, `nvim_on()`
+- [Packspec](https://packspec.org/), `pkg.json`
+- Remote-ssh
 
 ## Completed
 
