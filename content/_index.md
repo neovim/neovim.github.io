@@ -87,8 +87,8 @@ Neovim UIs are "inverted plugins". Here are some popular ones:
 with Vim."
 [---Geoff Greer](http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/)
 
-"Discovering what Neovim and its community had to offer brought me a lot of joy."
-[---Thorsten Ball](https://registerspill.thorstenball.com/p/from-vim-to-zed)
+"Full-screen Neovim looks cool as hell!"
+[---DHH](https://x.com/dhh/status/1764465909316583659)
 
 "A nice looking website, that's one thing Neovim did right."
 [---Bram Moolenaar](https://www.binpress.com/vim-creator-bram-moolenaar-interview/)
