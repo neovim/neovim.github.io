@@ -26,11 +26,11 @@ This roadmap is a high-level overview of the project direction.
 - UI "block-level elements" so plugins can reason about regions
 - UI "affordance" indicator so users know which elements they can interact with
 
-### [0.13](https://github.com/neovim/neovim/milestone/48) "The year of Batteries Included" (visibility, stdlib)
+### [0.13](https://github.com/neovim/neovim/milestone/48) "Batteries Included"
 
-- Multicursor
-- Task abstraction, structured concurrency: `vim.async`
+- ✅ Multicursor
 - ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur) event: subscribe to any "user action"
+- Task abstraction, structured concurrency: `vim.async`
 - ✅ File-change detection (OS watcher-driven 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
 - ✅ Image API: `vim.ui.img`
 - ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
