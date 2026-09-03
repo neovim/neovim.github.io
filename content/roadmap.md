@@ -30,8 +30,8 @@ This roadmap is a high-level overview of the project direction.
 
 - ✅ Multicursor
 - ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur) event: subscribe to any "user action"
-- Task abstraction, structured concurrency: `vim.async`
-- ✅ File-change detection (OS watcher-driven 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
+- ✅ `vim.async` task abstraction, structured concurrency [#34473](https://github.com/neovim/neovim/pull/34473)
+- ✅ File-change detection (improved 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
 - ✅ Image API: `vim.ui.img`
 - ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
 - ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
