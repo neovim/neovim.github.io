@@ -8,32 +8,30 @@ redirect_from:
 
 ### Extensible
 
-- API is first-class: [discoverable](/doc/user/api/#api-mapping),
+- [Repeat anything](https://neovim.io/doc/user/repeat/#excalibur) with `CmdAtom`.
+- Create [Lua plugins](/doc/user/lua-plugin/#lua-plugin-new) easily.
+  Your config lives in `init.lua`!
+- API is [discoverable](/doc/user/api/#api-mapping),
   [versioned](/doc/user/api/#api-contract),
   [documented](/doc/user/api/#api-global).
-- [MessagePack](http://msgpack.org/) structured communication enables
-  extensions in any language.
-- Remote plugins run as co-processes, safely and asynchronously.
-- [GUIs](#guis), IDEs, web browsers can `--embed` Neovim as an editor or script
-  host.
-- Create [Lua plugins](/doc/user/lua-plugin/#lua-plugin-new) easily.
-  Your config can live in `init.lua`!
-- AST-producing [parsing engine](https://tree-sitter.github.io/) enables
-  fast, accurate syntax highlighting, code navigation, refactoring, text
-  objects, and motions.
+- Ubiquitous [RPC](http://msgpack.org/) enables extensions in any language.
+- [GUIs](#guis), IDEs, web browsers can `nvim --embed` as editor or script host.
+- [Tree-sitter parsing](https://tree-sitter.github.io/) enables accurate syntax
+  highlighting, text-objects, and more.
 
 ### Usable
 
-- Strong [defaults](/doc/user/vim_diff/#nvim-defaults) including a
-  unique, minimalist colorscheme.
-- Builtin [LSP client](/doc/user/lsp/) for semantic code inspection
-  and refactoring (go-to definition, "find references", format, ...).
-- Client-server architecture enables [:connect, :detach, :restart](https://www.youtube.com/watch?v=bqWIibaUN_A&list=PLvTJMxH60GZ8EJszAxm-IxUv12xaCcUlG)
-  (like tmux, but works everywhere). Attach multiple UIs to any Nvim session.
-- No "Press ENTER" messages (Nvim 0.12 "ui2" feature).
+- [Multicursor](/doc/user/repeat/#multicursor) instantly
+  replays commands and mappings on a set of marks.
+- Strong [defaults](/doc/user/vim_diff/#nvim-defaults) include a unique,
+  minimalist colorscheme.
+- [LSP](/doc/user/lsp/) provides semantic code inspection and refactoring.
+- Multiplex with [:connect, :detach, :restart](https://www.youtube.com/watch?v=bqWIibaUN_A&list=PLvTJMxH60GZ8EJszAxm-IxUv12xaCcUlG)
+  (like tmux, but works everywhere).
+- No "Press ENTER" messages ([ui2](https://neovim.io/doc/user/lua/#ui2)).
 - Works the same everywhere: one build-type, one command.
-- Modern terminal features such as cursor styling, focus events,
-  bracketed paste.
+- Modern terminal features are enabled by default: progress bar, cursor styling,
+  focus events, bracketed paste, ….
 - Builtin [:terminal](https://www.youtube.com/watch?v=xZbMVj9XSUo) set
   the standard for "TTY as a basic component".
 

@@ -3,15 +3,15 @@ title: Roadmap
 layout: mainpage
 ---
 
-Detailed plans and priorities are tracked in [milestones](https://github.com/neovim/neovim/milestones?direction=desc&sort=due_date&state=open) (tentative, may be changed or dropped at any time).
+This is a high-level overview of the project direction. Detailed plans and
+priorities are tracked in [milestones](https://github.com/neovim/neovim/milestones?direction=desc&sort=due_date&state=open)
+(tentative, may be changed or dropped at any time).
 
 - Version numbers (`0.1`, `0.2`, …) track production releases. The next upcoming version has a (estimated) target date.
 - [backlog](https://github.com/neovim/neovim/milestone/6) holds low-priority items.
 - [needs-owner](https://github.com/neovim/neovim/milestone/9) holds zero-priority items (no feasible path to completion).
 
 ## Next
-
-This roadmap is a high-level overview of the project direction.
 
 ### Future (unknown release)
 
@@ -29,9 +29,10 @@ This roadmap is a high-level overview of the project direction.
 ### [0.13](https://github.com/neovim/neovim/milestone/48) "Batteries Included"
 
 - ✅ Multicursor
-- ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur) event: subscribe to any "user action"
+- ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur): subscribe to any <i>user action</i>
+- ✅ Dot-repeat "just works" with any operator mapping (`operatorfunc`, `:omap`).
 - ✅ `vim.async` task abstraction, structured concurrency [#34473](https://github.com/neovim/neovim/pull/34473)
-- ✅ File-change detection (improved 'autoread') [#37971](https://github.com/neovim/neovim/pull/37971)
+- ✅ File-change detection (improved `'autoread'`) [#37971](https://github.com/neovim/neovim/pull/37971)
 - ✅ Image API: `vim.ui.img`
 - ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
 - ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
