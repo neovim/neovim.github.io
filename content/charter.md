@@ -6,8 +6,9 @@ layout: mainpage
 Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which
 itself derives from [Stevie](https://en.wikipedia.org/wiki/Stevie_%28text_editor%29)).
 It is not a rewrite but a continuation and extension of Vim. Many clones and
-derivatives exist, some very clever—but none are Vim. Neovim is built
-for users who want the good parts of Vim, and more.
+derivatives exist, some very clever—but none are Vim.
+
+Neovim is for users who want the good parts of Vim, and more.
 
 ### Goals
 
