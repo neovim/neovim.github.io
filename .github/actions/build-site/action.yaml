@@ -26,6 +26,20 @@ runs:
       shell: bash
       run: |
         ./gendoc.lua ./neovim
+
+    # :help docs PDF, served at /doc/user/nvim-help.pdf. After gendoc.lua, which builds the helptags.
+    #
+    # TODO: --generate-pdf-document-outline might be nice, but bloats size from 15 => 50 MB.
+    - name: Generate help PDF
+      shell: bash
+      run: |
+        (cd ./neovim && nvim -V1 -es --clean +"lua require('src.gen.gen_help_html').gen('print', './runtime/doc', '${{ runner.temp }}/print')" +q)
+        mkdir -p static/doc/user
+        # --no-sandbox: Ubuntu restricts the user namespaces that Chrome's sandbox needs.
+        google-chrome --headless --no-sandbox --no-pdf-header-footer --disable-pdf-tagging \
+          --print-to-pdf=static/doc/user/nvim-help.pdf "${{ runner.temp }}/print/print.html"
+        test -s static/doc/user/nvim-help.pdf
+
     - name: Build with Hugo
       shell: bash
       env:
