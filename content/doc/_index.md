@@ -10,7 +10,7 @@ active: Documentation
 [Download a binary](https://github.com/neovim/neovim/releases) or use a
 [package manager](/doc/install/#install-from-package).
 
-### [User documentation](/doc/user/)
+### [User documentation](/doc/user/) ([PDF](/doc/user/nvim-help.pdf))
 
 - Neovim features:
   [`:help nvim-features`](/doc/user/vim_diff/#nvim-features)
