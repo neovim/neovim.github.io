@@ -139,6 +139,31 @@ h5 {
   overflow-x: auto;
 }
 
+/* Table: a block that starts with a tab-separated column heading. */
+.help-table {
+  /* Scroll wide tables instead of overflowing (mobile). */
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+.help-table th,
+.help-table td {
+  padding: 0.2em 0.9em;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.help-table th:first-child,
+.help-table td:first-child {
+  padding-left: 0;
+}
+.help-table th {
+  color: var(--code-color);
+  border-bottom-color: var(--tag-color);
+}
+
 /* TODO: should this rule be deleted? help tags are rendered as <code> or <span>, not <a> */
 a.help-tag,
 a.help-tag:focus,
