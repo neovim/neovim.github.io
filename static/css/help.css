@@ -163,6 +163,10 @@ h5 {
   color: var(--code-color);
   border-bottom-color: var(--tag-color);
 }
+/* Last row of a group (followed by a separator line). */
+.help-table-sep td {
+  border-bottom-color: rgba(128, 128, 128, 0.8);
+}
 
 /* TODO: should this rule be deleted? help tags are rendered as <code> or <span>, not <a> */
 a.help-tag,
@@ -183,6 +187,12 @@ a.help-tag:hover {
   margin-right: 0;
   float: right;
   display: block;
+}
+
+/* Line ending with right-aligned tags (see :help help-tag-heading). Contains the float, so a
+   tags-only line keeps its height. */
+.help-tag-heading {
+  display: flow-root;
 }
 
 .help-tag a,
