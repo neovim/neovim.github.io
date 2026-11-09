@@ -1,13 +1,6 @@
 :root {
-  --code-color: #004b4b;
-  --tag-color: #095943;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --code-color: #00c243;
-    --tag-color: #00b7b7;
-  }
+  --code-color: light-dark(#004b4b, #00c243);
+  --tag-color: light-dark(#095943, #00b7b7);
 }
 
 @media (min-width: 40em) {

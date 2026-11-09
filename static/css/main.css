@@ -1,28 +1,17 @@
 :root {
+  color-scheme: light dark;
   --sans-serif-fonts: var(--bs-font-sans-serif);
 
   /* Colors */
   /* Hue is between neovim green and blue for text/background */
   /* Saturation is low */
-  --fg-color: #29332f;
-  --inverse-fg-color: #a9d5c4; /* Dark-mode fg color. */
-  --bg-color: #e7eee8;
-  --accent-bg-color: #d3e4db;
-  --link-color: #195174;
-  --accent-color: #000;
-  --border-color: #658fac;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fg-color: #a9d5c4;
-    --inverse-fg-color: #29332f; /* Light-mode fg color. */
-    --bg-color: #0f191f;
-    --accent-bg-color: #0b151b;
-    --link-color: #5fb950;
-    --accent-color: #61ff00;
-    --border-color: #1174b1;
-  }
+  --fg-color: light-dark(#29332f, #a9d5c4);
+  --inverse-fg-color: light-dark(#a9d5c4, #29332f);
+  --bg-color: light-dark(#e7eee8, #0f191f);
+  --accent-bg-color: light-dark(#d3e4db, #0b151b);
+  --link-color: light-dark(#195174, #5fb950);
+  --accent-color: light-dark(#000, #61ff00);
+  --border-color: light-dark(#658fac, #1174b1);
 }
 
 @media (prefers-contrast: more) {
@@ -153,21 +142,15 @@ pre {
 
 /* Keyboard input should be distinctive from <pre> and <code>. */
 kbd {
+  box-shadow: light-dark(0 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px var(--border-color)), inset 0px 0px 0px 2px light-dark(#ffffff, rgba(255, 255, 255, 0.2));
   box-shadow: 0 2px 4px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
-  color: var(--accent-color);
-  background-color: #ebebeb; /* var(--accent-bg-color); */
-  border: 1pt solid var(--border-color); /* #555 */
-  border-radius: 3px; /* rounded corners */
+  color: light-dark(var(--accent-color), var(--fg-color));
+  background: light-dark(#ebebeb, var(--accent-bg-color));
+  border-width: 1pt;
+  border-style: solid;
+  border-color: light-dark(var(--border-color), var(--fg-color));
+  border-radius: 3px;
   padding: 2px 5px;
-}
-
-@media (prefers-color-scheme: dark) {
-  kbd {
-    box-shadow: 2px 2px 4px var(--border-color), inset 0px 0px 0px 2px rgba(255,255,255,0.2);
-    color: var(--fg-color);
-    background-color: var(--accent-bg-color);
-    border: 1pt solid var(--fg-color); /* #555 */
-  }
 }
 
 code,
@@ -577,7 +560,7 @@ iframe.poll {
   --docsearch-primary-color: var(--accent-color);
   --docsearch-text-color: var(--fg-color);
   --docsearch-highlight-color: var(--link-color);
-  --docsearch-container-background: rgba(231, 238, 232, 0.2);
+  --docsearch-container-background: light-dark(rgba(231, 238, 232, 0.2), rgba(231, 238, 232, 0.2));
 
   /* modal */
   --docsearch-modal-background: var(--bg-color);
@@ -600,37 +583,6 @@ iframe.poll {
   /* footer */
   --docsearch-footer-background: var(--bg-color);
   --docsearch-footer-shadow: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --docsearch-primary-color: var(--accent-color);
-    --docsearch-text-color: var(--fg-color);
-    --docsearch-highlight-color: var(--link-color);
-    --docsearch-container-background: rgba(231, 238, 232, 0.2);
-
-    /* modal */
-    --docsearch-modal-background: var(--bg-color);
-    --docsearch-modal-shadow: none;
-
-    /* searchbox */
-    --docsearch-searchbox-background: var(--accent-bg-color);
-    --docsearch-searchbox-focus-background: var(--accent-bg-color);
-
-    /* hit */
-    --docsearch-hit-color: var(--docsearch-text-color);
-    --docsearch-hit-active-color: #fff;
-    --docsearch-hit-background: var(--accent-bg-color);
-    --docsearch-hit-shadow: none;
-
-    /* key */
-    --docsearch-key-gradient: transparent;
-    --docsearch-key-shadow: none;
-
-    /* footer */
-    --docsearch-footer-background: var(--bg-color);
-    --docsearch-footer-shadow: none;
-  }
 }
 
 .DocSearch mark {
@@ -659,39 +611,27 @@ iframe.poll {
   border:  1px solid var(--docsearch-primary-color)
 }
 
-@media (prefers-color-scheme: dark) {
-  .DocSearch footer {
-      border-top: 1px solid var(--link-color)
-  }
-
-  .DocSearch-Button-Keys {
-    border-radius: 4px;
-    padding: 0 6px;
-    min-width: auto;
-    border: 1px solid var(--hi-b-black);
-  }
-
-  .DocSearch-Button {
-    border:  1px solid var(--docsearch-primary-color)
-  }
-}
-
 /* Force footer to bottom of viewport. */
+
 html {
   height: 100%;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0;
 }
+
 body > nav {
   flex-shrink: 0;
 }
+
 body > main {
   flex: 1 0 auto;
 }
+
 body > footer {
   flex-shrink: 0;
   margin-top: auto;

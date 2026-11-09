@@ -7,44 +7,22 @@
 
 :root {
   /* Neovim dark palette - regular/non-bright */
-  --hi-black: #2c2e33;
-  --hi-red: #5e0009;
-  --hi-green: #015825;
-  --hi-yellow: #6e5600;
-  --hi-blue: #005078;
-  --hi-cyan: #007676;
-  --hi-white: #4f5258;
+  --hi-black: light-dark(#2c2e33, #9b9ea4);
+  --hi-red: light-dark(#5e0009, #ffbcb5);
+  --hi-green: light-dark(#015825, #aaedb7);
+  --hi-yellow: light-dark(#6e5600, #f4d88c);
+  --hi-blue: light-dark(#005078, #9fd8ff);
+  --hi-cyan: light-dark(#007676, #83efef);
+  --hi-white: light-dark(#4f5258, #d7dae1);
 
   /* Neovim dark palette - bright */
-  --hi-b-black: #4f5258;
-  --hi-b-red: #5e0009;
-  --hi-b-green: #015825;
-  --hi-b-yellow: #6e5600;
-  --hi-b-blue: #005078;
-  --hi-b-cyan: #007676;
-  --hi-b-white: #9b9ea4;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Neovim light palette - regular/non-bright */
-    --hi-black: #9b9ea4;
-    --hi-red: #ffbcb5;
-    --hi-green: #aaedb7;
-    --hi-yellow: #f4d88c;
-    --hi-blue: #9fd8ff;
-    --hi-cyan: #83efef;
-    --hi-white: #d7dae1;
-
-    /* Neovim light palette - bright */
-    --hi-b-black: #c4c6cd;
-    --hi-b-red: #ffbcb5;
-    --hi-b-green: #aaedb7;
-    --hi-b-yellow: #f4d88c;
-    --hi-b-blue: #9fd8ff;
-    --hi-b-cyan: #83efef;
-    --hi-b-white: #ebeef5;
-  }
+  --hi-b-black: light-dark(#4f5258, #c4c6cd);
+  --hi-b-red: light-dark(#5e0009, #ffbcb5);
+  --hi-b-green: light-dark(#015825, #aaedb7);
+  --hi-b-yellow: light-dark(#6e5600, #f4d88c);
+  --hi-b-blue: light-dark(#005078, #9fd8ff);
+  --hi-b-cyan: light-dark(#007676, #83efef);
+  --hi-b-white: light-dark(#9b9ea4, #ebeef5);
 }
 
 /*! Neovim-based syntax highlighting */
