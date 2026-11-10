@@ -16,13 +16,7 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --fg-color: #000;
-  }
-}
-
-@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
-  :root {
-    --fg-color: #fff;
+    --fg-color: light-dark(#000, #fff);
   }
 }
 
@@ -142,8 +136,8 @@ pre {
 
 /* Keyboard input should be distinctive from <pre> and <code>. */
 kbd {
-  box-shadow: light-dark(0 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px var(--border-color)),
-    inset 0px 0px 0px 2px light-dark(#ffffff, rgba(255, 255, 255, 0.2));
+  box-shadow: 0 2px 4px light-dark(rgba(0, 0, 0, 0.2), var(--border-color)),
+    inset 0 0 0 2px light-dark(#fff, rgba(255, 255, 255, 0.2));
   color: light-dark(var(--accent-color), var(--fg-color));
   background-color: light-dark(#ebebeb, var(--accent-bg-color));
   border: 1pt solid light-dark(var(--border-color), var(--fg-color));
@@ -558,7 +552,7 @@ iframe.poll {
   --docsearch-primary-color: var(--accent-color);
   --docsearch-text-color: var(--fg-color);
   --docsearch-highlight-color: var(--link-color);
-  --docsearch-container-background: light-dark(rgba(231, 238, 232, 0.2), rgba(231, 238, 232, 0.2));
+  --docsearch-container-background: rgba(231, 238, 232, 0.2);
 
   /* modal */
   --docsearch-modal-background: var(--bg-color);
