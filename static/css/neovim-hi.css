@@ -6,7 +6,7 @@
  */
 
 :root {
-  /* Neovim dark palette - regular/non-bright */
+  /* Neovim light-dark palette - regular/non-bright */
   --hi-black: light-dark(#2c2e33, #9b9ea4);
   --hi-red: light-dark(#5e0009, #ffbcb5);
   --hi-green: light-dark(#015825, #aaedb7);
@@ -15,13 +15,13 @@
   --hi-cyan: light-dark(#007676, #83efef);
   --hi-white: light-dark(#4f5258, #d7dae1);
 
-  /* Neovim dark palette - bright */
+  /* Neovim light-dark palette - bright */
   --hi-b-black: light-dark(#4f5258, #c4c6cd);
-  --hi-b-red: light-dark(#5e0009, #ffbcb5);
-  --hi-b-green: light-dark(#015825, #aaedb7);
-  --hi-b-yellow: light-dark(#6e5600, #f4d88c);
-  --hi-b-blue: light-dark(#005078, #9fd8ff);
-  --hi-b-cyan: light-dark(#007676, #83efef);
+  --hi-b-red: var(--hi-red);
+  --hi-b-green: var(--hi-green);
+  --hi-b-yellow: var(--hi-yellow);
+  --hi-b-blue: var(--hi-blue);
+  --hi-b-cyan: var(--hi-cyan);
   --hi-b-white: light-dark(#9b9ea4, #ebeef5);
 }
 
