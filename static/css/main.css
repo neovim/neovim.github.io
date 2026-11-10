@@ -143,7 +143,7 @@ pre {
 /* Keyboard input should be distinctive from <pre> and <code>. */
 kbd {
   box-shadow: light-dark(0 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px var(--border-color)),
-  inset 0px 0px 0px 2px light-dark(#ffffff, rgba(255, 255, 255, 0.2));
+    inset 0px 0px 0px 2px light-dark(#ffffff, rgba(255, 255, 255, 0.2));
   color: light-dark(var(--accent-color), var(--fg-color));
   background-color: light-dark(#ebebeb, var(--accent-bg-color));
   border: 1pt solid light-dark(var(--border-color), var(--fg-color));
