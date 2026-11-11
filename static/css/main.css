@@ -555,40 +555,78 @@ iframe.poll {
  */
 
 :root {
-  --docsearch-primary-color: var(--accent-color);
-  --docsearch-text-color: var(--fg-color);
-  --docsearch-highlight-color: var(--link-color);
-  --docsearch-container-background: light-dark(rgba(231, 238, 232, 0.2), rgba(231, 238, 232, 0.2));
+  /* search */
+  --docsearch-search-button-background: var(--accent-bg-color);
+  --docsearch-search-button-text-color: light-dark(var(--link-color), var(--fg-color));
+  --docsearch-key-background: background: var(--accent-bg-color);
+  --docsearch-key-color: color: light-dark(var(--link-color), var(--fg-color));
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
 
   /* modal */
+  --docsearch-container-background: rgba(231, 238, 232, 0.2);
   --docsearch-modal-background: var(--bg-color);
   --docsearch-modal-shadow: none;
+  --docsearch-primary-color: light-dark(var(--border-color), var(--fg-color));
+  --docsearch-soft-primary-color: var(--inverse-fg-color);
+  --docsearch-secondary-text-color: light-dark(var(--link-color), var(--fg-color));
+  --docsearch-text-color: light-dark(var(--link-color), var(--fg-color));
+  --docsearch-highlight-color: var(--fg-color);
+  --docsearch-subtle-color: transparent;
+  --docsearch-muted-color: light-dark(var(--border-color), var(--fg-color));
+
+  /* icon */
+  --docsearch-icon-color: light-dark(var(--link-color), var(--fg-color));
 
   /* searchbox */
   --docsearch-searchbox-background: var(--accent-bg-color);
   --docsearch-searchbox-focus-background: var(--accent-bg-color);
 
   /* hit */
-  --docsearch-hit-color: var(--docsearch-text-color);
-  --docsearch-hit-active-color: #fff;
-  --docsearch-hit-background: var(--accent-bg-color);
+  --docsearch-hit-color: light-dark(var(--docsearch-text-color), var(--docsearch-text-color));
+  --docsearch-hit-active-color: light-dark(#fff, #fff);
+  --docsearch-hit-background: light-dark(var(--accent-bg-color), var(--accent-bg-color));
+  --docsearch-hit-highlight-color: var(--inverse-fg-color);
   --docsearch-hit-shadow: none;
 
-  /* key */
-  --docsearch-key-gradient: transparent;
-  --docsearch-key-shadow: none;
-
   /* footer */
+  --docsearch-background-color: var(--accent-bg-color);
   --docsearch-footer-background: var(--bg-color);
   --docsearch-footer-shadow: none;
 }
 
-.DocSearch mark {
-  padding: 0;
+/* DocSearch-Modal */
+
+.DocSearch-Modal {
+  border: 1px solid light-dark(var(--border-color), var(--fg-color));
 }
 
-.DocSearch footer {
-  border-top: 1px solid var(--link-color)
+.DocSearch-Input::placeholder {
+  color: light-dark(var(--link-color), var(--fg-color));
+}
+
+.DocSearch-Dropdown {
+  border-top: 1px solid light-dark(var(--border-color), var(--fg-color));
+}
+
+/* DockSearch-Icons */
+
+.DocSearch-Search-Icon circle,
+.DocSearch-Search-Icon path,
+.DocSearch-Close path,
+.DocSearch-Hit-icon path {
+  stroke: light-dark(var(--link-color), var(--fg-color));
+}
+
+/* DocSearch-Commands-Key */
+
+.DocSearch-Commands-Key {
+  border: 1px solid light-dark(var(--border-color), var(--fg-color));
+  color: light-dark(var(--link-color), var(--fg-color));;
+}
+
+.DocSearch-Divider {
+  border-color: light-dark(var(--border-color), var(--fg-color));
 }
 
 .DocSearch-Button-Key {
@@ -602,11 +640,44 @@ iframe.poll {
   border-radius: 4px;
   padding: 0 6px;
   min-width: auto;
-  border: 1px solid var(--hi-b-black);
+  border: 1px solid light-dark(var(--border-color), var(--fg-color));
 }
 
 .DocSearch-Button {
-  border:  1px solid var(--docsearch-primary-color)
+  padding: 0 5px 0 8px;
+  border:  1px solid light-dark(var(--border-color), var(--fg-color));;
+}
+
+.DocSearch-Clear {
+  color: light-dark(var(--link-color), var(--fg-color));
+}
+
+.DocSearch-Hit-Container {
+  color: var(--link-color);
+}
+
+.DocSearch mark {
+  padding: 0;
+}
+
+/* DocSearch footer */
+
+.DocSearch footer {
+  border-top: 1px solid light-dark(var(--border-color), var(--fg-color));
+}
+
+/* DocSearch-Logo */
+
+.DocSearch-Logo a:hover {
+  background: none;
+}
+
+.DocSearch-Logo path,
+.DocSearch-Logo rect,
+.DocSearch-Logo a::after {
+  fill: light-dark(var(--link-color), var(--fg-color));
+  stroke: light-dark(var(--link-color), var(--fg-color));
+  color: light-dark(var(--link-color), var(--fg-color));
 }
 
 /* Force footer to bottom of viewport. */
