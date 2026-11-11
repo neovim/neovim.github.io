@@ -16,13 +16,7 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --fg-color: #000;
-  }
-}
-
-@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
-  :root {
-    --fg-color: #fff;
+    --fg-color: light-dark(#000, #fff);
   }
 }
 
@@ -558,16 +552,13 @@ iframe.poll {
   /* search */
   --docsearch-search-button-background: var(--accent-bg-color);
   --docsearch-search-button-text-color: light-dark(var(--link-color), var(--fg-color));
-  --docsearch-key-background: background: var(--accent-bg-color);
-  --docsearch-key-color: color: light-dark(var(--link-color), var(--fg-color));
-  --docsearch-key-gradient: transparent;
-  --docsearch-key-shadow: none;
+  --docsearch-key-background: var(--accent-bg-color);
+  --docsearch-key-color: light-dark(var(--link-color), var(--fg-color));
 
   /* modal */
   --docsearch-container-background: rgba(231, 238, 232, 0.2);
   --docsearch-modal-background: var(--bg-color);
   --docsearch-modal-shadow: none;
-  --docsearch-primary-color: light-dark(var(--border-color), var(--fg-color));
   --docsearch-soft-primary-color: var(--inverse-fg-color);
   --docsearch-secondary-text-color: light-dark(var(--link-color), var(--fg-color));
   --docsearch-text-color: light-dark(var(--link-color), var(--fg-color));
@@ -583,9 +574,8 @@ iframe.poll {
   --docsearch-searchbox-focus-background: var(--accent-bg-color);
 
   /* hit */
-  --docsearch-hit-color: light-dark(var(--docsearch-text-color), var(--docsearch-text-color));
-  --docsearch-hit-active-color: light-dark(#fff, #fff);
-  --docsearch-hit-background: light-dark(var(--accent-bg-color), var(--accent-bg-color));
+  --docsearch-hit-color: var(--docsearch-text-color);
+  --docsearch-hit-background: var(--accent-bg-color);
   --docsearch-hit-highlight-color: var(--inverse-fg-color);
   --docsearch-hit-shadow: none;
 
@@ -624,7 +614,7 @@ iframe.poll {
 
 .DocSearch-Commands-Key {
   border: 1px solid light-dark(var(--border-color), var(--fg-color));
-  color: light-dark(var(--link-color), var(--fg-color));;
+  color: light-dark(var(--link-color), var(--fg-color));
 }
 
 .DocSearch-Divider {
