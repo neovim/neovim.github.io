@@ -636,8 +636,7 @@ iframe.poll {
 }
 
 .DocSearch-Button {
-  padding: 0 5px 0 8px;
-  border:  1px solid light-dark(var(--border-color), var(--fg-color));;
+  border:  1px solid light-dark(var(--border-color), var(--fg-color));
 }
 
 .DocSearch-Clear {
