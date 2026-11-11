@@ -611,10 +611,12 @@ iframe.poll {
 
 /* DockSearch-Icons */
 
+.DocSearch-Close path,
+.DocSearch-Hit-icon path,
 .DocSearch-Search-Icon circle,
 .DocSearch-Search-Icon path,
-.DocSearch-Close path,
-.DocSearch-Hit-icon path {
+.DocSearch-Screen-Icon circle,
+.DocSearch-Screen-Icon path {
   stroke: light-dark(var(--link-color), var(--fg-color));
 }
 
