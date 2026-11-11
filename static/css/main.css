@@ -599,7 +599,7 @@ iframe.poll {
   border-top: 1px solid light-dark(var(--border-color), var(--fg-color));
 }
 
-/* DockSearch-Icons */
+/* DocSearch-Icons */
 
 .DocSearch-Close path,
 .DocSearch-Hit-icon path,
