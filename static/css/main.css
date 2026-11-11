@@ -599,14 +599,10 @@ iframe.poll {
   border-top: 1px solid light-dark(var(--border-color), var(--fg-color));
 }
 
-/* DocSearch-Icons */
+/* DocSearch Icons */
 
-.DocSearch-Close path,
-.DocSearch-Hit-icon path,
-.DocSearch-Search-Icon circle,
-.DocSearch-Search-Icon path,
-.DocSearch-Screen-Icon circle,
-.DocSearch-Screen-Icon path {
+.DocSearch path,
+.DocSearch-Search circle {
   stroke: light-dark(var(--link-color), var(--fg-color));
 }
 
