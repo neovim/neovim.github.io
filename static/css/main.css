@@ -223,19 +223,40 @@ samp {
  * Logo and navigation at the top of the page
  */
 
+.navbar-brand {
+  padding: 8px 12px;
+}
+
+.navbar-brand, .nav-link {
+  border-radius: 8px;
+}
+
+.navbar-nav {
+  gap: 8px;
+  margin-right: 8px;
+}
+
 .nav-link {
+  padding: 6px;
   color: var(--link-color);
 }
+
+.navbar-brand:hover,
 .nav-link:hover,
 .nav-link:focus,
-.nav-link:active {
-  color: var(--accent-color);
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: light-dark(var(--inverse-fg-color), var(--inverse-fg-color)) !important;
+  color: light-dark(var(--accent-color), var(--fg-color)) !important;
 }
 
 /* Highlight the currently active menu item */
 .nav-link.active,
+.nav-link.active:hover,
+.nav-link.active:focus,
 .nav-item.dropdown:has(.dropdown-menu a.active) > .nav-link {
-  color: var(--accent-color) !important;
+  background: var(--link-color) !important;
+  color: var(--bg-color) !important;
 }
 
 .navbar-toggler {
@@ -243,9 +264,20 @@ samp {
   color: var(--fg-color);
 }
 
+.dropdown-menu {
+  border-color: light-dark(var(--border-color), var(--fg-color));
+}
+
+.dropdown-item.active,
+.dropdown-item.active:hover {
+  background: var(--link-color) !important;
+  color: var(--bg-color) !important;
+}
+
 @media (max-width: 991.98px) {
   .navbar-toggler {
     order: 3;
+    padding: 6px;
   }
 
   #docsearch {
