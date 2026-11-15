@@ -223,24 +223,67 @@ samp {
  * Logo and navigation at the top of the page
  */
 
-.nav-link {
-  color: var(--link-color);
+.navbar {
+  --bs-navbar-color: var(--link-color);
+  --bs-navbar-hover-color: light-dark(var(--accent-color), var(--fg-color));
+  /* Open dropdown toggle (`.show`). `.active` is overridden below. */
+  --bs-navbar-active-color: var(--bs-navbar-hover-color);
+  --bs-navbar-brand-color: var(--link-color);
+  --bs-navbar-brand-hover-color: var(--accent-color);
 }
+
+.navbar-nav {
+  --bs-nav-link-padding-x: 8px;
+  --bs-nav-link-padding-y: 6px;
+  gap: 8px;
+}
+
+.navbar-brand {
+  padding: 8px 12px;
+}
+
+.navbar-brand,
+.nav-link {
+  border-radius: 8px;
+}
+
 .nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
-  color: var(--accent-color);
+.nav-link:focus-visible,
+.nav-link.show {
+  background-color: var(--inverse-fg-color);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--fg-color);
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 /* Highlight the currently active menu item */
-.nav-link.active,
+.navbar-nav .nav-link.active,
 .nav-item.dropdown:has(.dropdown-menu a.active) > .nav-link {
-  color: var(--accent-color) !important;
+  color: var(--bg-color);
+  background-color: var(--link-color);
 }
 
 .navbar-toggler {
+  padding: 6px;
   border-width: 0;
   color: var(--fg-color);
+}
+
+.dropdown-menu {
+  --bs-dropdown-bg: var(--accent-bg-color);
+  --bs-dropdown-border-color: light-dark(var(--border-color), var(--fg-color));
+  --bs-dropdown-link-color: var(--link-color);
+  --bs-dropdown-link-hover-color: var(--bs-navbar-hover-color);
+  --bs-dropdown-link-hover-bg: var(--inverse-fg-color);
+  --bs-dropdown-link-active-color: var(--bg-color);
+  --bs-dropdown-link-active-bg: var(--link-color);
+}
+
+#docsearch {
+  margin-left: 12px;
 }
 
 @media (max-width: 991.98px) {
@@ -259,40 +302,6 @@ samp {
   .navbar-collapse {
     order: 4;
   }
-}
-
-/**
- * Logo
- */
-.navbar-brand {
-  color: var(--link-color);
-}
-.navbar-brand:hover,
-.navbar-brand:focus,
-.navbar-brand:active {
-  color: var(--accent-color);
-}
-
-/**
- * Menu dropdown
- */
-
-#neovimDropdown.show {
-  color: var(--accent-color);
-}
-
-.dropdown-menu {
-  background-color: var(--accent-bg-color);
-}
-
-.dropdown-item {
-  color: var(--link-color);
-}
-.dropdown-item:focus,
-.dropdown-item:hover,
-.dropdown-item:active {
-  color: var(--bg-color);
-  background-color: var(--link-color);
 }
 
 /*
