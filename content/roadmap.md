@@ -17,6 +17,7 @@ priorities are tracked in [milestones](https://github.com/neovim/neovim/mileston
 
 - [Prepare for 1.0](https://github.com/neovim/neovim/issues/20451)
 - Redesign `--remote`
+- Interactive `:!` (`:[range]terminal`, `:[range]write :term sudo tee %`, …) [#1496](https://github.com/neovim/neovim/issues/1496)
 - Redesign (simplify) remote plugin concept, eliminate `:UpdateRemotePlugins`
 - Unified event interface, `nvim_on()`
 - Multibuffer [#30463](https://github.com/neovim/neovim/issues/30463)
@@ -28,17 +29,16 @@ priorities are tracked in [milestones](https://github.com/neovim/neovim/mileston
 
 ### [0.13](https://github.com/neovim/neovim/milestone/48) "Batteries Included"
 
-- ✅ Multicursor
-- ✅ [CmdAtom](https://neovim.io/doc/user/repeat/#excalibur): subscribe to any <i>user action</i>
-- ✅ Dot-repeat "just works" with any operator mapping (`operatorfunc`, `:omap`).
-- ✅ `vim.async` task abstraction, structured concurrency [#34473](https://github.com/neovim/neovim/pull/34473)
-- ✅ File-change detection (improved `'autoread'`) [#37971](https://github.com/neovim/neovim/pull/37971)
-- ✅ Image API: `vim.ui.img`
-- ✅ `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
-- ✅ Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
-- Interactive `:!` (`:[range]terminal`, `:[range]write :term sudo tee %`, …) [#1496](https://github.com/neovim/neovim/issues/1496)
+- [Multicursor](/doc/user/repeat/#multicursor)
+- [CmdAtom](/doc/user/repeat/#excalibur): subscribe to any <i>user action</i>
+- Dot-repeat "just works" with any operator mapping (`operatorfunc`, `:omap`).
+- `vim.async` task abstraction, structured concurrency [#34473](https://github.com/neovim/neovim/pull/34473)
+- File-change detection (improved `'autoread'`) [#37971](https://github.com/neovim/neovim/pull/37971)
+- Image API: `vim.ui.img`
+- `dir.lua` directory browser (replaces `netrw`) [#39723](https://github.com/neovim/neovim/pull/39723)
+- Reimplement `cmdwin` as a normal buffer+window [#40312](https://github.com/neovim/neovim/issues/40312)
 - [Packspec](https://packspec.org/), `pkg.json`
-- Remote-ssh
+- [Remote-ssh](/doc/user/gui/#remote-ssh)
 
 ## Completed
 
